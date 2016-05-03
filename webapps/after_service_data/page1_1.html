@@ -1,0 +1,213 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html; charset=windows-1252">
+<title>page1_1</title>
+<meta content="CodeCharge Studio 4.1.00.032" name="GENERATOR">
+<link href="Styles/Blueprint1/Style_doctype.css" type="text/css" rel="stylesheet">
+</head>
+<body>
+&nbsp;
+<!-- BEGIN Record after_service_tbl -->
+<form id="after_service_tbl" name="{HTMLFormName}" action="{Action}" method="post">
+  <table cellspacing="0" cellpadding="0" border="0">
+    <tr>
+      <td valign="top">
+        <table class="Header" cellspacing="0" cellpadding="0" border="0">
+          <tr>
+            <td class="HeaderLeft"><img alt="" src="Styles/Blueprint1/Images/Spacer.gif" border="0"></td> 
+            <td class="th"><strong>Add/Edit After Service Data</strong></td> 
+            <td class="HeaderRight"><img alt="" src="Styles/Blueprint1/Images/Spacer.gif" border="0"></td>
+          </tr>
+        </table>
+ 
+        <table class="Record" cellspacing="0" cellpadding="0">
+          <!-- BEGIN Error -->
+          <tr class="Error">
+            <td colspan="4">{Error}</td>
+          </tr>
+          <!-- END Error -->
+          <tr class="Controls">
+            <td class="th"><label for="after_service_tblORDER_NO">ORDER NO</label></td> 
+            <td colspan="3"><input id="after_service_tblORDER_NO" maxlength="6" size="6" value="{ORDER_NO}" name="{ORDER_NO_Name}"></td>
+          </tr>
+ 
+          <tr class="Controls">
+            <td class="th"><label for="after_service_tblemp_id">TECHNICIAN</label></td> 
+            <td colspan="3">
+              <select id="after_service_tblemp_id" name="{emp_id_Name}">
+                <option value="" selected>Select Value</option>
+                {emp_id_Options}
+              </select>
+ </td>
+          </tr>
+ 
+          <tr class="Controls">
+            <td class="th"><label for="after_service_tblservice_date_day">SERVICE DATE</label></td> 
+            <td colspan="3">
+              <select id="after_service_tblservice_date_day" name="{service_date_day_Name}">
+                <option value="" selected>Select Value</option>
+                {service_date_day_Options}
+              </select>
+ - 
+              <select id="after_service_tblservice_date_month" name="{service_date_month_Name}">
+                <option value="" selected>Select Value</option>
+                {service_date_month_Options}
+              </select>
+ - <input id="after_service_tblservice_date_year" maxlength="4" size="4" value="{service_date_year}" name="{service_date_year_Name}"></td>
+          </tr>
+ 
+          <tr class="Controls">
+            <td class="th">PORT/PLACE</td> 
+            <td colspan="3"><label for="after_service_tblPORT_ID" style="display: none;"></label> 
+              <select id="after_service_tblPORT_ID" name="{PORT_ID_Name}">
+                <option value="" selected>Select Value</option>
+                {PORT_ID_Options}
+              </select>
+ </td>
+          </tr>
+ 
+          <tr class="Controls">
+            <td class="th"><label for="after_service_tblFOLLOW_UP">FOLLOW UP</label></td> 
+            <td colspan="3">
+              <select id="after_service_tblFOLLOW_UP" name="{FOLLOW_UP_Name}">
+                <option value="" selected>Select Value</option>
+                {FOLLOW_UP_Options}
+              </select>
+ </td>
+          </tr>
+ 
+          <tr class="Controls">
+            <td class="th"><label for="after_service_tblAGENT_EVAL_TECH">AGENT EVALUATION</label></td> 
+            <td colspan="3">
+              <select id="after_service_tblAGENT_EVAL_TECH" name="{AGENT_EVAL_TECH_Name}">
+                <option value="" selected>Select Value</option>
+                {AGENT_EVAL_TECH_Options}
+              </select>
+ </td>
+          </tr>
+ 
+          <tr class="Controls">
+            <td class="th"><label for="after_service_tblPORT_FEE_ID">PORT FEE</label></td> 
+            <td colspan="3">
+              <select id="after_service_tblPORT_FEE_ID" name="{PORT_FEE_ID_Name}">
+                <option value="" selected>Select Value</option>
+                {PORT_FEE_ID_Options}
+              </select>
+ </td>
+          </tr>
+ 
+          <tr class="Controls">
+            <td class="th"><label for="after_service_tblTRANSPORT_FEE_ID">TRANSPORT FEE</label></td> 
+            <td colspan="3">
+              <select id="after_service_tblTRANSPORT_FEE_ID" name="{TRANSPORT_FEE_ID_Name}">
+                <option value="" selected>Select Value</option>
+                {TRANSPORT_FEE_ID_Options}
+              </select>
+ </td>
+          </tr>
+ 
+          <tr class="Controls">
+            <td class="th" rowspan="2"><label for="after_service_tblNT_INV_WO">NORMAL TIME TO INVOICE</label></td> 
+            <td>WORK</td> 
+            <td>WAIT</td> 
+            <td>TRAVEL</td>
+          </tr>
+ 
+          <tr class="Controls">
+            <td><input id="after_service_tblNT_INV_WO" maxlength="2" size="2" value="{NT_INV_WO}" name="{NT_INV_WO_Name}"></td> 
+            <td><input id="after_service_tblNT_INV_WA" maxlength="2" size="2" value="{NT_INV_WA}" name="{NT_INV_WA_Name}"></td> 
+            <td><input id="after_service_tblNT_INV_TR" maxlength="2" size="2" value="{NT_INV_TR}" name="{NT_INV_TR_Name}"></td>
+          </tr>
+ 
+          <tr class="Controls">
+            <td class="th" rowspan="2">NORMAL TIME TECH<br>
+              <font style="BACKGROUND-COLOR: #ffffff">APP. BY: </font>
+              <select id="after_service_tblNT_APP_BY" name="{NT_APP_BY_Name}">
+                <option value="" selected>Select Value</option>
+                {NT_APP_BY_Options}
+              </select>
+ </td> 
+            <td>WORK</td> 
+            <td>WAIT</td> 
+            <td>TRAVEL</td>
+          </tr>
+ 
+          <tr class="Controls">
+            <td><input id="after_service_tblNT_TEC_WO" maxlength="2" size="2" value="{NT_TEC_WO}" name="{NT_TEC_WO_Name}"></td> 
+            <td><input id="after_service_tblNT_TEC_WA" maxlength="2" size="2" value="{NT_TEC_WA}" name="{NT_TEC_WA_Name}"></td> 
+            <td><input id="after_service_tblNT_TEC_TR" maxlength="2" size="2" value="{NT_TEC_TR}" name="{NT_TEC_TR_Name}"></td>
+          </tr>
+ 
+          <tr class="Controls">
+            <td class="th" rowspan="2">OVERTIME TO INVOICE</td> 
+            <td>WORK</td> 
+            <td>WAIT</td> 
+            <td>TRAVEL</td>
+          </tr>
+ 
+          <tr class="Controls">
+            <td><input id="after_service_tblOT_INV_WO" maxlength="2" size="2" value="{OT_INV_WO}" name="{OT_INV_WO_Name}"></td> 
+            <td><input id="after_service_tblOT_INV_WA" maxlength="2" size="2" value="{OT_INV_WA}" name="{OT_INV_WA_Name}"></td> 
+            <td><input id="after_service_tblOT_INV_TR" maxlength="2" size="2" value="{OT_INV_TR}" name="{OT_INV_TR_Name}"></td>
+          </tr>
+ 
+          <tr class="Controls">
+            <td class="th" rowspan="2">OVERTIME TECH<br>
+              <font style="BACKGROUND-COLOR: #ffffff">APP. BY: </font>
+              <select id="after_service_tblOT_APP_BY" name="{OT_APP_BY_Name}">
+                <option value="" selected>Select Value</option>
+                {OT_APP_BY_Options}
+              </select>
+ </td> 
+            <td>WORK</td> 
+            <td>WAIT</td> 
+            <td>TRAVEL</td>
+          </tr>
+ 
+          <tr class="Controls">
+            <td><input id="after_service_tblOT_TEC_WO" maxlength="2" size="2" value="{OT_TEC_WO}" name="{OT_TEC_WO_Name}"></td> 
+            <td><input id="after_service_tblOT_TEC_WA" maxlength="2" size="2" value="{OT_TEC_WA}" name="{OT_TEC_WA_Name}"></td> 
+            <td><input id="after_service_tblOT_TEC_TR" maxlength="2" size="2" value="{OT_TEC_TR}" name="{OT_TEC_TR_Name}"></td>
+          </tr>
+ 
+          <tr class="Controls">
+            <td class="th" rowspan="2">NORMAL DAYS</td> 
+            <td>WORK</td> 
+            <td>WAIT</td> 
+            <td>TRAVEL</td>
+          </tr>
+ 
+          <tr class="Controls">
+            <td><input id="after_service_tblND_WO" maxlength="2" size="2" value="{ND_WO}" name="{ND_WO_Name}"></td> 
+            <td><input id="after_service_tblND_WA" maxlength="2" size="2" value="{ND_WA}" name="{ND_WA_Name}"></td> 
+            <td><input id="after_service_tblND_TR" maxlength="2" size="2" value="{ND_TR}" name="{ND_TR_Name}"></td>
+          </tr>
+ 
+          <tr class="Controls">
+            <td class="th" rowspan="2"><label for="after_service_tblWE_WO">WEEKEND DAYS</label></td> 
+            <td>WORK</td> 
+            <td>WAIT</td> 
+            <td>TRAVEL</td>
+          </tr>
+ 
+          <tr class="Controls">
+            <td><input id="after_service_tblWE_WO" maxlength="2" size="2" value="{WE_WO}" name="{WE_WO_Name}"></td> 
+            <td><input id="after_service_tblWE_WA" maxlength="2" size="2" value="{WE_WA}" name="{WE_WA_Name}"></td> 
+            <td><input id="after_service_tblWE_TR" maxlength="2" size="2" value="{WE_TR}" name="{WE_TR_Name}"></td>
+          </tr>
+ 
+          <tr class="Bottom">
+            <td align="right" colspan="4">
+              <!-- BEGIN Button Button_Insert --><input class="Button" id="after_service_tblButton_Insert" type="submit" alt="Add" value="add new entry" name="{Button_Name}"><!-- END Button Button_Insert -->
+              <!-- BEGIN Button Button_Update --><input class="Button" id="after_service_tblButton_Update" type="submit" alt="Submit" value="save changes" name="{Button_Name}"><!-- END Button Button_Update -->
+              <!-- BEGIN Button Button_Cancel --><input class="Button" id="after_service_tblButton_Cancel" type="submit" alt="Cancel" value="return" name="{Button_Name}"><!-- END Button Button_Cancel --><input id="after_service_tblrecord_id" type="hidden" value="{record_id}" name="{record_id_Name}"></td>
+          </tr>
+        </table>
+      </td>
+    </tr>
+  </table>
+</form>
+<!-- END Record after_service_tbl -->
+</body>
+</html>

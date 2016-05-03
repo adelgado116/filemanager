@@ -1,0 +1,193 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html; charset=windows-1252">
+<title>page2_3</title>
+<meta content="CodeCharge Studio 4.1.00.027" name="GENERATOR">
+<script language="JavaScript" type="text/javascript">
+//Begin CCS script
+//Include Common JSFunctions @1-D3B5F5BF
+</script>
+<script language="JavaScript" src="ClientI18N.php?file=Functions.js&amp;locale={res:CCS_LocaleID}" type="text/javascript" charset="utf-8"></script>
+<script language="JavaScript" type="text/javascript">
+//End Include Common JSFunctions
+
+//ports_tbl1Button_Submit_OnClick @27-9B10C99E
+function ports_tbl1Button_Submit_OnClick()
+{
+    var result = true;
+//End ports_tbl1Button_Submit_OnClick
+
+//Confirmation Message @28-257FDD03
+    return confirm('Submit records?');
+//End Confirmation Message
+
+//Close ports_tbl1Button_Submit_OnClick @27-BC33A33A
+    return result;
+}
+//End Close ports_tbl1Button_Submit_OnClick
+
+//ports_tblSearchs_country_id_OnChange @16-2B3D4DF7
+function ports_tblSearchs_country_id_OnChange()
+{
+    var result = true;
+//End ports_tblSearchs_country_id_OnChange
+
+//Submit Form @30-8E0EAE5B
+    document.forms["ports_tblSearch"].submit();
+//End Submit Form
+
+//Close ports_tblSearchs_country_id_OnChange @16-BC33A33A
+    return result;
+}
+//End Close ports_tblSearchs_country_id_OnChange
+
+//bind_events @1-B04B1883
+function bind_events() {
+    addEventHandler("ports_tbl1Button_Submit", "click", ports_tbl1Button_Submit_OnClick);
+    addEventHandler("ports_tblSearchs_country_id", "change", ports_tblSearchs_country_id_OnChange);
+}
+//End bind_events
+
+window.onload = bind_events; //Assign bind_events @1-19F7B649
+
+//End CCS script
+</script>
+<link href="Styles/Blueprint1/Style_doctype.css" type="text/css" rel="stylesheet">
+</head>
+<body>
+<table width="100%" border="0">
+  <tr>
+    <td>
+      <p><strong><font color="#000066" size="6">Edit&nbsp;Port/Place&nbsp;information in database</font></strong></p>
+    </td> 
+    <td>
+      <div align="right">
+      </div>
+    </td>
+  </tr>
+</table>
+<br>
+<!-- BEGIN Record ports_tblSearch -->
+<form id="ports_tblSearch" name="{HTMLFormName}" action="{Action}" method="post">
+  <table cellspacing="0" cellpadding="0" border="0">
+    <tr>
+      <td valign="top">
+        <table class="Header" cellspacing="0" cellpadding="0" border="0">
+          <tr>
+            <td class="HeaderLeft"><img alt="" src="Styles/Blueprint1/Images/Spacer.gif" border="0"></td> 
+            <td class="th"><strong>Search Ports </strong></td> 
+            <td class="HeaderRight"><img alt="" src="Styles/Blueprint1/Images/Spacer.gif" border="0"></td>
+          </tr>
+        </table>
+ 
+        <table class="Record" cellspacing="0" cellpadding="0">
+          <!-- BEGIN Error -->
+          <tr class="Error">
+            <td colspan="2">{Error}</td>
+          </tr>
+          <!-- END Error -->
+          <tr class="Controls">
+            <td class="th"><label for="ports_tblSearchs_country_id">COUNTRY</label></td> 
+            <td>
+              <select id="ports_tblSearchs_country_id" name="{s_country_id_Name}">
+                <option value="" selected>Select Value</option>
+                {s_country_id_Options}
+              </select>
+ </td>
+          </tr>
+ 
+          <tr class="Bottom">
+            <td align="right" colspan="2">
+              <!-- BEGIN Button Button_DoSearch --><input class="Button" id="ports_tblSearchButton_DoSearch" type="submit" alt="Search" value="Search" name="{Button_Name}"><!-- END Button Button_DoSearch --></td>
+          </tr>
+        </table>
+      </td>
+    </tr>
+  </table>
+</form>
+<!-- END Record ports_tblSearch --><br>
+<!-- BEGIN EditableGrid ports_tbl1 -->
+<form id="ports_tbl1" name="{HTMLFormName}" action="{Action}" method="post">
+  <input type="hidden" value="{FormState}" name="FormState">{FormScript} 
+  <table cellspacing="0" cellpadding="0" border="0">
+    <tr>
+      <td valign="top">
+        <table class="Header" cellspacing="0" cellpadding="0" border="0">
+          <tr>
+            <td class="HeaderLeft"><img alt="" src="Styles/Blueprint1/Images/Spacer.gif" border="0"></td> 
+            <td class="th"><strong>Ports Database</strong></td> 
+            <td class="HeaderRight"><img alt="" src="Styles/Blueprint1/Images/Spacer.gif" border="0"></td>
+          </tr>
+        </table>
+ 
+        <table class="Grid" cellspacing="0" cellpadding="0">
+          <!-- BEGIN Error -->
+          <tr class="Error">
+            <td colspan="4">{Error}</td>
+          </tr>
+          <!-- END Error -->
+          <tr class="Caption">
+            <th scope="col">COUNTRY</th>
+ 
+            <th scope="col">CITY</th>
+ 
+            <th scope="col">PORT NAME</th>
+ 
+            <th scope="col">PORT FEE TYPE</th>
+          </tr>
+ 
+          <!-- BEGIN Row -->
+          <!-- BEGIN RowError -->
+          <tr class="Error">
+            <td colspan="4">{Error}</td>
+          </tr>
+          <!-- END RowError -->
+          <tr class="Row">
+            <td><label for="ports_tbl1country_id_{ports_tbl1:rowNumber}" style="display: none;">Country Id</label> 
+              <select id="ports_tbl1country_id_{ports_tbl1:rowNumber}" name="{country_id_Name}">
+                <option value="" selected>Select Value</option>
+                {country_id_Options}
+              </select>
+ </td> 
+            <td>
+              <select id="ports_tbl1city_id" name="{city_id_Name}">
+                <option value="" selected>Select Value</option>
+                {city_id_Options}
+              </select>
+ </td> 
+            <td><label for="ports_tbl1PORT_NAME_{ports_tbl1:rowNumber}" style="display: none;">PORT NAME</label><input id="ports_tbl1PORT_NAME_{ports_tbl1:rowNumber}" maxlength="250" size="50" value="{PORT_NAME}" name="{PORT_NAME_Name}"></td> 
+            <td>
+              <select id="ports_tbl1PORT_FEE_ID" name="{PORT_FEE_ID_Name}">
+                <option value="" selected>Select Value</option>
+                {PORT_FEE_ID_Options}
+              </select>
+            </td>
+          </tr>
+ <!-- END Row -->
+          <!-- BEGIN NoRecords -->
+          <tr class="NoRecords">
+            <td colspan="4">no records found.</td>
+          </tr>
+          <!-- END NoRecords -->
+          <tr class="Footer">
+            <td style="TEXT-ALIGN: right" colspan="4">
+              <!-- BEGIN Navigator Navigator -->
+              <!-- BEGIN First_On --><a href="{First_URL}"><img alt="{First_URL}" src="Styles/Blueprint1/Images/First.gif" border="0"></a> <!-- END First_On -->
+              <!-- BEGIN First_Off --><img alt="{First_URL}" src="Styles/Blueprint1/Images/FirstOff.gif" border="0"><!-- END First_Off -->
+              <!-- BEGIN Prev_On --><a href="{Prev_URL}"><img alt="{Prev_URL}" src="Styles/Blueprint1/Images/Prev.gif" border="0"></a> <!-- END Prev_On -->
+              <!-- BEGIN Prev_Off --><img alt="{Prev_URL}" src="Styles/Blueprint1/Images/PrevOff.gif" border="0"><!-- END Prev_Off -->&nbsp;{Page_Number} of&nbsp;{Total_Pages}&nbsp; 
+              <!-- BEGIN Next_On --><a href="{Next_URL}"><img alt="{Next_URL}" src="Styles/Blueprint1/Images/Next.gif" border="0"></a> <!-- END Next_On -->
+              <!-- BEGIN Next_Off --><img alt="{Next_URL}" src="Styles/Blueprint1/Images/NextOff.gif" border="0"><!-- END Next_Off -->
+              <!-- BEGIN Last_On --><a href="{Last_URL}"><img alt="{Last_URL}" src="Styles/Blueprint1/Images/Last.gif" border="0"></a> <!-- END Last_On -->
+              <!-- BEGIN Last_Off --><img alt="{Last_URL}" src="Styles/Blueprint1/Images/LastOff.gif" border="0"><!-- END Last_Off --><!-- END Navigator Navigator -->
+              <!-- BEGIN Button Button_Submit --><input class="Button" id="ports_tbl1Button_Submit" type="submit" alt="Submit" value="Submit" name="{Button_Name}"><!-- END Button Button_Submit --></td>
+          </tr>
+        </table>
+      </td>
+    </tr>
+  </table>
+</form>
+<!-- END EditableGrid ports_tbl1 --><br>
+</body>
+</html>

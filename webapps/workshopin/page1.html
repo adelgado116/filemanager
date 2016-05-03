@@ -1,0 +1,166 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html; charset=windows-1252">
+<title>workshop :: incoming parts for repair </title>
+<meta content="CodeCharge Studio 4.1.00.032" name="GENERATOR">
+<link href="Styles/Blueprint1/Style_doctype.css" type="text/css" rel="stylesheet">
+</head>
+<body>
+<p>
+<table width="100%" border="0">
+  <tr>
+    <td></td> 
+    <td>
+      <div align="right">
+<a href="{Link2_Src}" id="Link2"><strong>REGISTER NEW WORKSHOP REPAIR</strong></a> 
+      </div>
+    </td>
+  </tr>
+</table>
+&nbsp;&nbsp; 
+<table width="100%" border="0">
+  <tr>
+    <td>&nbsp; 
+      <!-- BEGIN Record workshop_repairSearch -->
+      <form id="workshop_repairSearch" name="{HTMLFormName}" action="{Action}" method="post">
+        <table cellspacing="0" cellpadding="0" border="0">
+          <tr>
+            <td valign="top">
+              <table class="Header" cellspacing="0" cellpadding="0" border="0">
+                <tr>
+                  <td class="HeaderLeft"><img alt="" src="Styles/Blueprint1/Images/Spacer.gif" border="0"></td> 
+                  <td class="th"><strong>Search Workshop Repair Registers</strong></td> 
+                  <td class="HeaderRight"><img alt="" src="Styles/Blueprint1/Images/Spacer.gif" border="0"></td>
+                </tr>
+              </table>
+ 
+              <table class="Record" cellspacing="0" cellpadding="0">
+                <!-- BEGIN Error -->
+                <tr class="Error">
+                  <td colspan="2">{Error}</td>
+                </tr>
+                <!-- END Error -->
+                <tr class="Controls">
+                  <td class="th"><label for="workshop_repairSearchs_date_received">RECEIVED ON</label></td> 
+                  <td><input id="workshop_repairSearchs_date_received" maxlength="10" size="10" value="{s_date_received}" name="{s_date_received_Name}"></td>
+                </tr>
+ 
+                <tr class="Controls">
+                  <td class="th"><label for="workshop_repairSearchs_ship_name">VESSEL</label></td> 
+                  <td><input id="workshop_repairSearchs_ship_name" maxlength="250" size="30" value="{s_ship_name}" name="{s_ship_name_Name}"></td>
+                </tr>
+ 
+                <tr class="Controls">
+                  <td class="th"><label for="workshop_repairSearchs_imo">IMO</label></td> 
+                  <td><input id="workshop_repairSearchs_imo" maxlength="7" size="7" value="{s_imo}" name="{s_imo_Name}"></td>
+                </tr>
+ 
+                <tr class="Controls">
+                  <td class="th"><label for="workshop_repairSearchs_customer">CUSTOMER</label></td> 
+                  <td><input id="workshop_repairSearchs_customer" maxlength="50" size="30" value="{s_customer}" name="{s_customer_Name}"></td>
+                </tr>
+ 
+                <tr class="Controls">
+                  <td class="th"><label for="workshop_repairSearchs_EQUIP_TYPE">TYPE OF EQUIPMENT</label></td> 
+                  <td><input id="workshop_repairSearchs_EQUIP_TYPE" maxlength="250" size="30" value="{s_EQUIP_TYPE}" name="{s_EQUIP_TYPE_Name}"></td>
+                </tr>
+ 
+                <tr class="Controls">
+                  <td class="th"><label for="workshop_repairSearchs_MANUF_NAME">MANUFACTURER</label></td> 
+                  <td><input id="workshop_repairSearchs_MANUF_NAME" maxlength="250" size="30" value="{s_MANUF_NAME}" name="{s_MANUF_NAME_Name}"></td>
+                </tr>
+ 
+                <tr class="Controls">
+                  <td class="th"><label for="workshop_repairSearchs_emp_id">RECEIVED BY</label></td> 
+                  <td>
+                    <select id="workshop_repairSearchs_emp_id" name="{s_emp_id_Name}">
+                      <option value="" selected>Select Value</option>
+                      {s_emp_id_Options}
+                    </select>
+ </td>
+                </tr>
+ 
+                <tr class="Bottom">
+                  <td align="right" colspan="2">
+                    <!-- BEGIN Button Button_DoSearch --><input class="Button" id="workshop_repairSearchButton_DoSearch" type="submit" alt="Search" value="Search" name="{Button_Name}"><!-- END Button Button_DoSearch --></td>
+                </tr>
+              </table>
+            </td>
+          </tr>
+        </table>
+      </form>
+      <!-- END Record workshop_repairSearch --></td> 
+    <td>&nbsp;<a href="{Link1_Src}" id="Link1" target="_blank"><strong>THRANE &amp; THRANE WARRANTY CHECK</strong></a></td>
+  </tr>
+</table>
+&nbsp; 
+<!-- BEGIN Grid workshop_repair -->
+<table cellspacing="0" cellpadding="0" border="0">
+  <tr>
+    <td valign="top">
+      <table class="Header" cellspacing="0" cellpadding="0" border="0">
+        <tr>
+          <td class="HeaderLeft"><img alt="" src="Styles/Blueprint1/Images/Spacer.gif" border="0"></td> 
+          <td class="th"><strong>Search Results</strong></td> 
+          <td class="HeaderRight"><img alt="" src="Styles/Blueprint1/Images/Spacer.gif" border="0"></td>
+        </tr>
+      </table>
+ 
+      <table class="Grid" cellspacing="0" cellpadding="0">
+        <tr class="Caption">
+          <th scope="col">RECEIVED ON</th>
+ 
+          <th scope="col">VESSEL</th>
+ 
+          <th scope="col">IMO</th>
+ 
+          <th scope="col">CUSTOMER</th>
+ 
+          <th scope="col">EQUIPMENT TYPE</th>
+ 
+          <th scope="col">MANUFACTURER</th>
+ 
+          <th scope="col">MODEL</th>
+ 
+          <th scope="col">S/N</th>
+ 
+          <th scope="col">RECEIVED BY</th>
+ 
+          <th scope="col">ACTIONS</th>
+        </tr>
+ 
+        <!-- BEGIN Row -->
+        <tr class="Row">
+          <td>{date_received}&nbsp;</td> 
+          <td>{ship_name}&nbsp;</td> 
+          <td>{imo}&nbsp;</td> 
+          <td>{customer}&nbsp;</td> 
+          <td>{EQUIP_TYPE}</td> 
+          <td>{MANUF_NAME}</td> 
+          <td>{EQUIP_MODEL}</td> 
+          <td>{sn}&nbsp;</td> 
+          <td>{emp_login}&nbsp;</td> 
+          <td><a href="{Link1_Src}" id="workshop_repairLink1_{workshop_repair:rowNumber}">EXPAND</a></td>
+        </tr>
+ <!-- END Row -->
+        <!-- BEGIN NoRecords -->
+        <tr class="NoRecords">
+          <td colspan="10">no records found</td>
+        </tr>
+        <!-- END NoRecords -->
+        <tr class="Footer">
+          <td colspan="10">
+            <!-- BEGIN Navigator Navigator -->
+            <!-- BEGIN Prev_On --><a href="{Prev_URL}"><img alt="{Prev_URL}" src="Styles/Blueprint1/Images/en/ButtonPrev.gif" border="0"></a> <!-- END Prev_On -->
+            <!-- BEGIN Prev_Off --><img alt="{Prev_URL}" src="Styles/Blueprint1/Images/en/ButtonPrevOff.gif" border="0"><!-- END Prev_Off -->
+            <!-- BEGIN Next_On --><a href="{Next_URL}"><img alt="{Next_URL}" src="Styles/Blueprint1/Images/en/ButtonNext.gif" border="0"></a> <!-- END Next_On -->
+            <!-- BEGIN Next_Off --><img alt="{Next_URL}" src="Styles/Blueprint1/Images/en/ButtonNextOff.gif" border="0"><!-- END Next_Off --><!-- END Navigator Navigator --></td>
+        </tr>
+      </table>
+    </td>
+  </tr>
+</table>
+<!-- END Grid workshop_repair --></p>
+</body>
+</html>

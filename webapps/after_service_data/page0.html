@@ -1,0 +1,259 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html; charset=windows-1252">
+<title>page0</title>
+<meta content="CodeCharge Studio 4.1.00.032" name="GENERATOR">
+<link rel="stylesheet" type="text/css" href="Styles/Blueprint1/Style_doctype.css">
+</head>
+<body>
+<p>
+<table width="100%" border="0">
+  <tr>
+    <td>&nbsp; 
+      <!-- BEGIN Record after_service_tbl_employe -->
+      <form id="after_service_tbl_employe" name="{HTMLFormName}" action="{Action}" method="post">
+        <table cellspacing="0" cellpadding="0" border="0">
+          <tr>
+            <td valign="top">
+              <table class="Header" cellspacing="0" cellpadding="0" border="0">
+                <tr>
+                  <td class="HeaderLeft"><img alt="" src="Styles/Blueprint1/Images/Spacer.gif" border="0"></td> 
+                  <td class="th"><strong>Search&nbsp;for Timesheet&nbsp;Data</strong></td> 
+                  <td class="HeaderRight"><img alt="" src="Styles/Blueprint1/Images/Spacer.gif" border="0"></td> 
+                </tr>
+ 
+              </table>
+ 
+              <table class="Record" cellspacing="0" cellpadding="0">
+                <!-- BEGIN Error -->
+                <tr class="Error">
+                  <td colspan="2">{Error}</td> 
+                </tr>
+ <!-- END Error -->
+                <tr class="Controls">
+                  <td class="th"><label for="after_service_tbl_employes_ORDER_NO">ORDER NO</label></td> 
+                  <td><input id="after_service_tbl_employes_ORDER_NO" maxlength="6" size="6" value="{s_ORDER_NO}" name="{s_ORDER_NO_Name}"></td> 
+                </tr>
+ 
+                <tr class="Controls">
+                  <td class="th"><label for="after_service_tbl_employes_PORT_ID">PORT/PLACE</label></td> 
+                  <td>
+                    <select id="after_service_tbl_employes_PORT_ID" name="{s_PORT_ID_Name}">
+                      <option value="" selected>Select Value</option>
+ {s_PORT_ID_Options} 
+                    </select>
+ </td> 
+                </tr>
+ 
+                <tr class="Controls">
+                  <td class="th"><label for="after_service_tbl_employes_service_date_day">DATE</label></td> 
+                  <td>day - month - year<br>
+                    <select id="after_service_tbl_employes_service_date_day" name="{s_service_date_day_Name}">
+                      <option value="" selected>Select Value</option>
+ {s_service_date_day_Options} 
+                    </select>
+ - 
+                    <select id="after_service_tbl_employes_service_date_month" name="{s_service_date_month_Name}">
+                      <option value="" selected>Select Value</option>
+ {s_service_date_month_Options} 
+                    </select>
+ - <input id="after_service_tbl_employes_service_date_year" maxlength="4" size="4" value="{s_service_date_year}" name="{s_service_date_year_Name}"></td> 
+                </tr>
+ 
+                <tr class="Bottom">
+                  <td align="right" colspan="2">
+                    <!-- BEGIN Button Button_DoSearch --><input class="Button" id="after_service_tbl_employeButton_DoSearch" type="submit" alt="Search" value="search" name="{Button_Name}"><!-- END Button Button_DoSearch --></td> 
+                </tr>
+ 
+              </table>
+ </td> 
+          </tr>
+ 
+        </table>
+ 
+      </form>
+ <!-- END Record after_service_tbl_employe --></td> 
+    <td>
+      <p><a href="{Link5_Src}" id="Link5"><strong>ADMIN</strong></a></p>
+ 
+      <p><a href="{Link1_Src}" id="Link1" title="use this option only after attending to a service onboard a vessel."><strong>ADD AFTER SERVICE ENTRY</strong></a><br>
+<a href="{Link2_Src}" id="Link2" title="use this option when you have came to the office to forward spare parts or have done a special duty for the office."><strong>ADD SPECIAL DUTIES ENTRY</strong></a><br>
+<a href="{Link3_Src}" id="Link3"><strong>ADD TIME OFF OR SICKNESS ENTRY</strong></a></p>
+ 
+      <p><a href="{Link4_Src}" id="Link4"><strong>MONTHLY REPORT</strong></a></p>
+ 
+      <p><a href="{Logout_Src}" id="Logout"><strong>logout</strong></a></p>
+ </td> 
+  </tr>
+</table>
+</p>
+<p>
+<!-- BEGIN Grid after_service_tbl_employe1 -->
+<table cellspacing="0" cellpadding="0" border="0">
+  <tr>
+    <td valign="top">
+      <table class="Header" cellspacing="0" cellpadding="0" border="0">
+        <tr>
+          <td class="HeaderLeft"><img alt="" src="Styles/Blueprint1/Images/Spacer.gif" border="0"></td> 
+          <td class="th">Results for: &nbsp;{emp_name}</td> 
+          <td class="HeaderRight"><img alt="" src="Styles/Blueprint1/Images/Spacer.gif" border="0"></td> 
+        </tr>
+ 
+      </table>
+ 
+      <table class="Grid" cellspacing="0" cellpadding="0">
+        <tr class="Caption">
+          <th scope="col" rowspan="2"></th>
+ 
+          <th scope="col" rowspan="2">ORDER</th>
+ 
+          <th scope="col" rowspan="2">DATE</th>
+ 
+          <th scope="col" rowspan="2">PORT/PLACE</th>
+ 
+          <th scope="col" rowspan="2">TRANSPORT FEE</th>
+ 
+          <th scope="col" rowspan="2">FOLLOW<br>
+          UP</th>
+ 
+          <th scope="col" rowspan="2">AGENT<br>
+          EVAL.</th>
+ 
+          <th title="TIME OFF" scope="col" rowspan="2">TOFF</th>
+ 
+          <th title="SICKNESS TIME OFF" scope="col" rowspan="2">SK</th>
+ 
+          <th scope="col" colspan="3">NT&nbsp;<font color="#ff0000">AAHN</font></th>
+ 
+          <th scope="col" colspan="3">NT TECH</th>
+ 
+          <th scope="col" colspan="3">OT <font color="#ff0000">AAHO</font></th>
+ 
+          <th scope="col" colspan="3">OT TECH</th>
+ 
+          <th scope="col" colspan="3">ND <font color="#ff0000">AADN</font></th>
+ 
+          <th scope="col" colspan="3">WD <font color="#ff0000">AADW</font></th>
+ 
+        </tr>
+ 
+        <tr class="Caption">
+          <!--<th>&nbsp;</th> 
+
+          <th scope="col"></th>
+ 
+          <th scope="col"></th>
+ 
+          <th scope="col"></th>
+ 
+          <th scope="col"></th>
+ 
+          <th scope="col"></th>
+ 
+          <th scope="col"></th>
+ 
+          <th scope="col"></th>
+
+                  <th scope="col"></th>
+
+                  <th scope="col"></th>
+ 
+          <th scope="col"></th> -->
+          <th title="working time">WO</th>
+ 
+          <th title="waiting time">WA</th>
+ 
+          <th title="travel time">TR</th>
+ 
+          <th title="working time">WO</th>
+ 
+          <th title="waiting time">WA</th>
+ 
+          <th title="travel time">TR</th>
+ 
+          <th title="working time">WO</th>
+ 
+          <th title="waiting time">WA</th>
+ 
+          <th title="travel time">TR</th>
+ 
+          <th title="working time">WO</th>
+ 
+          <th title="waiting time">WA</th>
+ 
+          <th title="travel time">TR</th>
+ 
+          <th title="working time abroad">WO</th>
+ 
+          <th title="waiting time abroad">WA</th>
+ 
+          <th title="travel time abroad">TR</th>
+ 
+          <th title="working time abroad">WO</th>
+ 
+          <th title="waiting time abroad">WA</th>
+ 
+          <th title="travel time abroad">TR</th>
+ 
+        </tr>
+ 
+        <!-- BEGIN Row -->
+        <tr class="Row">
+          <td><a href="{Link1_Src}" id="after_service_tbl_employe1Link1_{after_service_tbl_employe1:rowNumber}">EDIT</a></td> 
+          <td>{ORDER_NO}</td> 
+          <td>{service_date_day}/{service_date_month}/{service_date_year}</td> 
+          <td>{PORT_NAME}&nbsp;</td> 
+          <td>{TRANSPORT_FEE_DESCRIPTION}&nbsp;</td> 
+          <td>{FOLLOW_UP}&nbsp;</td> 
+          <td>{AGENT_EVAL_TECH}</td> 
+          <td>{TIME_OFF}</td> 
+          <td>{SICKNESS_TIME_OFF}</td> 
+          <td style="BACKGROUND-COLOR: #666666"><strong>{NT_INV_WO}</strong></td> 
+          <td style="BACKGROUND-COLOR: #999999">{NT_INV_WA}</td> 
+          <td style="BACKGROUND-COLOR: #cccccc">{NT_INV_TR}</td> 
+          <td style="BACKGROUND-COLOR: #666666">{NT_TEC_WO}</td> 
+          <td style="BACKGROUND-COLOR: #999999">{NT_TEC_WA}</td> 
+          <td style="BACKGROUND-COLOR: #cccccc">{NT_TEC_TR}</td> 
+          <td style="BACKGROUND-COLOR: #666666">{OT_INV_WO}</td> 
+          <td style="BACKGROUND-COLOR: #999999">{OT_INV_WA}</td> 
+          <td style="BACKGROUND-COLOR: #cccccc">{OT_INV_TR}</td> 
+          <td style="BACKGROUND-COLOR: #666666">{OT_TEC_WO}</td> 
+          <td style="BACKGROUND-COLOR: #999999">{OT_TEC_WA}</td> 
+          <td style="BACKGROUND-COLOR: #cccccc">{OT_TEC_TR}</td> 
+          <td style="BACKGROUND-COLOR: #666666">{ND_WO}</td> 
+          <td style="BACKGROUND-COLOR: #999999">{ND_WA}</td> 
+          <td style="BACKGROUND-COLOR: #cccccc">{ND_TR}</td> 
+          <td style="BACKGROUND-COLOR: #666666">{WE_WO}</td> 
+          <td style="BACKGROUND-COLOR: #999999">{WE_WA}</td> 
+          <td style="BACKGROUND-COLOR: #cccccc">{WE_TR}</td> 
+        </tr>
+ <!-- END Row -->
+        <!-- BEGIN NoRecords -->
+        <tr class="NoRecords">
+          <td colspan="27">no records found.</td> 
+        </tr>
+ <!-- END NoRecords -->
+        <tr class="Footer">
+          <td colspan="27">
+            <!-- BEGIN Navigator Navigator -->
+            <!-- BEGIN First_On --><a href="{First_URL}">First</a> <!-- END First_On -->
+            <!-- BEGIN First_Off -->First <!-- END First_Off -->
+            <!-- BEGIN Prev_On --><a href="{Prev_URL}">Prev</a> <!-- END Prev_On -->
+            <!-- BEGIN Prev_Off -->Prev <!-- END Prev_Off -->
+            <!-- BEGIN Pages -->
+            <!-- BEGIN Page_On --><a href="{Page_URL}">{Page_Number}</a><!-- END Page_On -->
+            <!-- BEGIN Page_Off -->{Page_Number}<!-- END Page_Off --><!-- END Pages -->of &nbsp;{Total_Pages}&nbsp; 
+            <!-- BEGIN Next_On --><a href="{Next_URL}">Next</a> <!-- END Next_On -->
+            <!-- BEGIN Next_Off -->Next <!-- END Next_Off -->
+            <!-- BEGIN Last_On --><a href="{Last_URL}">Last</a> <!-- END Last_On -->
+            <!-- BEGIN Last_Off -->Last <!-- END Last_Off --><!-- END Navigator Navigator --></td> 
+        </tr>
+ 
+      </table>
+ </td> 
+  </tr>
+</table>
+<!-- END Grid after_service_tbl_employe1 --></p>
+</body>
+</html>

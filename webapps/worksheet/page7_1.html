@@ -1,0 +1,82 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html; charset=windows-1252">
+<title>page7_1</title>
+<meta content="CodeCharge Studio 4.1.00.032" name="GENERATOR">
+<link href="Styles/Blueprint1/Style_doctype.css" type="text/css" rel="stylesheet">
+</head>
+<body>
+<p>
+<table width="100%" border="0">
+  <tr>
+    <td><strong><font color="#000066" size="6">Filling in After Service Information</font></strong></td> 
+    <td>
+      <div align="right">
+<a href="{Link2_Src}" id="Link2"><strong>RETURN TO MAIN MENU</strong></a> 
+      </div>
+    </td>
+  </tr>
+</table>
+</p>
+<!-- BEGIN Record service_tbl -->
+<form id="service_tbl" name="{HTMLFormName}" action="{Action}" method="post">
+  <table cellspacing="0" cellpadding="0" border="0">
+    <tr>
+      <td valign="top">
+        <table class="Header" cellspacing="0" cellpadding="0" border="0">
+          <tr>
+            <td class="HeaderLeft"><img alt="" src="Styles/Blueprint1/Images/Spacer.gif" border="0"></td> 
+            <td class="th"><strong>After Service Info</strong></td> 
+            <td class="HeaderRight"><img alt="" src="Styles/Blueprint1/Images/Spacer.gif" border="0"></td>
+          </tr>
+        </table>
+ 
+        <table class="Record" cellspacing="0" cellpadding="0">
+          <!-- BEGIN Error -->
+          <tr class="Error">
+            <td colspan="2">{Error}</td>
+          </tr>
+          <!-- END Error -->
+          <tr class="Controls">
+            <td class="th"><label for="service_tblAGENT_EVAL_TECH">AGENT EVALUATION (TECHNICIAN)</label></td> 
+            <td>
+              <select id="service_tblAGENT_EVAL_TECH" name="{AGENT_EVAL_TECH_Name}">
+                <option value="" selected>Select Value</option>
+                {AGENT_EVAL_TECH_Options}
+              </select>
+ </td>
+          </tr>
+ 
+          <tr class="Controls">
+            <td class="th"><label for="service_tblRETURN_PARTS_TO">RETURN PARTS TO</label></td> 
+            <td>
+              <select id="service_tblRETURN_PARTS_TO" name="{RETURN_PARTS_TO_Name}">
+                <option value="" selected>Select Value</option>
+                {RETURN_PARTS_TO_Options}
+              </select>
+ </td>
+          </tr>
+ 
+          <tr class="Controls">
+            <td class="th"><label for="service_tblORDER_PARTS_FROM">ORDER PARTS FROM</label></td> 
+            <td>
+              <select id="service_tblORDER_PARTS_FROM" name="{ORDER_PARTS_FROM_Name}">
+                <option value="" selected>Select Value</option>
+                {ORDER_PARTS_FROM_Options}
+              </select>
+ </td>
+          </tr>
+ 
+          <tr class="Bottom">
+            <td align="right" colspan="2">
+              <!-- BEGIN Button Button_Update --><input class="Button" id="service_tblButton_Update" type="submit" alt="Submit" value="Submit" name="{Button_Name}"><!-- END Button Button_Update --></td>
+          </tr>
+        </table>
+      </td>
+    </tr>
+  </table>
+</form>
+<!-- END Record service_tbl --><br>
+</body>
+</html>

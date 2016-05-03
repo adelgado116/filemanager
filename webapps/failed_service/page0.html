@@ -1,0 +1,55 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html; charset=windows-1252">
+<title>Failed Service Report</title>
+<meta content="CodeCharge Studio 4.1.00.032" name="GENERATOR">
+<link href="Styles/Blueprint1/Style_doctype.css" type="text/css" rel="stylesheet">
+</head>
+<body>
+<!-- BEGIN Grid equipment_manufacturer_tb1 -->
+<table cellspacing="0" cellpadding="0" border="0">
+  <tr>
+    <td valign="top">
+      <table class="Header" cellspacing="0" cellpadding="0" border="0">
+        <tr>
+          <td class="HeaderLeft"><img alt="" src="Styles/Blueprint1/Images/Spacer.gif" border="0"></td> 
+          <td class="th"><strong>List of Equipments under Service</strong></td> 
+          <td class="HeaderRight"><img alt="" src="Styles/Blueprint1/Images/Spacer.gif" border="0"></td>
+        </tr>
+      </table>
+ 
+      <table class="Grid" cellspacing="0" cellpadding="0">
+        <tr class="Caption">
+          <th scope="col">ORDER NO</th>
+ 
+          <th scope="col">TYPE OF SERVICE</th>
+ 
+          <th scope="col">MANUFACTURER</th>
+ 
+          <th scope="col">TYPE OF EQUIPMENT</th>
+ 
+          <th scope="col">MODEL</th>
+        </tr>
+ 
+        <!-- BEGIN Row -->
+        <tr class="Row">
+          <td>{ORDER_NO}&nbsp;</td> 
+          <td>{SERVICE_TYPE}&nbsp;</td> 
+          <td>{MANUF_NAME}&nbsp;</td> 
+          <td>{EQUIP_TYPE}&nbsp;</td> 
+          <td><a href="{EQUIP_MODEL_Src}" id="equipment_manufacturer_tb1EQUIP_MODEL_{equipment_manufacturer_tb1:rowNumber}">{EQUIP_MODEL}</a>&nbsp;</td>
+        </tr>
+ <!-- END Row -->
+        <!-- BEGIN NoRecords -->
+        <tr class="NoRecords">
+          <td colspan="5">no records available</td>
+        </tr>
+        <!-- END NoRecords -->
+      </table>
+    </td>
+  </tr>
+</table>
+<!-- END Grid equipment_manufacturer_tb1 --><br>
+</body>
+</html>

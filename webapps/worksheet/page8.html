@@ -1,0 +1,418 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html; charset=windows-1252">
+<title>page8</title>
+<meta content="CodeCharge Studio 4.1.00.032" name="GENERATOR">
+<link href="Styles/Blueprint1/Style_doctype.css" type="text/css" rel="stylesheet">
+<script language="JavaScript" type="text/javascript">
+//Begin CCS script
+//Include Common JSFunctions @1-D3B5F5BF
+</script>
+<script language="JavaScript" src="ClientI18N.php?file=Functions.js&amp;locale={res:CCS_LocaleID}" type="text/javascript" charset="utf-8"></script>
+<script language="JavaScript" type="text/javascript">
+//End Include Common JSFunctions
+
+//after_service_tblButton_Submit_OnClick @69-A9140E18
+function after_service_tblButton_Submit_OnClick()
+{
+    var result = true;
+//End after_service_tblButton_Submit_OnClick
+
+//Confirmation Message @70-257FDD03
+    return confirm('Submit records?');
+//End Confirmation Message
+
+//Close after_service_tblButton_Submit_OnClick @69-BC33A33A
+    return result;
+}
+//End Close after_service_tblButton_Submit_OnClick
+
+//after_service_tblCancel_OnClick @71-6F925747
+function after_service_tblCancel_OnClick()
+{
+    disableValidation = true;
+}
+//End after_service_tblCancel_OnClick
+
+//bind_events @1-389A3C51
+function bind_events() {
+    addEventHandler("after_service_tblButton_Submit", "click", after_service_tblButton_Submit_OnClick);
+    addEventHandler("after_service_tblCancel", "click", after_service_tblCancel_OnClick);
+}
+//End bind_events
+
+window.onload = bind_events; //Assign bind_events @1-19F7B649
+
+//End CCS script
+</script>
+</head>
+<body>
+<!-- BEGIN Record after_service_tblSearch -->
+<form id="after_service_tblSearch" name="{HTMLFormName}" action="{Action}" method="post">
+  <table cellspacing="0" cellpadding="0" border="0">
+    <tr>
+      <td valign="top">
+        <table class="Header" cellspacing="0" cellpadding="0" border="0">
+          <tr>
+            <td class="HeaderLeft"><img alt="" src="Styles/Blueprint1/Images/Spacer.gif" border="0"></td> 
+            <td class="th"><strong>Search After Service Tbl </strong></td> 
+            <td class="HeaderRight"><img alt="" src="Styles/Blueprint1/Images/Spacer.gif" border="0"></td>
+          </tr>
+        </table>
+ 
+        <table class="Record" cellspacing="0" cellpadding="0">
+          <!-- BEGIN Error -->
+          <tr class="Error">
+            <td colspan="2">{Error}</td>
+          </tr>
+          <!-- END Error -->
+          <tr class="Controls">
+            <td class="th"><label for="after_service_tblSearchs_ORDER_NO">ORDER NO</label></td> 
+            <td><input id="after_service_tblSearchs_ORDER_NO" maxlength="6" size="6" value="{s_ORDER_NO}" name="{s_ORDER_NO_Name}"></td>
+          </tr>
+ 
+          <tr class="Controls">
+            <td class="th"><label for="after_service_tblSearchs_emp_id">Emp Id</label></td> 
+            <td>
+              <select id="after_service_tblSearchs_emp_id" name="{s_emp_id_Name}">
+                <option value="" selected>Select Value</option>
+                {s_emp_id_Options}
+              </select>
+ </td>
+          </tr>
+ 
+          <tr class="Controls">
+            <td class="th"><label for="after_service_tblSearchs_service_date_day">Service Date Day</label></td> 
+            <td>
+              <select id="after_service_tblSearchs_service_date_day" name="{s_service_date_day_Name}">
+                <option value="" selected>Select Value</option>
+                {s_service_date_day_Options}
+              </select>
+ </td>
+          </tr>
+ 
+          <tr class="Controls">
+            <td class="th"><label for="after_service_tblSearchs_service_date_month">Service Date Month</label></td> 
+            <td>
+              <select id="after_service_tblSearchs_service_date_month" name="{s_service_date_month_Name}">
+                <option value="" selected>Select Value</option>
+                {s_service_date_month_Options}
+              </select>
+ </td>
+          </tr>
+ 
+          <tr class="Controls">
+            <td class="th"><label for="after_service_tblSearchs_service_date_year">Service Date Year</label></td> 
+            <td><input id="after_service_tblSearchs_service_date_year" maxlength="4" size="4" value="{s_service_date_year}" name="{s_service_date_year_Name}"></td>
+          </tr>
+ 
+          <tr class="Bottom">
+            <td align="right" colspan="2">
+              <!-- BEGIN Button Button_DoSearch --><input class="Button" id="after_service_tblSearchButton_DoSearch" type="submit" alt="Search" value="Search" name="{Button_Name}"><!-- END Button Button_DoSearch --></td>
+          </tr>
+        </table>
+      </td>
+    </tr>
+  </table>
+</form>
+<!-- END Record after_service_tblSearch --><br>
+<!-- BEGIN EditableGrid after_service_tbl -->
+<form id="after_service_tbl" name="{HTMLFormName}" action="{Action}" method="post">
+  <input type="hidden" value="{FormState}" name="FormState">{FormScript} 
+  <table cellspacing="0" cellpadding="0" border="0">
+    <tr>
+      <td valign="top">
+        <table class="Header" cellspacing="0" cellpadding="0" border="0">
+          <tr>
+            <td class="HeaderLeft"><img alt="" src="Styles/Blueprint1/Images/Spacer.gif" border="0"></td> 
+            <td class="th"><strong>List of After Service Tbl </strong></td> 
+            <td class="HeaderRight"><img alt="" src="Styles/Blueprint1/Images/Spacer.gif" border="0"></td>
+          </tr>
+        </table>
+ 
+        <table class="Grid" cellspacing="0" cellpadding="0">
+          <!-- BEGIN Error -->
+          <tr class="Error">
+            <td colspan="26">{Error}</td>
+          </tr>
+          <!-- END Error -->
+          <tr class="Caption">
+            <th scope="col">
+            <!-- BEGIN Sorter Sorter_ORDER_NO -->ORDER NO 
+            <!-- BEGIN Asc_On --><img alt="Ascending" src="Styles/Blueprint1/Images/Asc.gif" border="0"><!-- END Asc_On -->
+            <!-- BEGIN Asc_Off --><a href="{Asc_URL}" id="after_service_tblSorter_ORDER_NO"><img alt="{Asc_URL}" src="Styles/Blueprint1/Images/AscOff.gif" border="0"></a><!-- END Asc_Off -->
+            <!-- BEGIN Desc_On --><img alt="Descending" src="Styles/Blueprint1/Images/Desc.gif" border="0"><!-- END Desc_On -->
+            <!-- BEGIN Desc_Off --><a href="{Desc_URL}" id="after_service_tblSorter_ORDER_NO"><img alt="{Desc_URL}" src="Styles/Blueprint1/Images/DescOff.gif" border="0"></a><!-- END Desc_Off --><!-- END Sorter Sorter_ORDER_NO --></th>
+ 
+            <th scope="col">
+            <!-- BEGIN Sorter Sorter_emp_id -->Emp Id 
+            <!-- BEGIN Asc_On --><img alt="Ascending" src="Styles/Blueprint1/Images/Asc.gif" border="0"><!-- END Asc_On -->
+            <!-- BEGIN Asc_Off --><a href="{Asc_URL}" id="after_service_tblSorter_emp_id"><img alt="{Asc_URL}" src="Styles/Blueprint1/Images/AscOff.gif" border="0"></a><!-- END Asc_Off -->
+            <!-- BEGIN Desc_On --><img alt="Descending" src="Styles/Blueprint1/Images/Desc.gif" border="0"><!-- END Desc_On -->
+            <!-- BEGIN Desc_Off --><a href="{Desc_URL}" id="after_service_tblSorter_emp_id"><img alt="{Desc_URL}" src="Styles/Blueprint1/Images/DescOff.gif" border="0"></a><!-- END Desc_Off --><!-- END Sorter Sorter_emp_id --></th>
+ 
+            <th scope="col">
+            <!-- BEGIN Sorter Sorter_service_date_day -->Service Date Day 
+            <!-- BEGIN Asc_On --><img alt="Ascending" src="Styles/Blueprint1/Images/Asc.gif" border="0"><!-- END Asc_On -->
+            <!-- BEGIN Asc_Off --><a href="{Asc_URL}" id="after_service_tblSorter_service_date_day"><img alt="{Asc_URL}" src="Styles/Blueprint1/Images/AscOff.gif" border="0"></a><!-- END Asc_Off -->
+            <!-- BEGIN Desc_On --><img alt="Descending" src="Styles/Blueprint1/Images/Desc.gif" border="0"><!-- END Desc_On -->
+            <!-- BEGIN Desc_Off --><a href="{Desc_URL}" id="after_service_tblSorter_service_date_day"><img alt="{Desc_URL}" src="Styles/Blueprint1/Images/DescOff.gif" border="0"></a><!-- END Desc_Off --><!-- END Sorter Sorter_service_date_day --></th>
+ 
+            <th scope="col">
+            <!-- BEGIN Sorter Sorter_service_date_month -->Service Date Month 
+            <!-- BEGIN Asc_On --><img alt="Ascending" src="Styles/Blueprint1/Images/Asc.gif" border="0"><!-- END Asc_On -->
+            <!-- BEGIN Asc_Off --><a href="{Asc_URL}" id="after_service_tblSorter_service_date_month"><img alt="{Asc_URL}" src="Styles/Blueprint1/Images/AscOff.gif" border="0"></a><!-- END Asc_Off -->
+            <!-- BEGIN Desc_On --><img alt="Descending" src="Styles/Blueprint1/Images/Desc.gif" border="0"><!-- END Desc_On -->
+            <!-- BEGIN Desc_Off --><a href="{Desc_URL}" id="after_service_tblSorter_service_date_month"><img alt="{Desc_URL}" src="Styles/Blueprint1/Images/DescOff.gif" border="0"></a><!-- END Desc_Off --><!-- END Sorter Sorter_service_date_month --></th>
+ 
+            <th scope="col">
+            <!-- BEGIN Sorter Sorter_service_date_year -->Service Date Year 
+            <!-- BEGIN Asc_On --><img alt="Ascending" src="Styles/Blueprint1/Images/Asc.gif" border="0"><!-- END Asc_On -->
+            <!-- BEGIN Asc_Off --><a href="{Asc_URL}" id="after_service_tblSorter_service_date_year"><img alt="{Asc_URL}" src="Styles/Blueprint1/Images/AscOff.gif" border="0"></a><!-- END Asc_Off -->
+            <!-- BEGIN Desc_On --><img alt="Descending" src="Styles/Blueprint1/Images/Desc.gif" border="0"><!-- END Desc_On -->
+            <!-- BEGIN Desc_Off --><a href="{Desc_URL}" id="after_service_tblSorter_service_date_year"><img alt="{Desc_URL}" src="Styles/Blueprint1/Images/DescOff.gif" border="0"></a><!-- END Desc_Off --><!-- END Sorter Sorter_service_date_year --></th>
+ 
+            <th scope="col">
+            <!-- BEGIN Sorter Sorter_FOLLOW_UP -->FOLLOW UP 
+            <!-- BEGIN Asc_On --><img alt="Ascending" src="Styles/Blueprint1/Images/Asc.gif" border="0"><!-- END Asc_On -->
+            <!-- BEGIN Asc_Off --><a href="{Asc_URL}" id="after_service_tblSorter_FOLLOW_UP"><img alt="{Asc_URL}" src="Styles/Blueprint1/Images/AscOff.gif" border="0"></a><!-- END Asc_Off -->
+            <!-- BEGIN Desc_On --><img alt="Descending" src="Styles/Blueprint1/Images/Desc.gif" border="0"><!-- END Desc_On -->
+            <!-- BEGIN Desc_Off --><a href="{Desc_URL}" id="after_service_tblSorter_FOLLOW_UP"><img alt="{Desc_URL}" src="Styles/Blueprint1/Images/DescOff.gif" border="0"></a><!-- END Desc_Off --><!-- END Sorter Sorter_FOLLOW_UP --></th>
+ 
+            <th scope="col">
+            <!-- BEGIN Sorter Sorter_AGENT_EVAL_TECH -->AGENT EVAL TECH 
+            <!-- BEGIN Asc_On --><img alt="Ascending" src="Styles/Blueprint1/Images/Asc.gif" border="0"><!-- END Asc_On -->
+            <!-- BEGIN Asc_Off --><a href="{Asc_URL}" id="after_service_tblSorter_AGENT_EVAL_TECH"><img alt="{Asc_URL}" src="Styles/Blueprint1/Images/AscOff.gif" border="0"></a><!-- END Asc_Off -->
+            <!-- BEGIN Desc_On --><img alt="Descending" src="Styles/Blueprint1/Images/Desc.gif" border="0"><!-- END Desc_On -->
+            <!-- BEGIN Desc_Off --><a href="{Desc_URL}" id="after_service_tblSorter_AGENT_EVAL_TECH"><img alt="{Desc_URL}" src="Styles/Blueprint1/Images/DescOff.gif" border="0"></a><!-- END Desc_Off --><!-- END Sorter Sorter_AGENT_EVAL_TECH --></th>
+ 
+            <th scope="col">
+            <!-- BEGIN Sorter Sorter_PORT_FEE_ID -->PORT FEE ID 
+            <!-- BEGIN Asc_On --><img alt="Ascending" src="Styles/Blueprint1/Images/Asc.gif" border="0"><!-- END Asc_On -->
+            <!-- BEGIN Asc_Off --><a href="{Asc_URL}" id="after_service_tblSorter_PORT_FEE_ID"><img alt="{Asc_URL}" src="Styles/Blueprint1/Images/AscOff.gif" border="0"></a><!-- END Asc_Off -->
+            <!-- BEGIN Desc_On --><img alt="Descending" src="Styles/Blueprint1/Images/Desc.gif" border="0"><!-- END Desc_On -->
+            <!-- BEGIN Desc_Off --><a href="{Desc_URL}" id="after_service_tblSorter_PORT_FEE_ID"><img alt="{Desc_URL}" src="Styles/Blueprint1/Images/DescOff.gif" border="0"></a><!-- END Desc_Off --><!-- END Sorter Sorter_PORT_FEE_ID --></th>
+ 
+            <th scope="col">
+            <!-- BEGIN Sorter Sorter_NT_INV_WO -->NT INV WO 
+            <!-- BEGIN Asc_On --><img alt="Ascending" src="Styles/Blueprint1/Images/Asc.gif" border="0"><!-- END Asc_On -->
+            <!-- BEGIN Asc_Off --><a href="{Asc_URL}" id="after_service_tblSorter_NT_INV_WO"><img alt="{Asc_URL}" src="Styles/Blueprint1/Images/AscOff.gif" border="0"></a><!-- END Asc_Off -->
+            <!-- BEGIN Desc_On --><img alt="Descending" src="Styles/Blueprint1/Images/Desc.gif" border="0"><!-- END Desc_On -->
+            <!-- BEGIN Desc_Off --><a href="{Desc_URL}" id="after_service_tblSorter_NT_INV_WO"><img alt="{Desc_URL}" src="Styles/Blueprint1/Images/DescOff.gif" border="0"></a><!-- END Desc_Off --><!-- END Sorter Sorter_NT_INV_WO --></th>
+ 
+            <th scope="col">
+            <!-- BEGIN Sorter Sorter_NT_INV_WA -->NT INV WA 
+            <!-- BEGIN Asc_On --><img alt="Ascending" src="Styles/Blueprint1/Images/Asc.gif" border="0"><!-- END Asc_On -->
+            <!-- BEGIN Asc_Off --><a href="{Asc_URL}" id="after_service_tblSorter_NT_INV_WA"><img alt="{Asc_URL}" src="Styles/Blueprint1/Images/AscOff.gif" border="0"></a><!-- END Asc_Off -->
+            <!-- BEGIN Desc_On --><img alt="Descending" src="Styles/Blueprint1/Images/Desc.gif" border="0"><!-- END Desc_On -->
+            <!-- BEGIN Desc_Off --><a href="{Desc_URL}" id="after_service_tblSorter_NT_INV_WA"><img alt="{Desc_URL}" src="Styles/Blueprint1/Images/DescOff.gif" border="0"></a><!-- END Desc_Off --><!-- END Sorter Sorter_NT_INV_WA --></th>
+ 
+            <th scope="col">
+            <!-- BEGIN Sorter Sorter_NT_INV_TR -->NT INV TR 
+            <!-- BEGIN Asc_On --><img alt="Ascending" src="Styles/Blueprint1/Images/Asc.gif" border="0"><!-- END Asc_On -->
+            <!-- BEGIN Asc_Off --><a href="{Asc_URL}" id="after_service_tblSorter_NT_INV_TR"><img alt="{Asc_URL}" src="Styles/Blueprint1/Images/AscOff.gif" border="0"></a><!-- END Asc_Off -->
+            <!-- BEGIN Desc_On --><img alt="Descending" src="Styles/Blueprint1/Images/Desc.gif" border="0"><!-- END Desc_On -->
+            <!-- BEGIN Desc_Off --><a href="{Desc_URL}" id="after_service_tblSorter_NT_INV_TR"><img alt="{Desc_URL}" src="Styles/Blueprint1/Images/DescOff.gif" border="0"></a><!-- END Desc_Off --><!-- END Sorter Sorter_NT_INV_TR --></th>
+ 
+            <th scope="col">
+            <!-- BEGIN Sorter Sorter_NT_TEC_WO -->NT TEC WO 
+            <!-- BEGIN Asc_On --><img alt="Ascending" src="Styles/Blueprint1/Images/Asc.gif" border="0"><!-- END Asc_On -->
+            <!-- BEGIN Asc_Off --><a href="{Asc_URL}" id="after_service_tblSorter_NT_TEC_WO"><img alt="{Asc_URL}" src="Styles/Blueprint1/Images/AscOff.gif" border="0"></a><!-- END Asc_Off -->
+            <!-- BEGIN Desc_On --><img alt="Descending" src="Styles/Blueprint1/Images/Desc.gif" border="0"><!-- END Desc_On -->
+            <!-- BEGIN Desc_Off --><a href="{Desc_URL}" id="after_service_tblSorter_NT_TEC_WO"><img alt="{Desc_URL}" src="Styles/Blueprint1/Images/DescOff.gif" border="0"></a><!-- END Desc_Off --><!-- END Sorter Sorter_NT_TEC_WO --></th>
+ 
+            <th scope="col">
+            <!-- BEGIN Sorter Sorter_NT_TEC_WA -->NT TEC WA 
+            <!-- BEGIN Asc_On --><img alt="Ascending" src="Styles/Blueprint1/Images/Asc.gif" border="0"><!-- END Asc_On -->
+            <!-- BEGIN Asc_Off --><a href="{Asc_URL}" id="after_service_tblSorter_NT_TEC_WA"><img alt="{Asc_URL}" src="Styles/Blueprint1/Images/AscOff.gif" border="0"></a><!-- END Asc_Off -->
+            <!-- BEGIN Desc_On --><img alt="Descending" src="Styles/Blueprint1/Images/Desc.gif" border="0"><!-- END Desc_On -->
+            <!-- BEGIN Desc_Off --><a href="{Desc_URL}" id="after_service_tblSorter_NT_TEC_WA"><img alt="{Desc_URL}" src="Styles/Blueprint1/Images/DescOff.gif" border="0"></a><!-- END Desc_Off --><!-- END Sorter Sorter_NT_TEC_WA --></th>
+ 
+            <th scope="col">
+            <!-- BEGIN Sorter Sorter_NT_TEC_TR -->NT TEC TR 
+            <!-- BEGIN Asc_On --><img alt="Ascending" src="Styles/Blueprint1/Images/Asc.gif" border="0"><!-- END Asc_On -->
+            <!-- BEGIN Asc_Off --><a href="{Asc_URL}" id="after_service_tblSorter_NT_TEC_TR"><img alt="{Asc_URL}" src="Styles/Blueprint1/Images/AscOff.gif" border="0"></a><!-- END Asc_Off -->
+            <!-- BEGIN Desc_On --><img alt="Descending" src="Styles/Blueprint1/Images/Desc.gif" border="0"><!-- END Desc_On -->
+            <!-- BEGIN Desc_Off --><a href="{Desc_URL}" id="after_service_tblSorter_NT_TEC_TR"><img alt="{Desc_URL}" src="Styles/Blueprint1/Images/DescOff.gif" border="0"></a><!-- END Desc_Off --><!-- END Sorter Sorter_NT_TEC_TR --></th>
+ 
+            <th scope="col">
+            <!-- BEGIN Sorter Sorter_OT_INV_WO -->OT INV WO 
+            <!-- BEGIN Asc_On --><img alt="Ascending" src="Styles/Blueprint1/Images/Asc.gif" border="0"><!-- END Asc_On -->
+            <!-- BEGIN Asc_Off --><a href="{Asc_URL}" id="after_service_tblSorter_OT_INV_WO"><img alt="{Asc_URL}" src="Styles/Blueprint1/Images/AscOff.gif" border="0"></a><!-- END Asc_Off -->
+            <!-- BEGIN Desc_On --><img alt="Descending" src="Styles/Blueprint1/Images/Desc.gif" border="0"><!-- END Desc_On -->
+            <!-- BEGIN Desc_Off --><a href="{Desc_URL}" id="after_service_tblSorter_OT_INV_WO"><img alt="{Desc_URL}" src="Styles/Blueprint1/Images/DescOff.gif" border="0"></a><!-- END Desc_Off --><!-- END Sorter Sorter_OT_INV_WO --></th>
+ 
+            <th scope="col">
+            <!-- BEGIN Sorter Sorter_OT_INV_WA -->OT INV WA 
+            <!-- BEGIN Asc_On --><img alt="Ascending" src="Styles/Blueprint1/Images/Asc.gif" border="0"><!-- END Asc_On -->
+            <!-- BEGIN Asc_Off --><a href="{Asc_URL}" id="after_service_tblSorter_OT_INV_WA"><img alt="{Asc_URL}" src="Styles/Blueprint1/Images/AscOff.gif" border="0"></a><!-- END Asc_Off -->
+            <!-- BEGIN Desc_On --><img alt="Descending" src="Styles/Blueprint1/Images/Desc.gif" border="0"><!-- END Desc_On -->
+            <!-- BEGIN Desc_Off --><a href="{Desc_URL}" id="after_service_tblSorter_OT_INV_WA"><img alt="{Desc_URL}" src="Styles/Blueprint1/Images/DescOff.gif" border="0"></a><!-- END Desc_Off --><!-- END Sorter Sorter_OT_INV_WA --></th>
+ 
+            <th scope="col">
+            <!-- BEGIN Sorter Sorter_OT_INV_TR -->OT INV TR 
+            <!-- BEGIN Asc_On --><img alt="Ascending" src="Styles/Blueprint1/Images/Asc.gif" border="0"><!-- END Asc_On -->
+            <!-- BEGIN Asc_Off --><a href="{Asc_URL}" id="after_service_tblSorter_OT_INV_TR"><img alt="{Asc_URL}" src="Styles/Blueprint1/Images/AscOff.gif" border="0"></a><!-- END Asc_Off -->
+            <!-- BEGIN Desc_On --><img alt="Descending" src="Styles/Blueprint1/Images/Desc.gif" border="0"><!-- END Desc_On -->
+            <!-- BEGIN Desc_Off --><a href="{Desc_URL}" id="after_service_tblSorter_OT_INV_TR"><img alt="{Desc_URL}" src="Styles/Blueprint1/Images/DescOff.gif" border="0"></a><!-- END Desc_Off --><!-- END Sorter Sorter_OT_INV_TR --></th>
+ 
+            <th scope="col">
+            <!-- BEGIN Sorter Sorter_OT_TEC_WO -->OT TEC WO 
+            <!-- BEGIN Asc_On --><img alt="Ascending" src="Styles/Blueprint1/Images/Asc.gif" border="0"><!-- END Asc_On -->
+            <!-- BEGIN Asc_Off --><a href="{Asc_URL}" id="after_service_tblSorter_OT_TEC_WO"><img alt="{Asc_URL}" src="Styles/Blueprint1/Images/AscOff.gif" border="0"></a><!-- END Asc_Off -->
+            <!-- BEGIN Desc_On --><img alt="Descending" src="Styles/Blueprint1/Images/Desc.gif" border="0"><!-- END Desc_On -->
+            <!-- BEGIN Desc_Off --><a href="{Desc_URL}" id="after_service_tblSorter_OT_TEC_WO"><img alt="{Desc_URL}" src="Styles/Blueprint1/Images/DescOff.gif" border="0"></a><!-- END Desc_Off --><!-- END Sorter Sorter_OT_TEC_WO --></th>
+ 
+            <th scope="col">
+            <!-- BEGIN Sorter Sorter_OT_TEC_WA -->OT TEC WA 
+            <!-- BEGIN Asc_On --><img alt="Ascending" src="Styles/Blueprint1/Images/Asc.gif" border="0"><!-- END Asc_On -->
+            <!-- BEGIN Asc_Off --><a href="{Asc_URL}" id="after_service_tblSorter_OT_TEC_WA"><img alt="{Asc_URL}" src="Styles/Blueprint1/Images/AscOff.gif" border="0"></a><!-- END Asc_Off -->
+            <!-- BEGIN Desc_On --><img alt="Descending" src="Styles/Blueprint1/Images/Desc.gif" border="0"><!-- END Desc_On -->
+            <!-- BEGIN Desc_Off --><a href="{Desc_URL}" id="after_service_tblSorter_OT_TEC_WA"><img alt="{Desc_URL}" src="Styles/Blueprint1/Images/DescOff.gif" border="0"></a><!-- END Desc_Off --><!-- END Sorter Sorter_OT_TEC_WA --></th>
+ 
+            <th scope="col">
+            <!-- BEGIN Sorter Sorter_OT_TEC_TR -->OT TEC TR 
+            <!-- BEGIN Asc_On --><img alt="Ascending" src="Styles/Blueprint1/Images/Asc.gif" border="0"><!-- END Asc_On -->
+            <!-- BEGIN Asc_Off --><a href="{Asc_URL}" id="after_service_tblSorter_OT_TEC_TR"><img alt="{Asc_URL}" src="Styles/Blueprint1/Images/AscOff.gif" border="0"></a><!-- END Asc_Off -->
+            <!-- BEGIN Desc_On --><img alt="Descending" src="Styles/Blueprint1/Images/Desc.gif" border="0"><!-- END Desc_On -->
+            <!-- BEGIN Desc_Off --><a href="{Desc_URL}" id="after_service_tblSorter_OT_TEC_TR"><img alt="{Desc_URL}" src="Styles/Blueprint1/Images/DescOff.gif" border="0"></a><!-- END Desc_Off --><!-- END Sorter Sorter_OT_TEC_TR --></th>
+ 
+            <th scope="col">
+            <!-- BEGIN Sorter Sorter_ND_WO -->ND WO 
+            <!-- BEGIN Asc_On --><img alt="Ascending" src="Styles/Blueprint1/Images/Asc.gif" border="0"><!-- END Asc_On -->
+            <!-- BEGIN Asc_Off --><a href="{Asc_URL}" id="after_service_tblSorter_ND_WO"><img alt="{Asc_URL}" src="Styles/Blueprint1/Images/AscOff.gif" border="0"></a><!-- END Asc_Off -->
+            <!-- BEGIN Desc_On --><img alt="Descending" src="Styles/Blueprint1/Images/Desc.gif" border="0"><!-- END Desc_On -->
+            <!-- BEGIN Desc_Off --><a href="{Desc_URL}" id="after_service_tblSorter_ND_WO"><img alt="{Desc_URL}" src="Styles/Blueprint1/Images/DescOff.gif" border="0"></a><!-- END Desc_Off --><!-- END Sorter Sorter_ND_WO --></th>
+ 
+            <th scope="col">
+            <!-- BEGIN Sorter Sorter_ND_WA -->ND WA 
+            <!-- BEGIN Asc_On --><img alt="Ascending" src="Styles/Blueprint1/Images/Asc.gif" border="0"><!-- END Asc_On -->
+            <!-- BEGIN Asc_Off --><a href="{Asc_URL}" id="after_service_tblSorter_ND_WA"><img alt="{Asc_URL}" src="Styles/Blueprint1/Images/AscOff.gif" border="0"></a><!-- END Asc_Off -->
+            <!-- BEGIN Desc_On --><img alt="Descending" src="Styles/Blueprint1/Images/Desc.gif" border="0"><!-- END Desc_On -->
+            <!-- BEGIN Desc_Off --><a href="{Desc_URL}" id="after_service_tblSorter_ND_WA"><img alt="{Desc_URL}" src="Styles/Blueprint1/Images/DescOff.gif" border="0"></a><!-- END Desc_Off --><!-- END Sorter Sorter_ND_WA --></th>
+ 
+            <th scope="col">
+            <!-- BEGIN Sorter Sorter_ND_TR -->ND TR 
+            <!-- BEGIN Asc_On --><img alt="Ascending" src="Styles/Blueprint1/Images/Asc.gif" border="0"><!-- END Asc_On -->
+            <!-- BEGIN Asc_Off --><a href="{Asc_URL}" id="after_service_tblSorter_ND_TR"><img alt="{Asc_URL}" src="Styles/Blueprint1/Images/AscOff.gif" border="0"></a><!-- END Asc_Off -->
+            <!-- BEGIN Desc_On --><img alt="Descending" src="Styles/Blueprint1/Images/Desc.gif" border="0"><!-- END Desc_On -->
+            <!-- BEGIN Desc_Off --><a href="{Desc_URL}" id="after_service_tblSorter_ND_TR"><img alt="{Desc_URL}" src="Styles/Blueprint1/Images/DescOff.gif" border="0"></a><!-- END Desc_Off --><!-- END Sorter Sorter_ND_TR --></th>
+ 
+            <th scope="col">
+            <!-- BEGIN Sorter Sorter_WE_WO -->WE WO 
+            <!-- BEGIN Asc_On --><img alt="Ascending" src="Styles/Blueprint1/Images/Asc.gif" border="0"><!-- END Asc_On -->
+            <!-- BEGIN Asc_Off --><a href="{Asc_URL}" id="after_service_tblSorter_WE_WO"><img alt="{Asc_URL}" src="Styles/Blueprint1/Images/AscOff.gif" border="0"></a><!-- END Asc_Off -->
+            <!-- BEGIN Desc_On --><img alt="Descending" src="Styles/Blueprint1/Images/Desc.gif" border="0"><!-- END Desc_On -->
+            <!-- BEGIN Desc_Off --><a href="{Desc_URL}" id="after_service_tblSorter_WE_WO"><img alt="{Desc_URL}" src="Styles/Blueprint1/Images/DescOff.gif" border="0"></a><!-- END Desc_Off --><!-- END Sorter Sorter_WE_WO --></th>
+ 
+            <th scope="col">
+            <!-- BEGIN Sorter Sorter_WE_WA -->WE WA 
+            <!-- BEGIN Asc_On --><img alt="Ascending" src="Styles/Blueprint1/Images/Asc.gif" border="0"><!-- END Asc_On -->
+            <!-- BEGIN Asc_Off --><a href="{Asc_URL}" id="after_service_tblSorter_WE_WA"><img alt="{Asc_URL}" src="Styles/Blueprint1/Images/AscOff.gif" border="0"></a><!-- END Asc_Off -->
+            <!-- BEGIN Desc_On --><img alt="Descending" src="Styles/Blueprint1/Images/Desc.gif" border="0"><!-- END Desc_On -->
+            <!-- BEGIN Desc_Off --><a href="{Desc_URL}" id="after_service_tblSorter_WE_WA"><img alt="{Desc_URL}" src="Styles/Blueprint1/Images/DescOff.gif" border="0"></a><!-- END Desc_Off --><!-- END Sorter Sorter_WE_WA --></th>
+ 
+            <th scope="col">
+            <!-- BEGIN Sorter Sorter_WE_TR -->WE TR 
+            <!-- BEGIN Asc_On --><img alt="Ascending" src="Styles/Blueprint1/Images/Asc.gif" border="0"><!-- END Asc_On -->
+            <!-- BEGIN Asc_Off --><a href="{Asc_URL}" id="after_service_tblSorter_WE_TR"><img alt="{Asc_URL}" src="Styles/Blueprint1/Images/AscOff.gif" border="0"></a><!-- END Asc_Off -->
+            <!-- BEGIN Desc_On --><img alt="Descending" src="Styles/Blueprint1/Images/Desc.gif" border="0"><!-- END Desc_On -->
+            <!-- BEGIN Desc_Off --><a href="{Desc_URL}" id="after_service_tblSorter_WE_TR"><img alt="{Desc_URL}" src="Styles/Blueprint1/Images/DescOff.gif" border="0"></a><!-- END Desc_Off --><!-- END Sorter Sorter_WE_TR --></th>
+          </tr>
+ 
+          <!-- BEGIN Row -->
+          <!-- BEGIN RowError -->
+          <tr class="Error">
+            <td colspan="26">{Error}</td>
+          </tr>
+          <!-- END RowError -->
+          <tr class="Row">
+            <td><label for="after_service_tblORDER_NO_{after_service_tbl:rowNumber}" style="display: none;">ORDER NO</label><input id="after_service_tblORDER_NO_{after_service_tbl:rowNumber}" maxlength="6" size="6" value="{ORDER_NO}" name="{ORDER_NO_Name}"></td> 
+            <td><label for="after_service_tblemp_id_{after_service_tbl:rowNumber}" style="display: none;">Emp Id</label> 
+              <select id="after_service_tblemp_id_{after_service_tbl:rowNumber}" name="{emp_id_Name}">
+                <option value="" selected>Select Value</option>
+                {emp_id_Options}
+              </select>
+ </td> 
+            <td><label for="after_service_tblservice_date_day_{after_service_tbl:rowNumber}" style="display: none;">Service Date Day</label> 
+              <select id="after_service_tblservice_date_day_{after_service_tbl:rowNumber}" name="{service_date_day_Name}">
+                <option value="" selected>Select Value</option>
+                {service_date_day_Options}
+              </select>
+ </td> 
+            <td><label for="after_service_tblservice_date_month_{after_service_tbl:rowNumber}" style="display: none;">Service Date Month</label> 
+              <select id="after_service_tblservice_date_month_{after_service_tbl:rowNumber}" name="{service_date_month_Name}">
+                <option value="" selected>Select Value</option>
+                {service_date_month_Options}
+              </select>
+ </td> 
+            <td><label for="after_service_tblservice_date_year_{after_service_tbl:rowNumber}" style="display: none;">Service Date Year</label><input id="after_service_tblservice_date_year_{after_service_tbl:rowNumber}" maxlength="4" size="4" value="{service_date_year}" name="{service_date_year_Name}"></td> 
+            <td><label for="after_service_tblFOLLOW_UP_{after_service_tbl:rowNumber}" style="display: none;">FOLLOW UP</label> 
+              <select id="after_service_tblFOLLOW_UP_{after_service_tbl:rowNumber}" name="{FOLLOW_UP_Name}">
+                <option value="" selected>Select Value</option>
+                {FOLLOW_UP_Options}
+              </select>
+ </td> 
+            <td><label for="after_service_tblAGENT_EVAL_TECH_{after_service_tbl:rowNumber}" style="display: none;">AGENT EVAL TECH</label> 
+              <select id="after_service_tblAGENT_EVAL_TECH_{after_service_tbl:rowNumber}" name="{AGENT_EVAL_TECH_Name}">
+                <option value="" selected>Select Value</option>
+                {AGENT_EVAL_TECH_Options}
+              </select>
+ </td> 
+            <td><label for="after_service_tblPORT_FEE_ID_{after_service_tbl:rowNumber}" style="display: none;">PORT FEE ID</label> 
+              <select id="after_service_tblPORT_FEE_ID_{after_service_tbl:rowNumber}" name="{PORT_FEE_ID_Name}">
+                <option value="" selected>Select Value</option>
+                {PORT_FEE_ID_Options}
+              </select>
+ </td> 
+            <td><label for="after_service_tblNT_INV_WO_{after_service_tbl:rowNumber}" style="display: none;">NT INV WO</label><input id="after_service_tblNT_INV_WO_{after_service_tbl:rowNumber}" maxlength="2" size="2" value="{NT_INV_WO}" name="{NT_INV_WO_Name}"></td> 
+            <td><label for="after_service_tblNT_INV_WA_{after_service_tbl:rowNumber}" style="display: none;">NT INV WA</label><input id="after_service_tblNT_INV_WA_{after_service_tbl:rowNumber}" maxlength="2" size="2" value="{NT_INV_WA}" name="{NT_INV_WA_Name}"></td> 
+            <td><label for="after_service_tblNT_INV_TR_{after_service_tbl:rowNumber}" style="display: none;">NT INV TR</label><input id="after_service_tblNT_INV_TR_{after_service_tbl:rowNumber}" maxlength="2" size="2" value="{NT_INV_TR}" name="{NT_INV_TR_Name}"></td> 
+            <td><label for="after_service_tblNT_TEC_WO_{after_service_tbl:rowNumber}" style="display: none;">NT TEC WO</label><input id="after_service_tblNT_TEC_WO_{after_service_tbl:rowNumber}" maxlength="2" size="2" value="{NT_TEC_WO}" name="{NT_TEC_WO_Name}"></td> 
+            <td><label for="after_service_tblNT_TEC_WA_{after_service_tbl:rowNumber}" style="display: none;">NT TEC WA</label><input id="after_service_tblNT_TEC_WA_{after_service_tbl:rowNumber}" maxlength="2" size="2" value="{NT_TEC_WA}" name="{NT_TEC_WA_Name}"></td> 
+            <td><label for="after_service_tblNT_TEC_TR_{after_service_tbl:rowNumber}" style="display: none;">NT TEC TR</label><input id="after_service_tblNT_TEC_TR_{after_service_tbl:rowNumber}" maxlength="2" size="2" value="{NT_TEC_TR}" name="{NT_TEC_TR_Name}"></td> 
+            <td><label for="after_service_tblOT_INV_WO_{after_service_tbl:rowNumber}" style="display: none;">OT INV WO</label><input id="after_service_tblOT_INV_WO_{after_service_tbl:rowNumber}" maxlength="2" size="2" value="{OT_INV_WO}" name="{OT_INV_WO_Name}"></td> 
+            <td><label for="after_service_tblOT_INV_WA_{after_service_tbl:rowNumber}" style="display: none;">OT INV WA</label><input id="after_service_tblOT_INV_WA_{after_service_tbl:rowNumber}" maxlength="2" size="2" value="{OT_INV_WA}" name="{OT_INV_WA_Name}"></td> 
+            <td><label for="after_service_tblOT_INV_TR_{after_service_tbl:rowNumber}" style="display: none;">OT INV TR</label><input id="after_service_tblOT_INV_TR_{after_service_tbl:rowNumber}" maxlength="2" size="2" value="{OT_INV_TR}" name="{OT_INV_TR_Name}"></td> 
+            <td><label for="after_service_tblOT_TEC_WO_{after_service_tbl:rowNumber}" style="display: none;">OT TEC WO</label><input id="after_service_tblOT_TEC_WO_{after_service_tbl:rowNumber}" maxlength="2" size="2" value="{OT_TEC_WO}" name="{OT_TEC_WO_Name}"></td> 
+            <td><label for="after_service_tblOT_TEC_WA_{after_service_tbl:rowNumber}" style="display: none;">OT TEC WA</label><input id="after_service_tblOT_TEC_WA_{after_service_tbl:rowNumber}" maxlength="2" size="2" value="{OT_TEC_WA}" name="{OT_TEC_WA_Name}"></td> 
+            <td><label for="after_service_tblOT_TEC_TR_{after_service_tbl:rowNumber}" style="display: none;">OT TEC TR</label><input id="after_service_tblOT_TEC_TR_{after_service_tbl:rowNumber}" maxlength="2" size="2" value="{OT_TEC_TR}" name="{OT_TEC_TR_Name}"></td> 
+            <td><label for="after_service_tblND_WO_{after_service_tbl:rowNumber}" style="display: none;">ND WO</label><input id="after_service_tblND_WO_{after_service_tbl:rowNumber}" maxlength="2" size="2" value="{ND_WO}" name="{ND_WO_Name}"></td> 
+            <td><label for="after_service_tblND_WA_{after_service_tbl:rowNumber}" style="display: none;">ND WA</label><input id="after_service_tblND_WA_{after_service_tbl:rowNumber}" maxlength="2" size="2" value="{ND_WA}" name="{ND_WA_Name}"></td> 
+            <td><label for="after_service_tblND_TR_{after_service_tbl:rowNumber}" style="display: none;">ND TR</label><input id="after_service_tblND_TR_{after_service_tbl:rowNumber}" maxlength="2" size="2" value="{ND_TR}" name="{ND_TR_Name}"></td> 
+            <td><label for="after_service_tblWE_WO_{after_service_tbl:rowNumber}" style="display: none;">WE WO</label><input id="after_service_tblWE_WO_{after_service_tbl:rowNumber}" maxlength="2" size="2" value="{WE_WO}" name="{WE_WO_Name}"></td> 
+            <td><label for="after_service_tblWE_WA_{after_service_tbl:rowNumber}" style="display: none;">WE WA</label><input id="after_service_tblWE_WA_{after_service_tbl:rowNumber}" maxlength="2" size="2" value="{WE_WA}" name="{WE_WA_Name}"></td> 
+            <td><label for="after_service_tblWE_TR_{after_service_tbl:rowNumber}" style="display: none;">WE TR</label><input id="after_service_tblWE_TR_{after_service_tbl:rowNumber}" maxlength="2" size="2" value="{WE_TR}" name="{WE_TR_Name}"></td>
+          </tr>
+ <!-- END Row -->
+          <!-- BEGIN NoRecords -->
+          <tr class="NoRecords">
+            <td colspan="26">no records found.</td>
+          </tr>
+          <!-- END NoRecords -->
+          <tr class="Footer">
+            <td style="TEXT-ALIGN: right" colspan="26">
+              <!-- BEGIN Navigator Navigator -->
+              <!-- BEGIN First_On --><a href="{First_URL}">First</a> <!-- END First_On -->
+              <!-- BEGIN First_Off -->First <!-- END First_Off -->
+              <!-- BEGIN Prev_On --><a href="{Prev_URL}">Prev</a> <!-- END Prev_On -->
+              <!-- BEGIN Prev_Off -->Prev <!-- END Prev_Off -->&nbsp; 
+              <!-- BEGIN Pages -->
+              <!-- BEGIN Page_On --><a href="{Page_URL}">{Page_Number}</a>&nbsp;<!-- END Page_On -->
+              <!-- BEGIN Page_Off -->{Page_Number}&nbsp;<!-- END Page_Off --><!-- END Pages -->of &nbsp;{Total_Pages}&nbsp; 
+              <!-- BEGIN Next_On --><a href="{Next_URL}">Next</a> <!-- END Next_On -->
+              <!-- BEGIN Next_Off -->Next <!-- END Next_Off -->
+              <!-- BEGIN Last_On --><a href="{Last_URL}">Last</a> <!-- END Last_On -->
+              <!-- BEGIN Last_Off -->Last <!-- END Last_Off --><!-- END Navigator Navigator -->
+              <!-- BEGIN Button Button_Submit --><input class="Button" id="after_service_tblButton_Submit" type="submit" alt="Submit" value="save changes" name="{Button_Name}"><!-- END Button Button_Submit -->
+              <!-- BEGIN Button Cancel --><input class="Button" id="after_service_tblCancel" type="submit" alt="Cancel" value="return" name="{Button_Name}"><!-- END Button Cancel --></td>
+          </tr>
+        </table>
+      </td>
+    </tr>
+  </table>
+</form>
+<!-- END EditableGrid after_service_tbl --><br>
+</body>
+</html>

@@ -1,0 +1,224 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta content="text/html; charset=windows-1252" http-equiv="content-type">
+<title>High Sea Support :: Tools Manager V1.0b</title>
+<meta name="GENERATOR" content="CodeCharge Studio 4.1.00.032">
+<script language="JavaScript" type="text/javascript">
+//Begin CCS script
+//Include Common JSFunctions @1-D3B5F5BF
+</script>
+<script language="JavaScript" type="text/javascript" charset="utf-8" src="ClientI18N.php?file=Functions.js&amp;locale={res:CCS_LocaleID}"></script>
+<script language="JavaScript" type="text/javascript">
+//End Include Common JSFunctions
+
+//Include User Scripts @1-459D1CD2
+</script>
+<script language="JavaScript" type="text/javascript" src="js/pt/prototype.js"></script>
+<script language="JavaScript" type="text/javascript" src="js/pt/scriptaculous.js"></script>
+<script language="JavaScript" type="text/javascript" src="js/pt/controls.js"></script>
+<link rel="stylesheet" type="text/css" href="page0toolsSearchs_tool_description_style.css">
+<script language="JavaScript" type="text/javascript">
+//End Include User Scripts
+
+//toolsSearchs_tool_category_id_OnChange @68-FA95C768
+function toolsSearchs_tool_category_id_OnChange()
+{
+    var result = true;
+//End toolsSearchs_tool_category_id_OnChange
+
+//Custom Code @84-2A29BDB7
+    // -------------------------
+     window.location.href = "page0.php?s_tool_category_id=" + this.value ;
+    // -------------------------
+//End Custom Code
+
+//Close toolsSearchs_tool_category_id_OnChange @68-BC33A33A
+    return result;
+}
+//End Close toolsSearchs_tool_category_id_OnChange
+
+//toolsSearchs_tool_type_id_OnChange @69-FBDE358F
+function toolsSearchs_tool_type_id_OnChange()
+{
+    var result = true;
+//End toolsSearchs_tool_type_id_OnChange
+
+//Custom Code @89-2A29BDB7
+    // -------------------------
+    window.location.href = "page0.php?s_tool_category_id=" + document.toolsSearch.s_tool_category_id.value + "&s_tool_type_id=" + this.value ;
+    // -------------------------
+//End Custom Code
+
+//Close toolsSearchs_tool_type_id_OnChange @69-BC33A33A
+    return result;
+}
+//End Close toolsSearchs_tool_type_id_OnChange
+
+//Initialize toolsSearchs_tool_descriptionPTAutocomplete1 @88-F6D4127B
+function toolsSearchs_tool_descriptionPTAutocomplete1_start() {
+    if ($("toolsSearchs_tool_description"))
+        new Ajax.Autocompleter("toolsSearchs_tool_description", "toolsSearchs_tool_description_choices", "services/page0_toolsSearch_s_tool_description_PTAutocomplete1.php", {});
+}
+//End Initialize toolsSearchs_tool_descriptionPTAutocomplete1
+
+//bind_events @1-AB0C4595
+function bind_events() {
+    toolsSearchs_tool_descriptionPTAutocomplete1_start();
+    addEventHandler("toolsSearchs_tool_category_id", "change", toolsSearchs_tool_category_id_OnChange);
+    addEventHandler("toolsSearchs_tool_type_id", "change", toolsSearchs_tool_type_id_OnChange);
+}
+//End bind_events
+
+window.onload = bind_events; //Assign bind_events @1-19F7B649
+
+//End CCS script
+</script>
+<link rel="stylesheet" type="text/css" href="Styles/hss1/Style_doctype.css">
+</head>
+<body>
+<table>
+  <tr>
+    <td>
+      <p>
+      <!-- BEGIN Record toolsSearch -->
+      <form id="toolsSearch" method="post" name="{HTMLFormName}" action="{Action}">
+        <table border="0" cellspacing="0" cellpadding="0">
+          <tr>
+            <td valign="top">
+              <table class="Header" border="0" cellspacing="0" cellpadding="0">
+                <tr>
+                  <td class="HeaderLeft"><img border="0" alt="" src="Styles/hss1/Images/Spacer.gif"></td> 
+                  <td class="th"><strong>Search Tools </strong></td> 
+                  <td class="HeaderRight"><img border="0" alt="" src="Styles/hss1/Images/Spacer.gif"></td>
+                </tr>
+              </table>
+ 
+              <table class="Record" cellspacing="0" cellpadding="0">
+                <!-- BEGIN Error -->
+                <tr class="Error">
+                  <td colspan="2">{Error}</td>
+                </tr>
+                <!-- END Error -->
+                <tr class="Controls">
+                  <td class="th"><label for="toolsSearchs_tool_category_id">tool category</label></td> 
+                  <td>
+                    <select id="toolsSearchs_tool_category_id" name="{s_tool_category_id_Name}">
+                      <option selected value="">Select Value</option>
+                      {s_tool_category_id_Options}
+                    </select>
+ </td>
+                </tr>
+ 
+                <tr class="Controls">
+                  <td class="th"><label for="toolsSearchs_tool_type_id">tool type</label></td> 
+                  <td>
+                    <select id="toolsSearchs_tool_type_id" name="{s_tool_type_id_Name}">
+                      <option selected value="">Select Value</option>
+                      {s_tool_type_id_Options}
+                    </select>
+ </td>
+                </tr>
+ 
+                <tr class="Controls">
+                  <td class="th"><label for="toolsSearchs_tool_description">Description</label></td> 
+                  <td>
+                    <!-- BEGIN TextBox s_tool_description --><input id="toolsSearchs_tool_description" value="{s_tool_description}" maxlength="250" size="50" name="{s_tool_description_Name}" autocomplete="off">
+                    <!-- BEGINF PTAutocomplete PTAutocomplete1 -->
+                    <div id="toolsSearchs_tool_description_choices">
+                    </div>
+                    <!-- ENDF PTAutocomplete PTAutocomplete1 --><!-- END TextBox s_tool_description --></td>
+                </tr>
+ 
+                <tr class="Bottom">
+                  <td colspan="2" align="right">
+                    <!-- BEGIN Button Button_DoSearch --><input id="toolsSearchButton_DoSearch" class="Button" value="Search" alt="Search" type="submit" name="{Button_Name}"><!-- END Button Button_DoSearch --></td>
+                </tr>
+              </table>
+            </td>
+          </tr>
+        </table>
+      </form>
+      <!-- END Record toolsSearch --><br>
+      </p>
+    </td> 
+    <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="{Link2_Src}" id="Link2" target="_blank"><strong>PRINT ALL BARCODES</strong></a>&nbsp;&nbsp;&nbsp;&nbsp; |&nbsp;&nbsp;&nbsp;&nbsp; <a href="{Link1_Src}" id="Link1" onclick="var newWindow=window.open(this.href, 'add new tool', 'width=660,height=410,scrollbars=yes,resizable=no,location=no,status=no,toolbar=no,menubar=no');return false;"><strong>ADD NEW TOOL</strong></a>&nbsp;&nbsp;&nbsp;&nbsp; </td>
+  </tr>
+</table>
+<!-- BEGIN Grid tools -->
+<table border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td valign="top">
+      <table class="Header" border="0" cellspacing="0" cellpadding="0">
+        <tr>
+          <td class="HeaderLeft"><img border="0" alt="" src="Styles/hss1/Images/Spacer.gif"></td> 
+          <td class="th"><strong>List of Tools </strong></td> 
+          <td class="HeaderRight"><img border="0" alt="" src="Styles/hss1/Images/Spacer.gif"></td>
+        </tr>
+      </table>
+ 
+      <table class="Grid" cellspacing="0" cellpadding="0">
+        <tr class="Caption">
+          <th scope="col">tool description</th>
+ 
+          <th scope="col">barcode string</th>
+ 
+          <th scope="col">tool supplier</th>
+ 
+          <th scope="col">tool manufacturer</th>
+ 
+          <th scope="col">regular user</th>
+ 
+          <th scope="col">current user</th>
+ 
+          <th scope="col">tool status</th>
+ 
+          <th scope="col">actions</th>
+        </tr>
+ 
+        <!-- BEGIN Row -->
+        <tr class="Row">
+          <td>{tool_description}&nbsp;</td> 
+          <td style="TEXT-ALIGN: center">HSS_TID<b><font color="red">{tool_id}</font></b></td> 
+          <td style="TEXT-ALIGN: right">{supplier_name}&nbsp;</td> 
+          <td style="TEXT-ALIGN: right">{manufacturer_name}&nbsp;</td> 
+          <td style="TEXT-ALIGN: right">{employees_tbl_emp_login}&nbsp;</td> 
+          <td style="TEXT-ALIGN: right">{employees_tbl1_emp_login}&nbsp;</td> 
+          <td style="TEXT-ALIGN: right">{tool_status}&nbsp;</td> 
+          <td style="TEXT-ALIGN: right"><a href="{Link4_Src}" id="toolsLink4_{tools:rowNumber}" onclick="var newWindow=window.open(this.href, 'Print Barcode', 'width=500,height=150,scrollbars=no,resizable=no,location=no,status=no,toolbar=no,menubar=no');return false;">PRINT BARCODE</a>&nbsp;&nbsp;|&nbsp;&nbsp;<a href="{Link1_Src}" id="toolsLink1_{tools:rowNumber}" onclick="var newWindow=window.open(this.href, 'ADD/EDIT TOOLS', 'width=650,height=410,scrollbars=yes,resizable=yes,location=no,status=no,toolbar=no,menubar=no');return false;">EDIT</a>&nbsp; |&nbsp; <a href="{Link2_Src}" id="toolsLink2_{tools:rowNumber}" onclick="var newWindow=window.open(this.href, 'tool accessories', 'width=750,height=400,scrollbars=yes,resizable=no,location=no,status=no,toolbar=no,menubar=no');return false;">VIEW ACCESSORIES</a></td>
+        </tr>
+ <!-- END Row -->
+        <!-- BEGIN NoRecords -->
+        <tr class="NoRecords">
+          <td colspan="8">no records found.</td>
+        </tr>
+        <!-- END NoRecords -->
+        <tr class="Footer">
+          <td colspan="8">
+            <!-- BEGIN Navigator Navigator -->
+            <!-- BEGIN Page_Parameter --><input value="{Value}" type="hidden" name="{Name}"><!-- END Page_Parameter -->Per page: 
+            <select onchange="CCChangeSize(this, '{FormName}')" name="{FormName}PageSize">
+              <option selected value="">-</option>
+ {PageSize_Options}
+            </select>
+ 
+            <!-- BEGIN First_On --><a href="{First_URL}">First</a> <!-- END First_On -->
+            <!-- BEGIN First_Off -->First <!-- END First_Off -->
+            <!-- BEGIN Prev_On --><a href="{Prev_URL}">Prev</a> <!-- END Prev_On -->
+            <!-- BEGIN Prev_Off -->Prev <!-- END Prev_Off -->&nbsp; 
+            <!-- BEGIN Pages -->
+            <!-- BEGIN Page_On --><a href="{Page_URL}">{Page_Number}</a>&nbsp;<!-- END Page_On -->
+            <!-- BEGIN Page_Off -->{Page_Number}&nbsp;<!-- END Page_Off --><!-- END Pages -->of &nbsp;{Total_Pages}&nbsp; 
+            <!-- BEGIN Next_On --><a href="{Next_URL}">Next</a> <!-- END Next_On -->
+            <!-- BEGIN Next_Off -->Next <!-- END Next_Off -->
+            <!-- BEGIN Last_On --><a href="{Last_URL}">Last</a> <!-- END Last_On -->
+            <!-- BEGIN Last_Off -->Last <!-- END Last_Off --><!-- END Navigator Navigator -->&nbsp;</td>
+        </tr>
+      </table>
+    </td>
+  </tr>
+</table>
+<!-- END Grid tools --><br>
+<p></p>
+</body>
+</html>

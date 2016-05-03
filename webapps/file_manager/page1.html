@@ -1,0 +1,71 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta content="text/html; charset=windows-1252" http-equiv="content-type">
+<title>page1_1</title>
+<meta name="GENERATOR" content="CodeCharge Studio 4.1.00.032">
+<link rel="stylesheet" type="text/css" href="Styles/Blueprint1/Style_doctype.css">
+</head>
+<body>
+<p>
+<table border="0" width="100%">
+  <tr>
+    <td></td> 
+    <td>
+      <p align="right"><a href="{Link1_Src}" id="Link1"><strong>RETURN TO SEARCH INTERFACE</strong></a></p>
+    </td>
+  </tr>
+</table>
+</p>
+<!-- BEGIN Grid service_tbl -->
+<table border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td valign="top">
+      <table class="Header" border="0" cellspacing="0" cellpadding="0">
+        <tr>
+          <td class="HeaderLeft"><img border="0" alt="" src="Styles/Blueprint1/Images/Spacer.gif"></td> 
+          <td class="th"><strong>Service Orders List for:&nbsp;&nbsp;&nbsp; &nbsp;{SHIP_NAME}</strong></td> 
+          <td class="HeaderRight"><img border="0" alt="" src="Styles/Blueprint1/Images/Spacer.gif"></td>
+        </tr>
+      </table>
+ 
+      <table class="Grid" cellspacing="0" cellpadding="0">
+        <tr class="Caption">
+          <th scope="col">ORDER NO&nbsp;</th>
+ 
+          <th scope="col">EQUIPMENT MODEL</th>
+ 
+          <th scope="col">ACTIONS</th>
+        </tr>
+ 
+        <!-- BEGIN Row -->
+        <tr class="Row">
+          <td>{ORDER_NO}</td> 
+          <td>{EQUIP_MODEL}</td> 
+          <td><a href="{Link1_Src}" id="service_tblLink1_{service_tbl:rowNumber}">OPEN FILE MANAGER</a>&nbsp; |&nbsp; <a href="{Link4_Src}" id="service_tblLink4_{service_tbl:rowNumber}" target="_blank">CUSTOMER EVALUATION</a>&nbsp; |&nbsp; <a href="{Link2_Src}" id="service_tblLink2_{service_tbl:rowNumber}" target="_blank">CREATE RETURN PART SHEET</a></td>
+        </tr>
+ <!-- END Row -->
+        <!-- BEGIN NoRecords -->
+        <tr class="NoRecords">
+          <td colspan="3">No records found</td>
+        </tr>
+        <!-- END NoRecords -->
+        <tr class="Footer">
+          <td colspan="3">
+            <!-- BEGIN Navigator Navigator -->
+            <!-- BEGIN First_On --><a href="{First_URL}"><img border="0" alt="{First_URL}" src="Styles/Blueprint1/Images/First.gif"></a> <!-- END First_On -->
+            <!-- BEGIN First_Off --><img border="0" alt="{First_URL}" src="Styles/Blueprint1/Images/FirstOff.gif"><!-- END First_Off -->
+            <!-- BEGIN Prev_On --><a href="{Prev_URL}"><img border="0" alt="{Prev_URL}" src="Styles/Blueprint1/Images/Prev.gif"></a> <!-- END Prev_On -->
+            <!-- BEGIN Prev_Off --><img border="0" alt="{Prev_URL}" src="Styles/Blueprint1/Images/PrevOff.gif"><!-- END Prev_Off -->&nbsp;{Page_Number} of&nbsp;{Total_Pages}&nbsp; 
+            <!-- BEGIN Next_On --><a href="{Next_URL}"><img border="0" alt="{Next_URL}" src="Styles/Blueprint1/Images/Next.gif"></a> <!-- END Next_On -->
+            <!-- BEGIN Next_Off --><img border="0" alt="{Next_URL}" src="Styles/Blueprint1/Images/NextOff.gif"><!-- END Next_Off -->
+            <!-- BEGIN Last_On --><a href="{Last_URL}"><img border="0" alt="{Last_URL}" src="Styles/Blueprint1/Images/Last.gif"></a> <!-- END Last_On -->
+            <!-- BEGIN Last_Off --><img border="0" alt="{Last_URL}" src="Styles/Blueprint1/Images/LastOff.gif"><!-- END Last_Off --><!-- END Navigator Navigator -->&nbsp;</td>
+        </tr>
+      </table>
+    </td>
+  </tr>
+</table>
+<!-- END Grid service_tbl -->
+</body>
+</html>

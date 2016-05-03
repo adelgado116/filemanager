@@ -1,0 +1,1224 @@
+/* CCSTheme v 3.x */
+/* General */
+
+/* Colors */
+.PageBgColorBlueprint1 {
+	background-color: #9cb4c9;
+	}
+
+.FormTitleBgColorBlueprint1 {
+	background-color: #0058b3;
+	}
+
+.FormTitleFontColorBlueprint1 {
+	color: #f4f4f4;
+	}
+
+.CaptionBgColorBlueprint1 {
+	background-color: #d6d6d6;
+	}
+
+.CaptionFontColorBlueprint1 {
+	color: #000000;
+	}
+
+.DataBgColorBlueprint1 {
+	background-color: #ededed;
+	}
+
+.AltDataBgColorBlueprint1 {
+	background-color: #dae4ee;
+	}
+
+.DataFontColorBlueprint1 {
+	color: #000000;
+	}
+
+.LinkColorBlueprint1 {
+	color: #004e9c;
+	}
+
+.VisitedLinkColorBlueprint1 {
+	color: #740074;
+	}
+
+.HoverLinkColorBlueprint1 {
+	color: #e00000;
+	}
+
+.ColorBgButtonBlueprint1 {
+	background-color: #0058b3;
+}
+
+.ColorFontButtonBlueprint1 {
+	color: #f4f4f4;
+}
+
+.ColorBgButtonPassiveBlueprint1 {
+	background-color: #4894e0;
+}
+
+.ColorFontButtonPassiveBlueprint1 {
+	color: #f4f4f4;
+}
+
+
+
+.HeaderBlueprint1 {
+	width: 100%;
+	}
+
+.HeaderBlueprint1 th { 
+	font-family: Tahoma; font-size: 110%; font-weight: bold; text-align: left;
+	padding: 4px;
+	background-color: #0058b3; color: #f4f4f4;
+	width: 100%;
+	white-space: nowrap;
+	
+	}
+
+
+html>body .HeaderBlueprint1 th {
+	font-family: Tahoma; font-size: 140%; font-weight: bold; text-align: left;
+}
+
+
+/*ie6*/
+* html body .HeaderBlueprint1 th {
+	font-family: Tahoma; font-size: 140%; font-weight: bold; text-align: left;
+}
+/*end*/
+
+.HeaderBlueprint1 a:link { 
+	color: #f4f4f4;
+	}
+
+.HeaderBlueprint1 a:visited { 
+	color: #f4f4f4;
+	}
+
+.HeaderBlueprint1 a:hover, .CaptionBlueprint1 a:active { 
+	color: #f4f4f4; text-decoration: none;
+	}
+
+.HeaderLeftBlueprint1 { 
+	background-image: url('Images/HeaderLeft.gif');
+	}
+
+.HeaderRightBlueprint1 { 
+	background-image: url('Images/HeaderRight.gif');
+	background-position: right top;
+	}
+
+.HeaderLeftBlueprint1 img{
+	width: 9px;
+	}
+
+.HeaderRightBlueprint1 img{
+	width: 9px;
+	}
+
+
+/* Grid Options */
+.GridBlueprint1 { 
+	border-left: 1px solid #0058b3; border-bottom: 1px solid #0058b3;
+	width: 100%;
+	}
+
+.CaptionBlueprint1 th { 
+	font-family: Tahoma; font-size: 80%; text-align: left; vertical-align: top;
+	padding: 4px;
+	border-top: 1px solid #0058b3; border-right: 1px solid #0058b3;
+	background-image: url('Images/CaptionBg.gif'); color: #000000;
+	white-space: nowrap;
+	}
+
+.CaptionBlueprint1 td { 
+	font-family: Tahoma; font-size: 80%; text-align: left; vertical-align: top;
+	padding: 4px;
+	border-top: 1px solid #0058b3; border-right: 1px solid #0058b3;
+	background-image: url('Images/CaptionBg.gif'); color: #000000;
+	white-space: nowrap;
+	}
+
+
+html>body .CaptionBlueprint1 th, html>body .CaptionBlueprint1 td {
+	font-family: Tahoma; font-size: 100%; text-align: left; vertical-align: top;
+}
+
+
+/*ie6*/
+* html body .CaptionBlueprint1 th, * html body .CaptionBlueprint1 td {
+	font-family: Tahoma; font-size: 100%; text-align: left; vertical-align: top;
+}
+/*end*/
+
+.CaptionBlueprint1 a:link { 
+	color: #000000;
+	}
+
+.CaptionBlueprint1 a:visited { 
+	color: #000000;
+	}
+
+.CaptionBlueprint1 a:hover, .CaptionBlueprint1 a:active { 
+	color: #e00000;
+	}
+
+.CaptionBlueprint1 img {
+	margin: 2px; 
+	vertical-align: middle;
+	}
+
+.CaptionBlueprint1 input {
+	vertical-align: middle;
+	}
+
+.RowBlueprint1 th { 
+	font-family: Tahoma; font-size: 80%; font-weight: normal; text-align: left; vertical-align: top;
+	padding: 4px;
+	border-top: 1px solid #0058b3; border-right: 1px solid #0058b3;
+	background-color: #ededed; color: #000000;
+	white-space: nowrap;
+	color: #000000;
+	}
+
+.RowBlueprint1 td { 
+	font-family: Tahoma; font-size: 80%;
+	padding: 4px;
+	border-top: 1px solid #0058b3; border-right: 1px solid #0058b3;
+	text-align: left;
+	vertical-align: top;
+	background-color: #ededed; 
+	color: #000000;
+	}
+	
+
+html>body .RowBlueprint1 th, html>body .RowBlueprint1 td {
+	font-family: Tahoma; font-size: 100%;
+}
+
+
+/*ie6*/
+* html body .RowBlueprint1 th, * html body .RowBlueprint1 td {
+	font-family: Tahoma; font-size: 100%;
+}
+/*end*/
+
+caption.RowBlueprint1 { 
+	font-family: Tahoma; font-size: 80%;
+	padding: 4px;
+	border: 1px solid #0058b3; border-bottom: 0px;
+	text-align: left;
+	vertical-align: top;
+	background-color: #ededed; 
+	color: #000000;
+	}
+
+
+html>body caption.RowBlueprint1 {
+	font-family: Tahoma; font-size: 100%;
+}
+
+
+/*ie6*/
+* html body caption.RowBlueprint1 {
+	font-family: Tahoma; font-size: 100%;
+}
+/*end*/
+
+.RowBlueprint1 a:link { 
+	color: #004e9c;
+	}
+
+.RowBlueprint1 a:visited { 
+	color: #740074;
+	}
+
+.RowBlueprint1 a:hover, .RowBlueprint1 a:active { 
+	color: #e00000;
+	}
+
+.SeparatorBlueprint1{
+	color: #0058b3;
+	}
+
+.SeparatorBlueprint1 td{
+	height: 1px;
+	}
+
+
+.AltRowBlueprint1 th { 
+	font-family: Tahoma; font-size: 80%; font-weight: normal; text-align: left; vertical-align: top;
+	padding: 4px;
+	border-top: 1px solid #0058b3; border-right: 1px solid #0058b3;
+	background-color: #ededed; color: #000000;
+	white-space: nowrap;
+	color: #000000;
+	}
+
+.AltRowBlueprint1 td { 
+	font-family: Tahoma; font-size: 80%;
+	padding: 4px;
+	border-top: 1px solid #0058b3; border-right: 1px solid #0058b3;
+	text-align: left;
+	vertical-align: top;
+	background-color: #dae4ee; 
+	color: #000000;
+	}
+
+
+html>body .AltRowBlueprint1 th, html>body .AltRowBlueprint1 td {
+	font-family: Tahoma; font-size: 100%;
+}
+
+
+/*ie6*/
+* html body .AltRowBlueprint1 th, * html body .AltRowBlueprint1 td {
+	font-family: Tahoma; font-size: 100%;
+}
+/*end*/
+
+.AltRowBlueprint1 a:link { 
+	color: #004e9c;
+	}
+
+.AltRowBlueprint1 a:visited { 
+	color: #740074;
+	}
+
+.AltRowBlueprint1 a:hover, .AltRowBlueprint1 a:active { 
+	color: #e00000;
+	}
+
+.NoRecordsBlueprint1 td { 
+	font-family: Tahoma; font-size: 80%;
+	padding: 4px;
+	border-top: 1px solid #0058b3; border-right: 1px solid #0058b3;
+	text-align: left;
+	background-color: #ededed; 
+	color: #000000;
+	vertical-align: top;
+	}
+
+.FooterBlueprint1 td { 
+	font-family: Tahoma; font-size: 80%;
+	padding: 4px;
+	border-top: 1px solid #0058b3; border-right: 1px solid #0058b3;
+	background-color: #d6d6d6; color: #000000;
+	text-align: center;
+	vertical-align: middle;
+	white-space: nowrap;
+	color: #000000;
+	}
+
+
+html>body .NoRecordsBlueprint1 td, html>body .FooterBlueprint1 td {
+	font-family: Tahoma; font-size: 100%;
+}
+
+
+/*ie6*/
+* html body .NoRecordsBlueprint1 td, * html body .FooterBlueprint1 td {
+	font-family: Tahoma; font-size: 100%;
+}
+/*end*/
+
+.FooterBlueprint1 a:link { 
+	color: #004e9c;
+	}
+
+.FooterBlueprint1 a:visited { 
+	color: #740074;
+	}
+
+.FooterBlueprint1 a:hover, .FooterBlueprint1 a:active { 
+	color: #e00000;
+	}
+
+.FooterBlueprint1 img {
+	margin: 2px; 
+	vertical-align: middle;
+	}
+
+.FooterBlueprint1 input {
+	margin: 2px;
+	vertical-align: middle;
+	}
+
+/* Record Options */
+.RecordBlueprint1 { 
+	border-left: 1px solid #0058b3; border-bottom: 1px solid #0058b3;
+	width: 100%;
+	}
+
+.ErrorBlueprint1 td { 
+	font-family: Tahoma; font-size: 80%;
+	padding: 4px;
+	border-top: 1px solid #0058b3; border-right: 1px solid #0058b3;
+	text-align: left;
+	color: #FF0000;
+	vertical-align: top;
+	background-color: #ededed; 
+	}
+
+
+* html>body .ErrorBlueprint1 td {
+	font-family: Tahoma; font-size: 100%;
+}
+
+
+/*ie6*/
+* html body .ErrorBlueprint1 td {
+	font-family: Tahoma; font-size: 100%;
+}
+/*end*/
+
+.ControlsBlueprint1 th { 
+	font-family: Tahoma; font-size: 80%; font-weight: normal; text-align: left; vertical-align: top;
+	padding: 4px;
+	border-top: 1px solid #0058b3; border-right: 1px solid #0058b3;
+	background-color: #ededed; color: #000000;
+	white-space: nowrap;
+	color: #000000;
+	}
+
+.ControlsBlueprint1 td { 
+	font-family: Tahoma; font-size: 80%;
+	padding: 4px;
+	border-top: 1px solid #0058b3; border-right: 1px solid #0058b3;
+	text-align: left;
+	vertical-align: top;
+	background-color: #ededed; 
+	color: #000000;
+	}
+	
+.BottomBlueprint1 td { 
+	font-family: Tahoma; font-size: 80%;
+	padding: 4px;
+	border-top: 1px solid #0058b3; border-right: 1px solid #0058b3;
+	background-color: #d6d6d6; color: #000000;
+	text-align: right;
+	vertical-align: middle;
+	white-space: nowrap;
+	color: #000000;
+	}
+
+
+html>body .ControlsBlueprint1 th, html>body .ControlsBlueprint1 td, html>body .BottomBlueprint1 td {
+	font-family: Tahoma; font-size: 100%;
+}
+
+
+/*ie6*/
+* html body .ControlsBlueprint1 th, * html body .ControlsBlueprint1 td, * html body .BottomBlueprint1 td {
+	font-family: Tahoma; font-size: 100%;
+}
+/*end*/
+
+.BottomBlueprint1 a:link { 
+	color: #004e9c;
+	}
+
+.BottomBlueprint1 a:visited { 
+	color: #740074;
+	}
+
+.BottomBlueprint1 a:hover, .CaptionBlueprint1 a:active { 
+	color: #e00000;
+	}
+
+.BottomBlueprint1 img {
+	margin: 2px;
+	vertical-align: middle; 
+	}
+
+.BottomBlueprint1 input {
+	margin: 2px;
+	vertical-align: middle;
+	}
+
+/* Report */
+.GroupCaptionBlueprint1 th{
+	font-family: Tahoma; font-size: 80%;
+	padding: 4px;
+	border-top: 1px solid #0058b3; border-right: 1px solid #0058b3;
+	white-space: nowrap;
+	text-align: left;
+	vertical-align: top;
+	font-weight: bold;
+	background-color: #dae4ee; 
+	color: #000000;
+	}
+
+.GroupCaptionBlueprint1 td{
+	font-family: Tahoma; font-size: 80%;
+	padding: 4px;
+	border-top: 1px solid #0058b3; border-right: 1px solid #0058b3;
+	text-align: left;
+	vertical-align: top;
+	font-weight: bold;
+	background-color: #ededed; 
+	color: #000000;
+	}
+
+
+html>body .GroupCaptionBlueprint1 th, html>body .GroupCaptionBlueprint1 td {
+	font-family: Tahoma; font-size: 100%;
+}
+
+
+/*ie6*/
+* html body .GroupCaptionBlueprint1 th, * html body .GroupCaptionBlueprint1 td {
+	font-family: Tahoma; font-size: 100%;
+}
+/*end*/
+
+.GroupCaptionBlueprint1 a:link {
+	color: #000000;
+	}
+
+.GroupCaptionBlueprint1 a:visited{
+	color: #000000;
+	}
+
+.GroupCaptionBlueprint1 a:hover, .GroupCaptionBlueprint1 a:active{
+	color: #e00000;
+	}
+
+.GroupFooterBlueprint1 td{
+	font-family: Tahoma; font-size: 80%;
+	padding: 4px;
+	border-top: 1px solid #0058b3; border-right: 1px solid #0058b3;
+	text-align: center;
+	vertical-align: middle;
+	white-space: nowrap;
+	background-color: #d6d6d6; 
+	color: #000000;
+	}
+
+
+html>body .GroupFooterBlueprint1 td {
+	font-family: Tahoma; font-size: 100%;
+}
+
+
+/*ie6*/
+* html body .GroupFooterBlueprint1 td {
+	font-family: Tahoma; font-size: 100%;
+}
+/*end*/
+
+.GroupFooterBlueprint1 a:link {
+	color: #004e9c;
+	}
+
+.GroupFooterBlueprint1 a:visited{
+	color: #740074;
+	}
+
+.GroupFooterBlueprint1 a:hover, .GroupFooterBlueprint1 a:active{
+	color: #e00000;
+	}
+
+.GroupFooterBlueprint1 img {
+	margin: 2px; 
+	vertical-align: middle;
+	}
+
+.GroupFooterBlueprint1 input {
+	margin: 2px;
+	vertical-align: middle;
+	}
+
+.SubTotalBlueprint1 td{
+	font-family: Tahoma; font-size: 80%;
+	padding: 4px;
+	border-top: 1px solid #0058b3; border-right: 1px solid #0058b3;
+	text-align: left;
+	vertical-align: top;
+	font-weight: bold;
+	background-color: #dae4ee; 
+	color: #000000;
+	border-bottom: 2px solid #0058b3;
+	}
+
+
+html>body .SubTotalBlueprint1 td {
+	font-family: Tahoma; font-size: 100%;
+}
+
+
+/*ie6*/
+* html body .SubTotalBlueprint1 td {
+	font-family: Tahoma; font-size: 100%;
+}
+/*end*/
+
+.SubTotalBlueprint1 a:link {
+	color: #004e9c;
+	}
+
+.SubTotalBlueprint1 a:visited{
+	color: #740074;
+	}
+
+.SubTotalBlueprint1 a:hover, .SubTotalBlueprint1 a:active{
+	color: #e00000;
+	}
+
+.TotalBlueprint1 td{
+	font-family: Tahoma; font-size: 80%;
+	padding: 4px;
+	border-top: 1px solid #0058b3; border-right: 1px solid #0058b3;
+	text-align: left;
+	vertical-align: top;
+	white-space: nowrap;
+	font-weight: bold;
+	background-color: #dae4ee; 
+	color: #000000;
+	}
+
+
+html>body .TotalBlueprint1 td {
+	font-family: Tahoma; font-size: 100%;
+}
+
+
+/*ie6*/
+* html body .TotalBlueprint1 td {
+	font-family: Tahoma; font-size: 100%;
+}
+/*end*/
+
+.TotalBlueprint1 a:link {
+	color: #004e9c;
+	}
+
+.TotalBlueprint1 a:visited{
+	color: #740074;
+	}
+
+.TotalBlueprint1 a:hover, .TotalBlueprint1 a:active{
+	color: #e00000;
+	}
+
+/* Form Options */
+.ButtonBlueprint1 { 
+	background-color: #dae4ee; color: #000000; border: solid 1px #0058b3; padding: 2px; font-weight: bold; font-family: Tahoma; font-size: 11px; font-weight: bold;
+	}
+
+/* Calendar */
+
+.CalendarBlueprint1 { 
+	border: 1px solid #0058b3;
+	width: 100%;
+	}
+
+.CalendarWeekdayNameBlueprint1{
+	font-family: Tahoma; font-size: 80%;
+	padding: 4px;
+	border-top: 1px solid #0058b3; border-right: 1px solid #0058b3;
+	text-align: center; 
+	vertical-align: top;
+	white-space: nowrap;
+	background-color: #dae4ee; 
+	color: #000000;
+	font-weight: normal;
+	}
+
+
+html>body .CalendarWeekdayNameBlueprint1 {
+	font-family: Tahoma; font-size: 100%;
+}
+
+
+/*ie6*/
+* html body .CalendarWeekdayNameBlueprint1 {
+	font-family: Tahoma; font-size: 100%;
+}
+/*end*/
+
+.CalendarWeekdayNameBlueprint1 a:link {
+	color: #004e9c;
+	}
+
+.CalendarWeekdayNameBlueprint1 a:visited{
+	color: #740074;
+	}
+
+.CalendarWeekdayNameBlueprint1 a:hover, .CalendarWeekdayNameBlueprint1 a:active{
+	color: #e00000;
+	}
+
+.CalendarWeekendNameBlueprint1{
+	font-family: Tahoma; font-size: 80%;
+	padding: 4px;
+	border-top: 1px solid #0058b3; border-right: 1px solid #0058b3;
+	white-space: nowrap;
+	text-align: center; 
+	vertical-align: top;
+	background-color: #dae4ee;	
+	color: #000000;
+	font-weight: normal;
+	}
+
+
+html>body .CalendarWeekendNameBlueprint1 {
+	font-family: Tahoma; font-size: 100%;
+}
+
+
+/*ie6*/
+* html body .CalendarWeekendNameBlueprint1 {
+	font-family: Tahoma; font-size: 100%;
+}
+/*end*/
+
+.CalendarWeekendNameBlueprint1 a:link {
+	color: #000000;
+	}
+
+.CalendarWeekendNameBlueprint1 a:visited{
+	color: #000000;
+	}
+
+.CalendarWeekendNameBlueprint1 a:link, .CalendarWeekendNameBlueprint1 a:visited{
+	color: #e00000;
+	}
+
+/* Calendar Day */
+.CalendarDayBlueprint1{
+	font-family: Tahoma; font-size: 80%;
+	padding: 4px;
+	border-top: 1px solid #0058b3; border-right: 1px solid #0058b3;
+	text-align: center;
+	background-color: #ededed;	
+	color: #000000;
+	}
+
+
+html>body .CalendarDayBlueprint1 {
+	font-family: Tahoma; font-size: 100%;
+}
+
+
+/*ie6*/
+* html body .CalendarDayBlueprint1 {
+	font-family: Tahoma; font-size: 100%;
+}
+/*end*/
+
+.CalendarDayBlueprint1 a:link {
+	color: #004e9c;
+	}
+
+.CalendarDayBlueprint1 a:visited{
+	color: #740074;
+	}
+
+.CalendarDayBlueprint1 a:hover, .CalendarDayBlueprint1 a:active{
+	color: #e00000;
+	}
+
+/* Calendar Weekend */
+.CalendarWeekendBlueprint1{
+	font-family: Tahoma; font-size: 80%;
+	padding: 4px;
+	border-top: 1px solid #0058b3; border-right: 1px solid #0058b3;
+	text-align: center;
+	background-color: #dae4ee;	
+	color: #000000;
+	}
+
+
+html>body .CalendarWeekendBlueprint1 {
+	font-family: Tahoma; font-size: 100%;
+}
+
+
+/*ie6*/
+* html body .CalendarWeekendBlueprint1 {
+	font-family: Tahoma; font-size: 100%;
+}
+/*end*/
+
+.CalendarWeekendBlueprint1 a:link {
+	color: #004e9c;
+	}
+
+.CalendarWeekendBlueprint1 a:visited{
+	color: #740074;
+	}
+
+.CalendarWeekendBlueprint1 a:hover, .CalendarWeekendBlueprint1 a:active{
+	color: #e00000;
+	}
+
+/* Calendar Today */
+.CalendarTodayBlueprint1 {
+	font-family: Tahoma; font-size: 80%;
+	padding: 2px;
+	border-top: 3px solid #0058b3; border-right: 3px solid #0058b3; border-left: 2px solid #0058b3; border-bottom: 2px solid #0058b3;
+	text-align: center;
+	background-color: #ededed;	
+	color: #000000;
+	}
+
+
+html>body .CalendarTodayBlueprint1 {
+	font-family: Tahoma; font-size: 100%;
+}
+
+
+/*ie6*/
+* html body .CalendarTodayBlueprint1 {
+	font-family: Tahoma; font-size: 100%;
+}
+/*end*/
+
+.CalendarTodayBlueprint1 a:link {
+	color: #004e9c;
+	}
+
+.CalendarTodayBlueprint1 a:visited{
+	color: #740074;
+	}
+
+.CalendarTodayBlueprint1 a:hover, .CalendarTodayBlueprint1 a:active {
+	color: #e00000;
+	}
+
+/* Calendar Weekend Today */
+.CalendarWeekendTodayBlueprint1 {
+	font-family: Tahoma; font-size: 80%;
+	padding: 2px;
+	border-top: 3px solid #0058b3; border-right: 3px solid #0058b3; border-left: 2px solid #0058b3; border-bottom: 2px solid #0058b3;
+	text-align: center;
+	background-color: #dae4ee;	
+	color: #000000;
+	}
+
+
+html>body .CalendarWeekendTodayBlueprint1 {
+	font-family: Tahoma; font-size: 100%;
+}
+
+
+/*ie6*/
+* html body .CalendarWeekendTodayBlueprint1 {
+	font-family: Tahoma; font-size: 100%;
+}
+/*end*/
+
+.CalendarWeekendTodayBlueprint1 a:link {
+	color: #004e9c;
+	}
+
+.CalendarWeekendTodayBlueprint1 a:visited{
+	color: #740074;
+	}
+
+.CalendarWeekendTodayBlueprint1 a:hover, .CalendarWeekendTodayBlueprint1 a:active{
+	color: #e00000;
+	}
+
+/* Calendar Other Month's Day */
+.CalendarOtherMonthDayBlueprint1{
+	font-family: Tahoma; font-size: 80%;
+	padding: 4px;
+	border-top: 1px solid #0058b3; border-right: 1px solid #0058b3;
+	text-align: center;
+	background-color: #ededed;	
+	color: #0058b3;
+	}
+
+
+html>body .CalendarOtherMonthDayBlueprint1 {
+	font-family: Tahoma; font-size: 100%;
+}
+
+
+/*ie6*/
+* html body .CalendarOtherMonthDayBlueprint1 {
+	font-family: Tahoma; font-size: 100%;
+}
+/*end*/
+
+.CalendarOtherMonthDayBlueprint1 a:link {
+	color: #0058b3;
+	}
+
+.CalendarOtherMonthDayBlueprint1 a:visited{
+	color: #0058b3;
+	}
+
+.CalendarOtherMonthDayBlueprint1 a:hover, .CalendarOtherMonthDayBlueprint1 a:active{
+	color: #e00000;
+	}
+
+/* Calendar Other Month's Today */
+.CalendarOtherMonthTodayBlueprint1 {
+	font-family: Tahoma; font-size: 80%;
+	padding: 2px;
+	border-top: 3px solid #0058b3; border-right: 3px solid #0058b3; border-left: 2px solid #0058b3; border-bottom: 2px solid #0058b3;
+	text-align: center;
+	background-color: #ededed;	
+	color: #0058b3;
+	}
+
+
+html>body .CalendarOtherMonthTodayBlueprint1 {
+	font-family: Tahoma; font-size: 100%;
+}
+
+
+/*ie6*/
+* html body .CalendarOtherMonthTodayBlueprint1 {
+	font-family: Tahoma; font-size: 100%;
+}
+/*end*/
+
+.CalendarOtherMonthTodayBlueprint1 a:link {
+	color: #0058b3;
+	}
+
+.CalendarOtherMonthTodayBlueprint1 a:visited{
+	color: #0058b3;
+	}
+
+.CalendarOtherMonthTodayBlueprint1 a:hover, .CalendarOtherMonthTodayBlueprint1 a:active{
+	color: #e00000;
+	}
+
+/* Calendar Other Month's Weekend */
+.CalendarOtherMonthWeekendBlueprint1 {
+	font-family: Tahoma; font-size: 80%;
+	padding: 4px;
+	border-top: 1px solid #0058b3; border-right: 1px solid #0058b3;
+	text-align: center;
+	background-color: #dae4ee;	
+	color: #0058b3;
+	}
+
+
+html>body .CalendarOtherMonthWeekendBlueprint1 {
+	font-family: Tahoma; font-size: 100%;
+}
+
+
+/*ie6*/
+* html body .CalendarOtherMonthWeekendBlueprint1 {
+	font-family: Tahoma; font-size: 100%;
+}
+/*end*/
+
+.CalendarOtherMonthWeekendBlueprint1 a:link {
+	color: #0058b3;
+	}
+
+.CalendarOtherMonthWeekendBlueprint1 a:visited{
+	color: #0058b3;
+	}
+
+.CalendarOtherMonthWeekendBlueprint1 a:hover, .CalendarOtherMonthWeekendBlueprint1 a:active{
+	color: #e00000;
+	}
+
+/* Calendar Other Month's Weekend Today */
+.CalendarOtherMonthWeekendTodayBlueprint1 {
+	font-family: Tahoma; font-size: 80%;
+	padding: 2px;
+	border-top: 3px solid #0058b3; border-right: 3px solid #0058b3; border-left: 2px solid #0058b3; border-bottom: 2px solid #0058b3;
+	text-align: center;
+	color: #0058b3;
+	background-color: #dae4ee;	
+	}
+	
+
+html>body .CalendarOtherMonthWeekendTodayBlueprint1 {
+	font-family: Tahoma; font-size: 100%;
+}
+
+
+/*ie6*/
+* html body .CalendarOtherMonthWeekendTodayBlueprint1 {
+	font-family: Tahoma; font-size: 100%;
+}
+/*end*/
+
+.CalendarOtherMonthWeekendTodayBlueprint1 a:link {
+	color: #0058b3;
+	}
+
+.CalendarOtherMonthWeekendTodayBlueprint1 a:visited{
+	color: #0058b3;
+	}
+
+.CalendarOtherMonthWeekendTodayBlueprint1 a:hover, .CalendarOtherMonthWeekendTodayBlueprint1 a:active{
+	color: #e00000;
+	}
+
+/* Calendar Selected Day (for DatePicker) */
+.CalendarSelectedDayBlueprint1{
+	font-family: Tahoma; font-size: 80%;
+	padding: 4px;
+	border-top: 1px solid #0058b3; border-right: 1px solid #0058b3;
+	background-color: #d6d6d6;
+	color: #000000;
+	text-align: center;
+	font-weight: bold;
+	}
+	
+
+html>body .CalendarSelectedDayBlueprint1 {
+	font-family: Tahoma; font-size: 100%;
+}
+
+
+/*ie6*/
+* html body .CalendarSelectedDayBlueprint1 {
+	font-family: Tahoma; font-size: 100%;
+}
+/*end*/
+
+.CalendarSelectedDayBlueprint1 a:link {
+	color: #000000;
+	}
+
+.CalendarSelectedDayBlueprint1 a:visited{
+	color: #000000;
+	}
+
+.CalendarSelectedDayBlueprint1 a:hover, .CalendarSelectedDayBlueprint1 a:active{
+	color: #e00000;
+	}
+
+/* Calendar Navigator */
+.CalendarNavigatorBlueprint1 {
+	font-family: Tahoma; font-size: 80%;
+	padding: 4px;
+	background-color: #d6d6d6; color: #000000;
+	text-align: center;
+	vertical-align: middle;
+	white-space: nowrap;
+	color: #000000;
+	}
+
+
+html>body .CalendarNavigatorBlueprint1 {
+	font-family: Tahoma; font-size: 100%;
+}
+
+
+/*ie6*/
+* html body .CalendarNavigatorBlueprint1 {
+	font-family: Tahoma; font-size: 100%;
+}
+/*end*/
+
+.CalendarNavigatorBlueprint1 a:link {
+	color: #004e9c;
+	}
+
+.CalendarNavigatorBlueprint1 a:visited{
+	color: #740074;
+	}
+
+.CalendarNavigatorBlueprint1 a:hover, .CalendarNavigatorBlueprint1 a:active{
+	color: #e00000;
+	}
+
+.CalendarNavigatorBlueprint1 img{
+	margin: 2px;
+	vertical-align: middle; 	
+	}
+
+.CalendarNavigatorBlueprint1 td {
+	font-family: Tahoma; font-size: 80%;
+	}
+
+.CalendarNavigatorBlueprint1 th {
+	font-family: Tahoma; font-size: 80%;
+	}
+
+
+html>body .CalendarNavigatorBlueprint1 th, html>body .CalendarNavigatorBlueprint1 td {
+	font-family: Tahoma; font-size: 100%;
+}
+
+
+/*ie6*/
+* html body .CalendarNavigatorBlueprint1 th, * html body .CalendarNavigatorBlueprint1 td {
+	font-family: Tahoma; font-size: 100%;
+}
+/*end*/
+
+/* Calendar Extra */
+.CalendarEventBlueprint1{
+	font-family: Tahoma; font-size: 80%;
+	text-align: left;
+	}
+
+
+html>body .CalendarEventBlueprint1 {
+	font-family: Tahoma; font-size: 100%;
+}
+
+
+/*ie6*/
+* html body .CalendarEventBlueprint1 {
+	font-family: Tahoma; font-size: 100%;
+}
+/*end*/
+
+.CalendarEventBlueprint1 a:link {
+	color: #004e9c;
+	}
+
+.CalendarEventBlueprint1 a:visited{
+	color: #740074;
+	}
+
+.CalendarEventBlueprint1 a:hover, .CalendarEventBlueprint1 a:active{
+	color: #e00000;
+	}
+
+/* Changes for Section508 */
+table tr td strong {
+	padding: 0px;
+	margin: 0px;
+}
+
+.thBlueprint1 { 
+	font-family: Tahoma; font-size: 80%;
+	font-weight: bold;
+}
+
+
+html>body .thBlueprint1 {
+	font-size: 100%;
+}
+
+
+/*ie6*/
+* html body .thBlueprint1 {
+	font-size: 100%;
+}
+/*end*/
+
+.HeaderBlueprint1 .thBlueprint1 { 
+	font-family: Tahoma; font-size: 110%; font-weight: bold; text-align: left;
+	padding: 4px;
+	background-color: #0058b3; color: #f4f4f4;
+	width: 100%;
+	white-space: nowrap;
+}
+
+
+html>body .HeaderBlueprint1 .thBlueprint1 {
+	font-family: Tahoma; font-size: 140%; font-weight: bold; text-align: left;
+}
+
+
+/*ie6*/
+* html body .HeaderBlueprint1 .thBlueprint1 {
+	font-family: Tahoma; font-size: 140%; font-weight: bold; text-align: left;
+}
+/*end*/
+
+.CaptionBlueprint1 .thBlueprint1 { 
+	font-family: Tahoma; font-size: 80%; text-align: left; vertical-align: top;
+	padding: 4px;
+	border-top: 1px solid #0058b3; border-right: 1px solid #0058b3;
+	background-image: url('Images/CaptionBg.gif'); color: #000000;
+	white-space: nowrap;
+}
+
+
+html>body .CaptionBlueprint1 .thBlueprint1 {
+	font-family: Tahoma; font-size: 100%; text-align: left; vertical-align: top;
+}
+
+
+/*ie6*/
+* html body .CaptionBlueprint1 .thBlueprint1 {
+	font-family: Tahoma; font-size: 100%; text-align: left; vertical-align: top;
+}
+/*end*/
+
+.RowBlueprint1 .thBlueprint1 { 
+	font-family: Tahoma; font-size: 80%; font-weight: normal; text-align: left; vertical-align: top;
+	padding: 4px;
+	border-top: 1px solid #0058b3; border-right: 1px solid #0058b3;
+	background-color: #ededed; color: #000000;
+	white-space: nowrap;
+	color: #000000;
+}
+
+.AltRowBlueprint1 .thBlueprint1 { 
+	font-family: Tahoma; font-size: 80%; font-weight: normal; text-align: left; vertical-align: top;
+	padding: 4px;
+	border-top: 1px solid #0058b3; border-right: 1px solid #0058b3;
+	background-color: #ededed; color: #000000;
+	white-space: nowrap;
+	color: #000000;
+}
+
+.ControlsBlueprint1 .thBlueprint1 { 
+	font-family: Tahoma; font-size: 80%; font-weight: normal; text-align: left; vertical-align: top;
+	padding: 4px;
+	border-top: 1px solid #0058b3; border-right: 1px solid #0058b3;
+	background-color: #ededed; color: #000000;
+	white-space: nowrap;
+	color: #000000;
+}
+
+.GroupCaptionBlueprint1 .thBlueprint1 {
+	font-family: Tahoma; font-size: 80%;
+	padding: 4px;
+	border-top: 1px solid #0058b3; border-right: 1px solid #0058b3;
+	text-align: left;
+	white-space: nowrap;
+	vertical-align: top;
+	font-weight: bold;
+	background-color: #dae4ee; 
+	color: #000000;
+}
+
+
+html>body .GroupCaptionBlueprint1 .thBlueprint1 {
+	font-family: Tahoma; font-size: 100%;
+}
+
+html>body .RowBlueprint1 .thBlueprint1, html>body .AltRowBlueprint1 .thBlueprint1, html>body .ControlsBlueprint1 .thBlueprint1 {
+	font-family: Tahoma; font-size: 100%; font-weight: normal; text-align: left; vertical-align: top;
+}
+
+
+/*ie6*/
+* html body .GroupCaptionBlueprint1 .thBlueprint1 {
+	font-family: Tahoma; font-size: 100%;
+}
+
+* html body .RowBlueprint1 .thBlueprint1, * html body .AltRowBlueprint1 .thBlueprint1, * html body .ControlsBlueprint1 .thBlueprint1 {
+	font-family: Tahoma; font-size: 100%; font-weight: normal; text-align: left; vertical-align: top;
+}
+/*end*/
+
+/* Class for Application Builder Menu */
+.simpleMenuBlueprint1 td {
+	font-family: Tahoma; font-size: 80%;
+}
+
+
+html>body .simpleMenuBlueprint1 td {
+	font-family: Tahoma; font-size: 100%;
+} 
+
+
+/*ie6*/
+* html body .simpleMenuBlueprint1 td {
+	font-family: Tahoma; font-size: 100%;
+} 
+/*end*/

@@ -1,0 +1,168 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html; charset=windows-1252">
+<title>page1</title>
+<meta name="GENERATOR" content="CodeCharge Studio 4.1.00.032">
+<script language="JavaScript" type="text/javascript">
+//Begin CCS script
+//Include Common JSFunctions @1-D3B5F5BF
+</script>
+<script language="JavaScript" src="ClientI18N.php?file=Functions.js&amp;locale={res:CCS_LocaleID}" type="text/javascript" charset="utf-8"></script>
+<script language="JavaScript" type="text/javascript">
+//End Include Common JSFunctions
+
+//Include User Scripts @1-854AC65B
+</script>
+<script language="JavaScript" src="js/pt/prototype.js" type="text/javascript"></script>
+<script language="JavaScript" src="js/pt/scriptaculous.js" type="text/javascript"></script>
+<script language="JavaScript" src="js/pt/controls.js" type="text/javascript"></script>
+<link rel="stylesheet" type="text/css" href="page1sales_table_importedSearchs_CUSTOMERREF_style.css">
+<script language="JavaScript" type="text/javascript">
+//End Include User Scripts
+
+//Initialize sales_table_importedSearchs_CUSTOMERREFPTAutocomplete2 @27-AA93FCC3
+function sales_table_importedSearchs_CUSTOMERREFPTAutocomplete2_start() {
+    if ($("sales_table_importedSearchs_CUSTOMERREF"))
+        new Ajax.Autocompleter("sales_table_importedSearchs_CUSTOMERREF", "sales_table_importedSearchs_CUSTOMERREF_choices", "services/page1_sales_table_importedSearch_s_CUSTOMERREF_PTAutocomplete1.php", {});
+}
+//End Initialize sales_table_importedSearchs_CUSTOMERREFPTAutocomplete2
+
+//bind_events @1-26EA8FF2
+function bind_events() {
+    sales_table_importedSearchs_CUSTOMERREFPTAutocomplete2_start();
+}
+//End bind_events
+
+window.onload = bind_events; //Assign bind_events @1-19F7B649
+
+//End CCS script
+</script>
+<link rel="stylesheet" type="text/css" href="Styles/Blueprint1/Style_doctype.css">
+</head>
+<body>
+<p>
+<table border="0" width="100%">
+  <tr>
+    <td><strong><font color="#000066" size="6">Create/Edit Worksheets</font></strong></td> 
+    <td>
+      <div align="right">
+      </div>
+    </td>
+  </tr>
+</table>
+</p>
+<p></p>
+<p>
+<!-- BEGIN Record sales_table_importedSearch -->
+<form id="sales_table_importedSearch" method="post" name="{HTMLFormName}" action="{Action}">
+  <table border="0" cellspacing="0" cellpadding="0">
+    <tr>
+      <td valign="top">
+        <table class="Header" border="0" cellspacing="0" cellpadding="0">
+          <tr>
+            <td class="HeaderLeft"><img border="0" alt="" src="Styles/Blueprint1/Images/Spacer.gif"></td> 
+            <td class="th"><strong>Search for New Service Orders</strong></td> 
+            <td class="HeaderRight"><img border="0" alt="" src="Styles/Blueprint1/Images/Spacer.gif"></td>
+          </tr>
+        </table>
+ 
+        <table class="Record" cellspacing="0" cellpadding="0">
+          <!-- BEGIN Error -->
+          <tr class="Error">
+            <td colspan="2">{Error}</td>
+          </tr>
+          <!-- END Error -->
+          <tr class="Controls">
+            <td class="th"><label for="sales_table_importedSearchs_CREATEDATE">CREATED ON&nbsp;&nbsp;</label></td> 
+            <td><input id="sales_table_importedSearchs_CREATEDATE" name="{s_CREATEDATE_Name}" maxlength="10" value="{s_CREATEDATE}" size="10">(year-month-day; e.g.: 2009-04-17)</td>
+          </tr>
+ 
+          <tr class="Controls">
+            <td class="th"><label for="sales_table_importedSearchs_SALESNUMBER">ORDER NO&nbsp;&nbsp;</label></td> 
+            <td><input id="sales_table_importedSearchs_SALESNUMBER" name="{s_SALESNUMBER_Name}" maxlength="6" value="{s_SALESNUMBER}" size="6"></td>
+          </tr>
+ 
+          <tr class="Controls">
+            <td class="th"><label for="sales_table_importedSearchs_CUSTOMERREF">VESSEL'S NAME&nbsp;&nbsp;</label></td> 
+            <td>
+              <!-- BEGIN TextBox s_CUSTOMERREF --><input id="sales_table_importedSearchs_CUSTOMERREF" name="{s_CUSTOMERREF_Name}" maxlength="50" value="{s_CUSTOMERREF}" size="50" autocomplete="off">
+              <!-- BEGINF PTAutocomplete PTAutocomplete1 -->
+              <div id="sales_table_importedSearchs_CUSTOMERREF_choices">
+              </div>
+              <!-- ENDF PTAutocomplete PTAutocomplete1 --><!-- END TextBox s_CUSTOMERREF --></td>
+          </tr>
+ 
+          <tr class="Controls">
+            <td class="th"><label for="sales_table_importedSearchs_IMOnumber">IMO NUMBER&nbsp;&nbsp;</label></td> 
+            <td><input id="sales_table_importedSearchs_IMOnumber" name="{s_IMOnumber_Name}" maxlength="7" value="{s_IMOnumber}" size="7"></td>
+          </tr>
+ 
+          <tr class="Bottom">
+            <td colspan="2" align="right">
+              <!-- BEGIN Button Button_DoSearch --><input id="sales_table_importedSearchButton_DoSearch" class="Button" name="{Button_Name}" alt="Search" value="Search" type="submit"><!-- END Button Button_DoSearch --></td>
+          </tr>
+        </table>
+      </td>
+    </tr>
+  </table>
+</form>
+<!-- END Record sales_table_importedSearch --></p>
+<p>
+<!-- BEGIN Grid sales_table_imported -->
+<table border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td valign="top">
+      <table class="Header" border="0" cellspacing="0" cellpadding="0">
+        <tr>
+          <td class="HeaderLeft"><img border="0" alt="" src="Styles/Blueprint1/Images/Spacer.gif"></td> 
+          <td class="th"><strong>Search Results (OBS - On Board Service)</strong></td> 
+          <td class="HeaderRight"><img border="0" alt="" src="Styles/Blueprint1/Images/Spacer.gif"></td>
+        </tr>
+      </table>
+ 
+      <table class="Grid" cellspacing="0" cellpadding="0">
+        <tr class="Caption">
+          <th scope="col">CREATED ON</th>
+ 
+          <th scope="col">ORDER NO</th>
+ 
+          <th scope="col">IMO NUMBER</th>
+ 
+          <th scope="col">VESSEL'S NAME</th>
+ 
+          <th scope="col">ACTIONS</th>
+ 
+          <th scope="col">STATUS</th>
+        </tr>
+ 
+        <!-- BEGIN Row -->
+        <tr class="Row">
+          <td>{CREATEDATE}&nbsp;</td> 
+          <td>{SALESNUMBER}&nbsp;</td> 
+          <td>{IMOnumber}&nbsp;</td> 
+          <td>{CUSTOMERREF}</td> 
+          <td><a href="{Link1_Src}" id="sales_table_importedLink1_{sales_table_imported:rowNumber}">EDIT WORKSHEET</a>&nbsp; |&nbsp; <a href="{Link2_Src}" id="sales_table_importedLink2_{sales_table_imported:rowNumber}">OPEN FILE MANAGER</a></td> 
+          <td></td>
+        </tr>
+ <!-- END Row -->
+        <!-- BEGIN NoRecords -->
+        <tr class="NoRecords">
+          <td colspan="6">no records found.</td>
+        </tr>
+        <!-- END NoRecords -->
+        <tr class="Footer">
+          <td colspan="6">
+            <!-- BEGIN Navigator Navigator -->
+            <!-- BEGIN Prev_On --><a href="{Prev_URL}"><img border="0" alt="{Prev_URL}" src="Styles/Blueprint1/Images/en/ButtonPrev.gif"></a> <!-- END Prev_On -->
+            <!-- BEGIN Prev_Off --><img border="0" alt="{Prev_URL}" src="Styles/Blueprint1/Images/en/ButtonPrevOff.gif"><!-- END Prev_Off -->
+            <!-- BEGIN Next_On --><a href="{Next_URL}"><img border="0" alt="{Next_URL}" src="Styles/Blueprint1/Images/en/ButtonNext.gif"></a> <!-- END Next_On -->
+            <!-- BEGIN Next_Off --><img border="0" alt="{Next_URL}" src="Styles/Blueprint1/Images/en/ButtonNextOff.gif"><!-- END Next_Off --><!-- END Navigator Navigator --></td>
+        </tr>
+      </table>
+    </td>
+  </tr>
+</table>
+<!-- END Grid sales_table_imported --><a href="{Link1_Src}" id="Link1"><strong>NON OBS</strong></a></p>
+</body>
+</html>

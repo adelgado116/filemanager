@@ -1,0 +1,21 @@
+/*Page Style @1-3E7298C3*/
+#toolsSearchs_tool_description_choices {
+    position: absolute;
+}
+#toolsSearchs_tool_description_choices ul {
+    background-color: white;
+    border: 1px solid black;
+    border-top: none;
+    padding-left: 0px;
+    padding-right: 0px;
+    margin: 0px;
+}
+#toolsSearchs_tool_description_choices ul li.selected { background-color: #aaa;}
+#toolsSearchs_tool_description_choices li {
+    list-style-type: none;
+    padding-left: 8px;
+    padding-right: 8px;
+    margin: 0;
+}
+/*End Page Style*/
+

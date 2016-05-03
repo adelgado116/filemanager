@@ -1,0 +1,161 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html; charset=windows-1252">
+<title>page6</title>
+<meta content="CodeCharge Studio 4.01.00.06" name="GENERATOR">
+<link href="Styles/hss1/Style_doctype.css" type="text/css" rel="stylesheet">
+<script language="JavaScript" type="text/javascript">
+//Begin CCS script
+//Include Common JSFunctions @1-D3B5F5BF
+</script>
+<script language="JavaScript" src="ClientI18N.php?file=Functions.js&amp;locale={res:CCS_LocaleID}" type="text/javascript" charset="utf-8"></script>
+<script language="JavaScript" type="text/javascript">
+//End Include Common JSFunctions
+
+//service_items_tblButton_Delete_OnClick @7-CF885D26
+function service_items_tblButton_Delete_OnClick()
+{
+    var result = true;
+//End service_items_tblButton_Delete_OnClick
+
+//Confirmation Message @8-8243B274
+    return confirm('Delete this Equipment from Worksheet?');
+//End Confirmation Message
+
+//Close service_items_tblButton_Delete_OnClick @7-BC33A33A
+    return result;
+}
+//End Close service_items_tblButton_Delete_OnClick
+
+//service_items_tblButton_Cancel_OnClick @9-9C97A885
+function service_items_tblButton_Cancel_OnClick()
+{
+    disableValidation = true;
+}
+//End service_items_tblButton_Cancel_OnClick
+
+//bind_events @1-EB877450
+function bind_events() {
+    addEventHandler("service_items_tblButton_Delete", "click", service_items_tblButton_Delete_OnClick);
+    addEventHandler("service_items_tblButton_Cancel", "click", service_items_tblButton_Cancel_OnClick);
+}
+//End bind_events
+
+window.onload = bind_events; //Assign bind_events @1-19F7B649
+
+//End CCS script
+</script>
+</head>
+<body>
+<table width="100%" border="0">
+  <tr>
+    <td>
+      <p><strong><font color="#000066" size="6">Edit/Delete Equipment Information</font></strong></p>
+    </td> 
+    <td>
+      <div align="right">
+      </div>
+    </td>
+  </tr>
+</table>
+<p>&nbsp;</p>
+<!-- BEGIN Record service_items_tbl -->
+<form id="service_items_tbl" name="{HTMLFormName}" action="{Action}" method="post">
+  <table cellspacing="0" cellpadding="0" border="0">
+    <tr>
+      <td valign="top">
+        <table class="Header" cellspacing="0" cellpadding="0" border="0">
+          <tr>
+            <td class="HeaderLeft"><img alt="" src="Styles/hss1/Images/Spacer.gif" border="0"></td> 
+            <td class="th">Equipment Information</td> 
+            <td class="HeaderRight"><img alt="" src="Styles/hss1/Images/Spacer.gif" border="0"></td>
+          </tr>
+        </table>
+ 
+        <table class="Record" cellspacing="0" cellpadding="0">
+          <!-- BEGIN Error -->
+          <tr class="Error">
+            <td colspan="2">{Error}</td>
+          </tr>
+          <!-- END Error -->
+          <tr class="Controls">
+            <td class="th"><label for="service_items_tblORDER_NO">ORDER NO</label></td> 
+            <td><input id="service_items_tblORDER_NO" readonly maxlength="6" size="6" value="{ORDER_NO}" name="{ORDER_NO_Name}"></td>
+          </tr>
+ 
+          <tr class="Controls">
+            <td class="th">EQUIPMENT</td> 
+            <td><label for="service_items_tblEQUIP_MODEL" style="display: none;"></label><input id="service_items_tblEQUIP_MODEL" readonly size="40" value="{EQUIP_MODEL}" name="{EQUIP_MODEL_Name}"></td>
+          </tr>
+ 
+          <tr class="Controls">
+            <td class="th"><label for="service_items_tblSERVICE_TYPE_ID">SERVICE TYPE</label></td> 
+            <td>
+              <select id="service_items_tblSERVICE_TYPE_ID" name="{SERVICE_TYPE_ID_Name}">
+                <option value="" selected>Select Value</option>
+                {SERVICE_TYPE_ID_Options}
+              </select>
+ </td>
+          </tr>
+ 
+          <tr class="Controls">
+            <td class="th"><label for="service_items_tblWARRANTY">WARRANTY</label></td> 
+            <td><input id="service_items_tblWARRANTY" type="checkbox" value="1" name="{WARRANTY_Name}" {WARRANTY}></td>
+          </tr>
+ 
+          <tr class="Controls">
+            <td class="th"><label for="service_items_tblemp_id">APPROVED BY</label></td> 
+            <td>
+              <select id="service_items_tblemp_id" name="{emp_id_Name}">
+                <option value="" selected>Select Value</option>
+                {emp_id_Options}
+              </select>
+ </td>
+          </tr>
+ 
+          <tr class="Controls">
+            <td class="th">COORD. BY</td> 
+            <td>
+              <select id="service_items_tblcoord_id" name="{coord_id_Name}">
+                <option value="" selected>Select Value</option>
+                {coord_id_Options}
+              </select>
+ </td>
+          </tr>
+ 
+          <tr class="Controls">
+            <td class="th">ASSIGN TO</td> 
+            <td>
+              <select id="service_items_tblassigned_emp_id" name="{assigned_emp_id_Name}">
+                <option value="" selected>Select Value</option>
+                {assigned_emp_id_Options}
+              </select>
+ </td>
+          </tr>
+ 
+          <tr class="Controls">
+            <td class="th">REQUEST</td> 
+            <td><textarea id="service_items_tblREQUEST" name="{REQUEST_Name}" rows="4" cols="50">{REQUEST}</textarea></td>
+          </tr>
+ 
+          <tr class="Controls">
+            <td class="th"><label for="service_items_tblREMARKS">REMARKS</label></td> 
+            <td><textarea id="service_items_tblREMARKS" name="{REMARKS_Name}" rows="3" cols="50">{REMARKS}</textarea></td>
+          </tr>
+ 
+          <tr class="Bottom">
+            <td align="right" colspan="2">
+              <!-- BEGIN Button Button_Update --><input class="Button" id="service_items_tblButton_Update" type="submit" alt="Submit" value="Update" name="{Button_Name}"><!-- END Button Button_Update -->
+              <!-- BEGIN Button Button_Delete --><input class="Button" id="service_items_tblButton_Delete" type="submit" alt="Delete" value="Delete" name="{Button_Name}"><!-- END Button Button_Delete -->
+              <!-- BEGIN Button Button_Cancel --><input class="Button" id="service_items_tblButton_Cancel" type="submit" alt="Cancel" value="Cancel" name="{Button_Name}"><!-- END Button Button_Cancel --></td>
+          </tr>
+        </table>
+      </td>
+    </tr>
+  </table>
+  <p><input id="service_items_tblITEM_NO" type="hidden" value="{ITEM_NO}" name="{ITEM_NO_Name}"><input id="service_items_tblEQUIP_ID" type="hidden" value="{EQUIP_ID}" name="{EQUIP_ID_Name}"><input id="service_items_tblFOLLOW_UP" type="hidden" value="{FOLLOW_UP}" name="{FOLLOW_UP_Name}"></p>
+</form>
+<!-- END Record service_items_tbl --><br>
+</body>
+</html>

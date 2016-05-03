@@ -1,0 +1,75 @@
+body { color: black; background-color: white; }
+a:link {
+  color: #003399;
+  text-decoration: none;
+  font-family:Verdana, Arial, Helvetica, sans-serif;
+  font-size:12px;
+  font-weight: normal;
+}
+a:visited {
+  color: #003399;
+  text-decoration: none;
+  font-family:Verdana, Arial, Helvetica, sans-serif;
+  font-size:12px;
+  font-weight: normal;
+}
+a:hover {
+  color: red;
+  padding-bottom: 5px;
+  font-family:Verdana, Arial, Helvetica, sans-serif;
+  font-size:12px;
+  font-weight: normal;
+  text-decoration: none;
+}
+a:active { 
+  color: #003399;
+  font-family:Verdana, Arial, Helvetica, sans-serif;
+  font-size:12px;
+  font-weight: normal;
+}
+
+#title { height: 30px; width: 350px; left: 80px; top: 12px; position: absolute; visibility: visible; }
+#login_form { height: 170px; width: 270px; left: 254px; top: 100px;
+	position: absolute; visibility: visible;
+	border:1px solid;border-top-color: #545454;border-left-color: #545454;border-right-color: #545454;border-bottom-color: #545454 }
+
+/*  this is for newuser.php */
+#form_1 { height: 350px; width: 470px; left: 100px; top: 50px; position: absolute; visibility: visible;
+		  border:1px solid;border-top-color: #545454;border-left-color: #545454;border-right-color: #545454;border-bottom-color: #545454 }
+/*  this is for changeuser.php */
+#form_2 { height: 363px; width: 470px; left: 150px; top: 50px; position: absolute; visibility: visible;
+		  border:1px solid;border-top-color: #545454;border-left-color: #545454;border-right-color: #545454;border-bottom-color: #545454 }
+/*  this is for change_qsm.php */
+#form_3 { height: auto; width: 470px; left: 150px; top: 50px; position: absolute; visibility: visible;
+		  border:1px solid;border-top-color: #545454;border-left-color: #545454;border-right-color: #545454;border-bottom-color: #545454 }
+
+
+.textbox {
+	color:#000000;
+	font-family:Verdana, Arial, Helvetica, sans-serif;
+	font-size:14px;
+	
+	border:1px solid;
+	border-top-color: #545454;
+	border-left-color: #545454;
+	border-right-color: #545454;
+	border-bottom-color: #545454
+}
+
+.button{
+	color:#000000;
+	font-family:Verdana, Arial, Helvetica, sans-serif;
+	font-size:85%;
+	/*font-weight:bold;*/
+	background-color: #EEEEEE;
+	border:1px solid;
+	border-top-color: #0066FF;
+	border-left-color: #0066FF;
+	border-right-color: #0066FF;
+	border-bottom-color: #0066FF
+	
+}
+
+.font6{ font-family: Verdana; font-size: 6pt; }
+.font8{ font-family: Verdana; font-size: 8pt; }
+.font12{ font-family: Verdana; font-size: 12pt; }

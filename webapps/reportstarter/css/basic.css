@@ -1,0 +1,54 @@
+/*SYSTEM*/
+/*body { color: black; background-color: #545454; }*/
+body { color: black; background-color: #EEEEEE; }
+p {}
+td {}
+a:link {
+  color: white;
+  text-decoration: none;
+  font-family:Verdana, Arial, Helvetica, sans-serif;
+  font-size:12px;
+  font-weight: normal;
+}
+a:visited {
+  color: white;
+  text-decoration: none;
+  font-family:Verdana, Arial, Helvetica, sans-serif;
+  font-size:12px;
+  font-weight: normal;
+}
+a:hover {
+  color: #888888;
+  padding-bottom: 5px;
+  font-family:Verdana, Arial, Helvetica, sans-serif;
+  font-size:12px;
+  font-weight: normal;
+  text-decoration: none;
+}
+a:active { 
+  color: white;
+  font-family:Verdana, Arial, Helvetica, sans-serif;
+  font-size:12px;
+  font-weight: normal;
+}
+
+/*MAIN LAYOUT*/
+#wrapper { text-align: left; position: relative; width: 900px; height: auto; margin-right: auto; margin-left: auto; }
+#top { background-color: #545454; height: 50px; width: 780px; left: 22px; top: -8px; position: absolute; visibility: visible; }
+#notice { height: 30px; width: 360px; /*left: 400px;*/right: 0px; top: 0px; position: absolute; visibility: visible;
+		  /*border: 1px solid; border-top-color: #FFFFFF; border-left-color:#FFFFFF; border-bottom-color:#FFFFFF; border-right-color:#FFFFFF;*/ }
+#controls_bar { text-align: right; height: 20px; width: 780px; left: 22px; top: 43px; position: absolute; visibility: visible; background-color:#000000 }
+#left_side {
+text-align: left; background-color: #FFFFFF; height: 550px; width: 122px; left: 22px; top: 70px;
+position: absolute; visibility: visible;
+border: 1px solid; border-top-color: #FFFFFF; border-left-color:#FFFFFF; border-bottom-color:#FFFFFF; border-right-color:#000000; }
+#iframe { height: 550px; width: 778px; left: 22px; top: 65px; position: relative; visibility: visible;
+		  border: 1px solid; border-top-color: #545454; border-left-color:#545454; border-bottom-color:#545454; border-right-color:#545454; }
+#copy {  background-color: #484848; color: #FFFFFF; text-align: center; height: 22px; width: 780px; left: 22px; top: 618px; position: absolute; visibility: visible; }
+
+
+/*HOME*/
+#home { text-align:center; font-size: 18pt; top:175px; position: absolute; visibility: visible;}
+
+.font7{ font-family: Verdana; font-size: 7pt; color: #FFFFFF; }
+.font16{ font-family: Verdana; font-size: 16pt; color: #FFFFFF; }

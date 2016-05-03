@@ -1,0 +1,286 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta content="text/html; charset=windows-1252" http-equiv="content-type">
+<title>page5</title>
+<meta name="GENERATOR" content="CodeCharge Studio 4.01.00.06">
+<script language="JavaScript" type="text/javascript">
+//Begin CCS script
+//Include Common JSFunctions @1-D3B5F5BF
+</script>
+<script language="JavaScript" type="text/javascript" charset="utf-8" src="ClientI18N.php?file=Functions.js&amp;locale={res:CCS_LocaleID}"></script>
+<script language="JavaScript" type="text/javascript">
+//End Include Common JSFunctions
+
+//DEL      return confirm('Do you want to Delete this Worksheet?');
+
+//service_tblButton_Delete_OnClick @172-F34523BA
+function service_tblButton_Delete_OnClick()
+{
+    var result = true;
+//End service_tblButton_Delete_OnClick
+
+//Confirmation Message @173-8243B274
+    return confirm('Delete record?');
+//End Confirmation Message
+
+//Close service_tblButton_Delete_OnClick @172-BC33A33A
+    return result;
+}
+//End Close service_tblButton_Delete_OnClick
+
+//bind_events @1-CC8D0039
+function bind_events() {
+    addEventHandler("service_tblButton_Delete", "click", service_tblButton_Delete_OnClick);
+}
+//End bind_events
+
+window.onload = bind_events; //Assign bind_events @1-19F7B649
+
+//End CCS script
+</script>
+<link rel="stylesheet" type="text/css" href="Styles/Blueprint1/Style_doctype.css">
+</head>
+<body>
+<p>
+<table border="0" width="100%">
+  <tr>
+    <td><strong><font color="#000066" size="6">Service Information</font></strong></td> 
+    <td>
+      <div align="right">
+<a href="{Link2_Src}" id="Link2"><strong>GO TO ORDERS SEARCH</strong></a> 
+      </div>
+    </td>
+  </tr>
+</table>
+<table border="0" width="100%">
+  <tr>
+    <td>
+      <p>
+      <!-- BEGIN Record service_tbl -->
+      <form id="service_tbl" method="post" name="{HTMLFormName}" action="{Action}">
+        <table border="0" cellspacing="0" cellpadding="0">
+          <tr>
+            <td valign="top">
+              <table class="Header" border="0" cellspacing="0" cellpadding="0">
+                <tr>
+                  <td class="HeaderLeft"><img border="0" alt="" src="Styles/Blueprint1/Images/Spacer.gif"></td> 
+                  <td class="th"><strong>Service Information</strong></td> 
+                  <td class="HeaderRight"><img border="0" alt="" src="Styles/Blueprint1/Images/Spacer.gif"></td>
+                </tr>
+              </table>
+ 
+              <table class="Record" cellspacing="0" cellpadding="0">
+                <!-- BEGIN Error -->
+                <tr class="Error">
+                  <td colspan="2">{Error}</td>
+                </tr>
+                <!-- END Error -->
+                <tr class="Controls">
+                  <td class="th"><label for="service_tblORDER_NO">ORDER NO</label></td> 
+                  <td><input id="service_tblORDER_NO" value="{ORDER_NO}" readonly maxlength="6" size="6" name="{ORDER_NO_Name}"></td>
+                </tr>
+ 
+                <tr class="Controls">
+                  <td class="th"><label for="service_tblSTATUS_ID">STATUS</label></td> 
+                  <td>
+                    <select id="service_tblSTATUS_ID" name="{STATUS_ID_Name}">
+                      <option selected value="">Select Value</option>
+                      {STATUS_ID_Options}
+                    </select>
+ </td>
+                </tr>
+ 
+                <tr class="Controls">
+                  <td class="th"><label for="service_tblIMO_NUMBER">IMO NUMBER</label></td> 
+                  <td><input id="service_tblIMO_NUMBER" value="{IMO_NUMBER}" readonly maxlength="7" size="7" name="{IMO_NUMBER_Name}"></td>
+                </tr>
+ 
+                <tr class="Controls">
+                  <td class="th">VESSEL NAME</td> 
+                  <td><input id="service_tblSHIP_NAME" value="{SHIP_NAME}" readonly name="{SHIP_NAME_Name}"></td>
+                </tr>
+ 
+                <tr class="Controls">
+                  <td class="th"><label for="service_tblREQUISNUMBER">CUSTOMER ORDER NO</label></td> 
+                  <td><input id="service_tblREQUISNUMBER" value="{REQUISNUMBER}" readonly maxlength="50" size="30" name="{REQUISNUMBER_Name}"></td>
+                </tr>
+ 
+                <tr class="Controls">
+                  <td class="th"><label for="service_tblcountry_id">COUNTRY</label></td> 
+                  <td>
+                    <select id="service_tblcountry_id" name="{country_id_Name}">
+                      <option selected value="">Select Value</option>
+                      {country_id_Options}
+                    </select>
+ </td>
+                </tr>
+ 
+                <tr class="Controls">
+                  <td class="th"><label for="service_tblcity_id">CITY</label></td> 
+                  <td>
+                    <select id="service_tblcity_id" name="{city_id_Name}">
+                      <option selected value="">Select Value</option>
+                      {city_id_Options}
+                    </select>
+ </td>
+                </tr>
+ 
+                <tr class="Controls">
+                  <td class="th"><label for="service_tblPORT_ID">PORT/PLACE</label></td> 
+                  <td>
+                    <select id="service_tblPORT_ID" name="{PORT_ID_Name}">
+                      <option selected value="">Select Value</option>
+                      {PORT_ID_Options}
+                    </select>
+ </td>
+                </tr>
+ 
+                <tr class="Controls">
+                  <td class="th"><label for="service_tblAGENT_ID">AGENT</label></td> 
+                  <td>
+                    <select id="service_tblAGENT_ID" name="{AGENT_ID_Name}">
+                      <option selected value="">Select Value</option>
+                      {AGENT_ID_Options}
+                    </select>
+ </td>
+                </tr>
+ 
+                <tr class="Controls">
+                  <td class="th"><label for="service_tblAGENT_DUTY">AGENT DUTY</label></td> 
+                  <td><input id="service_tblAGENT_DUTY" value="{AGENT_DUTY}" maxlength="50" size="30" name="{AGENT_DUTY_Name}"></td>
+                </tr>
+ 
+                <tr class="Controls">
+                  <td class="th"><label for="service_tblETA_DATE_DAY">ETA DATE</label></td> 
+                  <td>DAY - MONTH - YEAR<br>
+                    <select id="service_tblETA_DATE_DAY" name="{ETA_DATE_DAY_Name}">
+                      <option selected value="">Select Value</option>
+                      {ETA_DATE_DAY_Options}
+                    </select>
+ - 
+                    <select id="service_tblETA_DATE_MONTH" name="{ETA_DATE_MONTH_Name}">
+                      <option selected value="">Select Value</option>
+                      {ETA_DATE_MONTH_Options}
+                    </select>
+ - 
+                    <select id="service_tblETA_DATE_YEAR" name="{ETA_DATE_YEAR_Name}">
+                      <option selected value="">Select Value</option>
+                      {ETA_DATE_YEAR_Options}
+                    </select>
+ </td>
+                </tr>
+ 
+                <tr class="Controls">
+                  <td class="th"><label for="service_tblETA_HOUR">ETA HOUR</label></td> 
+                  <td><input id="service_tblETA_HOUR" value="{ETA_HOUR}" maxlength="4" size="4" name="{ETA_HOUR_Name}"></td>
+                </tr>
+ 
+                <tr class="Controls">
+                  <td class="th" colspan="2"><strong>&nbsp; AFTER SERVICE INFORMATION</strong></td>
+                </tr>
+ 
+                <tr class="Controls">
+                  <td class="th"><label for="service_tblAGENT_EVAL_OFFICE">AGENT EVAL. (OFFICE)</label></td> 
+                  <td>
+                    <select id="service_tblAGENT_EVAL_OFFICE" name="{AGENT_EVAL_OFFICE_Name}">
+                      <option selected value="">Select Value</option>
+                      {AGENT_EVAL_OFFICE_Options}
+                    </select>
+ </td>
+                </tr>
+ 
+                <tr class="Controls">
+                  <td class="th"><label for="service_tblRETURN_REPORT_TO">RETURN REPORT TO</label></td> 
+                  <td><input id="service_tblRETURN_REPORT_TO" value="{RETURN_REPORT_TO}" maxlength="50" size="30" name="{RETURN_REPORT_TO_Name}"></td>
+                </tr>
+ 
+                <tr class="Bottom">
+                  <td colspan="2" align="right">
+                    <!-- BEGIN Button Button_Update --><input id="service_tblButton_Update" class="Button" value="update worksheet" alt="Submit" type="submit" name="{Button_Name}"><!-- END Button Button_Update -->
+                    <!-- BEGIN Button Button_Delete --><input id="service_tblButton_Delete" class="Button" value="delete worksheet" alt="Delete" type="submit" name="{Button_Name}"><!-- END Button Button_Delete -->
+                    <!-- BEGIN Button Button_Generate --><input id="service_tblButton_Generate" class="Button" value="generate printable version" alt="Button1" type="submit" name="{Button_Name}"><!-- END Button Button_Generate --></td>
+                </tr>
+              </table>
+            </td>
+          </tr>
+        </table>
+      </form>
+      <!-- END Record service_tbl --></p>
+ 
+      <p><a href="{Link3_Src}" id="Link3" title="only for service coordination use"><strong>RE-ASSIGN ORDER NO</strong></a></p>
+    </td> 
+    <td>
+      <p>&nbsp;</p>
+ 
+      <p>
+      <!-- BEGIN Grid employees_tbl_equipment_m1 -->
+      <table border="0" cellspacing="0" cellpadding="0">
+        <tr>
+          <td valign="top">
+            <table class="Header" border="0" cellspacing="0" cellpadding="0">
+              <tr>
+                <td class="HeaderLeft"><img border="0" alt="" src="Styles/hss1/Images/Spacer.gif"></td> 
+                <td class="th">Equipment Information</td> 
+                <td class="HeaderRight"><img border="0" alt="" src="Styles/hss1/Images/Spacer.gif"></td>
+              </tr>
+            </table>
+ 
+            <table class="Grid" cellspacing="0" cellpadding="0">
+              <tr class="Caption">
+                <th scope="col">MANUFACTURER</th>
+ 
+                <th scope="col">EQUIPMENT</th>
+ 
+                <th scope="col">SERVICE TYPE</th>
+ 
+                <th scope="col">WARRANTY</th>
+ 
+                <th scope="col">APP. BY</th>
+ 
+                <th scope="col">COORD. BY</th>
+ 
+                <th scope="col">&nbsp;REMARKS</th>
+ 
+                <th scope="col">ACTIONS</th>
+              </tr>
+ 
+              <!-- BEGIN Row -->
+              <tr class="Row">
+                <td>{MANUF_NAME}&nbsp;</td> 
+                <td>{EQUIP_MODEL}</td> 
+                <td>{SERVICE_TYPE}</td> 
+                <td>{WARRANTY}&nbsp;</td> 
+                <td>{employees_tbl_emp_login}&nbsp;</td> 
+                <td>{employees_tbl1_emp_login}</td> 
+                <td>&nbsp;{REMARKS}</td> 
+                <td>&nbsp;<a href="{Link2_Src}" id="employees_tbl_equipment_m1Link2_{employees_tbl_equipment_m1:rowNumber}">EDIT / DELETE</a>&nbsp; |&nbsp; <a href="{Link3_Src}" id="employees_tbl_equipment_m1Link3_{employees_tbl_equipment_m1:rowNumber}">VIEW / EDIT TIMESHEET</a></td>
+              </tr>
+ <!-- END Row -->
+              <tr class="NoRecords">
+                <td colspan="8">&nbsp;<a href="{Link1_Src}" id="employees_tbl_equipment_m1Link1_{employees_tbl_equipment_m:rowNumber}" title="search equipments database to add a new item to this SERVICE ORDER"><strong>ADD EQUIPMENT</strong></a></td>
+              </tr>
+              <!-- BEGIN NoRecords -->
+              <tr class="NoRecords">
+                <td colspan="8">&gt;&gt; empty worksheet</td>
+              </tr>
+              <!-- END NoRecords -->
+              <tr class="Footer">
+                <td colspan="8">
+                  <!-- BEGIN Navigator Navigator -->
+                  <!-- BEGIN Prev_On --><a href="{Prev_URL}"><img border="0" alt="{Prev_URL}" src="Styles/hss1/Images/en/ButtonPrev.gif"></a> <!-- END Prev_On -->
+                  <!-- BEGIN Prev_Off --><img border="0" alt="{Prev_URL}" src="Styles/hss1/Images/en/ButtonPrevOff.gif"><!-- END Prev_Off -->
+                  <!-- BEGIN Next_On --><a href="{Next_URL}"><img border="0" alt="{Next_URL}" src="Styles/hss1/Images/en/ButtonNext.gif"></a> <!-- END Next_On -->
+                  <!-- BEGIN Next_Off --><img border="0" alt="{Next_URL}" src="Styles/hss1/Images/en/ButtonNextOff.gif"><!-- END Next_Off --><!-- END Navigator Navigator -->&nbsp;</td>
+              </tr>
+            </table>
+          </td>
+        </tr>
+      </table>
+      <!-- END Grid employees_tbl_equipment_m1 --></p>
+    </td>
+  </tr>
+</table>
+</p>
+</body>
+</html>

@@ -1,0 +1,173 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta content="text/html; charset=windows-1252" http-equiv="content-type">
+<title>:: Customer Evaluations Reporting Tool</title>
+<meta name="GENERATOR" content="CodeCharge Studio 4.1.00.032">
+<link rel="stylesheet" type="text/css" href="Styles/hss1/Style_doctype.css">
+<script language="JavaScript" type="text/javascript">
+//Begin CCS script
+//Include Common JSFunctions @1-D3B5F5BF
+</script>
+<script language="JavaScript" type="text/javascript" charset="utf-8" src="ClientI18N.php?file=Functions.js&amp;locale={res:CCS_LocaleID}"></script>
+<script language="JavaScript" type="text/javascript">
+//End Include Common JSFunctions
+
+//tech_evalButton_Delete_OnClick @5-D9DA1F04
+function tech_evalButton_Delete_OnClick()
+{
+    var result = true;
+//End tech_evalButton_Delete_OnClick
+
+//Confirmation Message @6-8243B274
+    return confirm('Delete record?');
+//End Confirmation Message
+
+//Close tech_evalButton_Delete_OnClick @5-BC33A33A
+    return result;
+}
+//End Close tech_evalButton_Delete_OnClick
+
+//tech_evalButton_Cancel_OnClick @7-3AEDDE28
+function tech_evalButton_Cancel_OnClick()
+{
+    disableValidation = true;
+}
+//End tech_evalButton_Cancel_OnClick
+
+//bind_events @1-0243D752
+function bind_events() {
+    addEventHandler("tech_evalButton_Delete", "click", tech_evalButton_Delete_OnClick);
+    addEventHandler("tech_evalButton_Cancel", "click", tech_evalButton_Cancel_OnClick);
+}
+//End bind_events
+
+window.onload = bind_events; //Assign bind_events @1-19F7B649
+
+//End CCS script
+</script>
+</head>
+<body>
+<table border="0" width="100%">
+  <tr>
+    <td><strong><font color="#000066" size="6">Evaluation from Customer</font></strong></td> 
+    <td>&nbsp; 
+      <div align="right">
+      </div>
+    </td>
+  </tr>
+</table>
+<!-- BEGIN Record tech_eval -->
+<form id="tech_eval" method="post" name="{HTMLFormName}" action="{Action}">
+  <table border="0" cellspacing="0" cellpadding="0">
+    <tr>
+      <td valign="top">
+        <table class="Header" border="0" cellspacing="0" cellpadding="0">
+          <tr>
+            <td class="HeaderLeft"><img border="0" alt="" src="Styles/hss1/Images/Spacer.gif"></td> 
+            <td class="th"><strong>Add/Edit an Evaluation</strong></td> 
+            <td class="HeaderRight"><img border="0" alt="" src="Styles/hss1/Images/Spacer.gif"></td>
+          </tr>
+        </table>
+ 
+        <table class="Record" cellspacing="0" cellpadding="0">
+          <!-- BEGIN Error -->
+          <tr class="Error">
+            <td colspan="2">{Error}</td>
+          </tr>
+          <!-- END Error -->
+          <tr class="Controls">
+            <td class="th"><label for="tech_evalORDER_NO">ORDER NO</label></td> 
+            <td><input id="tech_evalORDER_NO" value="{ORDER_NO}" readonly maxlength="6" size="6" name="{ORDER_NO_Name}"></td>
+          </tr>
+ 
+          <tr class="Controls">
+            <td class="th"><label for="tech_evaltech_id">TECHNICIAN</label></td> 
+            <td>
+              <select id="tech_evaltech_id" name="{tech_id_Name}">
+                <option selected value="">Select Value</option>
+                {tech_id_Options}
+              </select>
+ </td>
+          </tr>
+ 
+          <tr class="Controls">
+            <td class="th"><label for="tech_evalservice_date_day">SERVICE DATE</label></td> 
+            <td>Day - Month - Year<br>
+              <select id="tech_evalservice_date_day" name="{service_date_day_Name}">
+                <option selected value="">Select Value</option>
+                {service_date_day_Options}
+              </select>
+ - 
+              <select id="tech_evalservice_date_month" name="{service_date_month_Name}">
+                <option selected value="">Select Value</option>
+                {service_date_month_Options}
+              </select>
+ - 
+              <select id="tech_evalservice_date_year" name="{service_date_year_Name}">
+                <option selected value="">Select Value</option>
+                {service_date_year_Options}
+              </select>
+ </td>
+          </tr>
+ 
+          <tr class="Controls">
+            <td class="th"><label for="tech_evalperformance"><strong>Technician's Performance</strong></label></td> 
+            <td>
+              <select id="tech_evalperformance" name="{performance_Name}">
+                <option selected value="">Select Value</option>
+                {performance_Options}
+              </select>
+ </td>
+          </tr>
+ 
+          <tr class="Controls">
+            <td class="th"><label for="tech_evalcoordination"><strong>Overall Service Coordination</strong></label></td> 
+            <td>
+              <select id="tech_evalcoordination" name="{coordination_Name}">
+                <option selected value="">Select Value</option>
+                {coordination_Options}
+              </select>
+ </td>
+          </tr>
+ 
+          <tr class="Controls">
+            <td class="th"><label for="tech_evalaccomplishment"><strong>Accomplishmentof Requested Services</strong></label></td> 
+            <td>
+              <select id="tech_evalaccomplishment" name="{accomplishment_Name}">
+                <option selected value="">Select Value</option>
+                {accomplishment_Options}
+              </select>
+ </td>
+          </tr>
+ 
+          <tr class="Controls">
+            <td class="th"><label for="tech_evalquality"><strong>Qualityof Service</strong></label></td> 
+            <td>
+              <select id="tech_evalquality" name="{quality_Name}">
+                <option selected value="">Select Value</option>
+                {quality_Options}
+              </select>
+ </td>
+          </tr>
+ 
+          <tr class="Controls">
+            <td class="th"><label for="tech_evalcomments">Comments</label></td> 
+            <td><textarea id="tech_evalcomments" rows="3" cols="50" name="{comments_Name}">{comments}</textarea></td>
+          </tr>
+ 
+          <tr class="Bottom">
+            <td colspan="2" align="right">
+              <!-- BEGIN Button Button_Insert --><input id="tech_evalButton_Insert" class="Button" value="save new entry" alt="Add" type="submit" name="{Button_Name}"><!-- END Button Button_Insert -->
+              <!-- BEGIN Button Button_Update --><input id="tech_evalButton_Update" class="Button" value="save changes" alt="Submit" type="submit" name="{Button_Name}"><!-- END Button Button_Update -->
+              <!-- BEGIN Button Button_Delete --><input id="tech_evalButton_Delete" class="Button" value="delete" alt="Delete" type="submit" name="{Button_Name}"><!-- END Button Button_Delete -->
+              <!-- BEGIN Button Button_Cancel --><input id="tech_evalButton_Cancel" class="Button" value="cancel" alt="Cancel" type="submit" name="{Button_Name}"><!-- END Button Button_Cancel --></td>
+          </tr>
+        </table>
+      </td>
+    </tr>
+  </table>
+</form>
+<!-- END Record tech_eval --><br>
+</body>
+</html>

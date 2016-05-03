@@ -1,0 +1,6 @@
+body { color: black; background-color: white; }
+#left { height: 420px; width: 250px; left: 0; top: 0; position: absolute; visibility: visible; }
+#right { height: 420px; width: 530px; left: 25px; top: 0; position: absolute; visibility: visible; }
+
+.font{ font-family: Verdana; font-size: 8pt; }
+.font12{ font-family: Verdana; font-size: 12pt; }

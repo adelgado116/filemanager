@@ -1,0 +1,215 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html; charset=windows-1252">
+<title>page4</title>
+<meta content="CodeCharge Studio 4.01.00.06" name="GENERATOR">
+<link href="Styles/Blueprint1/Style_doctype.css" type="text/css" rel="stylesheet">
+</head>
+<body>
+<p>
+<table width="100%" border="0">
+  <tr>
+    <td>
+      <p><strong><font color="#000066" size="6">Equipment Information</font></strong></p>
+    </td> 
+    <td>
+      <div align="right">
+      </div>
+    </td>
+  </tr>
+</table>
+</p>
+<p>
+<table width="100%" border="0">
+  <tr>
+    <td>&nbsp;&nbsp; 
+      <p>
+      <!-- BEGIN Record service_items_tbl1 -->
+      <form id="service_items_tbl1" name="{HTMLFormName}" action="{Action}" method="post">
+        <table cellspacing="0" cellpadding="0" border="0">
+          <tr>
+            <td valign="top">
+              <table class="Header" cellspacing="0" cellpadding="0" border="0">
+                <tr>
+                  <td class="HeaderLeft"><img alt="" src="Styles/Blueprint1/Images/Spacer.gif" border="0"></td> 
+                  <td class="th"><strong>Service&nbsp;Information</strong></td> 
+                  <td class="HeaderRight"><img alt="" src="Styles/Blueprint1/Images/Spacer.gif" border="0"></td>
+                </tr>
+              </table>
+ 
+              <table class="Record" cellspacing="0" cellpadding="0">
+                <!-- BEGIN Error -->
+                <tr class="Error">
+                  <td colspan="2">{Error}</td>
+                </tr>
+                <!-- END Error -->
+                <tr class="Controls">
+                  <td class="th"><label for="service_items_tbl1ORDER_NO">ORDER NO</label></td> 
+                  <td><input id="service_items_tbl1ORDER_NO" readonly maxlength="6" size="6" value="{ORDER_NO}" name="{ORDER_NO_Name}"></td>
+                </tr>
+ 
+                <tr class="Controls">
+                  <td class="th">EQUIPMENT</td> 
+                  <td><label for="service_items_tbl1EQUIP_MODEL" style="display: none;"></label><input id="service_items_tbl1EQUIP_MODEL" readonly value="{EQUIP_MODEL}" name="{EQUIP_MODEL_Name}"></td>
+                </tr>
+ 
+                <tr class="Controls">
+                  <td class="th"><label for="service_items_tbl1SERVICE_TYPE_ID">SERVICE TYPE</label></td> 
+                  <td>
+                    <select id="service_items_tbl1SERVICE_TYPE_ID" name="{SERVICE_TYPE_ID_Name}">
+                      <option value="" selected>Select Value</option>
+                      {SERVICE_TYPE_ID_Options}
+                    </select>
+ </td>
+                </tr>
+ 
+                <tr class="Controls">
+                  <td class="th"><label for="service_items_tbl1WARRANTY">WARRANTY</label></td> 
+                  <td><input id="service_items_tbl1WARRANTY" type="checkbox" value="1" name="{WARRANTY_Name}" {WARRANTY}></td>
+                </tr>
+ 
+                <tr class="Controls">
+                  <td class="th"><label for="service_items_tbl1emp_id">APPROVED BY</label></td> 
+                  <td>
+                    <select id="service_items_tbl1emp_id" name="{emp_id_Name}">
+                      <option value="" selected>Select Value</option>
+                      {emp_id_Options}
+                    </select>
+ </td>
+                </tr>
+ 
+                <tr class="Controls">
+                  <td class="th">COORD. BY</td> 
+                  <td>
+                    <select id="service_items_tbl1coord_id" name="{coord_id_Name}">
+                      <option value="" selected>Select Value</option>
+                      {coord_id_Options}
+                    </select>
+ </td>
+                </tr>
+ 
+                <tr class="Controls">
+                  <td class="th">ASSIGN TO</td> 
+                  <td>
+                    <select id="service_items_tbl1assign_emp_id" name="{assign_emp_id_Name}">
+                      <option value="" selected>Select Value</option>
+                      {assign_emp_id_Options}
+                    </select>
+ </td>
+                </tr>
+ 
+                <tr class="Controls">
+                  <td class="th">REQUEST</td> 
+                  <td><textarea id="service_items_tbl1REQUEST" name="{REQUEST_Name}" rows="4" cols="50">{REQUEST}</textarea></td>
+                </tr>
+ 
+                <tr class="Controls">
+                  <td class="th"><label for="service_items_tbl1REMARKS">REMARKS</label></td> 
+                  <td><textarea id="service_items_tbl1REMARKS" name="{REMARKS_Name}" rows="3" cols="50">{REMARKS}</textarea></td>
+                </tr>
+ 
+                <tr class="Bottom">
+                  <td align="right" colspan="2">
+                    <!-- BEGIN Button Button_Insert --><input class="Button" id="service_items_tbl1Button_Insert" type="submit" alt="Add" value="Add" name="{Button_Name}"><!-- END Button Button_Insert -->
+                    <!-- BEGIN Button Button_Cancel --><input class="Button" id="service_items_tbl1Button_Cancel" type="submit" alt="Cancel" value="Cancel" name="{Button_Name}"><!-- END Button Button_Cancel --><input id="service_items_tbl1ITEM_NO" type="hidden" value="{ITEM_NO}" name="{ITEM_NO_Name}"><input id="service_items_tbl1EQUIP_ID" type="hidden" value="{EQUIP_ID}" name="{EQUIP_ID_Name}"></td>
+                </tr>
+              </table>
+            </td>
+          </tr>
+        </table>
+      </form>
+      <!-- END Record service_items_tbl1 --><br>
+      </p>
+    </td> 
+    <td>
+      <!-- BEGIN Grid equipment_model_tbl -->
+      <table cellspacing="0" cellpadding="0" border="0">
+        <tr>
+          <td valign="top">
+            <table class="Header" cellspacing="0" cellpadding="0" border="0">
+              <tr>
+                <td class="HeaderLeft"><img alt="" src="Styles/hss1/Images/Spacer.gif" border="0"></td> 
+                <td class="th">Registered Equipments</td> 
+                <td class="HeaderRight"><img alt="" src="Styles/hss1/Images/Spacer.gif" border="0"></td>
+              </tr>
+            </table>
+ 
+            <table class="Grid" cellspacing="0" cellpadding="0">
+              <tr class="Caption">
+                <th scope="col">&nbsp;EQUIPMENT</th>
+ 
+                <th scope="col">ADDITIONAL INFO</th>
+              </tr>
+ 
+              <!-- BEGIN Row -->
+              <tr class="Row">
+                <td style="TEXT-ALIGN: left">&nbsp;{EQUIP_MODEL}</td> 
+                <td style="TEXT-ALIGN: left">{extended_info}</td>
+              </tr>
+ <!-- END Row -->
+              <!-- BEGIN NoRecords -->
+              <tr class="NoRecords">
+                <td colspan="2">&gt;&gt; empty set</td>
+              </tr>
+              <!-- END NoRecords -->
+              <tr class="Footer">
+                <td>&nbsp;</td> 
+                <td>
+                  <!-- BEGIN Navigator Navigator -->
+                  <!-- BEGIN Prev_On --><a href="{Prev_URL}"><img alt="{Prev_URL}" src="Styles/hss1/Images/en/ButtonPrev.gif" border="0"></a> <!-- END Prev_On -->
+                  <!-- BEGIN Prev_Off --><img alt="{Prev_URL}" src="Styles/hss1/Images/en/ButtonPrevOff.gif" border="0"><!-- END Prev_Off -->
+                  <!-- BEGIN Next_On --><a href="{Next_URL}"><img alt="{Next_URL}" src="Styles/hss1/Images/en/ButtonNext.gif" border="0"></a> <!-- END Next_On -->
+                  <!-- BEGIN Next_Off --><img alt="{Next_URL}" src="Styles/hss1/Images/en/ButtonNextOff.gif" border="0"><!-- END Next_Off --><!-- END Navigator Navigator --></td>
+              </tr>
+            </table>
+          </td>
+        </tr>
+      </table>
+      <!-- END Grid equipment_model_tbl -->
+      <p>
+      <!-- BEGIN Record service_type_tbl -->
+      <form id="service_type_tbl" name="{HTMLFormName}" action="{Action}" method="post">
+        <table cellspacing="0" cellpadding="0" border="0">
+          <tr>
+            <td valign="top">
+              <table class="Header" cellspacing="0" cellpadding="0" border="0">
+                <tr>
+                  <td class="HeaderLeft"><img alt="" src="Styles/Blueprint1/Images/Spacer.gif" border="0"></td> 
+                  <td class="th"><strong>Add New Type of Service</strong></td> 
+                  <td class="HeaderRight"><img alt="" src="Styles/Blueprint1/Images/Spacer.gif" border="0"></td>
+                </tr>
+              </table>
+ 
+              <table class="Record" cellspacing="0" cellpadding="0">
+                <!-- BEGIN Error -->
+                <tr class="Error">
+                  <td colspan="2">{Error}</td>
+                </tr>
+                <!-- END Error -->
+                <tr class="Controls">
+                  <td class="th" colspan="2">After you add a new Type of Service please refresh this page (press F5)</td>
+                </tr>
+ 
+                <tr class="Controls">
+                  <td class="th"><label for="service_type_tblSERVICE_TYPE">SERVICE TYPE</label></td> 
+                  <td><input id="service_type_tblSERVICE_TYPE" maxlength="50" size="50" value="{SERVICE_TYPE}" name="{SERVICE_TYPE_Name}"></td>
+                </tr>
+ 
+                <tr class="Bottom">
+                  <td align="right" colspan="2">
+                    <!-- BEGIN Button Button_Insert --><input class="Button" id="service_type_tblButton_Insert" type="submit" alt="Add" value="Add" name="{Button_Name}"><!-- END Button Button_Insert --></td>
+                </tr>
+              </table>
+            </td>
+          </tr>
+        </table>
+      </form>
+      <!-- END Record service_type_tbl --><br>
+      </p>
+    </td>
+  </tr>
+</table>
+&nbsp;</p>
+</body>
+</html>

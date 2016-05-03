@@ -1,0 +1,419 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html; charset=windows-1252">
+<title>page0</title>
+<meta content="CodeCharge Studio 4.1.00.032" name="GENERATOR">
+<link href="Styles/Blueprint1/Style_doctype.css" type="text/css" rel="stylesheet">
+
+
+<link href="css/start/jquery-ui-1.10.4.custom.css" rel="stylesheet">
+<script src="js/jquery-1.10.2.js"></script>
+<script src="js/jquery-ui-1.10.4.custom.js"></script>
+
+
+<script language="JavaScript" type="text/javascript">
+
+	var folderSelector = 0;
+	
+	function sendFileToServer(formData,status,folder)
+	{
+		switch(folder) {
+			case 1:
+				folder = "service";
+				break;
+			case 2:
+				folder = "sales";
+				break;
+			case 3:
+				folder = "accounting";
+				break;
+			case 4:
+				folder = "general";
+				break;
+			default:
+				break;
+		}
+	
+		var uploadURL ="upload_dashboard.php?folder=" + folder ; //Upload URL
+		
+		var extraData ={}; //Extra Data.
+		
+		var jqXHR=$.ajax({
+				xhr: function() {
+				var xhrobj = $.ajaxSettings.xhr();
+				if (xhrobj.upload) {
+						xhrobj.upload.addEventListener('progress', function(event) {
+							var percent = 0;
+							var position = event.loaded || event.position;
+							var total = event.total;
+							if (event.lengthComputable) {
+								percent = Math.ceil(position / total * 100);
+							}
+							//Set progress
+							status.setProgress(percent);
+						}, false);
+					}
+				return xhrobj;
+			},
+			url: uploadURL,
+			type: "POST",
+			contentType:false,
+			processData: false,
+			cache: false,
+			data: formData,
+			success: function(data){
+			
+				status.setProgress(100);
+				
+				
+			}
+		
+		});
+	 
+		status.setAbort(jqXHR);
+	}
+	 
+	var rowCount=0;
+	function createStatusbar(obj)
+	{
+		 rowCount++;
+		 var row="odd";
+		 if(rowCount %2 ==0) row ="even";
+		 this.statusbar = $("<div class='statusbar "+row+"'></div>");
+		 this.filename = $("<div class='filename'></div>").appendTo(this.statusbar);
+		 this.size = $("<div class='filesize'></div>").appendTo(this.statusbar);
+		 this.progressBar = $("<div class='progressBar'><div></div></div>").appendTo(this.statusbar);
+		 this.abort = $("<div class='abort'>Abort</div>").appendTo(this.statusbar);
+		 obj.after(this.statusbar);
+	 
+		this.setFileNameSize = function(name,size)
+		{
+			var sizeStr="";
+			var sizeKB = size/1024;
+			if(parseInt(sizeKB) > 1024)
+			{
+				var sizeMB = sizeKB/1024;
+				sizeStr = sizeMB.toFixed(2)+" MB";
+			}
+			else
+			{
+				sizeStr = sizeKB.toFixed(2)+" KB";
+			}
+	 
+			this.filename.html(name);
+			this.size.html(sizeStr);
+		}
+		this.setProgress = function(progress)
+		{      
+			var progressBarWidth =progress*this.progressBar.width()/ 100; 
+			this.progressBar.find('div').animate({ width: progressBarWidth }, 10).html(progress + "% ");
+			if(parseInt(progress) >= 100)
+			{
+				this.abort.hide();
+			}
+		}
+		this.setAbort = function(jqxhr)
+		{
+			var sb = this.statusbar;
+			this.abort.click(function()
+			{
+				jqxhr.abort();
+				sb.hide();
+			});
+		}
+	}
+	function handleFileUpload(files,obj,folder)
+	{
+	   for (var i = 0; i < files.length; i++)
+	   {
+			var fd = new FormData();
+			fd.append('file', files[i]);
+	 
+			var status = new createStatusbar(obj); //Using this we can set progress.
+			
+			status.setFileNameSize(files[i].name,files[i].size);
+			
+			sendFileToServer(fd,status,folder);
+		}	   
+	}
+	
+	
+	
+	
+	$(document).ready(function()
+	{
+	
+	
+	
+	$( "#tabs" ).tabs();
+	
+	
+	var updateFiles = function( folder ) {
+				
+		var tab = "";
+		var buttonId = "";
+		
+		switch ( folder ) {
+			case "service":
+				tab = "#tabs-1";
+				buttonId = "#upload-files-1";
+				break;
+			case "sales":
+				tab = "#tabs-2";
+				buttonId = "#upload-files-2";
+				break;
+			case "accounting":
+				tab = "#tabs-3";
+				buttonId = "#upload-files-3";
+				break;
+			case "general":
+				tab = "#tabs-4";
+				buttonId = "#upload-files-4";
+				break;
+			default:
+				break;
+		}	
+	
+		
+		$.post("retrieve_items.php?folder=" + folder, function(data) {
+
+			
+			$( tab ).html( data );  // create Button to upload files or show files list
+			
+			$( buttonId )  // create the button instance to open the File Upload Modal Dialog, inside each tab
+				.button()
+				.click(function() {
+				
+				switch ( folder ) {
+					case "service":
+						folderSelector = 1;
+						break;
+					case "sales":
+						folderSelector = 2;
+						break;
+					case "accounting":
+						folderSelector = 3;
+						break;
+					case "general":
+						folderSelector = 4;
+						break;
+					default:
+						break;
+				}
+				
+				$( "#dialog-upload" ).dialog( "open" );
+			});
+			
+		});
+		
+	};
+	
+	
+	updateFiles( "service" );
+	updateFiles( "sales" );
+	updateFiles( "accounting" );
+	updateFiles( "general" );
+	
+	
+	
+	
+	var obj = $("#dnd-handler");
+	obj.on('dragenter', function (e)
+	{
+		e.stopPropagation();
+		e.preventDefault();
+		$(this).css('border', '2px solid #FF0000');
+	});
+	obj.on('dragover', function (e)
+	{
+		 e.stopPropagation();
+		 e.preventDefault();
+	});
+	obj.on('drop', function (e)
+	{
+	 
+		 $(this).css('border', '2px dotted #0B85A1');
+		 e.preventDefault();
+		 var files = e.originalEvent.dataTransfer.files;
+	 
+		 //We need to send dropped files to Server
+		 handleFileUpload(files,obj, folderSelector);
+		 
+	});
+	$(document).on('dragenter', function (e)
+	{
+		e.stopPropagation();
+		e.preventDefault();
+	});
+	$(document).on('dragover', function (e)
+	{
+	  e.stopPropagation();
+	  e.preventDefault();
+	  obj.css('border', '2px dotted #0B85A1');
+	});
+	$(document).on('drop', function (e)
+	{
+		e.stopPropagation();
+		e.preventDefault();
+	});
+
+
+	
+	
+	$( "#dialog-upload" ).dialog({
+		autoOpen: false,
+		height: 450,
+		width: 615,
+		modal: true,
+		resizable: false,
+		close: function() {
+			
+			switch( folderSelector ) {
+				case 1:
+					folder = "service";
+					break;
+				case 2:
+					folder = "sales";
+					break;
+				case 3:
+					folder = "accounting";
+					break;
+				case 4:
+					folder = "general";
+					break;
+				default:
+					break;
+			}
+			
+			updateFiles( folder );
+			
+			//folderSelector = 0;
+			
+			
+			// PENDING: clear the list of uploaded files.
+			// ...			
+		}
+	});
+	
+	
+	
+	});
+
+</script>
+
+<style>
+#dnd-handler
+{
+border:2px dotted #0B85A1;
+width:570px;
+height:100px;
+color:#92AAB0;
+text-align:center;
+vertical-align:middle;
+padding:10px 10px 10 10px;
+margin-bottom:10px;
+font-size:200%;
+}
+.progressBar {
+	width: 145px;
+	height: 22px;
+	border: 1px solid #ddd;
+	border-radius: 5px;
+	overflow: hidden;
+	display:inline-block;
+	margin:0px 10px 5px 5px;
+	vertical-align:top;
+}
+ 
+.progressBar div {
+	height: 100%;
+	color: #fff;
+	text-align: right;
+	line-height: 22px; /* same as #progressBar height if we want text middle aligned */
+	width: 0;
+	background-color: #0ba1b5; border-radius: 3px;
+}
+.statusbar
+{
+	border-top:1px solid #A9CCD1;
+	min-height:25px;
+	width:570px;
+	padding:5px 5px 0px 5px;
+	vertical-align:top;
+}
+.statusbar:nth-child(odd){
+	background:#EBEFF0;
+}
+.filename
+{
+display:inline-block;
+vertical-align:top;
+width:250px;
+}
+.filesize
+{
+display:inline-block;
+vertical-align:top;
+color:#30693D;
+width:80px;
+margin-left:5px;
+margin-right:5px;
+}
+.abort{
+	background-color:#A8352F;
+	-moz-border-radius:4px;
+	-webkit-border-radius:4px;
+	border-radius:4px;display:inline-block;
+	color:#fff;
+	font-family:arial;font-size:13px;font-weight:normal;
+	padding:4px 15px;
+	cursor:pointer;
+	vertical-align:top
+}
+
+</style>
+
+</head>
+<body>
+
+
+<table border="0" width="100%">
+<tr>
+	<td>
+		<div id="tabs">
+			<ul>	
+				<li><a href="#tabs-1">SERVICE</a></li>
+				<li><a href="#tabs-2">SALES</a></li>
+				<li><a href="#tabs-3">ACCOUNTING</a></li>
+				<li><a href="#tabs-4">GENERAL</a></li>
+			</ul>
+			
+			<div id="tabs-1">		
+				// ajax data from retrieve_items.php goes here
+			</div>
+			<div id="tabs-2">
+				// ajax data from retrieve_items.php goes here
+			</div>
+			<div id="tabs-3">
+				// ajax data from retrieve_items.php goes here
+			</div>
+			<div id="tabs-4">
+				// ajax data from retrieve_items.php goes here
+			</div>
+		</div>
+	</td>
+</tr>
+</table>
+
+
+<div id="dialog-upload" title="Files Upload">
+	<div id="dnd-handler">
+		<br/>drop files here...
+	</div>
+</div>
+
+
+
+</body>
+</html>

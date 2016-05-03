@@ -1,0 +1,270 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html; charset=windows-1252">
+<title>page7</title>
+<meta content="CodeCharge Studio 4.1.00.032" name="GENERATOR">
+<link href="Styles/Blueprint1/Style_doctype.css" type="text/css" rel="stylesheet">
+</head>
+<body>
+<table width="100%" border="0">
+  <tr>
+    <td><strong><font color="#000066" size="6">After Service Information</font></strong></td> 
+    <td>
+      <div align="right">
+<a href="{Link2_Src}" id="Link2"><strong>link</strong></a> 
+      </div>
+    </td>
+  </tr>
+</table>
+<p>
+<table width="100%" border="0">
+  <tr>
+    <td>&nbsp; 
+      <!-- BEGIN Grid employees_tbl_service_don -->
+      <table cellspacing="0" cellpadding="0" border="0">
+        <tr>
+          <td valign="top">
+            <table class="Header" cellspacing="0" cellpadding="0" border="0">
+              <tr>
+                <td class="HeaderLeft"><img alt="" src="Styles/Blueprint1/Images/Spacer.gif" border="0"></td> 
+                <td class="th"><strong><font style="BACKGROUND-COLOR: #0058b3">Technician(s) Attending This Service</font></strong></td> 
+                <td class="HeaderRight"><img alt="" src="Styles/Blueprint1/Images/Spacer.gif" border="0"></td>
+              </tr>
+            </table>
+ 
+            <table class="Grid" cellspacing="0" cellpadding="0">
+              <tr class="Caption">
+                <th scope="col">ORDER NO</th>
+ 
+                <th scope="col">SHIP NAME</th>
+ 
+                <th scope="col">SERVICE DATE</th>
+ 
+                <th scope="col">EQUIPMENT</th>
+ 
+                <th scope="col">TECHNICIAN</th>
+              </tr>
+ 
+              <!-- BEGIN Row -->
+              <tr class="Row">
+                <td>{ORDER_NO}</td> 
+                <td>{SHIP_NAME}&nbsp;</td> 
+                <td>{SERVICE_DATE_DAY}/{SERVICE_DATE_MONTH}/{SERVICE_DATE_YEAR}</td> 
+                <td>{EQUIP_MODEL}</td> 
+                <td><a href="{emp_name_Src}" id="employees_tbl_service_donemp_name_{employees_tbl_service_don:rowNumber}">{emp_name}</a></td>
+              </tr>
+ <!-- END Row -->
+              <!-- BEGIN NoRecords -->
+              <tr class="NoRecords">
+                <td colspan="5">no records found.</td>
+              </tr>
+              <!-- END NoRecords -->
+              <tr class="Footer">
+                <td colspan="5"></td>
+              </tr>
+            </table>
+          </td>
+        </tr>
+      </table>
+      <!-- END Grid employees_tbl_service_don -->
+      <p>&nbsp;</p>
+      <!-- BEGIN Record service_done_by_tbl -->
+      <form id="service_done_by_tbl" name="{HTMLFormName}" action="{Action}" method="post">
+        <table cellspacing="0" cellpadding="0" border="0">
+          <tr>
+            <td valign="top">
+              <table class="Header" cellspacing="0" cellpadding="0" border="0">
+                <tr>
+                  <td class="HeaderLeft"><img alt="" src="Styles/Blueprint1/Images/Spacer.gif" border="0"></td> 
+                  <td class="th"><strong><font style="BACKGROUND-COLOR: #0058b3">Time Sheet - click on technician's name (above) to edit</font></strong></td> 
+                  <td class="HeaderRight"><img alt="" src="Styles/Blueprint1/Images/Spacer.gif" border="0"></td>
+                </tr>
+              </table>
+ 
+              <table class="Record" cellspacing="0" cellpadding="0">
+                <!-- BEGIN Error -->
+                <tr class="Error">
+                  <td colspan="6">{Error}</td>
+                </tr>
+                <!-- END Error -->
+                <tr class="Controls">
+                  <td class="th" colspan="6"><strong><font size="2">Service in Panama</font></strong></td>
+                </tr>
+ 
+                <tr class="Controls">
+                  <td class="th" colspan="3">
+                    <div align="center">
+                      <strong>&nbsp;NORMAL TIME (AAHN)</strong> 
+                    </div>
+                  </td> 
+                  <td colspan="3">
+                    <div align="center">
+                      &nbsp;<font color="#ff0000"><strong>OVERTIME (AAHO)</strong></font> 
+                    </div>
+                  </td>
+                </tr>
+ 
+                <tr class="Controls">
+                  <td class="th">&nbsp;</td> 
+                  <td>TO INVOICE</td> 
+                  <td>TECH TIME</td> 
+                  <td>&nbsp;</td> 
+                  <td>TO INVOICE</td> 
+                  <td>TECH TIME</td>
+                </tr>
+ 
+                <tr class="Controls">
+                  <td class="th"><label for="service_done_by_tblWORK_TIME_NORMAL">WORKING</label></td> 
+                  <td><input id="service_done_by_tblWORK_TIME_NORMAL" maxlength="5" size="2" value="{WORK_TIME_NORMAL}" name="{WORK_TIME_NORMAL_Name}">&nbsp;hrs.</td> 
+                  <td><label for="service_done_by_tblWORK_TIME_TECH_NORMAL" style="display: none;"></label><input id="service_done_by_tblWORK_TIME_TECH_NORMAL" maxlength="5" size="2" value="{WORK_TIME_TECH_NORMAL}" name="{WORK_TIME_TECH_NORMAL_Name}">&nbsp;hrs.</td> 
+                  <td><label for="service_done_by_tblWORK_TIME_OVERTIME">WORKING</label></td> 
+                  <td><input id="service_done_by_tblWORK_TIME_OVERTIME" maxlength="5" size="2" value="{WORK_TIME_OVERTIME}" name="{WORK_TIME_OVERTIME_Name}">&nbsp;hrs.</td> 
+                  <td><input id="service_done_by_tblWORK_TIME_TECH_OVERTIME" maxlength="5" size="2" value="{WORK_TIME_TECH_OVERTIME}" name="{WORK_TIME_TECH_OVERTIME_Name}">&nbsp;hrs.</td>
+                </tr>
+ 
+                <tr class="Controls">
+                  <td class="th"><label for="service_done_by_tblWAITED_TIME_NORMAL">WAITING</label></td> 
+                  <td><input id="service_done_by_tblWAITED_TIME_NORMAL" maxlength="5" size="2" value="{WAITED_TIME_NORMAL}" name="{WAITED_TIME_NORMAL_Name}">&nbsp;hrs.</td> 
+                  <td><input id="service_done_by_tblWAIT_TIME_TECH_NORMAL" maxlength="5" size="2" value="{WAIT_TIME_TECH_NORMAL}" name="{WAIT_TIME_TECH_NORMAL_Name}">&nbsp;hrs.</td> 
+                  <td><label for="service_done_by_tblWAITED_TIME_OVERTIME">WAITING</label></td> 
+                  <td><input id="service_done_by_tblWAITED_TIME_OVERTIME" maxlength="5" size="2" value="{WAITED_TIME_OVERTIME}" name="{WAITED_TIME_OVERTIME_Name}">&nbsp;hrs.</td> 
+                  <td><input id="service_done_by_tblWAIT_TIME_TECH_OVERTIME" maxlength="5" size="2" value="{WAIT_TIME_TECH_OVERTIME}" name="{WAIT_TIME_TECH_OVERTIME_Name}">&nbsp;hrs.</td>
+                </tr>
+ 
+                <tr class="Controls">
+                  <td class="th"><label for="service_done_by_tblTRAVEL_TIME_NORMAL">TRAVELLING</label></td> 
+                  <td><input id="service_done_by_tblTRAVEL_TIME_NORMAL" maxlength="5" size="2" value="{TRAVEL_TIME_NORMAL}" name="{TRAVEL_TIME_NORMAL_Name}">&nbsp;hrs.</td> 
+                  <td><input id="service_done_by_tblTRAVEL_TIME_TECH_NORMAL" maxlength="5" size="2" value="{TRAVEL_TIME_TECH_NORMAL}" name="{TRAVEL_TIME_TECH_NORMAL_Name}">&nbsp;hrs.</td> 
+                  <td><label for="service_done_by_tblTRAVEL_TIME_OVERTIME">TRAVELLING</label></td> 
+                  <td><input id="service_done_by_tblTRAVEL_TIME_OVERTIME" maxlength="5" size="2" value="{TRAVEL_TIME_OVERTIME}" name="{TRAVEL_TIME_OVERTIME_Name}">&nbsp;hrs.</td> 
+                  <td><input id="service_done_by_tblTRAVEL_TIME_TECH_OVERTIME" maxlength="5" size="2" value="{TRAVEL_TIME_TECH_OVERTIME}" name="{TRAVEL_TIME_TECH_OVERTIME_Name}">&nbsp;hrs.</td>
+                </tr>
+ 
+                <tr class="Controls">
+                  <td class="th" colspan="6"><strong><font size="2">Service Abroad</font></strong></td>
+                </tr>
+ 
+                <tr class="Controls">
+                  <td class="th" colspan="3">
+                    <div align="center">
+                      <strong>&nbsp;NORMAL DAYS (AADN)</strong> 
+                    </div>
+                  </td> 
+                  <td colspan="3">
+                    <div align="center">
+                      &nbsp;<font color="#ff0000"><strong>WEEKEND DAYS (AADW)</strong></font> 
+                    </div>
+                  </td>
+                </tr>
+ 
+                <tr class="Controls">
+                  <td class="th"><label for="service_done_by_tblNORMAL_DAYS_WORKING">WORKING</label></td> 
+                  <td><input id="service_done_by_tblNORMAL_DAYS_WORKING" maxlength="5" size="2" value="{NORMAL_DAYS_WORKING}" name="{NORMAL_DAYS_WORKING_Name}"></td> 
+                  <td>&nbsp;</td> 
+                  <td><label for="service_done_by_tblWEEKEND_DAYS_WORKING">WORKING</label></td> 
+                  <td><input id="service_done_by_tblWEEKEND_DAYS_WORKING" maxlength="5" size="2" value="{WEEKEND_DAYS_WORKING}" name="{WEEKEND_DAYS_WORKING_Name}"></td> 
+                  <td>&nbsp;</td>
+                </tr>
+ 
+                <tr class="Controls">
+                  <td class="th"><label for="service_done_by_tblNORMAL_DAYS_TRAVELLING">TRAVELLING</label></td> 
+                  <td><input id="service_done_by_tblNORMAL_DAYS_TRAVELLING" maxlength="5" size="2" value="{NORMAL_DAYS_TRAVELLING}" name="{NORMAL_DAYS_TRAVELLING_Name}"></td> 
+                  <td>&nbsp;</td> 
+                  <td><label for="service_done_by_tblWEEKEND_DAYS_TRAVELLING">TRAVELLING</label></td> 
+                  <td><input id="service_done_by_tblWEEKEND_DAYS_TRAVELLING" maxlength="5" size="2" value="{WEEKEND_DAYS_TRAVELLING}" name="{WEEKEND_DAYS_TRAVELLING_Name}"></td> 
+                  <td>&nbsp;</td>
+                </tr>
+ 
+                <tr class="Controls">
+                  <td class="th"><label for="service_done_by_tblNORMAL_DAYS_WAITING">WAITING</label></td> 
+                  <td><input id="service_done_by_tblNORMAL_DAYS_WAITING" maxlength="5" size="2" value="{NORMAL_DAYS_WAITING}" name="{NORMAL_DAYS_WAITING_Name}"></td> 
+                  <td>&nbsp;</td> 
+                  <td><label for="service_done_by_tblWEEKEND_DAYS_WAITING">WAITING</label></td> 
+                  <td><input id="service_done_by_tblWEEKEND_DAYS_WAITING" maxlength="5" size="2" value="{WEEKEND_DAYS_WAITING}" name="{WEEKEND_DAYS_WAITING_Name}"></td> 
+                  <td>&nbsp;</td>
+                </tr>
+ 
+                <tr class="Bottom">
+                  <td align="right" colspan="6">
+                    <!-- BEGIN Button Button_Update --><input class="Button" id="service_done_by_tblButton_Update" type="submit" alt="Submit" value="save changes" name="{Button_Name}"><!-- END Button Button_Update --></td>
+                </tr>
+              </table>
+            </td>
+          </tr>
+        </table>
+      </form>
+      <!-- END Record service_done_by_tbl --></td> 
+    <td>
+      <p></p>
+ 
+      <p>
+      <!-- BEGIN Record service_tbl -->
+      <form id="service_tbl" name="{HTMLFormName}" action="{Action}" method="post">
+        <table cellspacing="0" cellpadding="0" border="0">
+          <tr>
+            <td valign="top">
+              <table class="Header" cellspacing="0" cellpadding="0" border="0">
+                <tr>
+                  <td class="HeaderLeft"><img alt="" src="Styles/Blueprint1/Images/Spacer.gif" border="0"></td> 
+                  <td class="th"><strong>Additional Information</strong></td> 
+                  <td class="HeaderRight"><img alt="" src="Styles/Blueprint1/Images/Spacer.gif" border="0"></td>
+                </tr>
+              </table>
+ 
+              <table class="Record" cellspacing="0" cellpadding="0">
+                <!-- BEGIN Error -->
+                <tr class="Error">
+                  <td colspan="2">{Error}</td>
+                </tr>
+                <!-- END Error -->
+                <tr class="Controls">
+                  <td class="th"><label for="service_tblAGENT_EVAL_TECH">AGENT EVALUATION (TECHNICIAN)</label></td> 
+                  <td>
+                    <select id="service_tblAGENT_EVAL_TECH" name="{AGENT_EVAL_TECH_Name}">
+                      <option value="" selected>Select Value</option>
+                      {AGENT_EVAL_TECH_Options}
+                    </select>
+ </td>
+                </tr>
+ 
+                <tr class="Controls">
+                  <td class="th"><label for="service_tblRETURN_PARTS_TO">RETURN PARTS TO</label></td> 
+                  <td>
+                    <select id="service_tblRETURN_PARTS_TO" name="{RETURN_PARTS_TO_Name}">
+                      <option value="" selected>Select Value</option>
+                      {RETURN_PARTS_TO_Options}
+                    </select>
+ </td>
+                </tr>
+ 
+                <tr class="Controls">
+                  <td class="th"><label for="service_tblORDER_PARTS_FROM">ORDER PARTS FROM</label></td> 
+                  <td>
+                    <select id="service_tblORDER_PARTS_FROM" name="{ORDER_PARTS_FROM_Name}">
+                      <option value="" selected>Select Value</option>
+                      {ORDER_PARTS_FROM_Options}
+                    </select>
+ </td>
+                </tr>
+ 
+                <tr class="Bottom">
+                  <td align="right" colspan="2">
+                    <!-- BEGIN Button Button_Update --><input class="Button" id="service_tblButton_Update" type="submit" alt="Submit" value="save" name="{Button_Name}"><!-- END Button Button_Update --></td>
+                </tr>
+              </table>
+            </td>
+          </tr>
+        </table>
+      </form>
+      <!-- END Record service_tbl --><br>
+      </p>
+    </td>
+  </tr>
+</table>
+</p>
+<p><br>
+<br>
+&nbsp;</p>
+</body>
+</html>

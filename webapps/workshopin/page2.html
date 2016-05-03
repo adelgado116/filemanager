@@ -1,0 +1,118 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html; charset=windows-1252">
+<title>workshop :: incoming parts for repair </title>
+<meta content="CodeCharge Studio 4.1.00.032" name="GENERATOR">
+<link href="Styles/Blueprint1/Style_doctype.css" type="text/css" rel="stylesheet">
+</head>
+<body>
+<p>
+<table width="100%" border="0">
+  <tr>
+    <td></td> 
+    <td>
+      <div align="right">
+<a href="{Link2_Src}" id="Link2"><strong>BACK</strong></a> 
+      </div>
+    </td>
+  </tr>
+</table>
+<br>
+<!-- BEGIN Record workshop_repair -->
+<form id="workshop_repair" name="{HTMLFormName}" action="{Action}" method="post">
+  <table cellspacing="0" cellpadding="0" border="0">
+    <tr>
+      <td valign="top">
+        <table class="Header" cellspacing="0" cellpadding="0" border="0">
+          <tr>
+            <td class="HeaderLeft"><img alt="" src="Styles/Blueprint1/Images/Spacer.gif" border="0"></td> 
+            <td class="th"><strong>Register New Entry</strong></td> 
+            <td class="HeaderRight"><img alt="" src="Styles/Blueprint1/Images/Spacer.gif" border="0"></td>
+          </tr>
+        </table>
+ 
+        <table class="Record" cellspacing="0" cellpadding="0">
+          <!-- BEGIN Error -->
+          <tr class="Error">
+            <td colspan="2">{Error}</td>
+          </tr>
+          <!-- END Error -->
+          <tr class="Controls">
+            <td class="th"><label for="workshop_repairship_name">VESSEL</label></td> 
+            <td><input id="workshop_repairship_name" maxlength="250" size="30" value="{ship_name}" name="{ship_name_Name}"></td>
+          </tr>
+ 
+          <tr class="Controls">
+            <td class="th"><label for="workshop_repairimo">IMO</label></td> 
+            <td><input id="workshop_repairimo" maxlength="7" size="7" value="{imo}" name="{imo_Name}"></td>
+          </tr>
+ 
+          <tr class="Controls">
+            <td class="th"><label for="workshop_repaircustomer">CUSTOMER</label></td> 
+            <td><input id="workshop_repaircustomer" maxlength="50" size="30" value="{customer}" name="{customer_Name}"></td>
+          </tr>
+ 
+          <tr class="Controls">
+            <td class="th"><label for="workshop_repaircustomer_phone">CUSTOMER PHONE</label></td> 
+            <td><input id="workshop_repaircustomer_phone" maxlength="20" value="{customer_phone}" name="{customer_phone_Name}" size="20"></td>
+          </tr>
+ 
+          <tr class="Controls">
+            <td class="th"><label for="workshop_repaircustomer_email">CUSTOMER EMAIL</label></td> 
+            <td><input id="workshop_repaircustomer_email" maxlength="50" size="30" value="{customer_email}" name="{customer_email_Name}"></td>
+          </tr>
+ 
+          <tr class="Controls">
+            <td class="th"><label for="workshop_repairEQUIP_TYPE">TYPE OF EQUIPMENT</label></td> 
+            <td><input id="workshop_repairEQUIP_TYPE" maxlength="250" size="30" value="{EQUIP_TYPE}" name="{EQUIP_TYPE_Name}"></td>
+          </tr>
+ 
+          <tr class="Controls">
+            <td class="th"><label for="workshop_repairMANUF_NAME">MANUFACTURER</label></td> 
+            <td><input id="workshop_repairMANUF_NAME" maxlength="250" size="30" value="{MANUF_NAME}" name="{MANUF_NAME_Name}"></td>
+          </tr>
+ 
+          <tr class="Controls">
+            <td class="th"><label for="workshop_repairEQUIP_MODEL">MODEL</label></td> 
+            <td><input id="workshop_repairEQUIP_MODEL" maxlength="250" size="30" value="{EQUIP_MODEL}" name="{EQUIP_MODEL_Name}"></td>
+          </tr>
+ 
+          <tr class="Controls">
+            <td class="th"><label for="workshop_repairpart_no">PART NO</label></td> 
+            <td><input id="workshop_repairpart_no" maxlength="20" value="{part_no}" name="{part_no_Name}" size="20"></td>
+          </tr>
+ 
+          <tr class="Controls">
+            <td class="th"><label for="workshop_repairsn">S/N</label></td> 
+            <td><input id="workshop_repairsn" maxlength="20" value="{sn}" name="{sn_Name}" size="20"></td>
+          </tr>
+ 
+          <tr class="Controls">
+            <td class="th"><label for="workshop_repairnotes">NOTES</label></td> 
+            <td><textarea id="workshop_repairnotes" name="{notes_Name}" rows="3" cols="30">{notes}</textarea></td>
+          </tr>
+ 
+          <tr class="Controls">
+            <td class="th"><label for="workshop_repairemp_id">RECEIVED BY</label></td> 
+            <td>
+              <select id="workshop_repairemp_id" name="{emp_id_Name}">
+                <option value="" selected>Select Value</option>
+                {emp_id_Options}
+              </select>
+ </td>
+          </tr>
+ 
+          <tr class="Bottom">
+            <td align="right" colspan="2">
+              <!-- BEGIN Button Button_Insert --><input class="Button" id="workshop_repairButton_Insert" type="submit" alt="Add" value="Generate File" name="{Button_Name}"><!-- END Button Button_Insert --><input id="workshop_repairworkshop_in_id" type="hidden" value="{workshop_in_id}" name="{workshop_in_id_Name}"></td>
+          </tr>
+        </table>
+      </td>
+    </tr>
+  </table>
+</form>
+<!-- END Record workshop_repair --><br>
+</p>
+</body>
+</html>

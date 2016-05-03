@@ -1,0 +1,105 @@
+<html>
+	<head>
+		<link href="styles/jquery-ui.css" rel="stylesheet">
+		<link href="styles/styles.css" rel="stylesheet">
+		<title>RAn Panama - Inventory</title>
+	</head>
+	<body>    
+    
+	
+	<div id="header">
+		<img src="images/LogoRANPanama_hor.png" >
+		<h1>&nbsp;&nbsp;|&nbsp;&nbsp;Inventory List</h1>
+		<p style="color: #FF0000;">NOTE: INFORMATION PRESENTED ON THIS MODULE IS NOT OFFICIAL, CANNOT BE USED FOR SALES/SERVICE. <button id="update_inventory_button">Update Inventory List</button></p>
+	</div>
+	
+    
+    <div id="controls_upper" class="controls-style">
+		<div >
+			&nbsp;&nbsp;Filter by Manufacturer 
+			<select name="filterSelectManufacturer" id="filterSelectManufacturer" style="font-size: 1em">
+				<!-- populated dynamically -->
+			</select>
+			
+			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Filter by Keyword
+			<input name="filterTextBox" id="filterTextBox" type="text"  />
+		</div>
+	</div> <!-- filters -->
+    
+	<br/>
+    <div class="fixed-table-container content-style">        
+        <div class="header-background"> </div>
+        <div class="fixed-table-container-inner">
+            <div id="empty-set-message">There are no results for Selected Parameters.</div>
+			
+            <table id="tbl1">
+                <thead>
+                    <tr>
+                        <!-- <th class="headers_row"> -->
+                        
+						<th width="2%">
+                            <div class="th-inner"><input title="Check/Un-Check All Lines" type="checkbox" id="select_all_loads" value="1"/></div>
+                        </th>
+						<th width="15%">
+                            <div class="th-inner">Stock No.</div>
+                        </th>
+                        <th width="36%">
+                            <div class="th-inner">Part Description</div>
+                        </th>
+						<!--
+						<th width="25%">
+                            <div class="th-inner">Extended Description</div>
+                        </th>
+						-->
+						<th width="15%">
+                            <div class="th-inner">Manufacturer</div>
+                        </th>
+                        <th width="8%">
+                            <div class="th-inner">In Stock</div>
+                        </th>
+						<th width="8%">
+                            <div class="th-inner" title="Reserved on Order">Rsrvd</div>
+                        </th>
+						<!-- <th width="5%">
+                            <div class="th-inner">Ordered</div>
+						</th> -->
+                        <th width="8%">
+                            <div class="th-inner">Price</div>
+                        </th>
+						<th width="8%">
+                            <div class="th-inner">Currency</div>
+                        </th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!-- lines go here -->
+                </tbody>
+            </table>
+        </div>
+		
+		<div id="controls_lower" class="controls-style">
+			<div id="controls_table_pagination" >
+				Page&nbsp;<select id="pageSelector">
+					<!-- populated dynamically -->
+				</select>
+				&nbsp;&nbsp;Rows per Page&nbsp;<select id="filterSelectRowsPerPage"><
+					<option value="20">20</option>
+					<option value="50">50</option>
+					<option value="100">100</option>
+					<option value="250">250</option>
+				</select>
+			</div>
+			
+			<button id="add_to_group_button">add to Project</button>
+			<button id="loads_button">request for purchase</button>
+			<button id="download_button" title="download full or filtered list in Excel format">download list</button>
+		</div>
+	</div>
+    
+    
+    
+	<script src="js/jquery.js"></script>
+	<script src="js/jquery-ui.js"></script>
+	<script src="js/table_view.js" type="text/javascript"></script>
+	</body>
+</html>

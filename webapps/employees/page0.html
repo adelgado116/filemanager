@@ -1,0 +1,127 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html; charset=windows-1252">
+<title>Employee's Database</title>
+<meta content="CodeCharge Studio 4.1.00.032" name="GENERATOR">
+<link href="Styles/Blueprint1/Style_doctype.css" type="text/css" rel="stylesheet">
+</head>
+<body>
+<!-- BEGIN Record employees_tbl -->
+<form id="employees_tbl" name="{HTMLFormName}" action="{Action}" method="post">
+  <table cellspacing="0" cellpadding="0" border="0">
+    <tr>
+      <td valign="top">
+        <table class="Header" cellspacing="0" cellpadding="0" border="0">
+          <tr>
+            <td class="HeaderLeft"><img alt="" src="Styles/Blueprint1/Images/Spacer.gif" border="0"></td> 
+            <td class="th"><strong>Add/Edit Employees</strong></td> 
+            <td class="HeaderRight"><img alt="" src="Styles/Blueprint1/Images/Spacer.gif" border="0"></td>
+          </tr>
+        </table>
+ 
+        <table class="Record" cellspacing="0" cellpadding="0">
+          <!-- BEGIN Error -->
+          <tr class="Error">
+            <td colspan="2">{Error}</td>
+          </tr>
+          <!-- END Error -->
+          <tr class="Controls">
+            <td class="th"><label for="employees_tblemp_login">Login</label></td> 
+            <td><input id="employees_tblemp_login" maxlength="50" size="30" value="{emp_login}" name="{emp_login_Name}"></td>
+          </tr>
+ 
+          <tr class="Controls">
+            <td class="th"><label for="employees_tblemp_password">Password</label></td> 
+            <td><input id="employees_tblemp_password" maxlength="50" size="30" value="{emp_password}" name="{emp_password_Name}"></td>
+          </tr>
+ 
+          <tr class="Controls">
+            <td class="th"><label for="employees_tblemp_name">Name</label></td> 
+            <td><input id="employees_tblemp_name" maxlength="50" size="30" value="{emp_name}" name="{emp_name_Name}"></td>
+          </tr>
+ 
+          <tr class="Controls">
+            <td class="th"><label for="employees_tblgroup_id">Group</label></td> 
+            <td>
+              <select id="employees_tblgroup_id" name="{group_id_Name}">
+                <option value="" selected>Select Value</option>
+                {group_id_Options}
+              </select>
+ </td>
+          </tr>
+ 
+          <tr class="Controls">
+            <td class="th"><label for="employees_tbldepartment_id">Department</label></td> 
+            <td>
+              <select id="employees_tbldepartment_id" name="{department_id_Name}">
+                <option value="" selected>Select Value</option>
+                {department_id_Options}
+              </select>
+ </td>
+          </tr>
+ 
+          <tr class="Controls">
+            <td class="th"><label for="employees_tblphone_home">Phone Home</label></td> 
+            <td><input id="employees_tblphone_home" maxlength="50" size="30" value="{phone_home}" name="{phone_home_Name}"></td>
+          </tr>
+ 
+          <tr class="Controls">
+            <td class="th"><label for="employees_tblphone_work">Phone Work</label></td> 
+            <td><input id="employees_tblphone_work" maxlength="50" size="30" value="{phone_work}" name="{phone_work_Name}"></td>
+          </tr>
+ 
+          <tr class="Controls">
+            <td class="th"><label for="employees_tblphone_cell">Phone Mobile</label></td> 
+            <td><input id="employees_tblphone_cell" maxlength="50" size="30" value="{phone_cell}" name="{phone_cell_Name}"></td>
+          </tr>
+ 
+          <tr class="Controls">
+            <td class="th"><label for="employees_tblfax">Fax</label></td> 
+            <td><input id="employees_tblfax" maxlength="50" size="30" value="{fax}" name="{fax_Name}"></td>
+          </tr>
+ 
+          <tr class="Controls">
+            <td class="th"><label for="employees_tblemail">e-mail</label></td> 
+            <td><input id="employees_tblemail" maxlength="50" size="30" value="{email}" name="{email_Name}"></td>
+          </tr>
+ 
+          <tr class="Controls">
+            <td class="th"><label for="employees_tblcity">City</label></td> 
+            <td>
+              <select id="employees_tblcity" style="WIDTH: 101px" name="{city_Name}">
+                <option value="" selected>Select Value</option>
+                {city_Options}
+              </select>
+ </td>
+          </tr>
+ 
+          <tr class="Controls">
+            <td class="th"><label for="employees_tblzip">Zip</label></td> 
+            <td><input id="employees_tblzip" maxlength="50" size="30" value="{zip}" name="{zip_Name}"></td>
+          </tr>
+ 
+          <tr class="Controls">
+            <td class="th"><label for="employees_tbladdress">Address</label></td> 
+            <td><input id="employees_tbladdress" maxlength="50" size="30" value="{address}" name="{address_Name}"></td>
+          </tr>
+ 
+          <tr class="Controls">
+            <td class="th"><label for="employees_tblpicture">Picture</label></td> 
+            <td><input id="employees_tblpicture" maxlength="50" size="30" value="{picture}" name="{picture_Name}"></td>
+          </tr>
+ 
+          <tr class="Bottom">
+            <td align="right" colspan="2">
+              <!-- BEGIN Button Button_Insert --><input class="Button" id="employees_tblButton_Insert" type="submit" alt="Add" value="add new entry" name="{Button_Name}"><!-- END Button Button_Insert -->
+              <!-- BEGIN Button Button_Update --><input class="Button" id="employees_tblButton_Update" type="submit" alt="Submit" value="save changes" name="{Button_Name}"><!-- END Button Button_Update -->
+              <!-- BEGIN Button Button_Cancel --><input class="Button" id="employees_tblButton_Cancel" type="submit" alt="Cancel" value="return to menu" name="{Button_Name}"><!-- END Button Button_Cancel --></td>
+          </tr>
+        </table>
+      </td>
+    </tr>
+  </table>
+</form>
+<!-- END Record employees_tbl --><br>
+</body>
+</html>

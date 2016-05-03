@@ -1,0 +1,11 @@
+#iframe_position {
+
+	text-align: center;
+	height: auto;
+	width: 100%;
+	left: 0px;
+	top: 0px;
+	position: absolute;
+	visibility: visible;
+}
+

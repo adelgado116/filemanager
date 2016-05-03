@@ -1,0 +1,188 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html; charset=windows-1252">
+<title>page3_alfa</title>
+<meta content="CodeCharge Studio 4.1.00.027" name="GENERATOR">
+<link href="Styles/Blueprint1/Style_doctype.css" type="text/css" rel="stylesheet">
+<script language="JavaScript" type="text/javascript">
+//Begin CCS script
+//Include Common JSFunctions @1-D3B5F5BF
+</script>
+<script language="JavaScript" src="ClientI18N.php?file=Functions.js&amp;locale={res:CCS_LocaleID}" type="text/javascript" charset="utf-8"></script>
+<script language="JavaScript" type="text/javascript">
+//End Include Common JSFunctions
+
+//Include User Scripts @1-65A6D7D9
+</script>
+<script language="JavaScript" src="js/pt/prototype.js" type="text/javascript"></script>
+<script language="JavaScript" src="js/pt/scriptaculous.js" type="text/javascript"></script>
+<script language="JavaScript" src="js/pt/controls.js" type="text/javascript"></script>
+<link href="page3equipment_manufacturer_tbs_EQUIP_MODEL_style.css" type="text/css" rel="stylesheet">
+<script language="JavaScript" type="text/javascript">
+//End Include User Scripts
+
+//Initialize equipment_manufacturer_tbs_EQUIP_MODELPTAutocomplete1 @36-15739E29
+function equipment_manufacturer_tbs_EQUIP_MODELPTAutocomplete1_start() {
+    if ($("equipment_manufacturer_tbs_EQUIP_MODEL"))
+        new Ajax.Autocompleter("equipment_manufacturer_tbs_EQUIP_MODEL", "equipment_manufacturer_tbs_EQUIP_MODEL_choices", "services/page3_equipment_manufacturer_tb_s_EQUIP_MODEL_PTAutocomplete1.php", {});
+}
+//End Initialize equipment_manufacturer_tbs_EQUIP_MODELPTAutocomplete1
+
+//Initialize equipment_manufacturer_tbs_EQUIP_MODELPTAutocomplete2 @38-B3C3FC5F
+function equipment_manufacturer_tbs_EQUIP_MODELPTAutocomplete2_start() {
+    if ($("equipment_manufacturer_tbs_EQUIP_MODEL"))
+        new Ajax.Autocompleter("equipment_manufacturer_tbs_EQUIP_MODEL", "equipment_manufacturer_tbs_EQUIP_MODEL_choices", "services/page3_equipment_manufacturer_tb_s_EQUIP_MODEL_PTAutocomplete2.php", {});
+}
+//End Initialize equipment_manufacturer_tbs_EQUIP_MODELPTAutocomplete2
+
+//bind_events @1-AA46933E
+function bind_events() {
+    equipment_manufacturer_tbs_EQUIP_MODELPTAutocomplete1_start();
+    equipment_manufacturer_tbs_EQUIP_MODELPTAutocomplete2_start();
+}
+//End bind_events
+
+window.onload = bind_events; //Assign bind_events @1-19F7B649
+
+//End CCS script
+</script>
+</head>
+<body>
+<p>
+<table width="100%" border="0">
+  <tr>
+    <td>
+      <p><strong><font color="#000066" size="6">Select Equipment to Add to Worksheet</font></strong></p>
+    </td> 
+    <td>
+      <div align="right">
+<a href="{Link3_Src}" id="Link3" title="this link will open an interface to edit the database. after edition refresh this page to get the updates." target="_blank"><strong>EDIT EQUIPMENT DATABASE</strong></a>&nbsp; |&nbsp; <a href="{Link1_Src}" id="Link1"><strong>GO TO ORDERS SEARCH</strong></a>&nbsp; |&nbsp; <a href="{Link2_Src}" id="Link2"><strong>WORKSHEET REVIEW</strong></a> 
+      </div>
+    </td>
+  </tr>
+</table>
+</p>
+<p>
+<!-- BEGIN Record equipment_manufacturer_tb -->
+<form id="equipment_manufacturer_tb" name="{HTMLFormName}" action="{Action}" method="post">
+  <table cellspacing="0" cellpadding="0" border="0">
+    <tr>
+      <td valign="top">
+        <table class="Header" cellspacing="0" cellpadding="0" border="0">
+          <tr>
+            <td class="HeaderLeft"><img alt="" src="Styles/Blueprint1/Images/Spacer.gif" border="0"></td> 
+            <td class="th"><strong>Search for Equipments</strong></td> 
+            <td class="HeaderRight"><img alt="" src="Styles/Blueprint1/Images/Spacer.gif" border="0"></td>
+          </tr>
+        </table>
+ 
+        <table class="Record" cellspacing="0" cellpadding="0">
+          <!-- BEGIN Error -->
+          <tr class="Error">
+            <td colspan="2">{Error}</td>
+          </tr>
+          <!-- END Error -->
+          <tr class="Controls">
+            <td class="th"><label for="equipment_manufacturer_tbs_MANUF_ID">MANUFACTURER</label></td> 
+            <td>
+              <select id="equipment_manufacturer_tbs_MANUF_ID" name="{s_MANUF_ID_Name}">
+                <option value="" selected>Select Value</option>
+                {s_MANUF_ID_Options}
+              </select>
+ </td>
+          </tr>
+ 
+          <tr class="Controls">
+            <td class="th"><label for="equipment_manufacturer_tbs_EQUIP_TYPE_ID">EQUIPMENT TYPE</label></td> 
+            <td>
+              <select id="equipment_manufacturer_tbs_EQUIP_TYPE_ID" name="{s_EQUIP_TYPE_ID_Name}">
+                <option value="" selected>Select Value</option>
+                {s_EQUIP_TYPE_ID_Options}
+              </select>
+ </td>
+          </tr>
+ 
+          <tr class="Controls">
+            <td class="th"><label for="equipment_manufacturer_tbs_EQUIP_MODEL">EQUIPMENT MODEL</label></td> 
+            <td>
+              <!-- BEGIN TextBox s_EQUIP_MODEL --><input id="equipment_manufacturer_tbs_EQUIP_MODEL" maxlength="250" size="50" value="{s_EQUIP_MODEL}" name="{s_EQUIP_MODEL_Name}" autocomplete="off">
+              <!-- BEGINF PTAutocomplete PTAutocomplete1 -->
+              <div id="equipment_manufacturer_tbs_EQUIP_MODEL_choices">
+              </div>
+              <!-- ENDF PTAutocomplete PTAutocomplete1 -->
+              <!-- BEGINF PTAutocomplete PTAutocomplete2 -->
+              <div id="equipment_manufacturer_tbs_EQUIP_MODEL_choices">
+              </div>
+              <!-- ENDF PTAutocomplete PTAutocomplete2 --><!-- END TextBox s_EQUIP_MODEL --></td>
+          </tr>
+ 
+          <tr class="Bottom">
+            <td align="right" colspan="2">
+              <!-- BEGIN Button Button_DoSearch --><input class="Button" id="equipment_manufacturer_tbButton_DoSearch" type="submit" alt="Search" value="Search" name="{Button_Name}"><!-- END Button Button_DoSearch --></td>
+          </tr>
+        </table>
+      </td>
+    </tr>
+  </table>
+</form>
+<!-- END Record equipment_manufacturer_tb --><br>
+<!-- BEGIN Grid equipment_manufacturer_tb1 -->
+<table cellspacing="0" cellpadding="0" border="0">
+  <tr>
+    <td valign="top">
+      <table class="Header" cellspacing="0" cellpadding="0" border="0">
+        <tr>
+          <td class="HeaderLeft"><img alt="" src="Styles/Blueprint1/Images/Spacer.gif" border="0"></td> 
+          <td class="th"><strong>Equipments Database Results&nbsp;</strong></td> 
+          <td class="HeaderRight"><img alt="" src="Styles/Blueprint1/Images/Spacer.gif" border="0"></td>
+        </tr>
+      </table>
+ 
+      <table class="Grid" cellspacing="0" cellpadding="0">
+        <tr class="Caption">
+          <th scope="col">MANUFACTURER</th>
+ 
+          <th scope="col">EQUIPMENT TYPE</th>
+ 
+          <th scope="col">EQUIPMENT MODEL</th>
+ 
+          <th scope="col">&nbsp;EXTENDED INFORMATION</th>
+ 
+          <th scope="col">ACTIONS</th>
+        </tr>
+ 
+        <!-- BEGIN Row -->
+        <tr class="Row">
+          <td>{MANUF_NAME}&nbsp;</td> 
+          <td>{EQUIP_TYPE}&nbsp;</td> 
+          <td>{EQUIP_MODEL}&nbsp;</td> 
+          <td>&nbsp;{extended_info}</td> 
+          <td>&nbsp;<a href="{Link1_Src}" id="equipment_manufacturer_tb1Link1_{equipment_manufacturer_tb1:rowNumber}">SELECT</a></td>
+        </tr>
+ <!-- END Row -->
+        <!-- BEGIN NoRecords -->
+        <tr class="NoRecords">
+          <td colspan="5">no records found.</td>
+        </tr>
+        <!-- END NoRecords -->
+        <tr class="Footer">
+          <td colspan="5">
+            <!-- BEGIN Navigator Navigator -->
+            <!-- BEGIN First_On --><a href="{First_URL}"><img alt="{First_URL}" src="Styles/Blueprint1/Images/First.gif" border="0"></a> <!-- END First_On -->
+            <!-- BEGIN First_Off --><img alt="{First_URL}" src="Styles/Blueprint1/Images/FirstOff.gif" border="0"><!-- END First_Off -->
+            <!-- BEGIN Prev_On --><a href="{Prev_URL}"><img alt="{Prev_URL}" src="Styles/Blueprint1/Images/Prev.gif" border="0"></a> <!-- END Prev_On -->
+            <!-- BEGIN Prev_Off --><img alt="{Prev_URL}" src="Styles/Blueprint1/Images/PrevOff.gif" border="0"><!-- END Prev_Off -->&nbsp;{Page_Number} of&nbsp;{Total_Pages}&nbsp; 
+            <!-- BEGIN Next_On --><a href="{Next_URL}"><img alt="{Next_URL}" src="Styles/Blueprint1/Images/Next.gif" border="0"></a> <!-- END Next_On -->
+            <!-- BEGIN Next_Off --><img alt="{Next_URL}" src="Styles/Blueprint1/Images/NextOff.gif" border="0"><!-- END Next_Off -->
+            <!-- BEGIN Last_On --><a href="{Last_URL}"><img alt="{Last_URL}" src="Styles/Blueprint1/Images/Last.gif" border="0"></a> <!-- END Last_On -->
+            <!-- BEGIN Last_Off --><img alt="{Last_URL}" src="Styles/Blueprint1/Images/LastOff.gif" border="0"><!-- END Last_Off --><!-- END Navigator Navigator -->&nbsp;</td>
+        </tr>
+      </table>
+    </td>
+  </tr>
+</table>
+<!-- END Grid equipment_manufacturer_tb1 --><br>
+</p>
+</body>
+</html>

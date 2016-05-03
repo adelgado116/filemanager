@@ -1,0 +1,150 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html; charset=windows-1252">
+<title>page2_3</title>
+<meta content="CodeCharge Studio 4.1.00.032" name="GENERATOR"><link href="Styles/Blueprint1/Style_doctype.css" type="text/css" rel="stylesheet">
+</head>
+<body>
+<p>
+<table width="100%" border="0">
+  <tr>
+    <td>
+      <p><strong><font color="#000066" size="6">Edit&nbsp;Cities information in database</font></strong></p>
+    </td> 
+    <td>
+      <div align="right">
+      </div>
+    </td>
+  </tr>
+</table>
+</p>
+<!-- BEGIN Record cities_tbl_countries_tbl -->
+<form id="cities_tbl_countries_tbl" name="{HTMLFormName}" action="{Action}" method="post">
+  <table cellspacing="0" cellpadding="0" border="0">
+    <tr>
+      <td valign="top">
+        <table class="Header" cellspacing="0" cellpadding="0" border="0">
+          <tr>
+            <td class="HeaderLeft"><img alt="" src="Styles/Blueprint1/Images/Spacer.gif" border="0"></td> 
+            <td class="th"><strong>Search Cities&nbsp;by&nbsp;Country&nbsp;</strong></td> 
+            <td class="HeaderRight"><img alt="" src="Styles/Blueprint1/Images/Spacer.gif" border="0"></td>
+          </tr>
+        </table>
+ 
+        <table class="Record" cellspacing="0" cellpadding="0">
+          <!-- BEGIN Error -->
+          <tr class="Error">
+            <td colspan="2">{Error}</td>
+          </tr>
+          <!-- END Error -->
+          <tr class="Controls">
+            <td class="th"><label for="cities_tbl_countries_tbls_country_id">COUNTRY</label></td> 
+            <td>
+              <select id="cities_tbl_countries_tbls_country_id" name="{s_country_id_Name}">
+                <option value="" selected>Select Value</option>
+                {s_country_id_Options}
+              </select>
+ </td>
+          </tr>
+ 
+          <tr class="Bottom">
+            <td align="right" colspan="2">
+              <!-- BEGIN Button Button_DoSearch --><input class="Button" id="cities_tbl_countries_tblButton_DoSearch" type="submit" alt="Search" value="Search" name="{Button_Name}"><!-- END Button Button_DoSearch --></td>
+          </tr>
+        </table>
+      </td>
+    </tr>
+  </table>
+</form>
+<!-- END Record cities_tbl_countries_tbl --><br>
+<!-- BEGIN Grid cities_tbl_countries_tbl1 -->
+<table cellspacing="0" cellpadding="0" border="0">
+  <tr>
+    <td valign="top">
+      <table class="Header" cellspacing="0" cellpadding="0" border="0">
+        <tr>
+          <td class="HeaderLeft"><img alt="" src="Styles/Blueprint1/Images/Spacer.gif" border="0"></td> 
+          <td class="th"><strong>Results for Cities Search</strong></td> 
+          <td class="HeaderRight"><img alt="" src="Styles/Blueprint1/Images/Spacer.gif" border="0"></td>
+        </tr>
+      </table>
+ 
+      <table class="Grid" cellspacing="0" cellpadding="0">
+        <tr class="Caption">
+          <th scope="col">COUNTRY</th>
+ 
+          <th scope="col">CITY</th>
+        </tr>
+ 
+        <!-- BEGIN Row -->
+        <tr class="Row">
+          <td>{country_name}</td> 
+          <td><a href="{city_name_Src}" id="cities_tbl_countries_tbl1city_name_{cities_tbl_countries_tbl1:rowNumber}">{city_name}</a></td>
+        </tr>
+ <!-- END Row -->
+        <!-- BEGIN NoRecords -->
+        <tr class="NoRecords">
+          <td colspan="2">no records found.</td>
+        </tr>
+        <!-- END NoRecords -->
+        <tr class="Footer">
+          <td colspan="2"><a href="{cities_tbl_countries_tbl1_Insert_Src}" id="cities_tbl_countries_tbl1cities_tbl_countries_tbl1_Insert">Add New</a>&nbsp; 
+            <!-- BEGIN Navigator Navigator -->
+            <!-- BEGIN Prev_On --><a href="{Prev_URL}"><img alt="{Prev_URL}" src="Styles/Blueprint1/Images/en/ButtonPrev.gif" border="0"></a> <!-- END Prev_On -->
+            <!-- BEGIN Prev_Off --><img alt="{Prev_URL}" src="Styles/Blueprint1/Images/en/ButtonPrevOff.gif" border="0"><!-- END Prev_Off -->
+            <!-- BEGIN Next_On --><a href="{Next_URL}"><img alt="{Next_URL}" src="Styles/Blueprint1/Images/en/ButtonNext.gif" border="0"></a> <!-- END Next_On -->
+            <!-- BEGIN Next_Off --><img alt="{Next_URL}" src="Styles/Blueprint1/Images/en/ButtonNextOff.gif" border="0"><!-- END Next_Off --><!-- END Navigator Navigator -->&nbsp;</td>
+        </tr>
+      </table>
+    </td>
+  </tr>
+</table>
+<!-- END Grid cities_tbl_countries_tbl1 --><br>
+<!-- BEGIN Record cities_tbl -->
+<form id="cities_tbl" name="{HTMLFormName}" action="{Action}" method="post">
+  <table cellspacing="0" cellpadding="0" border="0">
+    <tr>
+      <td valign="top">
+        <table class="Header" cellspacing="0" cellpadding="0" border="0">
+          <tr>
+            <td class="HeaderLeft"><img alt="" src="Styles/Blueprint1/Images/Spacer.gif" border="0"></td> 
+            <td class="th"><strong>Add/Edit/Delete Cities in Database</strong></td> 
+            <td class="HeaderRight"><img alt="" src="Styles/Blueprint1/Images/Spacer.gif" border="0"></td>
+          </tr>
+        </table>
+ 
+        <table class="Record" cellspacing="0" cellpadding="0">
+          <!-- BEGIN Error -->
+          <tr class="Error">
+            <td colspan="2">{Error}</td>
+          </tr>
+          <!-- END Error -->
+          <tr class="Controls">
+            <td class="th"><label for="cities_tblcountry_id">COUNTRY</label></td> 
+            <td>
+              <select id="cities_tblcountry_id" name="{country_id_Name}">
+                <option value="" selected>Select Value</option>
+                {country_id_Options}
+              </select>
+ </td>
+          </tr>
+ 
+          <tr class="Controls">
+            <td class="th"><label for="cities_tblcity_name">CITYNAME</label></td> 
+            <td><input id="cities_tblcity_name" maxlength="250" size="50" value="{city_name}" name="{city_name_Name}"></td>
+          </tr>
+ 
+          <tr class="Bottom">
+            <td align="right" colspan="2">
+              <!-- BEGIN Button Button_Insert --><input class="Button" id="cities_tblButton_Insert" type="submit" alt="Add" value="save new city" name="{Button_Name}"><!-- END Button Button_Insert -->
+              <!-- BEGIN Button Button_Update --><input class="Button" id="cities_tblButton_Update" type="submit" alt="Submit" value="save change" name="{Button_Name}"><!-- END Button Button_Update --></td>
+          </tr>
+        </table>
+      </td>
+    </tr>
+  </table>
+</form>
+<!-- END Record cities_tbl --><br>
+</body>
+</html>

@@ -1,0 +1,249 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html; charset=windows-1252">
+<title>page2_4</title>
+<meta content="CodeCharge Studio 4.1.00.027" name="GENERATOR">
+<script language="JavaScript" type="text/javascript">
+//Begin CCS script
+//Include Common JSFunctions @1-D3B5F5BF
+</script>
+<script language="JavaScript" src="ClientI18N.php?file=Functions.js&amp;locale={res:CCS_LocaleID}" type="text/javascript" charset="utf-8"></script>
+<script language="JavaScript" type="text/javascript">
+//End Include Common JSFunctions
+
+//Include User Scripts @1-69796C6C
+</script>
+<script language="JavaScript" src="js/pt/prototype.js" type="text/javascript"></script>
+<script language="JavaScript" src="js/pt/scriptaculous.js" type="text/javascript"></script>
+<script language="JavaScript" src="js/pt/controls.js" type="text/javascript"></script>
+<link href="page2_2agents_tbl1s_AGENT_NAME_style.css" type="text/css" rel="stylesheet">
+<script language="JavaScript" type="text/javascript">
+//End Include User Scripts
+
+//agents_tblButton_Submit_OnClick @19-171DE257
+function agents_tblButton_Submit_OnClick()
+{
+    var result = true;
+//End agents_tblButton_Submit_OnClick
+
+//Confirmation Message @20-257FDD03
+    return confirm('Submit records?');
+//End Confirmation Message
+
+//Close agents_tblButton_Submit_OnClick @19-BC33A33A
+    return result;
+}
+//End Close agents_tblButton_Submit_OnClick
+
+//Initialize agents_tbl1s_AGENT_NAMEPTAutocomplete1 @30-7CE4F335
+function agents_tbl1s_AGENT_NAMEPTAutocomplete1_start() {
+    if ($("agents_tbl1s_AGENT_NAME"))
+        new Ajax.Autocompleter("agents_tbl1s_AGENT_NAME", "agents_tbl1s_AGENT_NAME_choices", "services/page2_2_agents_tbl1_s_AGENT_NAME_PTAutocomplete1.php", {});
+}
+//End Initialize agents_tbl1s_AGENT_NAMEPTAutocomplete1
+
+//bind_events @1-CCBEE0C5
+function bind_events() {
+    agents_tbl1s_AGENT_NAMEPTAutocomplete1_start();
+    addEventHandler("agents_tblButton_Submit", "click", agents_tblButton_Submit_OnClick);
+}
+//End bind_events
+
+window.onload = bind_events; //Assign bind_events @1-19F7B649
+
+//End CCS script
+</script>
+<link href="Styles/Blueprint1/Style_doctype.css" type="text/css" rel="stylesheet">
+</head>
+<body>
+&nbsp; 
+<table width="100%" border="0">
+  <tr>
+    <td>
+      <p><strong><font color="#000066" size="6">Edit&nbsp;Agents information in database</font></strong></p>
+    </td> 
+    <td>
+      <div align="right">
+      </div>
+    </td>
+  </tr>
+</table>
+<p>
+<!-- BEGIN Record agents_tbl1 -->
+<form id="agents_tbl1" name="{HTMLFormName}" action="{Action}" method="post">
+  <table cellspacing="0" cellpadding="0" border="0">
+    <tr>
+      <td valign="top">
+        <table class="Header" cellspacing="0" cellpadding="0" border="0">
+          <tr>
+            <td class="HeaderLeft"><img alt="" src="Styles/Blueprint1/Images/Spacer.gif" border="0"></td> 
+            <td class="th"><strong>Search Agents Tbl </strong></td> 
+            <td class="HeaderRight"><img alt="" src="Styles/Blueprint1/Images/Spacer.gif" border="0"></td>
+          </tr>
+        </table>
+ 
+        <table class="Record" cellspacing="0" cellpadding="0">
+          <!-- BEGIN Error -->
+          <tr class="Error">
+            <td colspan="2">{Error}</td>
+          </tr>
+          <!-- END Error -->
+          <tr class="Controls">
+            <td class="th"><label for="agents_tbl1s_country_id">COUNTRY</label></td> 
+            <td>
+              <select id="agents_tbl1s_country_id" name="{s_country_id_Name}">
+                <option value="" selected>Select Value</option>
+                {s_country_id_Options}
+              </select>
+ </td>
+          </tr>
+ 
+          <tr class="Controls">
+            <td class="th"><label for="agents_tbl1s_AGENT_NAME">AGENT NAME</label></td> 
+            <td>
+              <!-- BEGIN TextBox s_AGENT_NAME --><input id="agents_tbl1s_AGENT_NAME" maxlength="250" size="50" value="{s_AGENT_NAME}" name="{s_AGENT_NAME_Name}" autocomplete="off">
+              <!-- BEGINF PTAutocomplete PTAutocomplete1 -->
+              <div id="agents_tbl1s_AGENT_NAME_choices">
+              </div>
+              <!-- ENDF PTAutocomplete PTAutocomplete1 --><!-- END TextBox s_AGENT_NAME --></td>
+          </tr>
+ 
+          <tr class="Bottom">
+            <td align="right" colspan="2">
+              <!-- BEGIN Button Button_DoSearch --><input class="Button" id="agents_tbl1Button_DoSearch" type="submit" alt="Search" value="Search" name="{Button_Name}"><!-- END Button Button_DoSearch --></td>
+          </tr>
+        </table>
+      </td>
+    </tr>
+  </table>
+</form>
+<!-- END Record agents_tbl1 --></p>
+<p>
+<!-- BEGIN EditableGrid agents_tbl -->
+<form id="agents_tbl" name="{HTMLFormName}" action="{Action}" method="post">
+  <input type="hidden" value="{FormState}" name="FormState">{FormScript} 
+  <table cellspacing="0" cellpadding="0" border="0">
+    <tr>
+      <td valign="top">
+        <table class="Header" cellspacing="0" cellpadding="0" border="0">
+          <tr>
+            <td class="HeaderLeft"><img alt="" src="Styles/Blueprint1/Images/Spacer.gif" border="0"></td> 
+            <td class="th"><strong>Agents Database</strong></td> 
+            <td class="HeaderRight"><img alt="" src="Styles/Blueprint1/Images/Spacer.gif" border="0"></td>
+          </tr>
+        </table>
+ 
+        <table class="Grid" cellspacing="0" cellpadding="0">
+          <!-- BEGIN Error -->
+          <tr class="Error">
+            <td colspan="3">{Error}</td>
+          </tr>
+          <!-- END Error -->
+          <tr class="Caption">
+            <th scope="col">AGENT NAME</th>
+ 
+            <th scope="col">ADDRESSING INFORMATION</th>
+ 
+            <th scope="col">CONTACT</th>
+          </tr>
+ 
+          <!-- BEGIN Row -->
+          <!-- BEGIN RowError -->
+          <tr class="Error">
+            <td colspan="3">{Error}</td>
+          </tr>
+          <!-- END RowError -->
+          <tr class="Row">
+            <td><input id="agents_tblAGENT_NAME_{agents_tbl:rowNumber}" maxlength="250" size="35" value="{AGENT_NAME}" name="{AGENT_NAME_Name}"></td> 
+            <td>&nbsp; 
+              <table style="WIDTH: 393px; HEIGHT: 106px" cellspacing="0" cellpadding="0" width="393" align="left" border="0">
+                <tr>
+                  <td>COUNTRY</td> 
+                  <td>
+                    <select id="agents_tblcountry_id_{agents_tbl:rowNumber}" name="{country_id_Name}">
+                      <option value="" selected>Select Value</option>
+                      {country_id_Options}
+                    </select>
+ </td>
+                </tr>
+ 
+                <tr>
+                  <td>CITY</td> 
+                  <td>
+                    <select id="agents_tblcity_id" name="{city_id_Name}">
+                      <option value="" selected>Select Value</option>
+                      {city_id_Options}
+                    </select>
+ </td>
+                </tr>
+ 
+                <tr>
+                  <td>PHYSICAL</td> 
+                  <td><input id="agents_tblAGENT_ADDRESS_{agents_tbl:rowNumber}" maxlength="250" size="35" value="{AGENT_ADDRESS}" name="{AGENT_ADDRESS_Name}"></td>
+                </tr>
+ 
+                <tr>
+                  <td>EMAIL </td> 
+                  <td><input id="agents_tblAGENT_EMAIL_{agents_tbl:rowNumber}" maxlength="50" size="35" value="{AGENT_EMAIL}" name="{AGENT_EMAIL_Name}"></td>
+                </tr>
+              </table>
+              <br>
+              <br>
+              <br>
+            </td> 
+            <td>&nbsp; 
+              <table style="WIDTH: 202px; HEIGHT: 116px" cellspacing="0" cellpadding="0" width="202" align="left" border="0">
+                <tr>
+                  <td>ph 1</td> 
+                  <td><input id="agents_tblAGENT_OFFICE_PHONE_1_{agents_tbl:rowNumber}" maxlength="15" size="15" value="{AGENT_OFFICE_PHONE_1}" name="{AGENT_OFFICE_PHONE_1_Name}"></td>
+                </tr>
+ 
+                <tr>
+                  <td>ph 2</td> 
+                  <td><input id="agents_tblAGENT_OFFICE_PHONE_2_{agents_tbl:rowNumber}" maxlength="15" size="15" value="{AGENT_OFFICE_PHONE_2}" name="{AGENT_OFFICE_PHONE_2_Name}"></td>
+                </tr>
+ 
+                <tr>
+                  <td>fax</td> 
+                  <td><input id="agents_tblAGENT_FAX_{agents_tbl:rowNumber}" maxlength="15" size="15" value="{AGENT_FAX}" name="{AGENT_FAX_Name}"></td>
+                </tr>
+ 
+                <tr>
+                  <td>duty</td> 
+                  <td><input id="agents_tblAGENT_DUTY_PHONE_{agents_tbl:rowNumber}" maxlength="15" size="15" value="{AGENT_DUTY_PHONE}" name="{AGENT_DUTY_PHONE_Name}"></td>
+                </tr>
+              </table>
+              <br>
+              <br>
+            </td>
+          </tr>
+ <!-- END Row -->
+          <!-- BEGIN NoRecords -->
+          <tr class="NoRecords">
+            <td colspan="3">no records found.</td>
+          </tr>
+          <!-- END NoRecords -->
+          <tr class="Footer">
+            <td style="TEXT-ALIGN: right" colspan="3">
+              <!-- BEGIN Navigator Navigator -->
+              <!-- BEGIN First_On --><a href="{First_URL}"><img alt="{First_URL}" src="Styles/Blueprint1/Images/First.gif" border="0"></a> <!-- END First_On -->
+              <!-- BEGIN First_Off --><img alt="{First_URL}" src="Styles/Blueprint1/Images/FirstOff.gif" border="0"><!-- END First_Off -->
+              <!-- BEGIN Prev_On --><a href="{Prev_URL}"><img alt="{Prev_URL}" src="Styles/Blueprint1/Images/Prev.gif" border="0"></a> <!-- END Prev_On -->
+              <!-- BEGIN Prev_Off --><img alt="{Prev_URL}" src="Styles/Blueprint1/Images/PrevOff.gif" border="0"><!-- END Prev_Off -->&nbsp;{Page_Number} of&nbsp;{Total_Pages}&nbsp; 
+              <!-- BEGIN Next_On --><a href="{Next_URL}"><img alt="{Next_URL}" src="Styles/Blueprint1/Images/Next.gif" border="0"></a> <!-- END Next_On -->
+              <!-- BEGIN Next_Off --><img alt="{Next_URL}" src="Styles/Blueprint1/Images/NextOff.gif" border="0"><!-- END Next_Off -->
+              <!-- BEGIN Last_On --><a href="{Last_URL}"><img alt="{Last_URL}" src="Styles/Blueprint1/Images/Last.gif" border="0"></a> <!-- END Last_On -->
+              <!-- BEGIN Last_Off --><img alt="{Last_URL}" src="Styles/Blueprint1/Images/LastOff.gif" border="0"><!-- END Last_Off --><!-- END Navigator Navigator -->
+              <!-- BEGIN Button Button_Submit --><input class="Button" id="agents_tblButton_Submit" type="submit" alt="Submit" value="Submit" name="{Button_Name}"><!-- END Button Button_Submit --></td>
+          </tr>
+        </table>
+      </td>
+    </tr>
+  </table>
+</form>
+<!-- END EditableGrid agents_tbl --></p>
+<p><br>
+</p>
+</body>
+</html>

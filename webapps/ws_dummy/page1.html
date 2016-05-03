@@ -1,0 +1,222 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html; charset=windows-1252">
+<title>Dummy Worksheet</title>
+<meta content="CodeCharge Studio 4.1.00.032" name="GENERATOR">
+<link href="Styles/Blueprint1/Style_doctype.css" type="text/css" rel="stylesheet">
+<script language="JavaScript" type="text/javascript">
+//Begin CCS script
+//Include Common JSFunctions @1-56D0AF56
+</script>
+<script language="JavaScript" src="ClientI18N.php?file=Functions.js&amp;locale={res:CCS_LocaleID}" type="text/javascript" charset="utf-8"></script>
+<script language="JavaScript" src="ClientI18N.php?file=DatePicker.js&amp;locale={res:CCS_LocaleID}" type="text/javascript" charset="utf-8"></script>
+<script language="JavaScript" type="text/javascript">
+//End Include Common JSFunctions
+
+//Date Picker Object Definitions @1-F9D861FB
+
+var ws_dummy_DatePicker_eta_date1 = new Object(); 
+ws_dummy_DatePicker_eta_date1.format           = "ShortDate";
+ws_dummy_DatePicker_eta_date1.style            = "Styles/Blueprint1/Style.css";
+ws_dummy_DatePicker_eta_date1.relativePathPart = "";
+ws_dummy_DatePicker_eta_date1.themeVersion = "3.0";
+
+var ws_dummy_DatePicker_ref_called_on1 = new Object(); 
+ws_dummy_DatePicker_ref_called_on1.format           = "ShortDate";
+ws_dummy_DatePicker_ref_called_on1.style            = "Styles/Blueprint1/Style.css";
+ws_dummy_DatePicker_ref_called_on1.relativePathPart = "";
+ws_dummy_DatePicker_ref_called_on1.themeVersion = "3.0";
+
+//End Date Picker Object Definitions
+
+//bind_events @1-BF0EB765
+function bind_events() {
+}
+//End bind_events
+
+window.onload = bind_events; //Assign bind_events @1-19F7B649
+
+//End CCS script
+</script>
+</head>
+<body>
+<p>
+<!-- BEGIN Record ws_dummy -->
+<form id="ws_dummy" name="{HTMLFormName}" action="{Action}" method="post">
+  <table cellspacing="0" cellpadding="0" border="0">
+    <tr>
+      <td valign="top">
+        <table class="Header" cellspacing="0" cellpadding="0" border="0">
+          <tr>
+            <td class="HeaderLeft"><img alt="" src="Styles/Blueprint1/Images/Spacer.gif" border="0"></td> 
+            <td class="th"><strong>Worksheet</strong></td> 
+            <td class="HeaderRight"><img alt="" src="Styles/Blueprint1/Images/Spacer.gif" border="0"></td>
+          </tr>
+        </table>
+ 
+        <table class="Record" cellspacing="0" cellpadding="0">
+          <tr class="Error">
+            <td colspan="6">
+              <p>&nbsp;NON OF THESE FIELDS IS REQUIRED.</p>
+ 
+              <p>&nbsp;THE WORKSHEET WILL BE LAUNCHED&nbsp;AS A PDF FILE.</p>
+ 
+              <p>&nbsp;PLEASE SAVE THE PDF&nbsp;FILE FOR FUTURE REFERENCE (IT WON'T BE SAVED BY THIS APPLICATION).</p>
+            </td>
+          </tr>
+          <!-- BEGIN Error -->
+          <tr class="Error">
+            <td colspan="6">{Error}</td>
+          </tr>
+          <!-- END Error -->
+          <tr class="Controls">
+            <td class="th" colspan="4">SERVICE INFORMATION</td> 
+            <td colspan="2">AGENT INFORMATION</td>
+          </tr>
+ 
+          <tr class="Controls">
+            <td class="th"><label for="ws_dummyorder_no">Order No</label></td> 
+            <td><input id="ws_dummyorder_no" maxlength="6" size="6" value="{order_no}" name="{order_no_Name}">&nbsp;(write "N/A" if Order No.&nbsp;is not available)</td> 
+            <td><label for="ws_dummycountry">Country</label></td> 
+            <td><input id="ws_dummycountry" maxlength="250" size="40" value="{country}" name="{country_Name}">&nbsp;</td> 
+            <td><label for="ws_dummyagent_phone_1">Phone 1</label></td> 
+            <td><input id="ws_dummyagent_phone_1" maxlength="20" value="{agent_phone_1}" name="{agent_phone_1_Name}" size="20"></td>
+          </tr>
+ 
+          <tr class="Controls">
+            <td class="th"><label for="ws_dummyshipname">Shipname</label></td> 
+            <td><input id="ws_dummyshipname" maxlength="250" size="50" value="{shipname}" name="{shipname_Name}">&nbsp;</td> 
+            <td><label for="ws_dummyport">Port</label></td> 
+            <td><input id="ws_dummyport" maxlength="250" size="40" value="{port}" name="{port_Name}"></td> 
+            <td><label for="ws_dummyagent_phone_2">Phone 2</label></td> 
+            <td><input id="ws_dummyagent_phone_2" maxlength="20" value="{agent_phone_2}" name="{agent_phone_2_Name}" size="20"></td>
+          </tr>
+ 
+          <tr class="Controls">
+            <td class="th"><label for="ws_dummyimo_number">Imo Number</label></td> 
+            <td><input id="ws_dummyimo_number" maxlength="7" size="7" value="{imo_number}" name="{imo_number_Name}"></td> 
+            <td><label for="ws_dummyagent">Agent</label></td> 
+            <td><input id="ws_dummyagent" maxlength="250" size="40" value="{agent}" name="{agent_Name}"></td> 
+            <td><label for="ws_dummyagent_fax">Fax</label></td> 
+            <td><input id="ws_dummyagent_fax" maxlength="20" value="{agent_fax}" name="{agent_fax_Name}" size="20"></td>
+          </tr>
+ 
+          <tr class="Controls">
+            <td class="th"><label for="ws_dummyequipment">Equipment</label></td> 
+            <td><input id="ws_dummyequipment" maxlength="250" size="50" value="{equipment}" name="{equipment_Name}"></td> 
+            <td><label for="ws_dummyeta_date">ETA</label></td> 
+            <td>Date &nbsp;<input id="ws_dummyeta_date" maxlength="10" size="10" value="{eta_date}" name="{eta_date_Name}">&nbsp; 
+              <!-- BEGIN DatePicker DatePicker_eta_date1 --><a href="javascript:showDatePicker('{Name}','{FormName}','{DateControl}');" id="ws_dummyDatePicker_eta_date1"><img id="ws_dummyDatePicker_eta_date1_Image" alt="Show Date Picker" src="Styles/Blueprint1/Images/DatePicker.gif" border="0"></a>&nbsp;<!-- END DatePicker DatePicker_eta_date1 -->&nbsp;&nbsp; <label for="ws_dummyeta_time">Time </label><input id="ws_dummyeta_time" maxlength="4" size="4" value="{eta_time}" name="{eta_time_Name}"></td> 
+            <td><label for="ws_dummyagent_fax">e-mail</label></td> 
+            <td><input id="ws_dummyagent_email" maxlength="50" size="30" value="{agent_email}" name="{agent_email_Name}"></td>
+          </tr>
+ 
+          <tr class="Controls">
+            <td class="th"><label for="ws_dummyservice_type">Service Type</label></td> 
+            <td><input id="ws_dummyservice_type" maxlength="250" size="50" value="{service_type}" name="{service_type_Name}"></td> 
+            <td><label for="ws_dummyeta_time">Talked To</label></td> 
+            <td><input id="ws_dummyref_talked_to" maxlength="250" size="40" value="{ref_talked_to}" name="{ref_talked_to_Name}"></td> 
+            <td><label for="ws_dummyagent_mobile">Mobile</label></td> 
+            <td><input id="ws_dummyagent_mobile" maxlength="50" size="30" value="{agent_mobile}" name="{agent_mobile_Name}"></td>
+          </tr>
+ 
+          <tr class="Controls">
+            <td class="th"><label for="ws_dummywarranty">Warranty</label></td> 
+            <td><input id="ws_dummywarranty" type="checkbox" value="1" name="{warranty_Name}" {warranty}></td> 
+            <td><label for="ws_dummyref_called_on">Called On</label></td> 
+            <td>Date&nbsp; <input id="ws_dummyref_called_on" maxlength="10" size="10" value="{ref_called_on}" name="{ref_called_on_Name}">&nbsp; 
+              <!-- BEGIN DatePicker DatePicker_ref_called_on1 --><a href="javascript:showDatePicker('{Name}','{FormName}','{DateControl}');" id="ws_dummyDatePicker_ref_called_on1"><img id="ws_dummyDatePicker_ref_called_on1_Image" alt="Show Date Picker" src="Styles/Blueprint1/Images/DatePicker.gif" border="0"></a>&nbsp;<!-- END DatePicker DatePicker_ref_called_on1 -->&nbsp;&nbsp; <label for="ws_dummyref_time">Time </label><input id="ws_dummyref_time" maxlength="4" size="4" value="{ref_time}" name="{ref_time_Name}"></td> 
+            <td>Boarding Agent</td> 
+            <td><label for="ws_dummyagent_boarding" style="display: none;"></label><input id="ws_dummyagent_boarding" maxlength="50" size="30" value="{agent_boarding}" name="{agent_boarding_Name}">&nbsp;</td>
+          </tr>
+ 
+          <tr class="Controls">
+            <td class="th"><label for="ws_dummyapproved_by">Approved By</label></td> 
+            <td><input id="ws_dummyapproved_by" maxlength="250" size="50" value="{approved_by}" name="{approved_by_Name}"></td> 
+            <td colspan="4"></td>
+            <!--
+            <td></td> 
+            <td></td> 
+            <td></td>
+                        -->
+          </tr>
+ 
+          <tr class="Controls">
+            <td class="th"><label for="ws_dummyremarks">Remarks</label></td> 
+            <td><textarea id="ws_dummyremarks" name="{remarks_Name}" rows="3" cols="38">{remarks}</textarea></td> 
+            <td colspan="4">&nbsp;</td>
+            <!--
+            <td>&nbsp;</td> 
+            <td>&nbsp;</td> 
+            <td>&nbsp;</td>
+                        -->
+          </tr>
+ 
+          <tr class="Controls">
+            <td class="th" colspan="6"><label for="ws_dummyport"></label></td>
+            <!--
+            <td>&nbsp;</td> 
+            <td>&nbsp;</td> 
+            <td>&nbsp;</td> 
+            <td>&nbsp;</td> 
+            <td></td>
+                        -->
+          </tr>
+ 
+          <tr class="Controls">
+            <td class="th" colspan="2"><label for="ws_dummyagent">CUSTOMER INFORMATION</label></td> 
+            <td colspan="4">&nbsp;</td>
+            <!--
+            <td>&nbsp;</td> 
+            <td>&nbsp;</td> 
+            <td></td>
+                        -->
+          </tr>
+ 
+          <tr class="Controls">
+            <td class="th"><label for="ws_dummyinvoice_to">Invoice To</label></td> 
+            <td><input id="ws_dummyinvoice_to" maxlength="50" size="50" value="{invoice_to}" name="{invoice_to_Name}"></td> 
+            <td colspan="4">&nbsp;</td>
+            <!--
+                        <td>&nbsp;</td> 
+            <td>&nbsp;</td> 
+            <td></td>
+                        -->
+          </tr>
+ 
+          <tr class="Controls">
+            <td class="th"><label for="ws_dummypo_no">Po No</label></td> 
+            <td><input id="ws_dummypo_no" maxlength="50" size="50" value="{po_no}" name="{po_no_Name}"></td> 
+            <td colspan="4">&nbsp;</td>
+            <!--
+                        <td>&nbsp;</td> 
+            <td>&nbsp;</td> 
+            <td></td>
+                        -->
+          </tr>
+ 
+          <tr class="Controls">
+            <td class="th"><label for="ws_dummydebtor_account">Debtor Account</label></td> 
+            <td><input id="ws_dummydebtor_account" maxlength="10" size="10" value="{debtor_account}" name="{debtor_account_Name}"></td> 
+            <td colspan="4">&nbsp;</td>
+            <!--
+                        <td>&nbsp;</td> 
+            <td>&nbsp;</td> 
+            <td></td>
+                        -->
+          </tr>
+ 
+          <tr class="Bottom">
+            <td align="right" colspan="6">
+              <!-- BEGIN Button Button_Insert --><input class="Button" id="ws_dummyButton_Insert" type="submit" alt="Add" value="Generate PDF File" name="{Button_Name}"><!-- END Button Button_Insert --></td>
+          </tr>
+        </table>
+      </td>
+    </tr>
+  </table>
+</form>
+&nbsp;<!-- END Record ws_dummy --><br>
+</p>
+</body>
+</html>

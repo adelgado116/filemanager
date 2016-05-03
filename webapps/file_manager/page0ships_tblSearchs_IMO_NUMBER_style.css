@@ -1,0 +1,21 @@
+/*Page Style @1-8CB7AE65*/
+#ships_tblSearchs_IMO_NUMBER_choices {
+    position: absolute;
+}
+#ships_tblSearchs_IMO_NUMBER_choices ul {
+    background-color: white;
+    border: 1px solid black;
+    border-top: none;
+    padding-left: 0px;
+    padding-right: 0px;
+    margin: 0px;
+}
+#ships_tblSearchs_IMO_NUMBER_choices ul li.selected { background-color: #aaa;}
+#ships_tblSearchs_IMO_NUMBER_choices li {
+    list-style-type: none;
+    padding-left: 8px;
+    padding-right: 8px;
+    margin: 0;
+}
+/*End Page Style*/
+

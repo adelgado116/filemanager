@@ -1,0 +1,73 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html; charset=windows-1252">
+<title>page0_2</title>
+<meta name="GENERATOR" content="CodeCharge Studio 4.1.00.032">
+<link rel="stylesheet" type="text/css" href="Styles/Blueprint1/Style_doctype.css">
+</head>
+<body>
+<table border="0" width="100%">
+  <tr>
+    <td></td> 
+    <td>
+      <p align="right"><a href="{Link1_Src}" id="Link1"><strong>RETURN TO SEARCH INTERFACE</strong></a></p>
+    </td>
+  </tr>
+</table>
+<p>&nbsp; 
+<!-- BEGIN Grid ships_tbl -->
+<table border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td valign="top">
+      <table class="Header" border="0" cellspacing="0" cellpadding="0">
+        <tr>
+          <td class="HeaderLeft"><img border="0" alt="" src="Styles/Blueprint1/Images/Spacer.gif"></td> 
+          <td class="th"><strong>Result for Shipname/IMO</strong></td> 
+          <td class="HeaderRight"><img border="0" alt="" src="Styles/Blueprint1/Images/Spacer.gif"></td>
+        </tr>
+      </table>
+ 
+      <table class="Grid" cellspacing="0" cellpadding="0">
+        <tr class="Caption">
+          <th scope="col">SHIP NAME</th>
+ 
+          <th scope="col">IMO NUMBER</th>
+ 
+          <th scope="col">OWNER</th>
+ 
+          <th scope="col">SATCOM (VOICE)</th>
+ 
+          <th scope="col">MMSI</th>
+ 
+          <th scope="col">CALL SIGN</th>
+ 
+          <th scope="col">ACTIONS</th>
+ 
+          <th scope="col"></th>
+        </tr>
+ 
+        <!-- BEGIN Row -->
+        <tr class="Row">
+          <td>{SHIP_NAME}&nbsp;</td> 
+          <td>{IMO_NUMBER}&nbsp;</td> 
+          <td>{OWNER}&nbsp;</td> 
+          <td>{satcom_voice_1}</td> 
+          <td>{MMSI}&nbsp;</td> 
+          <td>{CALL_SIGN}</td> 
+          <td><a href="{Link1_Src}" id="ships_tblLink1_{ships_tbl:rowNumber}">VIEW SERVICE ORDER LIST</a>&nbsp; |&nbsp; <a href="{Link2_Src}" id="ships_tblLink2_{ships_tbl:rowNumber}" title="Opens Vessel's General Information view"><font color="#000080">VIEW GENERAL INFO</font></a></td> 
+          <td></td>
+        </tr>
+ <!-- END Row -->
+        <!-- BEGIN NoRecords -->
+        <tr class="NoRecords">
+          <td colspan="8">no records found.</td>
+        </tr>
+        <!-- END NoRecords -->
+      </table>
+    </td>
+  </tr>
+</table>
+<!-- END Grid ships_tbl --></p>
+</body>
+</html>

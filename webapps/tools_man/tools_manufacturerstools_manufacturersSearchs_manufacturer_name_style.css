@@ -1,0 +1,21 @@
+/*Page Style @1-FF95EF41*/
+#tools_manufacturersSearchs_manufacturer_name_choices {
+    position: absolute;
+}
+#tools_manufacturersSearchs_manufacturer_name_choices ul {
+    background-color: white;
+    border: 1px solid black;
+    border-top: none;
+    padding-left: 0px;
+    padding-right: 0px;
+    margin: 0px;
+}
+#tools_manufacturersSearchs_manufacturer_name_choices ul li.selected { background-color: #aaa;}
+#tools_manufacturersSearchs_manufacturer_name_choices li {
+    list-style-type: none;
+    padding-left: 8px;
+    padding-right: 8px;
+    margin: 0;
+}
+/*End Page Style*/
+

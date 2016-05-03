@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+<!DOCTYPE package SYSTEM "http://pear.php.net/dtd/package-1.0">
+<package version="1.0">
+  <name>Tree</name>
+  <summary>A Tree structure object for generic tree handling</summary>
+  <description>Provides a methods to create/use/maintain tree structures.</description>
+  <maintainers>
+    <maintainer>
+      <user>richard</user>
+      <name>Richard Heyes</name>
+      <email>richard@php.net</email>
+      <role>lead</role>
+    </maintainer>
+  </maintainers>
+  <release>
+    <version>2.0.0</version>
+    <date>2005-03-04</date>
+    <license>BSD</license>
+    <state>stable</state>
+    <notes>Converted to PHP5. Added support for creating Tree structures from
+RecursiveIterator iterator objects, and subsequently removed static
+createFrom* methods. Everything now reference based. Search() method
+of Tree_NodeCollection now returns all matching nodes.</notes>
+    <deps>
+      <dep type="php" rel="ge" version="5.0.0"/>
+    </deps>
+    <filelist>
+      <file role="php" baseinstalldir="/" name="Tree.php"/>
+      <file role="php" baseinstalldir="/" name="demo.php"/>
+      <file role="doc" baseinstalldir="/" name="docs/Tree.doc"/>
+      <file role="doc" baseinstalldir="/" name="docs/Tree.pdf"/>
+      <file role="php" baseinstalldir="/" name="Tree/Node.php"/>
+      <file role="php" baseinstalldir="/" name="Tree/NodeCollection.php"/>
+      <file role="php" baseinstalldir="/" name="Tree/Factory/FileSystem.php"/>
+      <file role="php" baseinstalldir="/" name="Tree/Factory/Iterator.php"/>
+      <file role="php" baseinstalldir="/" name="Tree/Factory/List.php"/>
+    </filelist>
+  </release>
+  <changelog>
+    <release>
+      <version>1.0.3</version>
+      <date>2002-03-02</date>
+      <license>BSD</license>
+      <state>stable</state>
+      <notes>Added Tree_NodeCollection::moveTo(), Tree_NodeCollection::copyTo(),
+Tree_Node::moveTo(), Tree_Node::copyTo() and Tree_Node::depth() methods.
+            
+</notes>
+    </release>
+    <release>
+      <version>1.0.2</version>
+      <date>2002-02-19</date>
+      <license>BSD</license>
+      <state>stable</state>
+      <notes>Added createFromXMLTree() method.
+            
+</notes>
+    </release>
+    <release>
+      <version>1.0.1</version>
+      <date>2002-02-19</date>
+      <license>BSD</license>
+      <state>stable</state>
+      <notes>Added various import methods including:
+ o createFromList()
+ o createFromMySQL()
+Also added a basic search method.
+            
+</notes>
+    </release>
+    <release>
+      <version>1.0</version>
+      <date>2002-02-18</date>
+      <license>BSD</license>
+      <state>stable</state>
+      <notes>Initial release using PEAR installer/package format
+            
+</notes>
+    </release>
+  </changelog>
+</package>

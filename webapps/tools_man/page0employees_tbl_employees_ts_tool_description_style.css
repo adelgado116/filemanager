@@ -1,0 +1,21 @@
+/*Page Style @1-0F2E5399*/
+#employees_tbl_employees_ts_tool_description_choices {
+    position: absolute;
+}
+#employees_tbl_employees_ts_tool_description_choices ul {
+    background-color: white;
+    border: 1px solid black;
+    border-top: none;
+    padding-left: 0px;
+    padding-right: 0px;
+    margin: 0px;
+}
+#employees_tbl_employees_ts_tool_description_choices ul li.selected { background-color: #aaa;}
+#employees_tbl_employees_ts_tool_description_choices li {
+    list-style-type: none;
+    padding-left: 8px;
+    padding-right: 8px;
+    margin: 0;
+}
+/*End Page Style*/
+

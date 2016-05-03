@@ -1,0 +1,36 @@
+/*principal*/
+table {font-size: 10pt; }
+
+/*secondary layout*/
+body{ background-color: white; }
+
+/*main layout*/
+#title { height: 30px; width: 280px; left: 80px; top: 12px; position: absolute; visibility: visible; }
+/*#title { height: 40px; width: 315px; left: 140; top: 0; position: absolute; visibility: visible; text-align: left; }*/
+#select { height: 40px; width: 315px; left: 455px; top: 0; position: absolute; visibility: visible; text-align: left; }
+#manual { height: auto; width: 250px; left: 50px; top: 65px; position: absolute; visibility: visible; text-align: left;
+		  border:1px solid;border-top-color: #545454;border-left-color: #FFFFFF;border-right-color: #FFFFFF;border-bottom-color: #FFFFFF }
+#auto { height: auto; width: 330px; left: 300px; top: 65px; position: absolute; visibility: visible; text-align: left;
+		border:1px solid;border-top-color: #545454;border-left-color: #545454;border-right-color: #FFFFFF;border-bottom-color: #FFFFFF }
+#button {left: 45px; top: 315px; position: absolute; visibility: visible; }
+
+/*classes*/
+.day{ font-family: Verdana; font-weight: bold; font-size: 8pt; }
+.start { background-color: #cfcfcf; font-family: Verdana; font-size: 9pt; }
+.end { background-color: #eeeeee; font-family: Verdana; font-size: 9pt; }
+.on { color: #32ee00; }
+.off { color: #ee0000; }
+
+.button_update{
+	color:#000000;
+	font-family:Verdana, Arial, Helvetica, sans-serif;
+	font-size:85%;
+	/*font-weight:bold;*/
+	background-color: #EEEEEE;
+	border:1px solid;
+	border-top-color: #0066FF;
+	border-left-color: #0066FF;
+	border-right-color: #0066FF;
+	border-bottom-color: #0066FF
+	
+}

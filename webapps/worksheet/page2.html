@@ -1,0 +1,225 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta content="text/html; charset=windows-1252" http-equiv="content-type">
+<title>page2</title>
+<meta name="GENERATOR" content="CodeCharge Studio 4.01.00.06">
+<link rel="stylesheet" type="text/css" href="Styles/Blueprint1/Style_doctype.css">
+<script language="JavaScript" type="text/javascript">
+//Begin CCS script
+//Include Common JSFunctions @1-D3B5F5BF
+</script>
+<script language="JavaScript" type="text/javascript" charset="utf-8" src="ClientI18N.php?file=Functions.js&amp;locale={res:CCS_LocaleID}"></script>
+<script language="JavaScript" type="text/javascript">
+//End Include Common JSFunctions
+
+//service_tblcountry_id_OnChange @30-058E2EC7
+function service_tblcountry_id_OnChange()
+{
+    var result = true;
+//End service_tblcountry_id_OnChange
+
+//Custom Code @51-2A29BDB7
+    // -------------------------
+    window.location.href = "page2.php?country_id=" + this.value + "&ORDER_NO=" + document.service_tbl.service_tblORDER_NO.value + "&IMO_NUMBER=" + document.service_tbl.service_tblIMO_NUMBER.value + "&SHIPNAME=" + document.service_tbl.service_tblSHIPNAME.value + "&REQUISNUMBER=" + document.service_tbl.service_tblREQUISNUMBER.value + "&AGENT_ID=" + document.service_tbl.service_tblAGENT_ID.value + "&AGENT_DUTY=" + document.service_tbl.service_tblAGENT_DUTY.value + "&ETA_DATE_DAY=" + document.service_tbl.service_tblETA_DATE_DAY.value + "&ETA_DATE_MONTH=" + document.service_tbl.service_tblETA_DATE_MONTH.value + "&ETA_DATE_YEAR=" + document.service_tbl.service_tblETA_DATE_YEAR.value + "&ETA_HOUR=" + document.service_tbl.service_tblETA_HOUR.value + "&RETURN_REPORT_TO=" + document.service_tbl.service_tblRETURN_REPORT_TO.value + "&ORDER_PARTS_FROM=" + document.service_tbl.service_tblORDER_PARTS_FROM.value + "&RETURN_PARTS_TO=" + document.service_tbl.service_tblRETURN_PARTS_TO.value + "&STATUS_ID=" + document.service_tbl.service_tblSTATUS_ID.value + "&SALESNAME=" + document.service_tbl.service_tblSALESNAME.value + "&DEBTORACCOUNT=" + document.service_tbl.service_tblDEBTORACCOUNT.value;
+    // -------------------------
+//End Custom Code
+
+//Close service_tblcountry_id_OnChange @30-BC33A33A
+    return result;
+}
+//End Close service_tblcountry_id_OnChange
+
+//service_tblcity_id_OnChange @31-54720AEF
+function service_tblcity_id_OnChange()
+{
+    var result = true;
+//End service_tblcity_id_OnChange
+
+//Custom Code @52-2A29BDB7
+    // -------------------------
+    window.location.href = "page2.php?city_id=" + this.value + "&country_id=" + document.service_tbl.service_tblcountry_id.value + "&ORDER_NO=" + document.service_tbl.service_tblORDER_NO.value + "&IMO_NUMBER=" + document.service_tbl.service_tblIMO_NUMBER.value + "&SHIPNAME=" + document.service_tbl.service_tblSHIPNAME.value + "&REQUISNUMBER=" + document.service_tbl.service_tblREQUISNUMBER.value + "&AGENT_ID=" + document.service_tbl.service_tblAGENT_ID.value + "&AGENT_DUTY=" + document.service_tbl.service_tblAGENT_DUTY.value + "&ETA_DATE_DAY=" + document.service_tbl.service_tblETA_DATE_DAY.value + "&ETA_DATE_MONTH=" + document.service_tbl.service_tblETA_DATE_MONTH.value + "&ETA_DATE_YEAR=" + document.service_tbl.service_tblETA_DATE_YEAR.value + "&ETA_HOUR=" + document.service_tbl.service_tblETA_HOUR.value + "&RETURN_REPORT_TO=" + document.service_tbl.service_tblRETURN_REPORT_TO.value + "&ORDER_PARTS_FROM=" + document.service_tbl.service_tblORDER_PARTS_FROM.value + "&RETURN_PARTS_TO=" + document.service_tbl.service_tblRETURN_PARTS_TO.value + "&STATUS_ID=" + document.service_tbl.service_tblSTATUS_ID.value + "&SALESNAME=" + document.service_tbl.service_tblSALESNAME.value + "&DEBTORACCOUNT=" + document.service_tbl.service_tblDEBTORACCOUNT.value;
+    // -------------------------
+//End Custom Code
+
+//Close service_tblcity_id_OnChange @31-BC33A33A
+    return result;
+}
+//End Close service_tblcity_id_OnChange
+
+//service_tblButton_Cancel_OnClick @25-D79EA390
+function service_tblButton_Cancel_OnClick()
+{
+    disableValidation = true;
+}
+//End service_tblButton_Cancel_OnClick
+
+//bind_events @1-AD41A843
+function bind_events() {
+    addEventHandler("service_tblcountry_id", "change", service_tblcountry_id_OnChange);
+    addEventHandler("service_tblcity_id", "change", service_tblcity_id_OnChange);
+    addEventHandler("service_tblButton_Cancel", "click", service_tblButton_Cancel_OnClick);
+}
+//End bind_events
+
+window.onload = bind_events; //Assign bind_events @1-19F7B649
+
+//End CCS script
+</script>
+</head>
+<body>
+<p>
+<table border="0" width="100%">
+  <tr>
+    <td>&nbsp;<strong><font color="#000066" size="6">Service Information</font></strong></td> 
+    <td>&nbsp; 
+      <div align="right">
+<a href="{Link2_Src}" id="Link2"><strong>GO TO ORDERS SEARCH</strong></a> 
+      </div>
+    </td>
+  </tr>
+</table>
+</p>
+<p>
+<!-- BEGIN Record service_tbl -->
+<form id="service_tbl" method="post" name="{HTMLFormName}" action="{Action}">
+  <table border="0" cellspacing="0" cellpadding="0">
+    <tr>
+      <td valign="top">
+        <table class="Header" border="0" cellspacing="0" cellpadding="0">
+          <tr>
+            <td class="HeaderLeft"><img border="0" alt="" src="Styles/Blueprint1/Images/Spacer.gif"></td> 
+            <td class="th">Service Information</td> 
+            <td class="HeaderRight"><img border="0" alt="" src="Styles/Blueprint1/Images/Spacer.gif"></td>
+          </tr>
+        </table>
+ 
+        <table class="Record" cellspacing="0" cellpadding="0">
+          <!-- BEGIN Error -->
+          <tr class="Error">
+            <td colspan="2">{Error}</td>
+          </tr>
+          <!-- END Error -->
+          <tr class="Controls">
+            <td class="th"><label for="service_tblORDER_NO">ORDER NO</label></td> 
+            <td><input id="service_tblORDER_NO" value="{ORDER_NO}" readonly maxlength="6" size="6" name="{ORDER_NO_Name}"></td>
+          </tr>
+ 
+          <tr class="Controls">
+            <td class="th"><label for="service_tblIMO_NUMBER">IMO NUMBER</label></td> 
+            <td><input id="service_tblIMO_NUMBER" value="{IMO_NUMBER}" readonly maxlength="7" size="7" name="{IMO_NUMBER_Name}"></td>
+          </tr>
+ 
+          <tr class="Controls">
+            <td class="th">VESSEL NAME</td> 
+            <td><label for="service_tblSHIPNAME" style="display: none;"></label><input id="service_tblSHIPNAME" value="{SHIPNAME}" readonly name="{SHIPNAME_Name}"></td>
+          </tr>
+ 
+          <tr class="Controls">
+            <td class="th"><label for="service_tblREQUISNUMBER">CUSTOMER ORDER NO</label></td> 
+            <td><input id="service_tblREQUISNUMBER" value="{REQUISNUMBER}" readonly maxlength="50" name="{REQUISNUMBER_Name}"></td>
+          </tr>
+ 
+          <tr class="Controls">
+            <td class="th"><label for="service_tblcountry_id">COUNTRY</label></td> 
+            <td>
+              <select id="service_tblcountry_id" name="{country_id_Name}">
+                <option selected value="">Select Value</option>
+                {country_id_Options}
+              </select>
+ </td>
+          </tr>
+ 
+          <tr class="Controls">
+            <td class="th"><label for="service_tblcity_id">CITY</label></td> 
+            <td>
+              <select id="service_tblcity_id" name="{city_id_Name}">
+                <option selected value="">Select Value</option>
+                {city_id_Options}
+              </select>
+ </td>
+          </tr>
+ 
+          <tr class="Controls">
+            <td class="th"><label for="service_tblPORT_ID">PORT/PLACE</label></td> 
+            <td>
+              <select id="service_tblPORT_ID" name="{PORT_ID_Name}">
+                <option selected value="">Select Value</option>
+                {PORT_ID_Options}
+              </select>
+ <a href="{Link1_Src}" id="service_tblLink1" target="_blank">EDIT PORTS DATABASE</a></td>
+          </tr>
+ 
+          <tr class="Controls">
+            <td class="th"><label for="service_tblAGENT_ID">AGENT</label></td> 
+            <td>
+              <select id="service_tblAGENT_ID" name="{AGENT_ID_Name}">
+                <option selected value="">Select Value</option>
+                {AGENT_ID_Options}
+              </select>
+ <a href="{Link2_Src}" id="service_tblLink2" target="_blank">EDIT AGENTS DATABASE</a></td>
+          </tr>
+ 
+          <tr class="Controls">
+            <td class="th"><label for="service_tblAGENT_DUTY">AGENT DUTY</label></td> 
+            <td><input id="service_tblAGENT_DUTY" value="{AGENT_DUTY}" maxlength="50" size="50" name="{AGENT_DUTY_Name}"></td>
+          </tr>
+ 
+          <tr class="Controls">
+            <td class="th"><label for="service_tblETA_DATE">ETA DATE</label></td> 
+            <td>DAY - MONTH - YEAR<br>
+              <select id="service_tblETA_DATE_DAY" name="{ETA_DATE_DAY_Name}">
+                <option selected value="">Select Value</option>
+                {ETA_DATE_DAY_Options}
+              </select>
+ - 
+              <select id="service_tblETA_DATE_MONTH" name="{ETA_DATE_MONTH_Name}">
+                <option selected value="">Select Value</option>
+                {ETA_DATE_MONTH_Options}
+              </select>
+ - 
+              <select id="service_tblETA_DATE_YEAR" name="{ETA_DATE_YEAR_Name}">
+                <option selected value="">Select Value</option>
+                {ETA_DATE_YEAR_Options}
+              </select>
+ </td>
+          </tr>
+ 
+          <tr class="Controls">
+            <td class="th"><label for="service_tblETA_HOUR">ETA HOUR</label></td> 
+            <td><input id="service_tblETA_HOUR" value="{ETA_HOUR}" maxlength="4" size="4" name="{ETA_HOUR_Name}"></td>
+          </tr>
+ 
+          <tr class="Controls">
+            <td class="th" colspan="2"><strong>&nbsp; AFTER SERVICE DATA</strong></td>
+          </tr>
+ 
+          <tr class="Controls">
+            <td class="th">RETURN REPORT TO</td> 
+            <td><label for="service_tblRETURN_REPORT_TO" style="display: none;"></label><input id="service_tblRETURN_REPORT_TO" value="{RETURN_REPORT_TO}" name="{RETURN_REPORT_TO_Name}"></td>
+          </tr>
+ 
+          <tr class="Controls">
+            <td class="th">ORDER PARTS FROM</td> 
+            <td><label for="service_tblORDER_PARTS_FROM" style="display: none;"></label><input id="service_tblORDER_PARTS_FROM" value="{ORDER_PARTS_FROM}" name="{ORDER_PARTS_FROM_Name}"></td>
+          </tr>
+ 
+          <tr class="Controls">
+            <td class="th">RETURN PARTS TO</td> 
+            <td><label for="service_tblRETURN_PARTS_TO" style="display: none;"></label><input id="service_tblRETURN_PARTS_TO" value="{RETURN_PARTS_TO}" name="{RETURN_PARTS_TO_Name}"></td>
+          </tr>
+ 
+          <tr class="Bottom">
+            <td colspan="2" align="right">
+              <!-- BEGIN Button Button_Insert --><input id="service_tblButton_Insert" class="Button" value="next" alt="Add" type="submit" name="{Button_Name}"><!-- END Button Button_Insert -->
+              <!-- BEGIN Button Button_Cancel --><input id="service_tblButton_Cancel" class="Button" value="cancel" alt="Cancel" type="submit" name="{Button_Name}"><!-- END Button Button_Cancel --><input id="service_tblSTATUS_ID" value="{STATUS_ID}" type="hidden" name="{STATUS_ID_Name}"><input id="service_tblSALESNAME" value="{SALESNAME}" type="hidden" name="{SALESNAME_Name}"><input id="service_tblDEBTORACCOUNT" value="{DEBTORACCOUNT}" type="hidden" name="{DEBTORACCOUNT_Name}"></td>
+          </tr>
+        </table>
+      </td>
+    </tr>
+  </table>
+</form>
+<!-- END Record service_tbl --><br>
+</p>
+</body>
+</html>

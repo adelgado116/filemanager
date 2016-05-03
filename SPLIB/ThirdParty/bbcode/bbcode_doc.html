@@ -1,0 +1,181 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+  <title>BBCode Class Documentation</title>
+                                         
+  <meta http-equiv="content-type"
+ content="text/html; charset=ISO-8859-1">
+</head>
+<body>
+           
+<div style="text-align: center;">      
+<h1>BBCode Class Documentation</h1>
+      For version 1.0.0<br>
+           
+<hr width="100%" size="2">      
+<div style="text-align: left;">      
+<h2>Contents</h2>
+           
+<ul>
+        <li><a href="#overview">Overview</a><br>
+     </li>
+     <li><a href="#functions">Functions</a></li>
+           
+  <ul>
+       <li><a href="#add_alias">add_alias</a></li>
+       <li><a href="#add_tag">add_tag</a></li>
+      <li><a href="#change_setting">change_setting</a></li>
+     <li><a href="#export_definition">export_definition</a></li>
+     <li><a href="#get_data">get_data</a></li>
+     <li><a href="#import_definition">import_definition</a></li>
+     <li><a href="#parse_bbcode">parse_bbcode</a></li>
+           
+  </ul>
+   <li><a href="#settings">Settings</a></li>
+   
+  <ul>
+     <li><a href="#enced">enced</a><br>
+     </li>
+   
+  </ul>
+           
+</ul>
+           
+<h2><a name="overview"></a>Overview</h2>
+           
+<div style="margin-left: 40px;">      
+<h3>Name</h3>
+      BBCode Class<br>
+           
+<h3>Description</h3>
+      Class for parsing of BBCode.<br>
+           
+<h3>Author</h3>
+      Leif K-Brooks (<a href="mailto:eurleif@ecritters.biz">eurleif@ecritters.biz</a>)<br>
+     </div>
+         
+<h2><a name="functions"></a>Functions</h2>
+     
+<div style="margin-left: 40px;">   
+<h3><a name="add_alias"></a>$succeeded=<a>$bbcode-&gt;</a>add_alias($name,$aliasof)</h3>
+   Adds a tag that is an alias of another tag.&nbsp; For example<br>
+     
+<pre>add_alias('image','img');<br></pre>
+   Adds an alias of the "img" tag named "image". &nbsp;This function returns 
+ true on success, false on failure.<br>
+     
+<h3><a name="add_tag"></a>$error=<a>$bbcode-&gt;</a>add_tag($params)</h3>
+   Adds a tag to the current BBCode definition. &nbsp;It returns an error 
+message  if adding did not succeed, otherwise it returns an empty string.<br>
+     
+<p>The $params argument is an associative array with parameters to the function.<br>
+   </p>
+     
+<h4>Parameters</h4>
+     
+<ul>
+     <li>Name<br>
+   (required)<br>
+                 
+    <p>This argument specifies what the tag will be called. &nbsp;For a tag 
+ that will be used as [b], for example, this would be "b".</p>
+     </li>
+     <li>HasParam<br>
+   (defaults to false)<br>
+                 
+    <p>This argument is a boolean. &nbsp;True means the tag has a parameter 
+ ([tag=parameter] for example), false means it doesn't ([tag] for example)</p>
+     </li>
+     <li>HtmlBegin<br>
+   (required)<br>
+                 
+    <p>The HTML that the start tag is replaced with. &nbsp;"%%P%%" is replaced 
+ by the tag's parameter. &nbsp;For a [b] tag, this would be "&lt;b&gt;".</p>
+     </li>
+     <li>HtmlEnd<br>
+   (required for complex HtmlBegin)<br>
+                 
+    <p>The HTML that the end tag is replaced with. &nbsp;For a [b] tag, this 
+ would be "&lt;/b&gt;".<br>
+       </p>
+                 
+    <p>The class attempts to determine HtmlEnd from the HtmlBegin parameter 
+ if HtmlEnd isn't specified, but you should always specify this as it has 
+trouble with anything more complex than a single tag with no parameters.</p>
+     </li>
+     <li>ParamRegex<br>
+   (defaults to "[^\]]+")<br>
+                 
+    <p>A PCRE-fragment to determine if the parameter is valid. &nbsp;It is 
+ highly reccomened that you do not allow "]" to be in the parameter, as it 
+ tends to be confused with the tag's ending.</p>
+     </li>
+     <li>ParamRegexReplace<br>
+   (defaults to empty array)<br>
+                 
+    <p>Associative array of PCRE replacments to do on the parameter, with 
+ the keys being the search values and the values being the replacment.</p>
+     </li>
+     <li>HasEnd<br>
+   (defaults to true)<br>
+                 
+    <p>Boolean for whether there is an end tag. &nbsp;If it is set to true, 
+ the class ensures that all tags are ended.</p>
+     </li>
+     
+</ul>
+     
+<h3><a name="change_setting"></a><a>$bbcode-&gt;</a>change_setting($name,$value)</h3>
+   Changes the <a href="#settings">setting</a> named $name to $value.<br>
+   
+<h3><a name="export_definition"></a><a>$bbcode-&gt;</a>export_definition()</h3>
+  Returns the a serialized copy of the current tag definition, ready to be
+ imported with <a href="#import_definition">import_definition</a>.<br>
+   
+<h3><a name="get_data"></a>$data=<a>$bbcode-&gt;</a>get_data($name)</h3>
+  Returns an array of the data of the tag named $name. &nbsp;Note that if 
+$name is an alias, the "Name" property will be the alias's name.<br>
+   
+<h3><a name="import_definition"></a>$succeeded=<a>$bbcode-&gt;</a>import_definition($definition,$mode)</h3>
+  Imports a tag definition from the <a href="#export_definition">export_definition</a>
+ function.<br>
+   
+<h4>Modes</h4>
+   
+<ul>
+    <li>append<br>
+  (default)<br>
+  Appends $definition to the current definition, using&nbsp; $definition's
+ tag for duplicates.</li>
+    <li>prepend<br>
+  Prepends $definition to the current definition, using the current definition
+ for duplicates.</li>
+    <li>overwrite<br>
+  Removes the current defintion and adds $definition.<br>
+    </li>
+   
+</ul>
+   
+<h3><a name="parse_bbcode">$result=$bbcode-&gt;parse_bbcode($text)</a></h3>
+  Parses $text according to the current BBCode definition, and returns the
+ result.<br>
+  </div>
+ 
+<h2><a name="settings"></a>Settings</h2>
+ 
+<div style="margin-left: 40px;">These settings change how certain features 
+behave. &nbsp;They can be set with the <a href="#change_setting">change_setting</a> 
+function.<br>
+ 
+<h3><a name="enced"></a>enced</h3>
+ (defaults to true)<br>
+ Boolean for whether or not strings passes to the <a
+ href="#parse_bbcode">parse_bbcode</a> function are html-encoded.<br>
+ <br>
+ </div>
+ <br>
+   </div>
+   </div>
+       
+</body>
+</html>

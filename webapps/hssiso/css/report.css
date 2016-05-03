@@ -1,0 +1,114 @@
+/*SYSTEM*/
+/*body { color: black; background-color: #545454; }*/
+body { color: black; background-color: #FFFFFF; }
+p {}
+td {}
+
+a:link {
+  color: white;
+  text-decoration: none;
+  font-family:Verdana, Arial, Helvetica, sans-serif;
+  font-size:12px;
+  font-weight: normal;
+}
+a:visited {
+  color: white;
+  text-decoration: none;
+  font-family:Verdana, Arial, Helvetica, sans-serif;
+  font-size:12px;
+  font-weight: normal;
+}
+a:hover {
+  color: #888888;
+  padding-bottom: 5px;
+  font-family:Verdana, Arial, Helvetica, sans-serif;
+  font-size:12px;
+  font-weight: normal;
+  text-decoration: none;
+}
+a:active { 
+  color: white;
+  font-family:Verdana, Arial, Helvetica, sans-serif;
+  font-size:12px;
+  font-weight: normal;
+}
+
+/*MAIN LAYOUT*/
+#title { height: 30px; width: 720px; right: 0px; top: 0px; position: absolute; visibility: visible;
+		 text-align: center;
+		 border:1px solid;border-top-color: #545454;border-left-color: #545454;border-right-color: #545454;border-bottom-color: #545454 }
+#content { text-align: left; position: relative; width: 720px; height: 480px; margin-right: auto; margin-left: auto;
+		   /*background-color: #545454;*/
+		   background-color: #C4E2FF;
+		   border: 1px solid; border-top-color: #545454; border-left-color:#545454; border-bottom-color:#545454; border-right-color:#545454; }
+#left { height: 465px; width: 495px; left: 5px; top: 5px; position: absolute; visibility: visible; text-align: left;
+		padding-left: 3px; padding-right: 3px; padding-top: 5px;
+		background-color: #FFFFFF;
+		border: 1px solid; border-top-color: #545454; border-left-color:#545454; border-bottom-color:#545454; border-right-color:#545454; }
+#right { height: 334px; width: 195px; right: 5px; top: 5px; position: absolute; visibility: visible; text-align: left;
+		padding-left: 3px; padding-right: 3px;
+		background-color: #FFFFFF;
+		border: 1px solid; border-top-color: #545454; border-left-color:#545454; border-bottom-color:#545454; border-right-color:#545454; }
+#submit_button { height: 80px; width: 195px; right: 5px; bottom: 8px;/*top: 362px;*/ position: absolute; visibility: visible; text-align: left;
+		padding-left: 3px; padding-right: 3px; padding-top: 45px;
+		text-align: center;
+		background-color: #FFFFFF;
+		border: 1px solid; border-top-color: #545454; border-left-color:#545454; border-bottom-color:#545454; border-right-color:#545454; }
+
+
+.textbox {
+	color:#000000;
+	font-family:Verdana, Arial, Helvetica, sans-serif;
+	font-size:14px;
+	
+	border:1px solid;
+	border-top-color: #545454;
+	border-left-color: #545454;
+	border-right-color: #545454;
+	border-bottom-color: #545454
+}
+
+.textarea_box {
+	color:#000000;
+	font-family:Verdana, Arial, Helvetica, sans-serif;
+	font-size:12px;
+	
+	border:1px solid;
+	border-top-color: #545454;
+	border-left-color: #545454;
+	border-right-color: #545454;
+	border-bottom-color: #545454
+}
+
+.button{
+	color:#000000;
+	font-family:Verdana, Arial, Helvetica, sans-serif;
+	font-size:85%;
+	/*font-weight:bold;*/
+	background-color: #EEEEEE;
+	border:1px solid;
+	border-top-color: #0066FF;
+	border-left-color: #0066FF;
+	border-right-color: #0066FF;
+	border-bottom-color: #0066FF
+	
+}
+
+.checkboxstyle {
+	color:#000000;
+	/*font-family:Verdana, Arial, Helvetica, sans-serif;
+	font-size:14px;*/
+	
+	width: 15px;
+	height: 15px;
+	
+	border:1px solid;
+	border-top-color: #545454;
+	border-left-color: #545454;
+	border-right-color: #545454;
+	border-bottom-color: #545454
+}
+
+.font8{ font-family: Verdana; font-size: 8pt; }
+.font9{ font-family: Verdana; font-size: 9pt; }
+.font12{ font-family: Verdana; font-size: 12pt; }

@@ -1,0 +1,91 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html; charset=windows-1252">
+<title>Failed Service Report</title>
+<meta content="CodeCharge Studio 4.1.00.032" name="GENERATOR">
+<link href="Styles/Blueprint1/Style_doctype.css" type="text/css" rel="stylesheet">
+</head>
+<body>
+<!-- BEGIN Record service_failed_tbl -->
+<form id="service_failed_tbl" name="{HTMLFormName}" action="{Action}" method="post">
+  <table cellspacing="0" cellpadding="0" border="0">
+    <tr>
+      <td valign="top">
+        <table class="Header" cellspacing="0" cellpadding="0" border="0">
+          <tr>
+            <td class="HeaderLeft"><img alt="" src="Styles/Blueprint1/Images/Spacer.gif" border="0"></td> 
+            <td class="th"><strong>Failed&nbsp;Service&nbsp;Report&nbsp;</strong></td> 
+            <td class="HeaderRight"><img alt="" src="Styles/Blueprint1/Images/Spacer.gif" border="0"></td>
+          </tr>
+        </table>
+ 
+        <table class="Record" cellspacing="0" cellpadding="0">
+          <!-- BEGIN Error -->
+          <tr class="Error">
+            <td colspan="2">{Error}</td>
+          </tr>
+          <!-- END Error -->
+          <tr class="Controls">
+            <td class="th">ORDER NO&nbsp;</td> 
+            <td><input id="service_failed_tblORDER_NO" readonly maxlength="6" size="6" value="{ORDER_NO}" name="{ORDER_NO_Name}"></td>
+          </tr>
+ 
+          <tr class="Controls">
+            <td class="th">TECHNICIAN</td> 
+            <td>
+              <select id="service_failed_tblemp_id" name="{emp_id_Name}">
+                <option value="" selected>Select Value</option>
+                {emp_id_Options}
+              </select>
+ </td>
+          </tr>
+ 
+          <tr class="Controls">
+            <td class="th">FAULT AFTER SERVICE</td> 
+            <td><textarea id="service_failed_tblfault_after_service" name="{fault_after_service_Name}" rows="5" cols="50">{fault_after_service}</textarea></td>
+          </tr>
+ 
+          <tr class="Controls">
+            <td class="th">FAILED SERVICE REASON&nbsp;</td> 
+            <td>
+              <select id="service_failed_tblfailed_service_reason" name="{failed_service_reason_Name}">
+                <option value="" selected>Select Value</option>
+                {failed_service_reason_Options}
+              </select>
+ </td>
+          </tr>
+ 
+          <tr class="Controls">
+            <td class="th">OTHER REASON(S)</td> 
+            <td><textarea id="service_failed_tblother_reason" name="{other_reason_Name}" rows="4" cols="50">{other_reason}</textarea></td>
+          </tr>
+ 
+          <tr class="Controls">
+            <td class="th">ACTIONS TO FINISH</td> 
+            <td><textarea id="service_failed_tblaction_to_finish" name="{action_to_finish_Name}" rows="4" cols="50">{action_to_finish}</textarea></td>
+          </tr>
+ 
+          <tr class="Controls">
+            <td class="th">RECEIVED BY</td> 
+            <td>
+              <select id="service_failed_tblreceived_by" name="{received_by_Name}">
+                <option value="" selected>Select Value</option>
+                {received_by_Options}
+              </select>
+ </td>
+          </tr>
+ 
+          <tr class="Bottom">
+            <td align="right" colspan="2"><input id="service_failed_tblITEM_NO" type="hidden" value="{ITEM_NO}" name="{ITEM_NO_Name}">
+              <!-- BEGIN Button Button_Insert --><input class="Button" id="service_failed_tblButton_Insert" type="submit" alt="Add" value="save" name="{Button_Name}"><!-- END Button Button_Insert -->
+              <!-- BEGIN Button Button_Update --><input class="Button" id="service_failed_tblButton_Update" type="submit" alt="Submit" value="update" name="{Button_Name}"><!-- END Button Button_Update --></td>
+          </tr>
+        </table>
+      </td>
+    </tr>
+  </table>
+</form>
+<!-- END Record service_failed_tbl --><br>
+</body>
+</html>

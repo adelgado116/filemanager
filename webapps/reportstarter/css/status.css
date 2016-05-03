@@ -1,0 +1,50 @@
+/* Generic Selectors */
+
+body {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 14px;
+	color: #999999;		
+	background-color: #FFFFFF;
+	/*margin: 0 0 0 0; top right bottom left*/	
+}
+
+h1 {
+
+	font-family: Vendana, Arial, Helvetica, sans-serif;
+	font-size: 20px;
+	font-weight: bold;
+	color: #999999;
+	border-bottom: 2px solid #999999;
+}
+
+h2 {
+	font-family: Vendana, Arial, Helvetica, sans-serif;
+	font-size: 16px;
+	font-weight: bold;
+	color: #999999;
+}
+
+
+/*************************  ID's *************************/
+
+#leftGroup {
+	position: absolute;
+	width: 600px;
+	height: 300px;	
+	margin-top: 0px;
+	visibility: visible;
+	text-align: left;
+	left: 75px;
+	top: 120px;
+}
+
+#rightGroup {
+	position: absolute;
+	width: 150px;
+	height: 300px;	
+	margin-top: 0px;
+      visibility: visible;
+      text-align: left;
+      left: 425px;
+      top: 120px;	
+}

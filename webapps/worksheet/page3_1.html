@@ -1,0 +1,269 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html; charset=windows-1252">
+<title>page3_1</title>
+<meta content="CodeCharge Studio 4.1.00.027" name="GENERATOR">
+<script language="JavaScript" type="text/javascript">
+//Begin CCS script
+//Include Common JSFunctions @1-D3B5F5BF
+</script>
+<script language="JavaScript" src="ClientI18N.php?file=Functions.js&amp;locale={res:CCS_LocaleID}" type="text/javascript" charset="utf-8"></script>
+<script language="JavaScript" type="text/javascript">
+//End Include Common JSFunctions
+
+//equipment_model_tbl1Button_Submit_OnClick @29-6F694EBF
+function equipment_model_tbl1Button_Submit_OnClick()
+{
+    var result = true;
+//End equipment_model_tbl1Button_Submit_OnClick
+
+//Confirmation Message @30-257FDD03
+    return confirm('Submit records?');
+//End Confirmation Message
+
+//Close equipment_model_tbl1Button_Submit_OnClick @29-BC33A33A
+    return result;
+}
+//End Close equipment_model_tbl1Button_Submit_OnClick
+
+//DEL      // -------------------------
+//DEL      
+//DEL  
+//DEL   window.close(); 
+//DEL  
+//DEL  
+//DEL      // -------------------------
+
+//bind_events @1-7A24E2D9
+function bind_events() {
+    addEventHandler("equipment_model_tbl1Button_Submit", "click", equipment_model_tbl1Button_Submit_OnClick);
+}
+//End bind_events
+
+window.onload = bind_events; //Assign bind_events @1-19F7B649
+
+//End CCS script
+</script>
+<link href="Styles/Blueprint1/Style_doctype.css" type="text/css" rel="stylesheet">
+</head>
+<body>
+<table width="100%" border="0">
+  <tr>
+    <td>
+      <p><strong><font color="#000066" size="6">Edit&nbsp;Equipment&nbsp;information in database</font></strong></p>
+    </td> 
+    <td>
+      <div align="right">
+      </div>
+    </td>
+  </tr>
+</table>
+<p>&nbsp; 
+<table width="100%" border="0">
+  <tr>
+    <td>&nbsp; 
+      <!-- BEGIN Record equipment_model_tblSearch -->
+      <form id="equipment_model_tblSearch" name="{HTMLFormName}" action="{Action}" method="post">
+        <table cellspacing="0" cellpadding="0" border="0">
+          <tr>
+            <td valign="top">
+              <table class="Header" cellspacing="0" cellpadding="0" border="0">
+                <tr>
+                  <td class="HeaderLeft"><img alt="" src="Styles/Blueprint1/Images/Spacer.gif" border="0"></td> 
+                  <td class="th"><strong>Search for Equipment</strong></td> 
+                  <td class="HeaderRight"><img alt="" src="Styles/Blueprint1/Images/Spacer.gif" border="0"></td>
+                </tr>
+              </table>
+ 
+              <table class="Record" cellspacing="0" cellpadding="0">
+                <!-- BEGIN Error -->
+                <tr class="Error">
+                  <td colspan="2">{Error}</td>
+                </tr>
+                <!-- END Error -->
+                <tr class="Controls">
+                  <td class="th"><label for="equipment_model_tblSearchs_MANUF_ID">MANUFACTURER</label></td> 
+                  <td>
+                    <select id="equipment_model_tblSearchs_MANUF_ID" name="{s_MANUF_ID_Name}">
+                      <option value="" selected>Select Value</option>
+                      {s_MANUF_ID_Options}
+                    </select>
+ </td>
+                </tr>
+ 
+                <tr class="Controls">
+                  <td class="th"><label for="equipment_model_tblSearchs_EQUIP_TYPE_ID">EQUIPMENT TYPE</label></td> 
+                  <td>
+                    <select id="equipment_model_tblSearchs_EQUIP_TYPE_ID" name="{s_EQUIP_TYPE_ID_Name}">
+                      <option value="" selected>Select Value</option>
+                      {s_EQUIP_TYPE_ID_Options}
+                    </select>
+ </td>
+                </tr>
+ 
+                <tr class="Bottom">
+                  <td align="right" colspan="2">
+                    <!-- BEGIN Button Button_DoSearch --><input class="Button" id="equipment_model_tblSearchButton_DoSearch" type="submit" alt="Search" value="Search" name="{Button_Name}"><!-- END Button Button_DoSearch --></td>
+                </tr>
+              </table>
+            </td>
+          </tr>
+        </table>
+      </form>
+      <!-- END Record equipment_model_tblSearch -->&nbsp;</td> 
+    <td>&nbsp; 
+      <!-- BEGIN Record equipment_manufacturer_tb -->
+      <form id="equipment_manufacturer_tb" name="{HTMLFormName}" action="{Action}" method="post">
+        <table cellspacing="0" cellpadding="0" border="0">
+          <tr>
+            <td valign="top">
+              <table class="Header" cellspacing="0" cellpadding="0" border="0">
+                <tr>
+                  <td class="HeaderLeft"><img alt="" src="Styles/Blueprint1/Images/Spacer.gif" border="0"></td> 
+                  <td class="th"><strong>Add Manufacturer to Database</strong></td> 
+                  <td class="HeaderRight"><img alt="" src="Styles/Blueprint1/Images/Spacer.gif" border="0"></td>
+                </tr>
+              </table>
+ 
+              <table class="Record" cellspacing="0" cellpadding="0">
+                <!-- BEGIN Error -->
+                <tr class="Error">
+                  <td colspan="2">{Error}</td>
+                </tr>
+                <!-- END Error -->
+                <tr class="Controls">
+                  <td class="th"><label for="equipment_manufacturer_tbMANUF_NAME">MANUF NAME</label></td> 
+                  <td><input id="equipment_manufacturer_tbMANUF_NAME" maxlength="250" size="30" value="{MANUF_NAME}" name="{MANUF_NAME_Name}"></td>
+                </tr>
+ 
+                <tr class="Bottom">
+                  <td align="right" colspan="2">
+                    <!-- BEGIN Button Button_Insert --><input class="Button" id="equipment_manufacturer_tbButton_Insert" type="submit" alt="Add" value="Add" name="{Button_Name}"><!-- END Button Button_Insert --></td>
+                </tr>
+              </table>
+            </td>
+          </tr>
+        </table>
+      </form>
+      <!-- END Record equipment_manufacturer_tb --><br>
+    </td> 
+    <td>&nbsp; 
+      <!-- BEGIN Record equipment_type_tbl -->
+      <form id="equipment_type_tbl" name="{HTMLFormName}" action="{Action}" method="post">
+        <table cellspacing="0" cellpadding="0" border="0">
+          <tr>
+            <td valign="top">
+              <table class="Header" cellspacing="0" cellpadding="0" border="0">
+                <tr>
+                  <td class="HeaderLeft"><img alt="" src="Styles/Blueprint1/Images/Spacer.gif" border="0"></td> 
+                  <td class="th"><strong>Add Equipment&nbsp;Type to Database</strong></td> 
+                  <td class="HeaderRight"><img alt="" src="Styles/Blueprint1/Images/Spacer.gif" border="0"></td>
+                </tr>
+              </table>
+ 
+              <table class="Record" cellspacing="0" cellpadding="0">
+                <!-- BEGIN Error -->
+                <tr class="Error">
+                  <td colspan="2">{Error}</td>
+                </tr>
+                <!-- END Error -->
+                <tr class="Controls">
+                  <td class="th"><label for="equipment_type_tblEQUIP_TYPE">EQUIP TYPE</label></td> 
+                  <td><input id="equipment_type_tblEQUIP_TYPE" maxlength="250" size="30" value="{EQUIP_TYPE}" name="{EQUIP_TYPE_Name}"></td>
+                </tr>
+ 
+                <tr class="Bottom">
+                  <td align="right" colspan="2">
+                    <!-- BEGIN Button Button_Insert --><input class="Button" id="equipment_type_tblButton_Insert" type="submit" alt="Add" value="Add" name="{Button_Name}"><!-- END Button Button_Insert --></td>
+                </tr>
+              </table>
+            </td>
+          </tr>
+        </table>
+      </form>
+      <!-- END Record equipment_type_tbl --><br>
+    </td>
+  </tr>
+</table>
+<br>
+<!-- BEGIN EditableGrid equipment_model_tbl1 -->
+<form id="equipment_model_tbl1" name="{HTMLFormName}" action="{Action}" method="post">
+  <input type="hidden" value="{FormState}" name="FormState">{FormScript} 
+  <table cellspacing="0" cellpadding="0" border="0">
+    <tr>
+      <td valign="top">
+        <table class="Header" cellspacing="0" cellpadding="0" border="0">
+          <tr>
+            <td class="HeaderLeft"><img alt="" src="Styles/Blueprint1/Images/Spacer.gif" border="0"></td> 
+            <td class="th"><strong>Equipment&nbsp;Database</strong></td> 
+            <td class="HeaderRight"><img alt="" src="Styles/Blueprint1/Images/Spacer.gif" border="0"></td>
+          </tr>
+        </table>
+ 
+        <table class="Grid" cellspacing="0" cellpadding="0">
+          <!-- BEGIN Error -->
+          <tr class="Error">
+            <td colspan="4">{Error}</td>
+          </tr>
+          <!-- END Error -->
+          <tr class="Caption">
+            <th scope="col">MANUFACTURER</th>
+ 
+            <th scope="col">EQUIPMENT TYPE</th>
+ 
+            <th scope="col">EQUIPMENT MODEL</th>
+ 
+            <th scope="col">ADDITIONAL INFORMATION</th>
+          </tr>
+ 
+          <!-- BEGIN Row -->
+          <!-- BEGIN RowError -->
+          <tr class="Error">
+            <td colspan="4">{Error}</td>
+          </tr>
+          <!-- END RowError -->
+          <tr class="Row">
+            <td><label for="equipment_model_tbl1MANUF_ID_{equipment_model_tbl1:rowNumber}" style="display: none;">MANUF ID</label> 
+              <select id="equipment_model_tbl1MANUF_ID_{equipment_model_tbl1:rowNumber}" name="{MANUF_ID_Name}">
+                <option value="" selected>Select Value</option>
+                {MANUF_ID_Options}
+              </select>
+ </td> 
+            <td><label for="equipment_model_tbl1EQUIP_TYPE_ID_{equipment_model_tbl1:rowNumber}" style="display: none;">EQUIP TYPE ID</label> 
+              <select id="equipment_model_tbl1EQUIP_TYPE_ID_{equipment_model_tbl1:rowNumber}" name="{EQUIP_TYPE_ID_Name}">
+                <option value="" selected>Select Value</option>
+                {EQUIP_TYPE_ID_Options}
+              </select>
+ </td> 
+            <td><label for="equipment_model_tbl1EQUIP_MODEL_{equipment_model_tbl1:rowNumber}" style="display: none;">EQUIP MODEL</label><input id="equipment_model_tbl1EQUIP_MODEL_{equipment_model_tbl1:rowNumber}" maxlength="250" size="30" value="{EQUIP_MODEL}" name="{EQUIP_MODEL_Name}"></td> 
+            <td><label for="equipment_model_tbl1extended_info_{equipment_model_tbl1:rowNumber}" style="display: none;">Extended Info</label><input id="equipment_model_tbl1extended_info_{equipment_model_tbl1:rowNumber}" maxlength="30" size="30" value="{extended_info}" name="{extended_info_Name}"></td>
+          </tr>
+ <!-- END Row -->
+          <!-- BEGIN NoRecords -->
+          <tr class="NoRecords">
+            <td colspan="4">no records found.</td>
+          </tr>
+          <!-- END NoRecords -->
+          <tr class="Footer">
+            <td style="TEXT-ALIGN: right" colspan="4">
+              <!-- BEGIN Navigator Navigator -->
+              <!-- BEGIN First_On --><a href="{First_URL}"><img alt="{First_URL}" src="Styles/Blueprint1/Images/First.gif" border="0"></a> <!-- END First_On -->
+              <!-- BEGIN First_Off --><img alt="{First_URL}" src="Styles/Blueprint1/Images/FirstOff.gif" border="0"><!-- END First_Off -->
+              <!-- BEGIN Prev_On --><a href="{Prev_URL}"><img alt="{Prev_URL}" src="Styles/Blueprint1/Images/Prev.gif" border="0"></a> <!-- END Prev_On -->
+              <!-- BEGIN Prev_Off --><img alt="{Prev_URL}" src="Styles/Blueprint1/Images/PrevOff.gif" border="0"><!-- END Prev_Off -->&nbsp;{Page_Number} of&nbsp;{Total_Pages}&nbsp; 
+              <!-- BEGIN Next_On --><a href="{Next_URL}"><img alt="{Next_URL}" src="Styles/Blueprint1/Images/Next.gif" border="0"></a> <!-- END Next_On -->
+              <!-- BEGIN Next_Off --><img alt="{Next_URL}" src="Styles/Blueprint1/Images/NextOff.gif" border="0"><!-- END Next_Off -->
+              <!-- BEGIN Last_On --><a href="{Last_URL}"><img alt="{Last_URL}" src="Styles/Blueprint1/Images/Last.gif" border="0"></a> <!-- END Last_On -->
+              <!-- BEGIN Last_Off --><img alt="{Last_URL}" src="Styles/Blueprint1/Images/LastOff.gif" border="0"><!-- END Last_Off --><!-- END Navigator Navigator -->
+              <!-- BEGIN Button Button_Submit --><input class="Button" id="equipment_model_tbl1Button_Submit" type="submit" alt="Submit" value="Submit" name="{Button_Name}"><!-- END Button Button_Submit --></td>
+          </tr>
+        </table>
+      </td>
+    </tr>
+  </table>
+</form>
+<!-- END EditableGrid equipment_model_tbl1 --><br>
+</p>
+</body>
+</html>

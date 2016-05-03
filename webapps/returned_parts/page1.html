@@ -1,0 +1,105 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta content="text/html; charset=windows-1252" http-equiv="content-type">
+<title>Returned Parts Sheet</title>
+<meta name="GENERATOR" content="CodeCharge Studio 4.1.00.032">
+<link rel="stylesheet" type="text/css" href="Styles/Blueprint1/Style_doctype.css">
+</head>
+<body>
+<p>
+<!-- BEGIN Record service_returned_parts_tb -->
+<form id="service_returned_parts_tb" method="post" name="{HTMLFormName}" action="{Action}">
+  <table border="0" cellspacing="0" cellpadding="0">
+    <tr>
+      <td valign="top">
+        <table class="Header" border="0" cellspacing="0" cellpadding="0">
+          <tr>
+            <td class="HeaderLeft"><img border="0" alt="" src="Styles/Blueprint1/Images/Spacer.gif"></td> 
+            <td class="th"><strong>Add New Part to be Returned</strong></td> 
+            <td class="HeaderRight"><img border="0" alt="" src="Styles/Blueprint1/Images/Spacer.gif"></td>
+          </tr>
+        </table>
+ 
+        <table class="Record" cellspacing="0" cellpadding="0">
+          <!-- BEGIN Error -->
+          <tr class="Error">
+            <td colspan="4">{Error}</td>
+          </tr>
+          <!-- END Error -->
+          <tr class="Controls">
+            <td class="th"><label for="service_returned_parts_tbORDER_NO">ORDER NO</label></td> 
+            <td colspan="3"><input id="service_returned_parts_tbORDER_NO" value="{ORDER_NO}" readonly maxlength="6" size="6" name="{ORDER_NO_Name}"></td>
+          </tr>
+ 
+          <tr class="Controls">
+            <td class="th"><label for="service_returned_parts_tbpart_description">PART DESCRIPTION (<font color="#ff0000">do no use the "/" char on this field</font>)</label></td> 
+            <td><input id="service_returned_parts_tbpart_description" value="{part_description}" maxlength="50" size="30" name="{part_description_Name}"></td> 
+            <td><label for="service_returned_parts_tbstock_no">STOCK NO</label></td> 
+            <td><input id="service_returned_parts_tbstock_no" value="{stock_no}" maxlength="50" name="{stock_no_Name}"></td>
+          </tr>
+ 
+          <tr class="Controls">
+            <td class="th"><label for="service_returned_parts_tbstock_no">S/N DEFECTIVE</label></td> 
+            <td><input id="service_returned_parts_tbsn_defective_part" value="{sn_defective_part}" maxlength="20" name="{sn_defective_part_Name}" size="20"></td> 
+            <td>S/N NEW</td> 
+            <td><input id="service_returned_parts_tbsn_new_part" value="{sn_new_part}" maxlength="20" name="{sn_new_part_Name}" size="20"></td>
+          </tr>
+ 
+          <tr class="Controls">
+            <td class="th"><label for="service_returned_parts_tbsn_defective_part">RETURN PART TO</label></td> 
+            <td>
+              <select id="service_returned_parts_tbMANUF_ID" name="{MANUF_ID_Name}">
+                <option selected value="">Select Value</option>
+                {MANUF_ID_Options}
+              </select>
+ </td> 
+            <td>RETURNED AS</td> 
+            <td>
+              <select id="service_returned_parts_tbreturn_type_id" name="{return_type_id_Name}">
+                <option selected value="">Select Value</option>
+                {return_type_id_Options}
+              </select>
+ </td>
+          </tr>
+ 
+          <tr class="Controls">
+            <td class="th"><label for="service_returned_parts_tbsn_new_part">SUPPLIER ORDER NO</label></td> 
+            <td colspan="3"><input id="service_returned_parts_tbsupplier_order_no" value="{supplier_order_no}" maxlength="50" size="30" name="{supplier_order_no_Name}">&nbsp;(leave this field blank if NOT AVAILABLE)</td>
+          </tr>
+ 
+          <tr class="Controls">
+            <td class="th">FAULT DESCRIPTION</td> 
+            <td colspan="3"><textarea style="WIDTH: 454px; HEIGHT: 54px" id="service_returned_parts_tbfault_description" rows="3" cols="44" name="{fault_description_Name}">{fault_description}</textarea></td>
+          </tr>
+ 
+          <tr class="Controls">
+            <td class="th"><label for="service_returned_parts_tbemp_id">SUBMITTED BY</label></td> 
+            <td colspan="3">
+              <select id="service_returned_parts_tbemp_id" name="{emp_id_Name}">
+                <option selected value="">Select Value</option>
+                {emp_id_Options}
+              </select>
+ </td>
+          </tr>
+ 
+          <tr class="Bottom">
+            <td colspan="4" align="right">
+              <!-- BEGIN Button Button_Insert --><input id="service_returned_parts_tbButton_Insert" class="Button" value="Generate File" alt="Add" type="submit" name="{Button_Name}"><!-- END Button Button_Insert --><input id="service_returned_parts_tbsequence_no" value="{sequence_no}" type="hidden" name="{sequence_no_Name}"></td>
+          </tr>
+        </table>
+      </td>
+    </tr>
+  </table>
+</form>
+<!-- END Record service_returned_parts_tb --><br>
+<strong><font size="4">Guidelines:</font></strong></p>
+<p><font size="3">[1] Fill out the form.</font></p>
+<p><font size="3">[2] Check if all data is correct and press the "Generate File" button.</font></p>
+<p><font size="3">[3] A PDF file will be launched to your browser. This file will be saved as well into the "additional docs" folder</font></p>
+<p><font size="3">&nbsp;&nbsp;&nbsp;&nbsp; for the same Order No.</font></p>
+<p><font size="3">[4] Print the file from the controls embedded in the browser's window.</font></p>
+<p><font size="3">[5] Attach the Upper part of the file to the Returned Part and Send the Lower part to Logistics Department.</font></p>
+<p><font size="3">[6] When finish printing, close the browser's (or browser's tab) window.</font></p>
+</body>
+</html>

@@ -1,0 +1,125 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta content="text/html; charset=windows-1252" http-equiv="content-type">
+<title>page0_0</title>
+<meta name="GENERATOR" content="CodeCharge Studio 4.1.00.032">
+<link rel="stylesheet" type="text/css" href="Styles/hss1/Style_doctype.css">
+</head>
+<body>
+<!-- BEGIN Record tools -->
+<form id="tools" method="post" name="{HTMLFormName}" action="{Action}">
+  <table border="0" cellspacing="0" cellpadding="0">
+    <tr>
+      <td valign="top">
+        <table class="Header" border="0" cellspacing="0" cellpadding="0">
+          <tr>
+            <td class="HeaderLeft"><img border="0" alt="" src="Styles/hss1/Images/Spacer.gif"></td> 
+            <td class="th"><strong>Edit Tool Information</strong></td> 
+            <td class="HeaderRight"><img border="0" alt="" src="Styles/hss1/Images/Spacer.gif"></td>
+          </tr>
+        </table>
+ 
+        <table class="Record" cellspacing="0" cellpadding="0">
+          <!-- BEGIN Error -->
+          <tr class="Error">
+            <td colspan="2">{Error}</td>
+          </tr>
+          <!-- END Error -->
+          <tr class="Controls">
+            <td class="th"><label for="toolstool_description">Description</label></td> 
+            <td><input id="toolstool_description" value="{tool_description}" maxlength="250" size="50" name="{tool_description_Name}"></td>
+          </tr>
+ 
+          <tr class="Controls">
+            <td class="th"><label for="toolstool_category_id">Category</label></td> 
+            <td>
+              <select id="toolstool_category_id" name="{tool_category_id_Name}">
+                <option selected value="">Select Value</option>
+                {tool_category_id_Options}
+              </select>
+ <a href="{Link1_Src}" id="toolsLink1" onclick="var newWindow=window.open(this.href, 'tools categories', 'width=400,height=350,scrollbars=yes,resizable=no,location=no,status=no,toolbar=no,menubar=no');return false;">NEW CATEGORY</a></td>
+          </tr>
+ 
+          <tr class="Controls">
+            <td class="th"><label for="toolstool_type_id">Tool Type</label></td> 
+            <td>
+              <select id="toolstool_type_id" name="{tool_type_id_Name}">
+                <option selected value="">Select Value</option>
+                {tool_type_id_Options}
+              </select>
+ <a href="{Link2_Src}" id="toolsLink2" onclick="var newWindow=window.open(this.href, 'tool types', 'width=600,height=350,scrollbars=yes,resizable=no,location=no,status=no,toolbar=no,menubar=no');return false;">NEW TOOL TYPE</a></td>
+          </tr>
+ 
+          <tr class="Controls">
+            <td class="th"><label for="toolssupplier_id">Supplier</label></td> 
+            <td>
+              <select id="toolssupplier_id" name="{supplier_id_Name}">
+                <option selected value="">Select Value</option>
+                {supplier_id_Options}
+              </select>
+ <a href="{Link3_Src}" id="toolsLink3" onclick="var newWindow=window.open(this.href, 'tools suppliers', 'width=950,height=450,scrollbars=yes,resizable=no,location=no,status=no,toolbar=no,menubar=no');return false;">NEW SUPPLIER</a></td>
+          </tr>
+ 
+          <tr class="Controls">
+            <td class="th"><label for="toolsmanufacturer_id">Manufacturer</label></td> 
+            <td>
+              <select id="toolsmanufacturer_id" name="{manufacturer_id_Name}">
+                <option selected value="">Select Value</option>
+                {manufacturer_id_Options}
+              </select>
+ <a href="{Link4_Src}" id="toolsLink4" onclick="var newWindow=window.open(this.href, 'tools manufacturers', 'width=850,height=450,scrollbars=yes,resizable=no,location=no,status=no,toolbar=no,menubar=no');return false;">NEW MANUFACTURER</a></td>
+          </tr>
+ 
+          <tr class="Controls">
+            <td class="th"><label for="toolsdate_of_purchase">Date Of Purchase</label></td> 
+            <td><input id="toolsdate_of_purchase" value="{date_of_purchase}" maxlength="10" size="10" name="{date_of_purchase_Name}"></td>
+          </tr>
+ 
+          <tr class="Controls">
+            <td class="th"><label for="toolss_n">Serial Number</label></td> 
+            <td><input id="toolss_n" value="{s_n}" maxlength="20" name="{s_n_Name}" size="20"></td>
+          </tr>
+ 
+          <tr class="Controls">
+            <td class="th"><label for="toolsvoltage">Voltage</label></td> 
+            <td><input id="toolsvoltage" value="{voltage}" maxlength="10" size="10" name="{voltage_Name}">&nbsp; <label for="toolslocation">Location </label><input id="toolslocation" value="{location}" maxlength="10" size="10" name="{location_Name}">&nbsp; <label for="toolsprice">Price </label><input id="toolsprice" value="{price}" maxlength="12" size="12" name="{price_Name}"></td>
+          </tr>
+ 
+          <tr class="Controls">
+            <td class="th"><label for="toolslast_calibration_date">Last Calibration Date</label></td> 
+            <td><input id="toolslast_calibration_date" value="{last_calibration_date}" maxlength="10" size="10" name="{last_calibration_date_Name}">&nbsp; <label for="toolsnext_calibration_date">Next Calibration Date </label><input id="toolsnext_calibration_date" value="{next_calibration_date}" maxlength="10" size="10" name="{next_calibration_date_Name}"></td>
+          </tr>
+ 
+          <tr class="Controls">
+            <td class="th"><label for="toolsregular_user_id">Regular User</label></td> 
+            <td>
+              <select id="toolsregular_user_id" name="{regular_user_id_Name}">
+                <option selected value="">Select Value</option>
+                {regular_user_id_Options}
+              </select>
+ &nbsp; <label for="toolscurrent_user_id">Current User </label> 
+              <select id="toolscurrent_user_id" name="{current_user_id_Name}">
+                <option selected value="">Select Value</option>
+                {current_user_id_Options}
+              </select>
+ &nbsp; <label for="toolstool_status_id">Tool Status </label> 
+              <select id="toolstool_status_id" name="{tool_status_id_Name}">
+                <option selected value="">Select Value</option>
+                {tool_status_id_Options}
+              </select>
+ </td>
+          </tr>
+ 
+          <tr class="Bottom">
+            <td colspan="2" align="right">
+              <!-- BEGIN Button Button_Update --><input id="toolsButton_Update" class="Button" value="save changes" alt="Submit" type="submit" name="{Button_Name}"><!-- END Button Button_Update --></td>
+          </tr>
+        </table>
+      </td>
+    </tr>
+  </table>
+</form>
+<!-- END Record tools --><br>
+</body>
+</html>
