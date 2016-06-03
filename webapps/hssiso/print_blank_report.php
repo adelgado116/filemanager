@@ -52,7 +52,7 @@ class PDF extends FPDF
 		//Move to the right
 		//$this->Cell(30);
 		//Title
-		$this->Cell(100,10,'High Sea Support',0,1,'L');
+		$this->Cell(100,10,'Raytheon Anschuetz Panama',0,1,'L');
 		//Horizontal line to separate header
 		$this->Cell(0, 2, '', 'T', 0, 'C');
 		//Line break
@@ -259,7 +259,7 @@ $pdf->MultiCell($textarea_width, $lineHeight - 3 , ''/*'This report has not been
 # document version-revision information
 $y = 286;
 $pdf->SetFont('Arial','', 8);
-$pdf->Text( 165, $y, $cat_name['version_revision']);
+$pdf->Text( 159, $y, $cat_name['version_revision']);
 
 
 #

@@ -173,7 +173,7 @@ $report_name = $_REQUEST['report_name'];
 			function Header() {
 				$this->SetFont('Arial','B',18);
 				//Title
-				$this->Cell(100,10,'High Sea Support',0,1,'L');
+				$this->Cell(100,10,'Raytheon Anschuetz Panama',0,1,'L');
 				//Horizontal line to separate header
 				$this->Cell(0, 2, '', 'T', 0, 'C');
 				//Line break
@@ -316,19 +316,20 @@ $report_name = $_REQUEST['report_name'];
 		$pdf->Rect( 10, ($y_ref + 94), $textarea_width, ($lineHeight - 1) * 3 );
 		$pdf->MultiCell($textarea_width, $lineHeight - 3 , $record['preventive_from_management'], 0, 1, 'L');
 		
-		
+
+
 		# document version-revision information
 		$y = 286;
 		$pdf->SetFont('Arial','', 8);
-		$pdf->Text( 165, $y, $cat_name['version_revision']);
+		$pdf->Text( 159, $y, $cat_name['version_revision']);
 		
 		
 		#
 		# Generate and save PDF file
 		#
-		
+
 		// save file:
-		$filename = 'repository/HSS-'.$cat_name['doc_code'].'-'.$record['sub_cat_id'].'_revd.pdf';
+		$filename = 'repository/RAN-'.$cat_name['doc_code'].'-'.$record['sub_cat_id'].'_revd.pdf';
 		$pdf->Output( $filename, 'F' );
 
 

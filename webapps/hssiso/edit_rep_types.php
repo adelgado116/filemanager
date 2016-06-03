@@ -149,7 +149,7 @@ else if ( $_REQUEST['page'] == 'prev' ) {
 			
 			<!-- row n, column m+3 -->
 			<TD>
-				<input type="text" size="25" maxlength="20" class="tableText"
+				<input type="text" size="25" maxlength="24" class="tableText"
 					   name="<?php echo 'ver_rev'.$rowNumb; ?>"
 					   style="background-color:<?php echo $bgcol; ?>; border:none"
 					   value="<?php echo $table_row[$rowNumb]['version_revision']; ?>" />

@@ -289,7 +289,7 @@ $pdf->MultiCell($textarea_width, $lineHeight - 2, 'This report has not been proc
 # document version-revision information
 $y = 286;
 $pdf->SetFont('Arial','', 8);
-$pdf->Text( 165, $y, $cat_name['version_revision']);
+$pdf->Text( 159, $y, $cat_name['version_revision']);
 
 
 #
