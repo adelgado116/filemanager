@@ -22,6 +22,7 @@ $mail->Body = $body;
 
 // Add a recipient address
 $mail->AddAddress('sales@raypanama.com', 'Sales Department');
+$mail->AddAddress('asugasti@raypanama.com', 'Sales Department');
 
 # ONLY FOR TESTS
 //$mail->AddAddress('alberto.delgado.vasquez@gmail.com', 'admin');
