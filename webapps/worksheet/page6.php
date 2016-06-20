@@ -505,7 +505,7 @@ function create_worksheet( $wsData, $wsData2, $serviceData, $itemData, $pageNo, 
 		 # document version-revision information
 		 $y = 280;
 		 $pdf->SetFont('Arial','', 6);
-		 $pdf->Text(175, $y + 3, "HSS-WS-300409-1-ADE");
+		 $pdf->Text(170, $y + 3, "RANPAN-WS-050416-01-ADE");
 		 
 		 
 		 $pdf->SetFont('Arial','', $textSize);  // return text to layout size

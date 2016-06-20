@@ -248,7 +248,6 @@ $pdf->Text($x_start + 133, $section1 + 70 + $label_top + 3, ' AND STAMP');
 # document version-revision information
 $y = 130;
 $pdf->SetFont('Arial','', 6);
-//$pdf->Text(176, $y + $label_top + 2.5, "HSS-CS-210809-1-ADE");
 $pdf->Text(176-4, $y + $label_top + 2.5, "RANPAN-CS-050416-01-ADE");
 
 
