@@ -168,50 +168,50 @@ $textSize = 14;
 $pdf->SetXY(150,10);
 $pdf->SetFont('Arial','',16);
 $pdf->Cell(12,10, 'No. ', 0,0);
-//$pdf->Cell(30,8, 'RP'.$max_id, 1, 1, 'C');
-$pdf->Cell(30,8, '', 1, 1, 'C');
+$pdf->Cell(30,8, 'RP'.$max_id, 1, 1, 'C');
+//$pdf->Cell(30,8, '', 1, 1, 'C');
 
 $pdf->Ln();
 
 $pdf->SetFont('Arial','',$textSize);
 
 $pdf->Cell(35,$lineHeight + 2, 'RANPAN Order No.: ', 'LTB', 0);
-//$pdf->Cell(55,$lineHeight + 2, $data['ORDER_NO'], 'TRB', 1, 'C');
-$pdf->Cell(55,$lineHeight + 2, '', 'TRB', 1, 'C');
+$pdf->Cell(55,$lineHeight + 2, $data['ORDER_NO'], 'TRB', 1, 'C');
+//$pdf->Cell(55,$lineHeight + 2, '', 'TRB', 1, 'C');
 
 $pdf->Ln(2);
 
-//$pdf->Cell(45,$lineHeight, 'Date: '.date('d-M-Y'), 1, 0);
-$pdf->Cell(45,$lineHeight, 'Date: ', 1, 0);
+$pdf->Cell(45,$lineHeight, 'Date: '.date('d-M-Y'), 1, 0);
+//$pdf->Cell(45,$lineHeight, 'Date: ', 1, 0);
 
 $pdf->Cell(5);
 
-//$pdf->Cell(40,$lineHeight, 'Technician: '.$employees['emp_login'], 1, 1);
-$pdf->Cell(40,$lineHeight, 'Technician: ', 1, 1);
+$pdf->Cell(40,$lineHeight, 'Technician: '.$employees['emp_login'], 1, 1);
+//$pdf->Cell(40,$lineHeight, 'Technician: ', 1, 1);
 
 $pdf->Ln(1);
 
 
 $pdf->Cell(45,$lineHeight, 'Vessel: ', 'LTB', 0);
-//$pdf->Cell(140,$lineHeight, /*$ships['SHIP_NAME']*/ $shipname, 'LTRB', 1, 'C');
-$pdf->Cell(140,$lineHeight, '', 'LTRB', 1, 'C');
+$pdf->Cell(140,$lineHeight, /*$ships['SHIP_NAME']*/ $shipname, 'LTRB', 1, 'C');
+//$pdf->Cell(140,$lineHeight, '', 'LTRB', 1, 'C');
 
 $pdf->Ln(1);
 
 // part info
 $pdf->Cell(45,$lineHeight, 'Part Description: ', 'LTB', 0);
-//$pdf->Cell(140,$lineHeight, $data['part_description'], 'LTRB', 1, 'C');
-$pdf->Cell(140,$lineHeight, '', 'LTRB', 1, 'C');
+$pdf->Cell(140,$lineHeight, $data['part_description'], 'LTRB', 1, 'C');
+//$pdf->Cell(140,$lineHeight, '', 'LTRB', 1, 'C');
 
 $pdf->Cell(45,$lineHeight, 'Stock No.:', 'LTB', 0);
-//$pdf->Cell(140,$lineHeight, $data['stock_no'], 'LTRB', 1, 'C');
-$pdf->Cell(140,$lineHeight, '', 'LTRB', 1, 'C');
+$pdf->Cell(140,$lineHeight, $data['stock_no'], 'LTRB', 1, 'C');
+//$pdf->Cell(140,$lineHeight, '', 'LTRB', 1, 'C');
 $pdf->Cell(45,$lineHeight, 'S/N Defective Part: ', 'LTB', 0);
-//$pdf->Cell(140,$lineHeight, $data['sn_defective_part'], 'LTRB', 1, 'C');
-$pdf->Cell(140,$lineHeight, '', 'LTRB', 1, 'C');
+$pdf->Cell(140,$lineHeight, $data['sn_defective_part'], 'LTRB', 1, 'C');
+//$pdf->Cell(140,$lineHeight, '', 'LTRB', 1, 'C');
 $pdf->Cell(45,$lineHeight, 'S/N New Part: ', 'LTB', 0);
-//$pdf->Cell(140,$lineHeight, $data['sn_new_part'], 'LTRB', 1, 'C');
-$pdf->Cell(140,$lineHeight, '', 'LTRB', 1, 'C');
+$pdf->Cell(140,$lineHeight, $data['sn_new_part'], 'LTRB', 1, 'C');
+//$pdf->Cell(140,$lineHeight, '', 'LTRB', 1, 'C');
 
 $pdf->Ln(7);
 
@@ -221,16 +221,16 @@ $pdf->Text( 11, $y, "Fault Description:");
 $pdf->SetFontSize(12);
 
 $pdf->Rect( 10, 95, 185, $lineHeight * 3 );
-//$pdf->MultiCell(185, $lineHeight - 3 , $data['fault_description'], '0', 1, 'L');
-$pdf->MultiCell(185, $lineHeight - 3 , '', '0', 1, 'L');
+$pdf->MultiCell(185, $lineHeight - 3 , $data['fault_description'], '0', 1, 'L');
+//$pdf->MultiCell(185, $lineHeight - 3 , '', '0', 1, 'L');
 
 $pdf->SetXY(10,120);
 
 $pdf->SetFontSize(14);
 
 $pdf->Cell(35,$lineHeight, 'Return Part to: ', 'LTB', 0);
-//$pdf->Cell(105,$lineHeight, $manufacturers['MANUF_NAME'], 'TRB', 1, 'C');
-$pdf->Cell(105,$lineHeight, '', 'TRB', 1, 'C');
+$pdf->Cell(105,$lineHeight, $manufacturers['MANUF_NAME'], 'TRB', 1, 'C');
+//$pdf->Cell(105,$lineHeight, '', 'TRB', 1, 'C');
 
 $pdf->Ln(0);
 
@@ -240,8 +240,8 @@ if ( $data['supplier_order_no'] == '' ) {
 } else {
 	$supplier_ref_no = $data['supplier_order_no'];
 }
-//$pdf->Cell(60,$lineHeight, $supplier_ref_no, 'TRB', 1, 'C');
-$pdf->Cell(60,$lineHeight, '', 'TRB', 1, 'C');
+$pdf->Cell(60,$lineHeight, $supplier_ref_no, 'TRB', 1, 'C');
+//$pdf->Cell(60,$lineHeight, '', 'TRB', 1, 'C');
 
 
 $pdf->SetXY(110,26);
@@ -264,7 +264,6 @@ $pdf->Cell(85,5,'Attach to Returned Part', 1, 1, 'C');
 # document version-revision information
 $y = 138;
 $pdf->SetFont('Arial','', 6);
-//$pdf->Text( 127, $y, $doc_version);
 $pdf->Text( 120, $y, $doc_version);
 
 
