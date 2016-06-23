@@ -194,6 +194,10 @@ class PDF extends FPDF
     $service_type_id = $rowItem['SERVICE_TYPE_ID'];
     $equip_id = $rowItem['EQUIP_ID'];
     $emp_id = $rowItem['emp_id'];
+    $emp_assigned_id = $rowItem['assigned_emp_id'];
+    $ta1_id = $rowItem['TA1'];
+    $ta2_id = $rowItem['TA2'];
+
     
     // get data from all tables to generate the worksheet
     $sql = "SELECT SERVICE_TYPE FROM service_type_tbl WHERE SERVICE_TYPE_ID='$service_type_id'";
@@ -223,11 +227,27 @@ class PDF extends FPDF
     $sql = "SELECT emp_login FROM employees_tbl WHERE emp_id='$emp_id'";
     $res23 = $db->query($sql);
     $res23_value = $res23->fetch();
+
+    $sql = "SELECT emp_login FROM employees_tbl WHERE emp_id='$emp_assigned_id'";
+    $res24 = $db->query($sql);
+    $res24_value = $res24->fetch();
+
+    $sql = "SELECT emp_login FROM employees_tbl WHERE emp_id='$ta1_id'";
+    $res25 = $db->query($sql);
+    $res25_value = $res25->fetch();
+
+    $sql = "SELECT emp_login FROM employees_tbl WHERE emp_id='$ta2_id'";
+    $res26 = $db->query($sql);
+    $res26_value = $res26->fetch();
+
+
     
     $worksheetData2 = array( "SERVICE"=>$res21_value['SERVICE_TYPE'],
                              "EQUIPMENT"=>$equipment_full_description,
-                             "APPROVEDBY"=>$res23_value['emp_login'] );
-	
+                             "APPROVEDBY"=>$res23_value['emp_login'],
+                             "PIC"=>$res24_value['emp_login'],
+                             "TA1"=>$res25_value['emp_login'],
+                             "TA2"=>$res26_value['emp_login']);
 	
 	
 	//$path_suffix = $res11_value['location_in_server']."/".$order."/worksheet/";
@@ -329,14 +349,26 @@ function create_worksheet( $wsData, $wsData2, $serviceData, $itemData, $pageNo, 
          
 		 $y = 35;
 		 
-		 $pdf->Rect($x_start, $y + ($rectHeight), 112, $rectHeight);
+		 $pdf->Rect($x_start, $y + ($rectHeight), 95, $rectHeight);
          $pdf->Text($x_start, $y + 3 + ($rectHeight), " TYPE OF SERVICE");
 		 
-         $pdf->Rect($x_start + 112, $y + ($rectHeight), 39, $rectHeight);
-         $pdf->Text($x_start + 112, $y + 3 + ($rectHeight), " WARRANTY");
+         $pdf->Rect($x_start + 95, $y + ($rectHeight), 17, $rectHeight);
+         $pdf->Text($x_start + 95, $y + 3 + ($rectHeight), " WARRANTY");
 		 
-         $pdf->Rect($x_start + 151, $y + ($rectHeight), 39, $rectHeight);
-         $pdf->Text($x_start + 151, $y + 3 + ($rectHeight), " APPROVED BY");
+         $pdf->Rect($x_start + 112, $y + ($rectHeight), 19.5, $rectHeight);
+         $pdf->Text($x_start + 112, $y + 3 + ($rectHeight), " APPROVED BY");
+
+         $pdf->Rect($x_start + 131.5, $y + ($rectHeight), 19.5, $rectHeight);
+         $pdf->Text($x_start + 131.5, $y + 3 + ($rectHeight), " T.I.C.");
+
+         $pdf->Rect($x_start + 151, $y + ($rectHeight), 19.5, $rectHeight);
+         $pdf->Text($x_start + 151, $y + 3 + ($rectHeight), " T/A 1");
+
+         $pdf->Rect($x_start + 170.5, $y + ($rectHeight), 19.5, $rectHeight);
+         $pdf->Text($x_start + 170.5, $y + 3 + ($rectHeight), " T/A 2");
+
+
+
 		 
          $pdf->Rect($x_start, $y + ($rectHeight * 2), 190, $rectHeight - 2);
          $pdf->Text($x_start, $y + 3 + ($rectHeight * 2), " EQUIPMENT");
@@ -505,7 +537,7 @@ function create_worksheet( $wsData, $wsData2, $serviceData, $itemData, $pageNo, 
 		 # document version-revision information
 		 $y = 280;
 		 $pdf->SetFont('Arial','', 6);
-		 $pdf->Text(170, $y + 3, "RANPAN-WS-050416-01-ADE");
+		 $pdf->Text(170, $y + 3, "RANPAN-WS-230616-01-ADE");
 		 
 		 
 		 $pdf->SetFont('Arial','', $textSize);  // return text to layout size
@@ -522,8 +554,30 @@ function create_worksheet( $wsData, $wsData2, $serviceData, $itemData, $pageNo, 
          $pdf->Text($x, 44, $wsData['SHIP']);
 		 $pdf->Text(150, 44, $serviceData['IMO_NUMBER']);
 		 $pdf->Text($x, 58, $wsData2['SERVICE']);
-		 $pdf->Text(140, 58, $itemData['WARRANTY']);
-		 $pdf->Text(180, 58, $wsData2['APPROVEDBY']);
+
+		 $pdf->Text(110, 58, $itemData['WARRANTY']);
+		 $pdf->Text(125, 58, $wsData2['APPROVEDBY']);
+		 $pdf->Text(146, 58, $wsData2['PIC']);
+
+		 if ($wsData2['TA1'] != '0'){
+		 	$ta1 = $wsData2['TA1'];
+		 } else {
+		 	$ta1 = '';
+		 }
+
+		 $pdf->Text(166, 58, $ta1);
+
+		 if ($wsData2['TA2'] != '0'){
+		 	$ta2 = $wsData2['TA2'];
+		 } else {
+		 	$ta2 = '';
+		 }
+
+		 $pdf->Text(187, 58, $ta2);
+
+
+
+
 		 $pdf->Text($x, 70, $wsData2['EQUIPMENT']);
 		 
 		 $pdf->SetXY(12, 76);

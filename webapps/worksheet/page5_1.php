@@ -45,7 +45,7 @@ class clsRecordservice_items_tbl { //service_items_tbl Class @5-9948EC80
     // Class variables
 //End Variables
 
-//Class_Initialize Event @5-B1CE3E35
+//Class_Initialize Event @5-A2D18C5A
     function clsRecordservice_items_tbl($RelativePath, & $Parent)
     {
 
@@ -127,6 +127,24 @@ class clsRecordservice_items_tbl { //service_items_tbl Class @5-9948EC80
             list($this->coord_id->BoundColumn, $this->coord_id->TextColumn, $this->coord_id->DBFormat) = array("emp_id", "emp_login", "");
             $this->coord_id->DataSource->Order = "emp_login";
             $this->coord_id->Required = true;
+            $this->TA1 = new clsControl(ccsListBox, "TA1", "TA1", ccsInteger, "", CCGetRequestParam("TA1", $Method, NULL), $this);
+            $this->TA1->DSType = dsTable;
+            $this->TA1->DataSource = new clsDBhss_db();
+            $this->TA1->ds = & $this->TA1->DataSource;
+            $this->TA1->DataSource->SQL = "SELECT * \n" .
+"FROM employees_tbl {SQL_Where} {SQL_OrderBy}";
+            $this->TA1->DataSource->Order = "emp_login";
+            list($this->TA1->BoundColumn, $this->TA1->TextColumn, $this->TA1->DBFormat) = array("emp_id", "emp_login", "");
+            $this->TA1->DataSource->Order = "emp_login";
+            $this->TA2 = new clsControl(ccsListBox, "TA2", "TA2", ccsInteger, "", CCGetRequestParam("TA2", $Method, NULL), $this);
+            $this->TA2->DSType = dsTable;
+            $this->TA2->DataSource = new clsDBhss_db();
+            $this->TA2->ds = & $this->TA2->DataSource;
+            $this->TA2->DataSource->SQL = "SELECT * \n" .
+"FROM employees_tbl {SQL_Where} {SQL_OrderBy}";
+            $this->TA2->DataSource->Order = "emp_login";
+            list($this->TA2->BoundColumn, $this->TA2->TextColumn, $this->TA2->DBFormat) = array("emp_id", "emp_login", "");
+            $this->TA2->DataSource->Order = "emp_login";
         }
     }
 //End Class_Initialize Event
@@ -143,7 +161,7 @@ class clsRecordservice_items_tbl { //service_items_tbl Class @5-9948EC80
     }
 //End Initialize Method
 
-//Validate Method @5-363D0878
+//Validate Method @5-CA155F48
     function Validate()
     {
         global $CCSLocales;
@@ -161,6 +179,8 @@ class clsRecordservice_items_tbl { //service_items_tbl Class @5-9948EC80
         $Validation = ($this->REQUEST->Validate() && $Validation);
         $Validation = ($this->assigned_emp_id->Validate() && $Validation);
         $Validation = ($this->coord_id->Validate() && $Validation);
+        $Validation = ($this->TA1->Validate() && $Validation);
+        $Validation = ($this->TA2->Validate() && $Validation);
         $this->CCSEventResult = CCGetEvent($this->CCSEvents, "OnValidate", $this);
         $Validation =  $Validation && ($this->ORDER_NO->Errors->Count() == 0);
         $Validation =  $Validation && ($this->SERVICE_TYPE_ID->Errors->Count() == 0);
@@ -174,11 +194,13 @@ class clsRecordservice_items_tbl { //service_items_tbl Class @5-9948EC80
         $Validation =  $Validation && ($this->REQUEST->Errors->Count() == 0);
         $Validation =  $Validation && ($this->assigned_emp_id->Errors->Count() == 0);
         $Validation =  $Validation && ($this->coord_id->Errors->Count() == 0);
+        $Validation =  $Validation && ($this->TA1->Errors->Count() == 0);
+        $Validation =  $Validation && ($this->TA2->Errors->Count() == 0);
         return (($this->Errors->Count() == 0) && $Validation);
     }
 //End Validate Method
 
-//CheckErrors Method @5-A070C36D
+//CheckErrors Method @5-BF634386
     function CheckErrors()
     {
         $errors = false;
@@ -194,6 +216,8 @@ class clsRecordservice_items_tbl { //service_items_tbl Class @5-9948EC80
         $errors = ($errors || $this->REQUEST->Errors->Count());
         $errors = ($errors || $this->assigned_emp_id->Errors->Count());
         $errors = ($errors || $this->coord_id->Errors->Count());
+        $errors = ($errors || $this->TA1->Errors->Count());
+        $errors = ($errors || $this->TA2->Errors->Count());
         $errors = ($errors || $this->Errors->Count());
         $errors = ($errors || $this->DataSource->Errors->Count());
         return $errors;
@@ -265,7 +289,7 @@ function GetPrimaryKey($keyName)
     }
 //End Operation Method
 
-//UpdateRow Method @5-C25E3291
+//UpdateRow Method @5-83012B2D
     function UpdateRow()
     {
         $this->CCSEventResult = CCGetEvent($this->CCSEvents, "BeforeUpdate", $this);
@@ -280,6 +304,8 @@ function GetPrimaryKey($keyName)
         $this->DataSource->FOLLOW_UP->SetValue($this->FOLLOW_UP->GetValue(true));
         $this->DataSource->assigned_emp_id->SetValue($this->assigned_emp_id->GetValue(true));
         $this->DataSource->REQUEST->SetValue($this->REQUEST->GetValue(true));
+        $this->DataSource->TA1->SetValue($this->TA1->GetValue(true));
+        $this->DataSource->TA2->SetValue($this->TA2->GetValue(true));
         $this->DataSource->Update();
         $this->CCSEventResult = CCGetEvent($this->CCSEvents, "AfterUpdate", $this);
         return (!$this->CheckErrors());
@@ -297,7 +323,7 @@ function GetPrimaryKey($keyName)
     }
 //End DeleteRow Method
 
-//Show Method @5-E6F789C8
+//Show Method @5-79C0FCE5
     function Show()
     {
         global $CCSUseAmp;
@@ -315,6 +341,8 @@ function GetPrimaryKey($keyName)
         $this->emp_id->Prepare();
         $this->assigned_emp_id->Prepare();
         $this->coord_id->Prepare();
+        $this->TA1->Prepare();
+        $this->TA2->Prepare();
 
         $RecordBlock = "Record " . $this->ComponentName;
         $ParentPath = $Tpl->block_path;
@@ -341,6 +369,8 @@ function GetPrimaryKey($keyName)
                     $this->REQUEST->SetValue($this->DataSource->REQUEST->GetValue());
                     $this->assigned_emp_id->SetValue($this->DataSource->assigned_emp_id->GetValue());
                     $this->coord_id->SetValue($this->DataSource->coord_id->GetValue());
+                    $this->TA1->SetValue($this->DataSource->TA1->GetValue());
+                    $this->TA2->SetValue($this->DataSource->TA2->GetValue());
                 }
             } else {
                 $this->EditMode = false;
@@ -361,6 +391,8 @@ function GetPrimaryKey($keyName)
             $Error = ComposeStrings($Error, $this->REQUEST->Errors->ToString());
             $Error = ComposeStrings($Error, $this->assigned_emp_id->Errors->ToString());
             $Error = ComposeStrings($Error, $this->coord_id->Errors->ToString());
+            $Error = ComposeStrings($Error, $this->TA1->Errors->ToString());
+            $Error = ComposeStrings($Error, $this->TA2->Errors->ToString());
             $Error = ComposeStrings($Error, $this->Errors->ToString());
             $Error = ComposeStrings($Error, $this->DataSource->Errors->ToString());
             $Tpl->SetVar("Error", $Error);
@@ -396,6 +428,8 @@ function GetPrimaryKey($keyName)
         $this->REQUEST->Show();
         $this->assigned_emp_id->Show();
         $this->coord_id->Show();
+        $this->TA1->Show();
+        $this->TA2->Show();
         $Tpl->parse();
         $Tpl->block_path = $ParentPath;
         $this->DataSource->close();
@@ -406,7 +440,7 @@ function GetPrimaryKey($keyName)
 
 class clsservice_items_tblDataSource extends clsDBhss_db {  //service_items_tblDataSource Class @5-C9CB8B01
 
-//DataSource Variables @5-89298C03
+//DataSource Variables @5-5FD29BC0
     public $Parent = "";
     public $CCSEvents = "";
     public $CCSEventResult;
@@ -433,9 +467,11 @@ class clsservice_items_tblDataSource extends clsDBhss_db {  //service_items_tblD
     public $REQUEST;
     public $assigned_emp_id;
     public $coord_id;
+    public $TA1;
+    public $TA2;
 //End DataSource Variables
 
-//DataSourceClass_Initialize Event @5-C3F291AD
+//DataSourceClass_Initialize Event @5-2131F6F7
     function clsservice_items_tblDataSource(& $Parent)
     {
         $this->Parent = & $Parent;
@@ -465,6 +501,10 @@ class clsservice_items_tblDataSource extends clsDBhss_db {  //service_items_tblD
         
         $this->coord_id = new clsField("coord_id", ccsInteger, "");
         
+        $this->TA1 = new clsField("TA1", ccsInteger, "");
+        
+        $this->TA2 = new clsField("TA2", ccsInteger, "");
+        
 
         $this->UpdateFields["ORDER_NO"] = array("Name" => "ORDER_NO", "Value" => "", "DataType" => ccsText, "OmitIfEmpty" => 1);
         $this->UpdateFields["SERVICE_TYPE_ID"] = array("Name" => "SERVICE_TYPE_ID", "Value" => "", "DataType" => ccsInteger, "OmitIfEmpty" => 1);
@@ -476,6 +516,8 @@ class clsservice_items_tblDataSource extends clsDBhss_db {  //service_items_tblD
         $this->UpdateFields["FOLLOW_UP"] = array("Name" => "FOLLOW_UP", "Value" => "", "DataType" => ccsInteger, "OmitIfEmpty" => 1);
         $this->UpdateFields["assigned_emp_id"] = array("Name" => "assigned_emp_id", "Value" => "", "DataType" => ccsInteger, "OmitIfEmpty" => 1);
         $this->UpdateFields["REQUEST"] = array("Name" => "REQUEST", "Value" => "", "DataType" => ccsMemo);
+        $this->UpdateFields["TA1"] = array("Name" => "TA1", "Value" => "", "DataType" => ccsInteger, "OmitIfEmpty" => 1);
+        $this->UpdateFields["TA2"] = array("Name" => "TA2", "Value" => "", "DataType" => ccsInteger, "OmitIfEmpty" => 1);
     }
 //End DataSourceClass_Initialize Event
 
@@ -511,7 +553,7 @@ class clsservice_items_tblDataSource extends clsDBhss_db {  //service_items_tblD
     }
 //End Open Method
 
-//SetValues Method @5-D5E2B5E9
+//SetValues Method @5-FB74186D
     function SetValues()
     {
         $this->ORDER_NO->SetDBValue($this->f("ORDER_NO"));
@@ -526,10 +568,12 @@ class clsservice_items_tblDataSource extends clsDBhss_db {  //service_items_tblD
         $this->REQUEST->SetDBValue($this->f("REQUEST"));
         $this->assigned_emp_id->SetDBValue(trim($this->f("assigned_emp_id")));
         $this->coord_id->SetDBValue(trim($this->f("coord_id")));
+        $this->TA1->SetDBValue(trim($this->f("TA1")));
+        $this->TA2->SetDBValue(trim($this->f("TA2")));
     }
 //End SetValues Method
 
-//Update Method @5-736A7E18
+//Update Method @5-7A6F8FF7
     function Update()
     {
         global $CCSLocales;
@@ -545,6 +589,8 @@ class clsservice_items_tblDataSource extends clsDBhss_db {  //service_items_tblD
         $this->cp["FOLLOW_UP"] = new clsSQLParameter("ctrlFOLLOW_UP", ccsInteger, "", "", $this->FOLLOW_UP->GetValue(true), NULL, false, $this->ErrorBlock);
         $this->cp["assigned_emp_id"] = new clsSQLParameter("ctrlassigned_emp_id", ccsInteger, "", "", $this->assigned_emp_id->GetValue(true), NULL, false, $this->ErrorBlock);
         $this->cp["REQUEST"] = new clsSQLParameter("ctrlREQUEST", ccsMemo, "", "", $this->REQUEST->GetValue(true), "", false, $this->ErrorBlock);
+        $this->cp["TA1"] = new clsSQLParameter("ctrlTA1", ccsInteger, "", "", $this->TA1->GetValue(true), NULL, false, $this->ErrorBlock);
+        $this->cp["TA2"] = new clsSQLParameter("ctrlTA2", ccsInteger, "", "", $this->TA2->GetValue(true), NULL, false, $this->ErrorBlock);
         $wp = new clsSQLParameters($this->ErrorBlock);
         $wp->AddParameter("1", "sesORDER", ccsText, "", "", CCGetSession("ORDER", NULL), "", false);
         if(!$wp->AllParamsSet()) {
@@ -575,6 +621,10 @@ class clsservice_items_tblDataSource extends clsDBhss_db {  //service_items_tblD
             $this->cp["assigned_emp_id"]->SetValue($this->assigned_emp_id->GetValue(true));
         if (!is_null($this->cp["REQUEST"]->GetValue()) and !strlen($this->cp["REQUEST"]->GetText()) and !is_bool($this->cp["REQUEST"]->GetValue())) 
             $this->cp["REQUEST"]->SetValue($this->REQUEST->GetValue(true));
+        if (!is_null($this->cp["TA1"]->GetValue()) and !strlen($this->cp["TA1"]->GetText()) and !is_bool($this->cp["TA1"]->GetValue())) 
+            $this->cp["TA1"]->SetValue($this->TA1->GetValue(true));
+        if (!is_null($this->cp["TA2"]->GetValue()) and !strlen($this->cp["TA2"]->GetText()) and !is_bool($this->cp["TA2"]->GetValue())) 
+            $this->cp["TA2"]->SetValue($this->TA2->GetValue(true));
         $wp->Criterion[1] = $wp->Operation(opEqual, "service_items_tbl.ORDER_NO", $wp->GetDBValue("1"), $this->ToSQL($wp->GetDBValue("1"), ccsText),false);
         $wp->Criterion[2] = $wp->Operation(opEqual, "ITEM_NO", $wp->GetDBValue("2"), $this->ToSQL($wp->GetDBValue("2"), ccsInteger),false);
         $Where = $wp->opAND(
@@ -591,6 +641,8 @@ class clsservice_items_tblDataSource extends clsDBhss_db {  //service_items_tblD
         $this->UpdateFields["FOLLOW_UP"]["Value"] = $this->cp["FOLLOW_UP"]->GetDBValue(true);
         $this->UpdateFields["assigned_emp_id"]["Value"] = $this->cp["assigned_emp_id"]->GetDBValue(true);
         $this->UpdateFields["REQUEST"]["Value"] = $this->cp["REQUEST"]->GetDBValue(true);
+        $this->UpdateFields["TA1"]["Value"] = $this->cp["TA1"]->GetDBValue(true);
+        $this->UpdateFields["TA2"]["Value"] = $this->cp["TA2"]->GetDBValue(true);
         $this->SQL = CCBuildUpdate("service_items_tbl", $this->UpdateFields, $this);
         $this->SQL .= strlen($Where) ? " WHERE " . $Where : $Where;
         $this->CCSEventResult = CCGetEvent($this->CCSEvents, "BeforeExecuteUpdate", $this->Parent);

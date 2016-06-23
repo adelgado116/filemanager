@@ -300,7 +300,7 @@ class clsRecordservice_items_tbl1 { //service_items_tbl1 Class @91-F2622B7A
     // Class variables
 //End Variables
 
-//Class_Initialize Event @91-32D5C270
+//Class_Initialize Event @91-085774A4
     function clsRecordservice_items_tbl1($RelativePath, & $Parent)
     {
 
@@ -379,6 +379,24 @@ class clsRecordservice_items_tbl1 { //service_items_tbl1 Class @91-F2622B7A
             list($this->coord_id->BoundColumn, $this->coord_id->TextColumn, $this->coord_id->DBFormat) = array("emp_id", "emp_login", "");
             $this->coord_id->DataSource->Order = "emp_login";
             $this->coord_id->Required = true;
+            $this->TA1 = new clsControl(ccsListBox, "TA1", "TA1", ccsInteger, "", CCGetRequestParam("TA1", $Method, NULL), $this);
+            $this->TA1->DSType = dsTable;
+            $this->TA1->DataSource = new clsDBhss_db();
+            $this->TA1->ds = & $this->TA1->DataSource;
+            $this->TA1->DataSource->SQL = "SELECT * \n" .
+"FROM employees_tbl {SQL_Where} {SQL_OrderBy}";
+            $this->TA1->DataSource->Order = "emp_login";
+            list($this->TA1->BoundColumn, $this->TA1->TextColumn, $this->TA1->DBFormat) = array("emp_id", "emp_login", "");
+            $this->TA1->DataSource->Order = "emp_login";
+            $this->TA2 = new clsControl(ccsListBox, "TA2", "TA2", ccsInteger, "", CCGetRequestParam("TA2", $Method, NULL), $this);
+            $this->TA2->DSType = dsTable;
+            $this->TA2->DataSource = new clsDBhss_db();
+            $this->TA2->ds = & $this->TA2->DataSource;
+            $this->TA2->DataSource->SQL = "SELECT * \n" .
+"FROM employees_tbl {SQL_Where} {SQL_OrderBy}";
+            $this->TA2->DataSource->Order = "emp_login";
+            list($this->TA2->BoundColumn, $this->TA2->TextColumn, $this->TA2->DBFormat) = array("emp_id", "emp_login", "");
+            $this->TA2->DataSource->Order = "emp_login";
             if(!$this->FormSubmitted) {
                 if(!is_array($this->WARRANTY->Value) && !strlen($this->WARRANTY->Value) && $this->WARRANTY->Value !== false)
                     $this->WARRANTY->SetValue(false);
@@ -398,7 +416,7 @@ class clsRecordservice_items_tbl1 { //service_items_tbl1 Class @91-F2622B7A
     }
 //End Initialize Method
 
-//Validate Method @91-CF8F6518
+//Validate Method @91-52C59EBD
     function Validate()
     {
         global $CCSLocales;
@@ -415,6 +433,8 @@ class clsRecordservice_items_tbl1 { //service_items_tbl1 Class @91-F2622B7A
         $Validation = ($this->REQUEST->Validate() && $Validation);
         $Validation = ($this->assign_emp_id->Validate() && $Validation);
         $Validation = ($this->coord_id->Validate() && $Validation);
+        $Validation = ($this->TA1->Validate() && $Validation);
+        $Validation = ($this->TA2->Validate() && $Validation);
         $this->CCSEventResult = CCGetEvent($this->CCSEvents, "OnValidate", $this);
         $Validation =  $Validation && ($this->ORDER_NO->Errors->Count() == 0);
         $Validation =  $Validation && ($this->SERVICE_TYPE_ID->Errors->Count() == 0);
@@ -427,11 +447,13 @@ class clsRecordservice_items_tbl1 { //service_items_tbl1 Class @91-F2622B7A
         $Validation =  $Validation && ($this->REQUEST->Errors->Count() == 0);
         $Validation =  $Validation && ($this->assign_emp_id->Errors->Count() == 0);
         $Validation =  $Validation && ($this->coord_id->Errors->Count() == 0);
+        $Validation =  $Validation && ($this->TA1->Errors->Count() == 0);
+        $Validation =  $Validation && ($this->TA2->Errors->Count() == 0);
         return (($this->Errors->Count() == 0) && $Validation);
     }
 //End Validate Method
 
-//CheckErrors Method @91-C7C7D786
+//CheckErrors Method @91-05F8B26C
     function CheckErrors()
     {
         $errors = false;
@@ -446,6 +468,8 @@ class clsRecordservice_items_tbl1 { //service_items_tbl1 Class @91-F2622B7A
         $errors = ($errors || $this->REQUEST->Errors->Count());
         $errors = ($errors || $this->assign_emp_id->Errors->Count());
         $errors = ($errors || $this->coord_id->Errors->Count());
+        $errors = ($errors || $this->TA1->Errors->Count());
+        $errors = ($errors || $this->TA2->Errors->Count());
         $errors = ($errors || $this->Errors->Count());
         $errors = ($errors || $this->DataSource->Errors->Count());
         return $errors;
@@ -510,7 +534,7 @@ function GetPrimaryKey($keyName)
     }
 //End Operation Method
 
-//InsertRow Method @91-BD08CBDA
+//InsertRow Method @91-46E8B0AE
     function InsertRow()
     {
         $this->CCSEventResult = CCGetEvent($this->CCSEvents, "BeforeInsert", $this);
@@ -526,13 +550,15 @@ function GetPrimaryKey($keyName)
         $this->DataSource->REQUEST->SetValue($this->REQUEST->GetValue(true));
         $this->DataSource->assign_emp_id->SetValue($this->assign_emp_id->GetValue(true));
         $this->DataSource->coord_id->SetValue($this->coord_id->GetValue(true));
+        $this->DataSource->TA1->SetValue($this->TA1->GetValue(true));
+        $this->DataSource->TA2->SetValue($this->TA2->GetValue(true));
         $this->DataSource->Insert();
         $this->CCSEventResult = CCGetEvent($this->CCSEvents, "AfterInsert", $this);
         return (!$this->CheckErrors());
     }
 //End InsertRow Method
 
-//Show Method @91-46E31A1C
+//Show Method @91-E0B669D7
     function Show()
     {
         global $CCSUseAmp;
@@ -550,6 +576,8 @@ function GetPrimaryKey($keyName)
         $this->emp_id->Prepare();
         $this->assign_emp_id->Prepare();
         $this->coord_id->Prepare();
+        $this->TA1->Prepare();
+        $this->TA2->Prepare();
 
         $RecordBlock = "Record " . $this->ComponentName;
         $ParentPath = $Tpl->block_path;
@@ -574,6 +602,8 @@ function GetPrimaryKey($keyName)
                     $this->REQUEST->SetValue($this->DataSource->REQUEST->GetValue());
                     $this->assign_emp_id->SetValue($this->DataSource->assign_emp_id->GetValue());
                     $this->coord_id->SetValue($this->DataSource->coord_id->GetValue());
+                    $this->TA1->SetValue($this->DataSource->TA1->GetValue());
+                    $this->TA2->SetValue($this->DataSource->TA2->GetValue());
                 }
             } else {
                 $this->EditMode = false;
@@ -595,6 +625,8 @@ function GetPrimaryKey($keyName)
             $Error = ComposeStrings($Error, $this->REQUEST->Errors->ToString());
             $Error = ComposeStrings($Error, $this->assign_emp_id->Errors->ToString());
             $Error = ComposeStrings($Error, $this->coord_id->Errors->ToString());
+            $Error = ComposeStrings($Error, $this->TA1->Errors->ToString());
+            $Error = ComposeStrings($Error, $this->TA2->Errors->ToString());
             $Error = ComposeStrings($Error, $this->Errors->ToString());
             $Error = ComposeStrings($Error, $this->DataSource->Errors->ToString());
             $Tpl->SetVar("Error", $Error);
@@ -631,6 +663,8 @@ function GetPrimaryKey($keyName)
         $this->REQUEST->Show();
         $this->assign_emp_id->Show();
         $this->coord_id->Show();
+        $this->TA1->Show();
+        $this->TA2->Show();
         $Tpl->parse();
         $Tpl->block_path = $ParentPath;
         $this->DataSource->close();
@@ -641,7 +675,7 @@ function GetPrimaryKey($keyName)
 
 class clsservice_items_tbl1DataSource extends clsDBhss_db {  //service_items_tbl1DataSource Class @91-E9D99EE6
 
-//DataSource Variables @91-FA190435
+//DataSource Variables @91-3AA851A6
     public $Parent = "";
     public $CCSEvents = "";
     public $CCSEventResult;
@@ -666,9 +700,11 @@ class clsservice_items_tbl1DataSource extends clsDBhss_db {  //service_items_tbl
     public $REQUEST;
     public $assign_emp_id;
     public $coord_id;
+    public $TA1;
+    public $TA2;
 //End DataSource Variables
 
-//DataSourceClass_Initialize Event @91-8A157E65
+//DataSourceClass_Initialize Event @91-D2D16F7E
     function clsservice_items_tbl1DataSource(& $Parent)
     {
         $this->Parent = & $Parent;
@@ -696,6 +732,10 @@ class clsservice_items_tbl1DataSource extends clsDBhss_db {  //service_items_tbl
         
         $this->coord_id = new clsField("coord_id", ccsInteger, "");
         
+        $this->TA1 = new clsField("TA1", ccsInteger, "");
+        
+        $this->TA2 = new clsField("TA2", ccsInteger, "");
+        
 
         $this->InsertFields["ORDER_NO"] = array("Name" => "ORDER_NO", "Value" => "", "DataType" => ccsText, "OmitIfEmpty" => 1);
         $this->InsertFields["SERVICE_TYPE_ID"] = array("Name" => "SERVICE_TYPE_ID", "Value" => "", "DataType" => ccsInteger, "OmitIfEmpty" => 1);
@@ -707,6 +747,8 @@ class clsservice_items_tbl1DataSource extends clsDBhss_db {  //service_items_tbl
         $this->InsertFields["REQUEST"] = array("Name" => "REQUEST", "Value" => "", "DataType" => ccsText, "OmitIfEmpty" => 1);
         $this->InsertFields["assigned_emp_id"] = array("Name" => "assigned_emp_id", "Value" => "", "DataType" => ccsInteger, "OmitIfEmpty" => 1);
         $this->InsertFields["coord_id"] = array("Name" => "coord_id", "Value" => "", "DataType" => ccsInteger, "OmitIfEmpty" => 1);
+        $this->InsertFields["TA1"] = array("Name" => "TA1", "Value" => "", "DataType" => ccsInteger, "OmitIfEmpty" => 1);
+        $this->InsertFields["TA2"] = array("Name" => "TA2", "Value" => "", "DataType" => ccsInteger, "OmitIfEmpty" => 1);
     }
 //End DataSourceClass_Initialize Event
 
@@ -737,7 +779,7 @@ class clsservice_items_tbl1DataSource extends clsDBhss_db {  //service_items_tbl
     }
 //End Open Method
 
-//SetValues Method @91-ADB00CEE
+//SetValues Method @91-B38B4FE9
     function SetValues()
     {
         $this->ORDER_NO->SetDBValue($this->f("ORDER_NO"));
@@ -750,10 +792,12 @@ class clsservice_items_tbl1DataSource extends clsDBhss_db {  //service_items_tbl
         $this->REQUEST->SetDBValue($this->f("REQUEST"));
         $this->assign_emp_id->SetDBValue(trim($this->f("assigned_emp_id")));
         $this->coord_id->SetDBValue(trim($this->f("coord_id")));
+        $this->TA1->SetDBValue(trim($this->f("TA1")));
+        $this->TA2->SetDBValue(trim($this->f("TA2")));
     }
 //End SetValues Method
 
-//Insert Method @91-91A8D2F3
+//Insert Method @91-FE085BFB
     function Insert()
     {
         global $CCSLocales;
@@ -770,6 +814,8 @@ class clsservice_items_tbl1DataSource extends clsDBhss_db {  //service_items_tbl
         $this->InsertFields["REQUEST"]["Value"] = $this->REQUEST->GetDBValue(true);
         $this->InsertFields["assigned_emp_id"]["Value"] = $this->assign_emp_id->GetDBValue(true);
         $this->InsertFields["coord_id"]["Value"] = $this->coord_id->GetDBValue(true);
+        $this->InsertFields["TA1"]["Value"] = $this->TA1->GetDBValue(true);
+        $this->InsertFields["TA2"]["Value"] = $this->TA2->GetDBValue(true);
         $this->SQL = CCBuildInsert("service_items_tbl", $this->InsertFields, $this);
         $this->CCSEventResult = CCGetEvent($this->CCSEvents, "BeforeExecuteInsert", $this->Parent);
         if($this->Errors->Count() == 0 && $this->CmdExecution) {

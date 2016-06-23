@@ -3,8 +3,8 @@
 <head>
 <meta http-equiv="content-type" content="text/html; charset=windows-1252">
 <title>page6</title>
-<meta content="CodeCharge Studio 4.01.00.06" name="GENERATOR">
-<link href="Styles/hss1/Style_doctype.css" type="text/css" rel="stylesheet">
+<meta name="GENERATOR" content="CodeCharge Studio 4.01.00.06">
+<link rel="stylesheet" type="text/css" href="Styles/hss1/Style_doctype.css">
 <script language="JavaScript" type="text/javascript">
 //Begin CCS script
 //Include Common JSFunctions @1-D3B5F5BF
@@ -48,7 +48,7 @@ window.onload = bind_events; //Assign bind_events @1-19F7B649
 </script>
 </head>
 <body>
-<table width="100%" border="0">
+<table border="0" width="100%">
   <tr>
     <td>
       <p><strong><font color="#000066" size="6">Edit/Delete Equipment Information</font></strong></p>
@@ -61,15 +61,15 @@ window.onload = bind_events; //Assign bind_events @1-19F7B649
 </table>
 <p>&nbsp;</p>
 <!-- BEGIN Record service_items_tbl -->
-<form id="service_items_tbl" name="{HTMLFormName}" action="{Action}" method="post">
-  <table cellspacing="0" cellpadding="0" border="0">
+<form id="service_items_tbl" method="post" name="{HTMLFormName}" action="{Action}">
+  <table border="0" cellspacing="0" cellpadding="0">
     <tr>
       <td valign="top">
-        <table class="Header" cellspacing="0" cellpadding="0" border="0">
+        <table class="Header" border="0" cellspacing="0" cellpadding="0">
           <tr>
-            <td class="HeaderLeft"><img alt="" src="Styles/hss1/Images/Spacer.gif" border="0"></td> 
+            <td class="HeaderLeft"><img border="0" alt="" src="Styles/hss1/Images/Spacer.gif"></td> 
             <td class="th">Equipment Information</td> 
-            <td class="HeaderRight"><img alt="" src="Styles/hss1/Images/Spacer.gif" border="0"></td>
+            <td class="HeaderRight"><img border="0" alt="" src="Styles/hss1/Images/Spacer.gif"></td>
           </tr>
         </table>
  
@@ -81,19 +81,19 @@ window.onload = bind_events; //Assign bind_events @1-19F7B649
           <!-- END Error -->
           <tr class="Controls">
             <td class="th"><label for="service_items_tblORDER_NO">ORDER NO</label></td> 
-            <td><input id="service_items_tblORDER_NO" readonly maxlength="6" size="6" value="{ORDER_NO}" name="{ORDER_NO_Name}"></td>
+            <td><input id="service_items_tblORDER_NO" value="{ORDER_NO}" readonly maxlength="6" size="6" name="{ORDER_NO_Name}"></td>
           </tr>
  
           <tr class="Controls">
             <td class="th">EQUIPMENT</td> 
-            <td><label for="service_items_tblEQUIP_MODEL" style="display: none;"></label><input id="service_items_tblEQUIP_MODEL" readonly size="40" value="{EQUIP_MODEL}" name="{EQUIP_MODEL_Name}"></td>
+            <td><label for="service_items_tblEQUIP_MODEL" style="display: none;">&nbsp;</label><input id="service_items_tblEQUIP_MODEL" value="{EQUIP_MODEL}" readonly size="40" name="{EQUIP_MODEL_Name}"></td>
           </tr>
  
           <tr class="Controls">
             <td class="th"><label for="service_items_tblSERVICE_TYPE_ID">SERVICE TYPE</label></td> 
             <td>
               <select id="service_items_tblSERVICE_TYPE_ID" name="{SERVICE_TYPE_ID_Name}">
-                <option value="" selected>Select Value</option>
+                <option selected value="">Select Value</option>
                 {SERVICE_TYPE_ID_Options}
               </select>
  </td>
@@ -101,14 +101,14 @@ window.onload = bind_events; //Assign bind_events @1-19F7B649
  
           <tr class="Controls">
             <td class="th"><label for="service_items_tblWARRANTY">WARRANTY</label></td> 
-            <td><input id="service_items_tblWARRANTY" type="checkbox" value="1" name="{WARRANTY_Name}" {WARRANTY}></td>
+            <td><input id="service_items_tblWARRANTY" value="1" type="checkbox" name="{WARRANTY_Name}" {WARRANTY}></td>
           </tr>
  
           <tr class="Controls">
             <td class="th"><label for="service_items_tblemp_id">APPROVED BY</label></td> 
             <td>
               <select id="service_items_tblemp_id" name="{emp_id_Name}">
-                <option value="" selected>Select Value</option>
+                <option selected value="">Select Value</option>
                 {emp_id_Options}
               </select>
  </td>
@@ -118,7 +118,7 @@ window.onload = bind_events; //Assign bind_events @1-19F7B649
             <td class="th">COORD. BY</td> 
             <td>
               <select id="service_items_tblcoord_id" name="{coord_id_Name}">
-                <option value="" selected>Select Value</option>
+                <option selected value="">Select Value</option>
                 {coord_id_Options}
               </select>
  </td>
@@ -128,33 +128,43 @@ window.onload = bind_events; //Assign bind_events @1-19F7B649
             <td class="th">ASSIGN TO</td> 
             <td>
               <select id="service_items_tblassigned_emp_id" name="{assigned_emp_id_Name}">
-                <option value="" selected>Select Value</option>
+                <option selected value="">Select Value</option>
                 {assigned_emp_id_Options}
+              </select>
+ &nbsp; T/A 1 
+              <select id="service_items_tblassigned_emp_id1" name="{TA1_Name}">
+                <option selected value="">Select Value</option>
+                {TA1_Options}
+              </select>
+ &nbsp; T/A 2 
+              <select id="service_items_tblTA2" name="{TA2_Name}">
+                <option selected value="">Select Value</option>
+                {TA2_Options}
               </select>
  </td>
           </tr>
  
           <tr class="Controls">
             <td class="th">REQUEST</td> 
-            <td><textarea id="service_items_tblREQUEST" name="{REQUEST_Name}" rows="4" cols="50">{REQUEST}</textarea></td>
+            <td><textarea id="service_items_tblREQUEST" rows="4" cols="50" name="{REQUEST_Name}">{REQUEST}</textarea></td>
           </tr>
  
           <tr class="Controls">
             <td class="th"><label for="service_items_tblREMARKS">REMARKS</label></td> 
-            <td><textarea id="service_items_tblREMARKS" name="{REMARKS_Name}" rows="3" cols="50">{REMARKS}</textarea></td>
+            <td><textarea id="service_items_tblREMARKS" rows="3" cols="50" name="{REMARKS_Name}">{REMARKS}</textarea></td>
           </tr>
  
           <tr class="Bottom">
-            <td align="right" colspan="2">
-              <!-- BEGIN Button Button_Update --><input class="Button" id="service_items_tblButton_Update" type="submit" alt="Submit" value="Update" name="{Button_Name}"><!-- END Button Button_Update -->
-              <!-- BEGIN Button Button_Delete --><input class="Button" id="service_items_tblButton_Delete" type="submit" alt="Delete" value="Delete" name="{Button_Name}"><!-- END Button Button_Delete -->
-              <!-- BEGIN Button Button_Cancel --><input class="Button" id="service_items_tblButton_Cancel" type="submit" alt="Cancel" value="Cancel" name="{Button_Name}"><!-- END Button Button_Cancel --></td>
+            <td colspan="2" align="right">
+              <!-- BEGIN Button Button_Update --><input id="service_items_tblButton_Update" class="Button" value="Update" alt="Submit" type="submit" name="{Button_Name}"><!-- END Button Button_Update -->
+              <!-- BEGIN Button Button_Delete --><input id="service_items_tblButton_Delete" class="Button" value="Delete" alt="Delete" type="submit" name="{Button_Name}"><!-- END Button Button_Delete -->
+              <!-- BEGIN Button Button_Cancel --><input id="service_items_tblButton_Cancel" class="Button" value="Cancel" alt="Cancel" type="submit" name="{Button_Name}"><!-- END Button Button_Cancel --></td>
           </tr>
         </table>
       </td>
     </tr>
   </table>
-  <p><input id="service_items_tblITEM_NO" type="hidden" value="{ITEM_NO}" name="{ITEM_NO_Name}"><input id="service_items_tblEQUIP_ID" type="hidden" value="{EQUIP_ID}" name="{EQUIP_ID_Name}"><input id="service_items_tblFOLLOW_UP" type="hidden" value="{FOLLOW_UP}" name="{FOLLOW_UP_Name}"></p>
+  <p><input id="service_items_tblITEM_NO" value="{ITEM_NO}" type="hidden" name="{ITEM_NO_Name}"><input id="service_items_tblEQUIP_ID" value="{EQUIP_ID}" type="hidden" name="{EQUIP_ID_Name}"><input id="service_items_tblFOLLOW_UP" value="{FOLLOW_UP}" type="hidden" name="{FOLLOW_UP_Name}"></p>
 </form>
 <!-- END Record service_items_tbl --><br>
 </body>
