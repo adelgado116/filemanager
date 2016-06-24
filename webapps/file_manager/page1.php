@@ -42,7 +42,7 @@ class clsGridservice_tbl { //service_tbl class @2-E2473FE4
     var $RowControls;
 //End Variables
 
-//Class_Initialize Event @2-177336CE
+//Class_Initialize Event @2-BCBFF370
     function clsGridservice_tbl($RelativePath, & $Parent)
     {
         global $FileName;
@@ -59,7 +59,7 @@ class clsGridservice_tbl { //service_tbl class @2-E2473FE4
         $this->ds = & $this->DataSource;
         $this->PageSize = CCGetParam($this->ComponentName . "PageSize", "");
         if(!is_numeric($this->PageSize) || !strlen($this->PageSize))
-            $this->PageSize = 10;
+            $this->PageSize = 20;
         else
             $this->PageSize = intval($this->PageSize);
         if ($this->PageSize > 100)
@@ -74,8 +74,6 @@ class clsGridservice_tbl { //service_tbl class @2-E2473FE4
         $this->Link1->Page = "page2.php";
         $this->Link2 = & new clsControl(ccsLink, "Link2", "Link2", ccsText, "", CCGetRequestParam("Link2", ccsGet, NULL), $this);
         $this->Link2->Page = "../returned_parts/page1.php";
-        $this->Link3 = & new clsControl(ccsLink, "Link3", "Link3", ccsText, "", CCGetRequestParam("Link3", ccsGet, NULL), $this);
-        $this->Link3->Page = "../failed_service/page0.php";
         $this->EQUIP_MODEL = & new clsControl(ccsLabel, "EQUIP_MODEL", "EQUIP_MODEL", ccsText, "", CCGetRequestParam("EQUIP_MODEL", ccsGet, NULL), $this);
         $this->Link4 = & new clsControl(ccsLink, "Link4", "Link4", ccsText, "", CCGetRequestParam("Link4", ccsGet, NULL), $this);
         $this->Link4->Page = "../tech_eval/page1.php";
@@ -96,7 +94,7 @@ class clsGridservice_tbl { //service_tbl class @2-E2473FE4
     }
 //End Initialize Method
 
-//Show Method @2-96505F07
+//Show Method @2-FD650B51
     function Show()
     {
         global $Tpl;
@@ -128,7 +126,6 @@ class clsGridservice_tbl { //service_tbl class @2-E2473FE4
             $this->ControlsVisible["ORDER_NO"] = $this->ORDER_NO->Visible;
             $this->ControlsVisible["Link1"] = $this->Link1->Visible;
             $this->ControlsVisible["Link2"] = $this->Link2->Visible;
-            $this->ControlsVisible["Link3"] = $this->Link3->Visible;
             $this->ControlsVisible["EQUIP_MODEL"] = $this->EQUIP_MODEL->Visible;
             $this->ControlsVisible["Link4"] = $this->Link4->Visible;
             while ($this->ForceIteration || (($this->RowNumber < $this->PageSize) &&  ($this->HasRecord = $this->DataSource->has_next_record()))) {
@@ -143,8 +140,6 @@ class clsGridservice_tbl { //service_tbl class @2-E2473FE4
                 $this->Link1->Parameters = CCAddParam($this->Link1->Parameters, "ORDER_NO", $this->DataSource->f("ORDER_NO"));
                 $this->Link2->Parameters = CCGetQueryString("QueryString", array("ccsForm"));
                 $this->Link2->Parameters = CCAddParam($this->Link2->Parameters, "ORDER_NO", $this->DataSource->f("ORDER_NO"));
-                $this->Link3->Parameters = CCGetQueryString("QueryString", array("ccsForm"));
-                $this->Link3->Parameters = CCAddParam($this->Link3->Parameters, "ORDER_NO", $this->DataSource->f("ORDER_NO"));
                 $this->EQUIP_MODEL->SetValue($this->DataSource->EQUIP_MODEL->GetValue());
                 $this->Link4->Parameters = "";
                 $this->Link4->Parameters = CCAddParam($this->Link4->Parameters, "ORDER_NO", $this->DataSource->f("ORDER_NO"));
@@ -154,7 +149,6 @@ class clsGridservice_tbl { //service_tbl class @2-E2473FE4
                 $this->ORDER_NO->Show();
                 $this->Link1->Show();
                 $this->Link2->Show();
-                $this->Link3->Show();
                 $this->EQUIP_MODEL->Show();
                 $this->Link4->Show();
                 $Tpl->block_path = $ParentPath . "/" . $GridBlock;
@@ -191,14 +185,13 @@ class clsGridservice_tbl { //service_tbl class @2-E2473FE4
     }
 //End Show Method
 
-//GetErrors Method @2-C25B19E5
+//GetErrors Method @2-9137E989
     function GetErrors()
     {
         $errors = "";
         $errors = ComposeStrings($errors, $this->ORDER_NO->Errors->ToString());
         $errors = ComposeStrings($errors, $this->Link1->Errors->ToString());
         $errors = ComposeStrings($errors, $this->Link2->Errors->ToString());
-        $errors = ComposeStrings($errors, $this->Link3->Errors->ToString());
         $errors = ComposeStrings($errors, $this->EQUIP_MODEL->Errors->ToString());
         $errors = ComposeStrings($errors, $this->Link4->Errors->ToString());
         $errors = ComposeStrings($errors, $this->Errors->ToString());
@@ -244,10 +237,10 @@ class clsservice_tblDataSource extends clsDBhss_db {  //service_tblDataSource Cl
     }
 //End DataSourceClass_Initialize Event
 
-//SetOrder Method @2-067BA3D2
+//SetOrder Method @2-0C3D5CF9
     function SetOrder($SorterName, $SorterDirection)
     {
-        $this->Order = "service_tbl.ORDER_NO desc";
+        $this->Order = "ETA_DATE_YEAR desc, ETA_DATE_MONTH desc, ETA_DATE_DAY desc, service_tbl.ORDER_NO desc";
         $this->Order = CCGetOrder($this->Order, $SorterName, $SorterDirection, 
             "");
     }
