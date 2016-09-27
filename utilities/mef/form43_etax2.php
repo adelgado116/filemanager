@@ -241,7 +241,7 @@ $objPHPExcel->getActiveSheet()->SetCellValue('J'.$rowCount, 0);
 
     
 // Rename worksheet
-$objPHPExcel->getActiveSheet()->setTitle("FORM 43 - {$month}-{$year}");
+$objPHPExcel->getActiveSheet()->setTitle("FORM 43 - {$year}{$month}");
 
 $objPHPExcel->getActiveSheet()->getStyle('A1:J1')->getFont()->setBold(true);
 
@@ -254,7 +254,7 @@ $objPHPExcel->setActiveSheetIndex(0);
 
 // Save Excel 2007 file
 $objWriter = PHPExcel_IOFactory::createWriter($objPHPExcel, 'Excel2007');
-$objWriter->save( './reports/MEF-FORM43_'.date('Ymd_Hi').'.xlsx' ); 
+$objWriter->save( "./reports/Informe43_2579887-1-2444_{$year}{$month}.xlsx" ); 
  
 // DEBUG
 //echo "<br/><br/>Done writing file";
