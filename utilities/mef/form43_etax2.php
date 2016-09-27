@@ -223,9 +223,25 @@ for( $i=0; $i<= (sizeof($purchases_table) - 1); $i++ ){
     $rowCount++;
 }
 
+
+// DEBUG
+// ADD AN ADDITIONAL LINE WITH ERRORS TO BE CHATCHED BY eTax 2.0 - FOR REVIEW OF OUR REPORT
+$objPHPExcel->getActiveSheet()->SetCellValueExplicit('A'.$rowCount, 'E', PHPExcel_Cell_DataType::TYPE_STRING);
+$objPHPExcel->getActiveSheet()->SetCellValueExplicit('B'.$rowCount, '0', PHPExcel_Cell_DataType::TYPE_STRING);
+$objPHPExcel->getActiveSheet()->SetCellValueExplicit('C'.$rowCount, '', PHPExcel_Cell_DataType::TYPE_STRING);
+$objPHPExcel->getActiveSheet()->SetCellValueExplicit('D'.$rowCount, 'TEST LINE', PHPExcel_Cell_DataType::TYPE_STRING);
+$objPHPExcel->getActiveSheet()->SetCellValueExplicit('E'.$rowCount, '', PHPExcel_Cell_DataType::TYPE_STRING);			// LEFT EMPTY ON PURPOSE
+$objPHPExcel->getActiveSheet()->SetCellValueExplicit('F'.$rowCount, '', PHPExcel_Cell_DataType::TYPE_STRING);			// LEFT EMPTY ON PURPOSE
+$objPHPExcel->getActiveSheet()->SetCellValueExplicit('G'.$rowCount, '1', PHPExcel_Cell_DataType::TYPE_STRING);
+$objPHPExcel->getActiveSheet()->SetCellValueExplicit('H'.$rowCount, '2', PHPExcel_Cell_DataType::TYPE_STRING);
+$objPHPExcel->getActiveSheet()->SetCellValue('I'.$rowCount, 100);
+$objPHPExcel->getActiveSheet()->SetCellValue('J'.$rowCount, 0);
+
+
+
     
 // Rename worksheet
-$objPHPExcel->getActiveSheet()->setTitle('FORM 43 - 2016-08');
+$objPHPExcel->getActiveSheet()->setTitle("FORM 43 - {$month}-{$year}");
 
 $objPHPExcel->getActiveSheet()->getStyle('A1:J1')->getFont()->setBold(true);
 
