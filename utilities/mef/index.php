@@ -8,7 +8,7 @@
 <br/><br/>
 
 
-<form name="form1" action="mef_report.php">
+<form name="form1" action="form43_etax2.php">
 	Year <select name="report_year">
 			<option value="2015">2015</option>
 			<option value="2016">2016</option>
@@ -71,7 +71,7 @@
 		for ( $k = 2; $k < $index_count_2; $k++ ) {
 			
 			// filter non TXT files
-			if ( substr( $dir_array_2[$k], strrpos( $dir_array_2[$k], '.' ) + 1 ) == 'txt' ) {
+			if ( substr( $dir_array_2[$k], strrpos( $dir_array_2[$k], '.' ) + 1 ) == 'txt' || substr( $dir_array_2[$k], strrpos( $dir_array_2[$k], '.' ) + 1 ) == 'xlsx' ) {
 			
 				$data .= "<tr bgcolor=\"".$bgcol."\">";
 				$data .= "<td>";
@@ -96,5 +96,4 @@
 ?>
 
 </body>
-
 </html>
