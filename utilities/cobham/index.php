@@ -15,7 +15,7 @@
 		<form name="form1" action="q_report.php">
 			Year <select name="report_year">
 					<option value="2015">2015</option>
-					<option value="2016">2016</option>
+					<option value="2016" selected="selected">2016</option>
 					<option value="2017">2017</option>
 			</select>
 			Month <select name="report_quarter">

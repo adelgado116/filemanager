@@ -204,7 +204,7 @@ for( $i=0; $i<= (sizeof($result_table2) - 1); $i++ ){
     
     
 // Rename worksheet
-$objPHPExcel->getActiveSheet()->setTitle('SALES OUT Q2-2105');
+$objPHPExcel->getActiveSheet()->setTitle('SALES OUT'.$quarter.'-'.$year);
 // Set active sheet index to the first sheet, so Excel opens this as the first sheet
 $objPHPExcel->setActiveSheetIndex(0);
 
@@ -217,8 +217,8 @@ foreach(range('A','J') as $columnID) {
 
 // Save Excel 2007 file
 $objWriter = PHPExcel_IOFactory::createWriter($objPHPExcel, 'Excel2007');
-$objWriter->save( './reports/'."SalesOut-Q$quarter-$year".'- UNPROCESSED CREDIT MEMOS -'.date('_Ymd_Hi').".xlsx" ); 
- 
+$objWriter->save( './reports/'."SalesOut-$year-Q$quarter".'- UNPROCESSED CREDIT MEMOS -'.date('_Ymd_Hi').".xlsx" ); 
+
 // Echo done
 echo "Done writing file";
 
