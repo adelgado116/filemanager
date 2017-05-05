@@ -47,9 +47,10 @@ echo "--  ADE for HSS<br/>";
 echo "--  last edition: 2014.01.28-10:39<br/>";
 echo "-------------------------------------------------<br/>"; 
  
-#
-# GET DATA FROM MSSQL DATABASE
-#
+/*
+ * GET DATA FROM MSSQL DATABASE
+ *
+ */
 $server = "192.168.244.29";    //"sapbo";
 $user = "dbuser";
 $pass = "Raytheon10";
@@ -72,7 +73,10 @@ if( $conn === false ) {
 }
 
 
-########################  REMOTE SALES TABLE  ########################
+/*
+ * REMOTE SALES TABLE
+ *
+ */
 $remote_table = "ORDR";
 $tsql = "SELECT DocDate,DocNum,U_IMO,NumAtCard,U_Shipname,CardName,CardCode
          FROM $remote_table WHERE SlpCode='1' ORDER BY DocDate DESC";
