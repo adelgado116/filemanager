@@ -44,7 +44,7 @@ echo "-------------------------------------------------<br/>";
 echo "--  MSSQL-to-MySQL Importing Script<br/>";
 echo "--  OBS<br/>";
 echo "--  ADE for HSS<br/>";
-echo "--  last edition: 2014.01.28-10:39<br/>";
+echo "--  last edition: 2014.01.28-10:39<br/>";  #esto cambia despues del ultimo update en 2018.
 echo "-------------------------------------------------<br/>"; 
  
 /*
@@ -68,7 +68,7 @@ if( $conn === false ) {
 	die( print_r( mssql_get_last_message(), true));
 
 } else {
-    $selected_db = mssql_select_db( $database, $conn ) or die("<br/>Couldn’t open database $database");
+    $selected_db = mssql_select_db( $database, $conn ) or die("<br/>Couldnâ€™t open database $database");
     echo "<br/>connected to database $database<br/><br/>";
 }
 
